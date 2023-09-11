@@ -24,3 +24,4 @@ package-lock.json
 sachbanquyen.pub
 sachbanquyen
 /src/*.html
+/dist
