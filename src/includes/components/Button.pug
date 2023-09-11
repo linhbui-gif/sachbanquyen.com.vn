@@ -1,0 +1,18 @@
+mixin ButtonChildren({ title, icon })
+  if (title)
+    span.Button-control-title
+      = title
+
+  if (icon)
+    span.Button-control-icon
+      img(src=`${icon}`, alt="")
+
+mixin Button({ className = '', type = 'button', size = 'middle', title, icon, reverse, link })
+  .Button(class=`${className} ${reverse ? 'reverse' : ''} ${size}`)
+    if link
+      a(href=`${link}`).Button-control.flex.items-center.justify-center
+        +ButtonChildren({ title, icon })
+
+    else
+      button(type=`${type}`).Button-control.flex.items-center.justify-center
+        +ButtonChildren({ title, icon })
