@@ -23,5 +23,6 @@ yarn-error.log*
 package-lock.json
 sachbanquyen.pub
 sachbanquyen
+yarn.lock
 /src/*.html
 /dist
