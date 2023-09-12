@@ -3,12 +3,12 @@
 @import './settings/variable';
 @import './library/scss/bootstrap.scss';
 @import './components/index.scss';
-.btn {
-  @include font-size("15px");
-  @include padding(10px 20px);
-  @include rfs(40px, border-radius);
-  @include media-breakpoint-down(xl) {
-    padding: rfs-fluid-value(2rem);
-    font-size: rfs-fluid-value(1.125rem);
-  }
-}
+//.btn {
+//  @include font-size("15px");
+//  @include padding(10px 20px);
+//  @include rfs(40px, border-radius);
+//  @include media-breakpoint-down(xl) {
+//    padding: rfs-fluid-value(2rem);
+//    font-size: rfs-fluid-value(1.125rem);
+//  }
+//}

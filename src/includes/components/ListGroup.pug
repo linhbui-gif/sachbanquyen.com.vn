@@ -1,0 +1,8 @@
+mixin ListGroupComponent({isAccordion})
+  .list-group
+    h3.list-group-item.header Chủ đề
+    if !isAccordion
+       each item in [1,2,3,4,5]
+         a.list-group-item.list-group-item-action Hello
+    else
+      +AccordionComponent()
