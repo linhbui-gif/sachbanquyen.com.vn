@@ -8,32 +8,36 @@ include ../components/Radio.pug
 
 doctype html
 html
-	head
-		meta(charset="utf-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		meta(http-equiv="X-UA-Compatible" content="ie=edge")
-		title Template Gulp
-		block head
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Template Gulp
+    block head
+    link(rel="stylesheet" type="text/css" href="./assets/css/library/fancybox.css")
+    link(rel="stylesheet" type="text/css" href="./assets/css/library/carousel.css")
+    link(rel="stylesheet" type="text/css" href="./assets/css/library/carousel.thumbs.css")
+    //link(rel="stylesheet" type="text/css" href="./assets/css/library/owl.theme.default.min.css")
+    //- CSS
+    link(rel="stylesheet" type="text/css" href="./assets/css/main.css")
 
-		//- CSS
-		link(rel="stylesheet" type="text/css" href="./assets/css/main.css")
-
-		//- Favicon
-		link(rel="icon" type="image/png" href="./assets/images/favicon.png")
+    //- Favicon
+    link(rel="icon" type="image/png" href="./assets/images/favicon.png")
 
 
-	body
-		include ../containers/Header.pug
+  body
+    include ../containers/Header.pug
 
-		block pages
+    block pages
 
-		include ../containers/Footer.pug
+    include ../containers/Footer.pug
 
-		block script
+    block script
 
-		//- Java Script
-		script(src="./assets/js/jquery.min.js")
-		script(src="./assets/js/popper.min.js")
-		script(src="./assets/js/bootstrap.min.js")
-		script(src="./assets/js/owl.carousel.min.js")
-		script(src="./assets/js/main.js")
+    //- Java Script
+    script(src="./assets/js/popper.min.js")
+    script(src="./assets/js/bootstrap.min.js")
+    script(src="./assets/js/fancybox.umd.js")
+    script(src="./assets/js/carousel.umd.js")
+    script(src="./assets/js/carousel.thumbs.umd.js")
+    script(src="./assets/js/main.js")

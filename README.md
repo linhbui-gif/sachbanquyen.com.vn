@@ -27,3 +27,11 @@ block pages
 # View Project
 -> dist/*.html
 # Document Migration bootstrap v5
+# Thumbnail owl carousel
+https://codepen.io/ezersky/pen/XojmpN
+# Fancybox gallery
+https://codepen.io/kthao/pen/vYYVxwx
+# Fancybox carousel combine gallery
+https://fancyapps.com/carousel/
+# Fancybox carousel
+https://fancyapps.com/carousel/plugins/thumbs/
