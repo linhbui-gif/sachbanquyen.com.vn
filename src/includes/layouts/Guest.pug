@@ -8,32 +8,31 @@ include ../components/Radio.pug
 
 doctype html
 html
-	head
-		meta(charset="utf-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		meta(http-equiv="X-UA-Compatible" content="ie=edge")
-		title Template Gulp
-		block head
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Template Gulp
+    block head
+    link(rel="stylesheet" type="text/css" href="./assets/css/library/fancybox.css")
+    link(rel="stylesheet" type="text/css" href="./assets/css/library/carousel.css")
+    link(rel="stylesheet" type="text/css" href="./assets/css/library/carousel.thumbs.css")
+    link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css")
+    //- CSS
+    link(rel="stylesheet" type="text/css" href="./assets/css/main.css")
+    //- Favicon
+    link(rel="icon" type="image/png" href="./assets/images/favicon.png")
 
-		//- CSS
-		link(rel="stylesheet" type="text/css" href="./assets/css/main.css")
+  body
+    include ../containers/Header.pug
+    block pages
+    include ../containers/Footer.pug
 
-		//- Favicon
-		link(rel="icon" type="image/png" href="./assets/images/favicon.png")
-
-
-	body
-		include ../containers/Header.pug
-
-		block pages
-
-		include ../containers/Footer.pug
-
-		block script
-
-		//- Java Script
-		script(src="./assets/js/jquery.min.js")
-		script(src="./assets/js/popper.min.js")
-		script(src="./assets/js/bootstrap.min.js")
-		script(src="./assets/js/owl.carousel.min.js")
-		script(src="./assets/js/main.js")
+    block script
+    //- Java Script
+    script(src="./assets/js/popper.min.js")
+    script(src="./assets/js/bootstrap.min.js")
+    script(src="./assets/js/fancybox.umd.js")
+    script(src="./assets/js/carousel.umd.js")
+    script(src="./assets/js/carousel.thumbs.umd.js")
+    script(src="./assets/js/main.js")

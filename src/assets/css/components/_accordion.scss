@@ -1,0 +1,9 @@
+.accordion-item{
+  &:first-of-type {
+    @include border-top-radius(0);
+
+    .accordion-button {
+      @include border-top-radius(0);
+    }
+  }
+}
