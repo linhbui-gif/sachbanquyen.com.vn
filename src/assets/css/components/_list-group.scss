@@ -1,0 +1,10 @@
+.list-group-item{
+  &.header{
+    color: var(--#{$prefix}list-group-active-color);
+    background-color: var(--#{$prefix}list-group-active-bg);
+    border-color: var(--#{$prefix}list-group-active-border-color);
+    font-size: 15px;
+    font-weight: 800;
+    padding: 12px 15px;
+  }
+}
