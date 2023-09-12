@@ -26,3 +26,4 @@ sachbanquyen
 yarn.lock
 /src/*.html
 /dist
+/src/assets/css/main.css
