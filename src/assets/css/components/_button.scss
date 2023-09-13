@@ -1,4 +1,34 @@
+$btn-color: $white;
+$btn-bg: $orange-brand;
+$btn-border-color: $orange-brand;
+$btn-hover-color: $btn-color;
+$btn-hover-bg: #FF3F02;
+$btn-active-bg: #EE3D05;
 .btn{
-   font-size: $btn-font-size;
-
+  --#{$prefix}btn-font-size: #{$btn-font-size};
+  --#{$prefix}btn-font-weight: #{$btn-font-weight};
+  &-primary{
+    @include l-btn-18-pt-sm()
+  }
+  &-success{
+    --#{$prefix}btn-color: #{$btn-color};
+    --#{$prefix}btn-hover-color: #{$btn-color};
+    --#{$prefix}btn-active-color: #{$btn-color};
+    @include l-btn-18-pt-sm()
+  }
+  &-orange-brand{
+    --#{$prefix}btn-color: #{$btn-color};
+    --#{$prefix}btn-bg: #{$btn-bg};
+    --#{$prefix}btn-border-color: #{$btn-border-color};
+    --#{$prefix}btn-hover-color: #{$btn-hover-color};
+    --#{$prefix}btn-hover-bg: #{$btn-hover-bg};
+    --#{$prefix}btn-hover-border-color: #{$btn-hover-bg};
+    --#{$prefix}btn-active-color: #{$btn-color};
+    --#{$prefix}btn-active-bg: #{$btn-active-bg};
+    --#{$prefix}active-border-color: #{$btn-active-bg};
+    --#{$prefix}disabled-bg: #{$orange-brand};
+    --#{$prefix}disabled-border-color: #{$orange-brand};
+    background-color: $orange-brand;
+    font-weight: 600;
+  }
 }

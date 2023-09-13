@@ -1,8 +1,15 @@
-$commonTheme: 'nxb_v2';
-$list-group-active-bg: #F6F6F6;
+// Variable overide bootstrap theme
+$commonTheme: 'sachbanquyen';
+$list-group-active-bg: var(--bginput);
 $list-group-active-border-color: #EAEAEA;
-$list-group-active-color: #262626;
+$list-group-active-color: var(--black);
+
 $btn-font-size: 13px;
+$btn-font-weight: 400;
 $btn-padding-x: 12px;
 $btn-padding-y: 8px;
-$blue:#2F69FD;
+$blue: #2F69FD;
+$green: #26AD60;
+//Variable follow theme
+$font-family-sans-serif: "Roboto";
+$orange-brand: var(--branding)
