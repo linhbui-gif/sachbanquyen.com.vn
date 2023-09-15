@@ -29,3 +29,15 @@ block pages
         button.btn.btn-primary.d-block.w-100 Mua ngay
         button.btn.btn-orange-brand.mt-4.w-100 Mua ngay
         button.btn.btn-success.mt-4 Mua ngay
+    .row
+      .col-2
+        +CardComponent({url: './assets/images/image-card.png', title:'Benito'})
+      .col-2
+        +CardComponent({url: './assets/images/image-card-service.png', imageType:'rounded-circle' , title: 'Cung cấp sách thư viện'})
+      .col-2
+        +CardComponent({
+          url: './assets/images/image-card-gif.jpg',
+          imageType: 'rounded-circle',
+          title: 'Cung cấp sách thư viện',
+          description:'3,420 sách'
+        })
