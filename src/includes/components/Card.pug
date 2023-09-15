@@ -1,0 +1,10 @@
+mixin CardComponent({url, title, description, footer, classModify, imageType, isVideoCard})
+   .CardComponent(class=`${classModify ? classModify : ''}`)
+       .CardComponent-image
+            img(src=`${url}` class=`${imageType ? imageType : ''} ` alt=`${title}`)
+       .CardComponent-body
+            h3.CardComponent-body-title=title
+            if description
+               p.CardComponent-body-description.text-center=description
+       if footer
+          .CardComponent-footer
