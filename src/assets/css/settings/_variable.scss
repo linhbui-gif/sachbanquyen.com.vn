@@ -1,5 +1,5 @@
 // Variable overide bootstrap theme
-$commonTheme: 'sachbanquyen';
+$commonTheme: 'theme';
 $list-group-active-bg: var(--bginput);
 $list-group-active-border-color: #EAEAEA;
 $list-group-active-color: var(--black);
@@ -10,6 +10,15 @@ $btn-padding-x: 12px;
 $btn-padding-y: 8px;
 $blue: #2F69FD;
 $green: #26AD60;
+$box-shadow: 0px 2px 5px 0px rgba(167, 111, 1, 0.25);
 //Variable follow theme
 $font-family-sans-serif: "Roboto";
-$orange-brand: var(--branding)
+$orange-brand: var(--branding);
+$spacer-theme: 2px;
+$spacers-theme: (
+  1: $spacer-theme * 1,
+  2: $spacer-theme * 2,
+  3: $spacer-theme * 3,
+  4: $spacer-theme * 4,
+  5: $spacer-theme * 5,
+) !default;
