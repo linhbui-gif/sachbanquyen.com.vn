@@ -1,0 +1,50 @@
+#carouselHome{
+  .f-carousel__dots{
+    //--f-carousel-dots-width:16px;
+    //--f-carousel-dots-height:16px;
+    //--f-carousel-dot-width: 16px;
+    //--f-carousel-dot-height: 16px;
+    //--f-carousel-dot-color: rgba(0, 0, 0, 0.20);
+    bottom: 0;
+  }
+}
+
+  //
+  //#carouselFlashSale{
+  //  @media screen and (min-width: 320px) {
+  //    --f-carousel-slide-width: calc(100% / 2);
+  //  }
+  //  @media screen and (min-width: 767px) {
+  //    --f-carousel-slide-width: calc(100% / 3);
+  //  }
+  //  @media screen and (min-width: 992px) {
+  //    --f-carousel-slide-width: calc(100% / 5);
+  //  }
+  //}
+
+#carouselFlashSale {
+  --f-carousel-slide-width: calc(100% / 5);
+  --f-button-width: 48px;
+  --f-button-height: 48px;
+
+  --f-button-svg-width: 19px;
+  --f-button-svg-height: 19px;
+
+  --f-button-border-radius: 50%;
+  --f-button-bg: var(--body-text);
+  --f-button-hover-bg: var(--body-text);
+  --f-button-active-bg:var(--body-text);
+  .f-button{
+    opacity: .2;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  #carouselFlashSale {
+    --f-carousel-slide-width: calc(100% / 2);
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #carouselFlashSale {
+    --f-carousel-slide-width: calc(100% / 3);
+  }
+}
