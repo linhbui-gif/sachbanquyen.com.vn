@@ -39,3 +39,16 @@
     padding-bottom: $value;
   }
 }
+.bg-card-orange{
+  background: var(--bgcard);
+}
+img{
+  width: 100%;
+  display: block;
+}
+.pt-theme-60{
+  padding-top: 60px;
+}
+.pb-theme-60{
+  padding-bottom: 60px;
+}

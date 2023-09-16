@@ -1,0 +1,15 @@
+mixin CategoryCommon({name,className})
+  section.Category.has-bg
+    +HeadingCard({title: "Danh mục sản phẩm", className:'justify-content-center H0-24-B-heading-card', isViewAll: false})
+    .container
+      .Category-wrapper.d-flex
+        each item in [1,2,3,4,5]
+          .Category-wrapper-item
+            +CardComponent({
+              url: './assets/images/image-card-gif.jpg',
+              imageType: 'rounded-circle',
+              title: 'Sách giấy',
+              description: '3,420 sách',
+              classTitle: 'mt-theme-4 mb-theme-4'
+            })
+

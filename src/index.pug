@@ -1,7 +1,254 @@
 extends includes/layouts/Guest.pug
 
 block pages
-   .container
-     .row
-       .col-12
-         +HeadingCard({title:"Top sách giấy bán chạy", className:'justify-content-between H0-24-B-heading-card', isViewAll: true})
+     include ./includes/containers/Banner
+     section.Category.has-bg
+        +HeadingCard({title: "Danh mục sản phẩm", className: 'justify-content-center H0-24-B-heading-card', isViewAll: false})
+        .container
+          .Category-wrapper.row
+            each item in [1,2,3,4,5]
+              .Category-wrapper-item
+                +CardComponent({
+                  url: './assets/images/image-card-gif.jpg',
+                  imageType: 'rounded-circle',
+                  title: 'Sách giấy',
+                  description: '3,420 sách',
+                  classTitle: 'mt-theme-4 mb-theme-4'
+                })
+
+     section.Category
+      +HeadingCard({title: "Dịch vụ", className: 'justify-content-center H0-24-B-heading-card', isViewAll: false})
+      .container
+        .Category-wrapper.row
+          each item in [1,2,3,4,5]
+            .Category-wrapper-item
+              +CardComponent({
+                url: './assets/images/image-card-service.png',
+                imageType: 'rounded-circle',
+                title: 'Cung cấp sách thư viện',
+                classModify: 'bg-card-orange',
+                classTitle: 'mt-theme-4 mb-theme-4'
+              })
+     section.banner-single
+      .container
+        .row
+          .col-12
+            img(src="./assets/images/image-banner-single.png" alt="")
+     section.top-sale.bg-card-orange
+      .container
+        .row
+          .col-12
+            +HeadingCard({title: "Top sách giấy bán chạy", className: 'justify-content-between mt-theme-6 mb-theme-6', isViewAll: true})
+          .col-12
+            #carouselFlashSale.f-carousel.carouselFlashSale
+              .f-carousel__slide
+                +CardComponent({
+                  url: './assets/images/image-book-thumbnail.png',
+                  title: 'Làm Chủ Cơn Giận',
+                  description: 'Tác giả',
+                  classTitle: 'mt-theme-4 mb-theme-4',
+                  isRate: true,
+                  price: true,
+                  footer: true,
+                  isSale: true,
+                })
+              .f-carousel__slide
+                +CardComponent({
+                  url: './assets/images/image-book-thumbnail-1.png',
+                  title: 'Làm Chủ Cơn Giận',
+                  description: 'Tác giả',
+                  classTitle: 'mt-theme-4 mb-theme-4',
+                  isRate: true,
+                  price: true,
+                  footer: true
+                })
+              .f-carousel__slide
+                +CardComponent({
+                  url: './assets/images/image-book-thumbnail-2.png',
+                  title: 'Làm Chủ Cơn Giận',
+                  description: 'Tác giả',
+                  classTitle: 'mt-theme-4 mb-theme-4',
+                  isRate: true,
+                  price: true,
+                  footer: true
+                })
+              .f-carousel__slide
+                +CardComponent({
+                  url: './assets/images/image-book-thumbnail-3.png',
+                  title: 'Làm Chủ Cơn Giận',
+                  description: 'Tác giả',
+                  classTitle: 'mt-theme-4 mb-theme-4',
+                  isRate: true,
+                  price: true,
+                  footer: true
+                })
+              .f-carousel__slide
+                +CardComponent({
+                  url: './assets/images/image-book-thumbnail-3.png',
+                  title: 'Làm Chủ Cơn Giận',
+                  description: 'Tác giả',
+                  classTitle: 'mt-theme-4 mb-theme-4',
+                  isRate: true,
+                  price: true,
+                  footer: true
+                })
+              .f-carousel__slide
+                +CardComponent({
+                  url: './assets/images/image-book-thumbnail-3.png',
+                  title: 'Làm Chủ Cơn Giận',
+                  description: 'Tác giả',
+                  classTitle: 'mt-theme-4 mb-theme-4',
+                  isRate: true,
+                  price: true,
+                  footer: true
+                })
+     section.top-sale
+        .container
+          .row
+            .col-12
+              +HeadingCard({
+                title: "Top Ebook bán chạy",
+                className: 'justify-content-between mt-theme-6 mb-theme-6',
+                isViewAll: true
+              })
+            .col-12
+              #carouselFlashSale01.f-carousel.carouselFlashSale
+                .f-carousel__slide
+                  +CardComponent({
+                    url: './assets/images/image-book-thumbnail.png',
+                    title: 'Làm Chủ Cơn Giận',
+                    description: 'Tác giả',
+                    classTitle: 'mt-theme-4 mb-theme-4',
+                    isRate: true,
+                    price: true,
+                    footer: true,
+                    isSale: true,
+                  })
+                .f-carousel__slide
+                  +CardComponent({
+                    url: './assets/images/image-book-thumbnail-1.png',
+                    title: 'Làm Chủ Cơn Giận',
+                    description: 'Tác giả',
+                    classTitle: 'mt-theme-4 mb-theme-4',
+                    isRate: true,
+                    price: true,
+                    footer: true
+                  })
+                .f-carousel__slide
+                  +CardComponent({
+                    url: './assets/images/image-book-thumbnail-2.png',
+                    title: 'Làm Chủ Cơn Giận',
+                    description: 'Tác giả',
+                    classTitle: 'mt-theme-4 mb-theme-4',
+                    isRate: true,
+                    price: true,
+                    footer: true
+                  })
+                .f-carousel__slide
+                  +CardComponent({
+                    url: './assets/images/image-book-thumbnail-3.png',
+                    title: 'Làm Chủ Cơn Giận',
+                    description: 'Tác giả',
+                    classTitle: 'mt-theme-4 mb-theme-4',
+                    isRate: true,
+                    price: true,
+                    footer: true
+                  })
+                .f-carousel__slide
+                  +CardComponent({
+                    url: './assets/images/image-book-thumbnail-3.png',
+                    title: 'Làm Chủ Cơn Giận',
+                    description: 'Tác giả',
+                    classTitle: 'mt-theme-4 mb-theme-4',
+                    isRate: true,
+                    price: true,
+                    footer: true
+                  })
+                .f-carousel__slide
+                  +CardComponent({
+                    url: './assets/images/image-book-thumbnail-3.png',
+                    title: 'Làm Chủ Cơn Giận',
+                    description: 'Tác giả',
+                    classTitle: 'mt-theme-4 mb-theme-4',
+                    isRate: true,
+                    price: true,
+                    footer: true
+                  })
+     section.top-sale.bg-card-orange
+      .container
+        .row
+          .col-12
+            +HeadingCard({
+              title: "Top AudioBook bán chạy",
+              className: 'justify-content-between mt-theme-6 mb-theme-6',
+              isViewAll: true
+            })
+          .col-12
+            #carouselFlashSale02.f-carousel.carouselFlashSale
+              .f-carousel__slide
+                +CardComponent({
+                  url: './assets/images/image-book-thumbnail.png',
+                  title: 'Làm Chủ Cơn Giận',
+                  description: 'Tác giả',
+                  classTitle: 'mt-theme-4 mb-theme-4',
+                  isRate: true,
+                  price: true,
+                  isSale: true,
+                })
+              .f-carousel__slide
+                +CardComponent({
+                  url: './assets/images/image-book-thumbnail-1.png',
+                  title: 'Làm Chủ Cơn Giận',
+                  description: 'Tác giả',
+                  classTitle: 'mt-theme-4 mb-theme-4',
+                  isRate: true,
+                  price: true,
+                  isSale: true,
+                })
+              .f-carousel__slide
+                +CardComponent({
+                  url: './assets/images/image-book-thumbnail-2.png',
+                  title: 'Làm Chủ Cơn Giận',
+                  description: 'Tác giả',
+                  classTitle: 'mt-theme-4 mb-theme-4',
+                  isRate: true,
+                  price: true,
+                  isSale: true,
+                })
+              .f-carousel__slide
+                +CardComponent({
+                  url: './assets/images/image-book-thumbnail-3.png',
+                  title: 'Làm Chủ Cơn Giận',
+                  description: 'Tác giả',
+                  classTitle: 'mt-theme-4 mb-theme-4',
+                  isRate: true,
+                  price: true,
+                  isSale: true,
+                })
+              .f-carousel__slide
+                +CardComponent({
+                  url: './assets/images/image-book-thumbnail-3.png',
+                  title: 'Làm Chủ Cơn Giận',
+                  description: 'Tác giả',
+                  classTitle: 'mt-theme-4 mb-theme-4',
+                  isRate: true,
+                  price: true,
+                  isSale: true,
+                })
+              .f-carousel__slide
+                +CardComponent({
+                  url: './assets/images/image-book-thumbnail-3.png',
+                  title: 'Làm Chủ Cơn Giận',
+                  description: 'Tác giả',
+                  classTitle: 'mt-theme-4 mb-theme-4',
+                  isRate: true,
+                  price: true,
+                  isSale: true,
+                })
+     section.banner-two.pt-theme-60.pb-theme-60
+       .container
+         .row
+           .col-lg-6
+             img(src="./assets/images/image-banner-large.png")
+           .col-lg-6
+             img(src="./assets/images/image-banner-large.png")
