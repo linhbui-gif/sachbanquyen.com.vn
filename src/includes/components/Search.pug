@@ -1,4 +1,17 @@
 mixin Search({title})
-  form.d-flex
-      input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
-      button.btn.btn-outline-success(type='submit') Search
+  .search
+    form.expanding-search-form
+      .search-dropdown
+        button.button.dropdown-toggle(type='button')
+          span.toggle-active Sách giấy
+          span.ion-arrow-down-b
+        ul.dropdown-menu
+          li.menu-active
+            a(href='#') Sách giấy
+          li
+            a(href='#') Ebook
+          li
+            a(href='#') Audiobooks
+      input#global-search.search-input(type='search', placeholder=`${title}`)
+      button.button.search-button(type='button')
+        img(src="../../assets/icons/search-normal.svg", alt="", srcset="")

@@ -68,6 +68,7 @@ const header = {
   init: function () {
     this.menuMobile();
     this.dropdownAccount();
+    this.dropdownSearch();
   },
   dropdownAccount: function () {
     const headerAccount = document.querySelector(".Header-account");
@@ -105,6 +106,46 @@ const header = {
         menu.classList.remove("active");
       });
     }
+  },
+  dropdownSearch: function () {
+    // Handle click on the dropdown toggle
+    document.querySelectorAll(".dropdown-toggle").forEach(function (toggle) {
+      toggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var searchDropdown = toggle.closest(".search-dropdown");
+        searchDropdown.classList.toggle("open");
+      });
+    });
+
+    // Handle click on dropdown menu item
+    document
+      .querySelectorAll(".dropdown-menu > li > a")
+      .forEach(function (menuItem) {
+        menuItem.addEventListener("click", function (e) {
+          e.preventDefault();
+          var clicked = menuItem;
+          var dropdownMenu = clicked.closest(".dropdown-menu");
+          dropdownMenu
+            .querySelectorAll(".menu-active")
+            .forEach(function (activeItem) {
+              activeItem.classList.remove("menu-active");
+            });
+          clicked.parentElement.classList.add("menu-active");
+          var searchDropdown = clicked.closest(".search-dropdown");
+          searchDropdown.querySelector(".toggle-active").innerHTML =
+            clicked.innerHTML;
+        });
+      });
+
+    // Close the dropdown when clicking outside
+    document.addEventListener("click", function () {
+      document
+        .querySelectorAll(".search-dropdown.open")
+        .forEach(function (openDropdown) {
+          openDropdown.classList.remove("open");
+        });
+    });
   },
 };
 

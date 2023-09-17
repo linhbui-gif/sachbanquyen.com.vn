@@ -1,5 +1,24 @@
 .Header {
   padding: 16px 0;
+  position: relative;
+
+  &-search {
+    max-width: 523px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    @media (max-width: 991px) {
+      position: absolute;
+      top: calc(100% + 1px);
+      z-index: 2;
+      padding: 12px 15px;
+      background: var(--white);
+      max-width: unset;
+      width: 101%;
+      left: 0%;
+      right: 0;
+    }
+  }
   img {
     width: 100%;
   }
