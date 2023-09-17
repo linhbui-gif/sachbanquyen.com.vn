@@ -21,6 +21,23 @@
     { link: '#', title: 'Tải danh mục sách', subItems: [] },
   ];
 
+  const mockupData = [
+    {
+      title: 'Văn học',
+      subItems: [
+        { href: '#', text: 'Vừa học vừa chơi', active: true },
+        { href: '#', text: 'Kỹ năng thuyết trình', active: false },
+      ],
+    },
+    {
+      title: 'Văn học 1',
+      subItems: [
+        { href: '#', text: 'Vừa học vừa chơi', active: false },
+        { href: '#', text: 'Kỹ năng thuyết trình', active: false },
+      ],
+    },
+  ];
+
 
 nav.Navigation 
   .NavigationMobile-overlay 
@@ -28,7 +45,7 @@ nav.Navigation
       img(src="./assets/icons/close-circle.png", alt="")
   .container 
     .Navigation-wrapper.flex.items-center.justify-between.NavigationMobile-main
-      +ListMenuComponent({ isAccordion:true, icon: true, data: accordionData})
+      +ListMenuComponent({ isAccordion: true, icon: '../../assets/icons/menu-dropdown.svg', items: mockupData })
       .Navigation-wrapper-item
         .NavigationMobile-title Menu 
         .Navigation-list.NavigationMobile-list.flex.items-center 
