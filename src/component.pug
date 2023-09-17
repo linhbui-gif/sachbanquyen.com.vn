@@ -69,14 +69,14 @@ block pages
             isSale: true
           })
       .col-12
-        #carouselHome.f-carousel
-          .f-carousel__slide
-            img(data-lazy-src="./assets/images/image-banner-slider-home.png" alt="")
-          .f-carousel__slide
-            img(data-lazy-src="./assets/images/image-banner-slider-home-1.png" alt="")
+        .owl-carousel#HomeBanner-top.style-dots-rectangle
+          .item
+            img(src="./assets/images/image-banner-slider-home.png" alt="")
+          .item
+            img(src="./assets/images/image-banner-slider-home-1.png" alt="")
       .col-12
-        #carouselFlashSale.f-carousel
-          .f-carousel__slide
+        #carouselFlashSale.owl-carousel
+          .item
             +CardComponent({
               url: './assets/images/image-book-thumbnail.png',
               title: 'Làm Chủ Cơn Giận',
@@ -87,7 +87,7 @@ block pages
               footer: true,
               isSale: true
             })
-          .f-carousel__slide
+          .item
             +CardComponent({
               url: './assets/images/image-book-thumbnail-1.png',
               title: 'Làm Chủ Cơn Giận',
@@ -97,7 +97,7 @@ block pages
               price: true,
               footer: true
             })
-          .f-carousel__slide
+          .item
             +CardComponent({
               url: './assets/images/image-book-thumbnail-2.png',
               title: 'Làm Chủ Cơn Giận',
@@ -107,7 +107,7 @@ block pages
               price: true,
               footer: true
             })
-          .f-carousel__slide
+          .item
             +CardComponent({
               url: './assets/images/image-book-thumbnail-3.png',
               title: 'Làm Chủ Cơn Giận',
@@ -117,7 +117,7 @@ block pages
               price: true,
               footer: true
             })
-          .f-carousel__slide
+          .item
             +CardComponent({
               url: './assets/images/image-book-thumbnail-3.png',
               title: 'Làm Chủ Cơn Giận',
@@ -128,7 +128,7 @@ block pages
               footer: true,
               isSale: true
             })
-          .f-carousel__slide
+          .item
             +CardComponent({
               url: './assets/images/image-book-thumbnail.png',
               title: 'Làm Chủ Cơn Giận',

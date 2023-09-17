@@ -7,6 +7,10 @@
         @include border-top-radius(0);
       }
     }
+    &:last-of-type{
+      border-bottom-right-radius: unset;
+      border-bottom-left-radius: unset;
+    }
   }
   .accordion-body{
     padding: 0;

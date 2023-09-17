@@ -40,8 +40,8 @@ block pages
           .col-12
             +HeadingCard({title: "Top sách giấy bán chạy", className: 'justify-content-between mt-theme-6 mb-theme-6', isViewAll: true})
           .col-12
-            #carouselFlashSale.f-carousel.carouselFlashSale
-              .f-carousel__slide
+            #carouselFlashSale.owl-carousel
+              .item
                 +CardComponent({
                   url: './assets/images/image-book-thumbnail.png',
                   title: 'Làm Chủ Cơn Giận',
@@ -50,9 +50,9 @@ block pages
                   isRate: true,
                   price: true,
                   footer: true,
-                  isSale: true,
+                  isSale: true
                 })
-              .f-carousel__slide
+              .item
                 +CardComponent({
                   url: './assets/images/image-book-thumbnail-1.png',
                   title: 'Làm Chủ Cơn Giận',
@@ -62,7 +62,7 @@ block pages
                   price: true,
                   footer: true
                 })
-              .f-carousel__slide
+              .item
                 +CardComponent({
                   url: './assets/images/image-book-thumbnail-2.png',
                   title: 'Làm Chủ Cơn Giận',
@@ -72,7 +72,7 @@ block pages
                   price: true,
                   footer: true
                 })
-              .f-carousel__slide
+              .item
                 +CardComponent({
                   url: './assets/images/image-book-thumbnail-3.png',
                   title: 'Làm Chủ Cơn Giận',
@@ -82,7 +82,7 @@ block pages
                   price: true,
                   footer: true
                 })
-              .f-carousel__slide
+              .item
                 +CardComponent({
                   url: './assets/images/image-book-thumbnail-3.png',
                   title: 'Làm Chủ Cơn Giận',
@@ -90,17 +90,19 @@ block pages
                   classTitle: 'mt-theme-4 mb-theme-4',
                   isRate: true,
                   price: true,
-                  footer: true
+                  footer: true,
+                  isSale: true
                 })
-              .f-carousel__slide
+              .item
                 +CardComponent({
-                  url: './assets/images/image-book-thumbnail-3.png',
+                  url: './assets/images/image-book-thumbnail.png',
                   title: 'Làm Chủ Cơn Giận',
                   description: 'Tác giả',
                   classTitle: 'mt-theme-4 mb-theme-4',
                   isRate: true,
                   price: true,
-                  footer: true
+                  footer: true,
+                  isSale: true
                 })
      section.top-sale
         .container
@@ -112,8 +114,8 @@ block pages
                 isViewAll: true
               })
             .col-12
-              #carouselFlashSale01.f-carousel.carouselFlashSale
-                .f-carousel__slide
+              #carouselFlashSale01.owl-carousel
+                .item
                   +CardComponent({
                     url: './assets/images/image-book-thumbnail.png',
                     title: 'Làm Chủ Cơn Giận',
@@ -122,9 +124,9 @@ block pages
                     isRate: true,
                     price: true,
                     footer: true,
-                    isSale: true,
+                    isSale: true
                   })
-                .f-carousel__slide
+                .item
                   +CardComponent({
                     url: './assets/images/image-book-thumbnail-1.png',
                     title: 'Làm Chủ Cơn Giận',
@@ -134,7 +136,7 @@ block pages
                     price: true,
                     footer: true
                   })
-                .f-carousel__slide
+                .item
                   +CardComponent({
                     url: './assets/images/image-book-thumbnail-2.png',
                     title: 'Làm Chủ Cơn Giận',
@@ -144,7 +146,7 @@ block pages
                     price: true,
                     footer: true
                   })
-                .f-carousel__slide
+                .item
                   +CardComponent({
                     url: './assets/images/image-book-thumbnail-3.png',
                     title: 'Làm Chủ Cơn Giận',
@@ -154,7 +156,7 @@ block pages
                     price: true,
                     footer: true
                   })
-                .f-carousel__slide
+                .item
                   +CardComponent({
                     url: './assets/images/image-book-thumbnail-3.png',
                     title: 'Làm Chủ Cơn Giận',
@@ -162,17 +164,19 @@ block pages
                     classTitle: 'mt-theme-4 mb-theme-4',
                     isRate: true,
                     price: true,
-                    footer: true
+                    footer: true,
+                    isSale: true
                   })
-                .f-carousel__slide
+                .item
                   +CardComponent({
-                    url: './assets/images/image-book-thumbnail-3.png',
+                    url: './assets/images/image-book-thumbnail.png',
                     title: 'Làm Chủ Cơn Giận',
                     description: 'Tác giả',
                     classTitle: 'mt-theme-4 mb-theme-4',
                     isRate: true,
                     price: true,
-                    footer: true
+                    footer: true,
+                    isSale: true
                   })
      section.top-sale.bg-card-orange
       .container
@@ -184,8 +188,8 @@ block pages
               isViewAll: true
             })
           .col-12
-            #carouselFlashSale02.f-carousel.carouselFlashSale
-              .f-carousel__slide
+            #carouselFlashSale02.owl-carousel
+              .item
                 +CardComponent({
                   url: './assets/images/image-book-thumbnail.png',
                   title: 'Làm Chủ Cơn Giận',
@@ -193,9 +197,10 @@ block pages
                   classTitle: 'mt-theme-4 mb-theme-4',
                   isRate: true,
                   price: true,
-                  isSale: true,
+                  footer: true,
+                  isSale: true
                 })
-              .f-carousel__slide
+              .item
                 +CardComponent({
                   url: './assets/images/image-book-thumbnail-1.png',
                   title: 'Làm Chủ Cơn Giận',
@@ -203,9 +208,9 @@ block pages
                   classTitle: 'mt-theme-4 mb-theme-4',
                   isRate: true,
                   price: true,
-                  isSale: true,
+                  footer: true
                 })
-              .f-carousel__slide
+              .item
                 +CardComponent({
                   url: './assets/images/image-book-thumbnail-2.png',
                   title: 'Làm Chủ Cơn Giận',
@@ -213,9 +218,9 @@ block pages
                   classTitle: 'mt-theme-4 mb-theme-4',
                   isRate: true,
                   price: true,
-                  isSale: true,
+                  footer: true
                 })
-              .f-carousel__slide
+              .item
                 +CardComponent({
                   url: './assets/images/image-book-thumbnail-3.png',
                   title: 'Làm Chủ Cơn Giận',
@@ -223,9 +228,9 @@ block pages
                   classTitle: 'mt-theme-4 mb-theme-4',
                   isRate: true,
                   price: true,
-                  isSale: true,
+                  footer: true
                 })
-              .f-carousel__slide
+              .item
                 +CardComponent({
                   url: './assets/images/image-book-thumbnail-3.png',
                   title: 'Làm Chủ Cơn Giận',
@@ -233,17 +238,19 @@ block pages
                   classTitle: 'mt-theme-4 mb-theme-4',
                   isRate: true,
                   price: true,
-                  isSale: true,
+                  footer: true,
+                  isSale: true
                 })
-              .f-carousel__slide
+              .item
                 +CardComponent({
-                  url: './assets/images/image-book-thumbnail-3.png',
+                  url: './assets/images/image-book-thumbnail.png',
                   title: 'Làm Chủ Cơn Giận',
                   description: 'Tác giả',
                   classTitle: 'mt-theme-4 mb-theme-4',
                   isRate: true,
                   price: true,
-                  isSale: true,
+                  footer: true,
+                  isSale: true
                 })
      section.banner-two.pt-theme-60.pb-theme-60
        .container
