@@ -1,5 +1,7 @@
 window.onload = () => {
   carousel.init()
+  seeMore.init()
+  activeItem.init()
 };
 
 const loading = {
@@ -10,7 +12,7 @@ const loading = {
 };
 const carousel = {
   init: function () {
-    // this.setupBookDetail();
+    this.setupBookDetail();
     this.setupHomeBannerCarousel();
     this.setupFlashSaleBannerCarousel()
     this.setupFlashSaleBannerCarousel01()
@@ -26,13 +28,14 @@ const carousel = {
         type: "classic",
       },
     };
-
-    new Carousel(container, options, { Thumbs });
-    Fancybox.bind("[data-fancybox]", {
-      Thumbs : {
-        type: "classic"
-      }
-    });
+    if (container !== null){
+      new Carousel(container, options, { Thumbs });
+      Fancybox.bind("[data-fancybox]", {
+        Thumbs : {
+          type: "classic"
+        }
+      });
+    }
   },
   setupHomeBannerCarousel: function () {
     $("#HomeBanner-top").owlCarousel({
@@ -131,7 +134,7 @@ const carousel = {
       lazyLoad: true,
       dots: false,
       nav: true,
-      margin: 0,
+      margin: 7.5,
       navText: [
         '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
         '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
@@ -192,4 +195,45 @@ const carousel = {
       ],
     })
   },
+}
+const seeMore = {
+  init:function (){
+    this.seeMore()
+  },
+  seeMore:function (){
+     const TableWrapper = document.querySelector('.BookDetail-table');
+     let isExpand = false;
+     if(TableWrapper == null) return;
+     TableWrapper.addEventListener('click', (event) => {
+       const clicked = event.target;
+       if(clicked.classList.contains('see-full') && !isExpand){
+         clicked.closest('.BookDetail-table').classList.add('active');
+         clicked.innerText = "Thu gọn"
+       } else if(clicked.classList.contains('see-full') && isExpand){
+         clicked.closest('.BookDetail-table').classList.remove('active');
+         clicked.innerText = "Xem đầy đủ"
+       }
+       isExpand = !isExpand;
+     })
+  },
+}
+const activeItem = {
+  init:function (){
+    this.activeItem()
+  },
+  activeItem: function (){
+      const wrapper = document.querySelector('.BookDetail-suggest')
+      const item = document.querySelectorAll('.BookDetail-suggest-wrapper .BookDetail-suggest-wrapper-item')
+      wrapper.addEventListener('click', (e) => {
+        const clicked = e.target;
+        item.forEach((element) => element.classList.remove('active'))
+        if(clicked.classList.contains('BookDetail-suggest-wrapper-item')){
+          clicked.classList.add('active')
+        } else {
+          if(clicked.classList.contains('ebook-text')){
+            clicked.closest('.BookDetail-suggest-wrapper-item').classList.add('active')
+          }
+        }
+      })
+  }
 }

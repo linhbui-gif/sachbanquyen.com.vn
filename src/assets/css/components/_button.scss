@@ -8,13 +8,15 @@ $btn-active-bg: #EE3D05;
   --#{$prefix}btn-font-size: #{$btn-font-size};
   --#{$prefix}btn-font-weight: #{$btn-font-weight};
   &-primary{
-    @include l-btn-18-pt-sm()
+    font-weight: 700;
+    line-height: 21px;
   }
   &-success{
     --#{$prefix}btn-color: #{$btn-color};
     --#{$prefix}btn-hover-color: #{$btn-color};
     --#{$prefix}btn-active-color: #{$btn-color};
-    @include l-btn-18-pt-sm()
+    font-weight: 700;
+    line-height: 21px;
   }
   &-orange-brand{
     --#{$prefix}btn-color: #{$btn-color};
@@ -30,5 +32,23 @@ $btn-active-bg: #EE3D05;
     --#{$prefix}disabled-border-color: #{$orange-brand};
     background-color: $orange-brand;
     font-weight: 600;
+  }
+  &-outline-orange{
+    --#{$prefix}btn-color: var(--branding);
+    --#{$prefix}btn-hover-bg: var(--branding);
+    --#{$prefix}btn-border-color: var(--branding);
+    --#{$prefix}btn-hover-color: #{$white};
+    --#{$prefix}btn-hover-border-color: var(--branding);
+    --#{$prefix}active-border-color: var(--branding);
+    --#{$prefix}btn-active-bg:var(--branding);
+    background-color: $white;
+  }
+  &-outline-xs{
+    --#{$prefix}btn-hover-color: #{$btn-color};
+    --#{$prefix}btn-active-color: #{$btn-color};
+    padding: 4px 10px;
+    min-width: 66px;
+    border-radius: 4px;
+    display: block;
   }
 }

@@ -1,0 +1,8 @@
+
+.breadcrumb{
+
+}
+.breadcrumb-item{
+   @include body-15-pt-r();
+   color: var(--icon);
+}
