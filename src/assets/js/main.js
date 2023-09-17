@@ -3,6 +3,7 @@ window.onload = () => {
   header.init();
   navigation.init();
   toggleNavigation.init();
+  addListMenuHoverEffect();
 };
 
 const loading = {
@@ -66,7 +67,6 @@ const carousel = {
 const header = {
   init: function () {
     this.menuMobile();
-    this.filterCategoryMobile();
     this.dropdownAccount();
   },
   dropdownAccount: function () {
@@ -111,51 +111,71 @@ const header = {
 const navigation = {
   init: function () {
     this.dropdownSubmenu();
-    this.dropdownSubmenuMobile();
+    this.addListMenuHoverEffect();
   },
   dropdownSubmenu: function () {
     const navigationItems = document.querySelectorAll(".Navigation-list-item");
+    let timeoutId;
 
     navigationItems.forEach((item) => {
       const caretIcon = item.querySelector(".Navigation-list-item-caret");
       const subItems = item.querySelector(".Navigation-sub-items");
 
       if (caretIcon) {
-        item.addEventListener("mouseover", (e) => {
+        item?.addEventListener?.("mouseenter", (e) => {
+          if (isMobile()) {
+            clearTimeout(timeoutId);
+          }
           item.classList.add("active");
           subItems.classList.add("active");
         });
 
-        item.addEventListener("mouseout", (e) => {
-          item.classList.remove("active");
-          subItems.classList.remove("active");
+        item?.addEventListener?.("mouseleave", (e) => {
+          if (isMobile()) {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+              item.classList.remove("active");
+              subItems.classList.remove("active");
+            }, 500); // Debounce time (adjust as needed)
+          } else {
+            item.classList.remove("active");
+            subItems.classList.remove("active");
+          }
         });
       }
+
+      const listener = (event) => {
+        if (!subItems || subItems.contains(event.target)) return;
+        item.classList.remove("active");
+        subItems.classList.remove("active");
+      };
+
+      document.addEventListener("mousedown", listener);
+      document.addEventListener("touchstart", listener);
     });
   },
-  dropdownSubmenuMobile: function () {
-    const navigationItems = document.querySelectorAll(
-      ".NavigationMobile-list-item"
-    );
+  addListMenuHoverEffect: function () {
+    const listMenu = document.querySelector(".list-menu");
 
-    navigationItems.forEach((item) => {
-      const caretIcon = item.querySelector(".NavigationMobile-list-item-caret");
-      const subItems = item.querySelector(".NavigationMobile-sub-items");
+    if (listMenu) {
+      listMenu.addEventListener("mouseenter", () => {
+        listMenu.classList.add("active");
+      });
 
-      if (caretIcon) {
-        item.addEventListener("mouseover", (e) => {
-          subItems.classList.add("active");
-          item.classList.add("active");
-        });
-
-        item.addEventListener("mouseout", (e) => {
-          subItems.classList.remove("active");
-          item.classList.remove("active");
-        });
-      }
-    });
+      listMenu.addEventListener("mouseleave", () => {
+        listMenu.classList.remove("active");
+      });
+    }
   },
 };
+
+function isMobile() {
+  // Add your logic here to determine if it's a mobile device
+  // For example, you can check window width or use a library like Modernizr
+  // Return true if it's a mobile device, false otherwise
+  return window.innerWidth <= 991; // Example: consider devices with width <= 768 as mobile
+}
+
 window.addEventListener("resize", () => {
   // Update the navigation when the window is resized
   toggleNavigation();

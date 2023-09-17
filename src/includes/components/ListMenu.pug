@@ -1,0 +1,15 @@
+mixin ListMenuComponent({isAccordion, icon})
+  .list-menu
+    if icon
+      h3.list-menu-item.header
+        span.wrapper-icon
+          img(src="../../assets/icons/menu-dropdown.svg", alt="", srcset="")
+          span Chủ đề
+        img(src="../../assets/icons/arrow-down.svg", alt="", srcset="")
+    else 
+      h3.list-menu-item.header Chủ đề
+    if !isAccordion
+       each item in [1,2,3,4,5]
+         a.list-menu-item.list-menu-item-action Hello
+    else
+      +AccordionComponent()

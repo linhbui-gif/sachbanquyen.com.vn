@@ -1,0 +1,21 @@
+.list-menu-item {
+  &.header {
+    color: var(--#{$prefix}list-group-active-color);
+    background-color: var(--#{$prefix}list-group-active-bg);
+    border-color: var(--#{$prefix}list-group-active-border-color);
+    font-size: 15px;
+    font-weight: 800;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .wrapper-icon {
+      display: flex;
+      span {
+        @include h-6-title-15-pt-b();
+        margin-left: 4px;
+        display: block;
+      }
+    }
+  }
+}

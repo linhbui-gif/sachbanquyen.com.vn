@@ -11,7 +11,23 @@
     @media (max-width: 991px) {
       display: block;
     }
-
+    .Navigation-wrapper-item {
+      padding: 30px 16px;
+    }
+    .NavigationMobile-list-item.active {
+      position: relative;
+      a {
+        width: 100%;
+      }
+      img {
+        position: absolute;
+        right: 0;
+        top: 12px;
+      }
+      .NavigationMobile-list-item-caret {
+        width: 100%;
+      }
+    }
     &.active {
       pointer-events: unset;
 
@@ -89,13 +105,12 @@
       align-items: flex-start;
       &-item {
         padding: 12px 0;
+        width: 100%;
         transition: $common-transition;
         cursor: pointer;
 
         &-caret {
-          width: 16px;
-          margin-left: auto;
-
+          width: 20px;
           svg {
             transform: rotate(180deg);
             transition: $common-transition;
@@ -111,11 +126,12 @@
         }
 
         &.active {
+          flex-direction: column;
+          align-items: flex-start;
           .NavigationMobile-list-item-caret svg {
             transform: rotate(0deg);
           }
         }
-
         &.active,
         &:hover {
           & > a {
@@ -183,7 +199,6 @@
           font-size: 14px;
           font-weight: 400;
           color: color(emperor);
-          width: 100%;
           transition: $common-transition;
         }
 
@@ -224,13 +239,14 @@
       height: 24px;
       right: calc(320px + 12px);
       top: 12px;
-      background: color(alto);
       display: flex;
       cursor: pointer;
       z-index: 3;
       opacity: 0;
       transition: $common-transition;
-
+      img {
+        width: 100%;
+      }
       @media (max-width: 375px) {
         right: calc(280px + 8px);
       }
@@ -239,8 +255,26 @@
         margin: auto;
       }
     }
-  }
-  .list-group {
-    width: 100%;
+    .list-menu {
+      position: relative;
+      width: 100%;
+      border-radius: 0;
+      @include h-6-title-15-pt-b();
+      img {
+        display: none;
+      }
+      &-item {
+        border-width: 0;
+        border-right: 1px solid var(--line-3, #eaeaea);
+        border-left: 1px solid var(--line-3, #eaeaea);
+      }
+      .accordion {
+        width: 100%;
+        &-item {
+          border-bottom: 1px dashed var(--line-3, #eaeaea);
+          background: var(--main-white, #fff);
+        }
+      }
+    }
   }
 }
