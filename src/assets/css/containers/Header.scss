@@ -100,12 +100,6 @@
 
   &-wrapper {
     &-item {
-      &:nth-child(2) {
-        @media (max-width: 991px) {
-          display: none;
-        }
-      }
-
       &.mobile {
         display: none;
 
@@ -119,7 +113,27 @@
       }
     }
   }
-
+  @media (min-width: 992px) {
+    .ButtonHeader:last-child {
+      display: none;
+    }
+  }
+  @media (max-width: 991px) {
+    .ButtonHeader-control {
+      margin: 0;
+      padding-right: 12px;
+    }
+    .ButtonHeader:last-child {
+      .ButtonHeader-control {
+        padding: 0;
+      }
+    }
+    &-hotline,
+    .ButtonHeader-control-title,
+    .ButtonHeader-control::before {
+      display: none;
+    }
+  }
   &-account {
     position: relative;
     cursor: pointer;
@@ -173,28 +187,28 @@
       }
 
       &:hover {
-        border-color: color(azure-radiance) !important;
+        border-color: color(branding) !important;
 
         span {
-          color: color(azure-radiance);
+          color: color(branding);
         }
 
         .document {
           .stroke {
-            stroke: color(azure-radiance);
+            stroke: color(branding);
           }
           .fill {
-            fill: color(azure-radiance);
+            fill: color(branding);
           }
         }
 
         svg {
           &.fill path {
-            fill: color(azure-radiance);
+            fill: color(branding);
           }
 
           &.stroke path {
-            stroke: color(azure-radiance);
+            stroke: color(branding);
           }
         }
       }
@@ -214,5 +228,9 @@
         }
       }
     }
+  }
+  @media (max-width: 991px) {
+    border: 1px solid var(--line-3, #eaeaea);
+    background: var(--main-white, #fff);
   }
 }

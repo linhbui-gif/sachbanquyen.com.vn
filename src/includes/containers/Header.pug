@@ -15,7 +15,7 @@ header.Header
               .Header-hotline-item-info-value 0382832993
         .Header-btns.flex.items-center
           +ButtonHeader({
-            title: 'Tủ sách của bạn',
+            title: 'Giỏ hàng',
             size: 'small',
             styleType: 'primary',
             badge: { label: '1', styleType: 'red' },
@@ -47,25 +47,12 @@ header.Header
               title: 'Tài khoản',
               size: 'small',
               styleType: 'outline-primary',
-              badge: { label: '!', styleType: 'yellow' },
               iconImage: '../assets/icons/profile-circle.svg'
             })
+          +ButtonHeader({
+            className: 'NavigationMobile-open',
+            size: 'middle',
+            styleType: 'outline-primary',
+            iconImage: '../assets/icons/menu.svg'
+          })
 
-      .Header-wrapper-item.mobile.flex.items-center
-        +ButtonHeader({
-          size: 'middle',
-          styleType: 'outline-primary',
-          iconImage: '../assets/icons/shopping-cart.svg'
-        })
-        +ButtonHeader({
-          size: 'middle',
-          styleType: 'outline-primary',
-          iconImage: '../assets/icons/profile-circle.svg'
-        })
-
-        +ButtonHeader({
-          className: 'NavigationMobile-open',
-          size: 'middle',
-          styleType: 'outline-primary',
-          iconImage: '../assets/icons/menu.svg'
-        })
