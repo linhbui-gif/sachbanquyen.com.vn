@@ -211,7 +211,7 @@ function SelectDropdown(optional){
     }
   });
   document.addEventListener('click', (e) => {
-    if (!customSelect.contains(e.target)) {
+    if (customSelect && !customSelect.contains(e.target)) {
       customOptions.classList.remove('active')
     }
   });
@@ -312,5 +312,7 @@ new SelectDropdown({
   label: 'Select-label'
 });
 new QuantityControl('product')
+new QuantityControl('BookDetail-data-item-quantity')
 new SeeMoreComponent('content', 'seeMoreBtn');
 new SeeMoreComponent('see-more', 'seeBtn');
+new SeeMoreComponent('content-tab-see', 'seeAboutBtn');

@@ -41,7 +41,7 @@ $btn-active-bg: #EE3D05;
     --#{$prefix}btn-hover-border-color: var(--branding);
     --#{$prefix}active-border-color: var(--branding);
     --#{$prefix}btn-active-bg:var(--branding);
-    background-color: $white;
+    background-color: rgba(255, 76, 19, 0.05);
   }
   &-outline-xs{
     --#{$prefix}btn-hover-color: #{$btn-color};
@@ -50,5 +50,25 @@ $btn-active-bg: #EE3D05;
     min-width: 66px;
     border-radius: 4px;
     display: block;
+  }
+  &-outline-radius{
+    --#{$prefix}btn-border-color: rgba(47, 105, 253, 0.10);
+    border-radius: 21px;
+    background-color: rgba(47, 105, 253, 0.10);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    padding: 4px 24px;
+  }
+  &-default{
+    --#{$prefix}btn-hover-bg: rgba(164, 164, 164, 0.50);
+    --#{$prefix}btn-active-color: var(--text-hidden);
+    background-color: var(--line3);
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    border-radius: unset;
+    padding: 0;
   }
 }
