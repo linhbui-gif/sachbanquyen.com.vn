@@ -224,7 +224,7 @@ const activeItem = {
   activeItem: function (){
       const wrapper = document.querySelector('.BookDetail-suggest')
       const item = document.querySelectorAll('.BookDetail-suggest-wrapper .BookDetail-suggest-wrapper-item')
-      wrapper.addEventListener('click', (e) => {
+      wrapper && wrapper.addEventListener('click', (e) => {
         const clicked = e.target;
         item.forEach((element) => element.classList.remove('active'))
         if(clicked.classList.contains('BookDetail-suggest-wrapper-item')){
@@ -237,3 +237,117 @@ const activeItem = {
       })
   }
 }
+
+function SelectDropdown(optional){
+  const customSelect = document.getElementById(optional.select);
+  const customOptions = document.getElementById(optional.options);
+  customSelect && customSelect.addEventListener('click', () => {
+    customOptions.classList.toggle('active')
+  });
+  customOptions && customOptions.addEventListener('click', (e) => {
+    if (e.target.classList.contains('option')) {
+      const selectedOption = e.target;
+      const selectedValue = selectedOption.getAttribute('data-value');
+      customSelect.querySelector('.' + optional.label).textContent = selectedOption.textContent;
+      customOptions.classList.remove('active')
+      console.log('Selected Value:', selectedValue);
+    }
+  });
+  document.addEventListener('click', (e) => {
+    if (!customSelect.contains(e.target)) {
+      customOptions.classList.remove('active')
+    }
+  });
+}
+function QuantityControl(container){
+  function createQuantityControl(subContainer) {
+    const decreaseButton = subContainer.querySelector('.decrease-button');
+    const increaseButton = subContainer.querySelector('.increase-button');
+    const quantityInput = subContainer.querySelector('input[type="number"]');
+
+    let quantity = 1;
+
+    decreaseButton.addEventListener('click', () => {
+      if (quantity > 1) {
+        quantity--;
+        quantityInput.value = quantity;
+      }
+    });
+
+    increaseButton.addEventListener('click', () => {
+      quantity++;
+      quantityInput.value = quantity;
+    });
+
+    quantityInput.addEventListener('input', () => {
+      let newQuantity = parseInt(quantityInput.value);
+      if (isNaN(newQuantity) || newQuantity < 1) {
+        newQuantity = 1;
+      }
+      quantity = newQuantity;
+      quantityInput.value = quantity;
+    });
+  }
+  const products = document.querySelectorAll('.' + container);
+  products.forEach((product) => {
+    createQuantityControl(product.querySelector('.quantity-control'));
+  });
+}
+function SeeMoreComponent(contentId, seeMoreBtnId) {
+  const content = document.getElementById(contentId);
+  const seeMoreBtn = document.getElementById(seeMoreBtnId);
+  let isExpanded = false;
+
+  function toggleContent() {
+    if (isExpanded) {
+      content.style.maxHeight = '100px';
+      seeMoreBtn.textContent = 'See More';
+    } else {
+      content.style.maxHeight = 'none';
+      seeMoreBtn.textContent = 'See Less';
+    }
+    isExpanded = !isExpanded;
+  }
+
+  function setupEventListeners() {
+    seeMoreBtn.addEventListener('click', toggleContent);
+  }
+
+  if(content){
+    toggleContent();
+  }
+  if(seeMoreBtn){
+    setupEventListeners();
+  }
+}
+function ActiveItemsComponent(container) {
+  const itemsContainer = document.getElementById(container.containerItem);
+  const items = itemsContainer && itemsContainer.querySelectorAll('.item');
+  let activeItem = null;
+
+  function setActiveItem(item) {
+    if (activeItem) {
+      activeItem.classList.remove('active');
+    }
+    item && item.classList.add('active');
+    activeItem = item;
+  }
+
+  items && items.forEach((item) => {
+    item.addEventListener('click', () => {
+      setActiveItem(item);
+    });
+  });
+
+  setActiveItem(items?.[0]);
+}
+new ActiveItemsComponent({
+  containerItem: 'itemsContainer'
+})
+new SelectDropdown({
+  select: 'customSelect',
+  options: 'customOptions',
+  label: 'Select-label'
+});
+new QuantityControl('product')
+new SeeMoreComponent('content', 'seeMoreBtn');

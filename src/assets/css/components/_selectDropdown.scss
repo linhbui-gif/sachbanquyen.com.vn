@@ -1,0 +1,41 @@
+.Select{
+  position: relative;
+  cursor: pointer;
+  &-options{
+    position: absolute;
+    top: 100%;
+    width: 100px;
+    max-height: 0;
+    overflow: hidden;
+    transition: .4s;
+    &.active{
+      max-height: 100vh;
+    }
+  }
+}
+//test
+//see more
+.content {
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.btn-see-more {
+  cursor: pointer;
+  color: blue;
+}
+//active item
+.item {
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.item.active {
+  background-color: lightgreen;
+}
+
+.item-icon {
+  margin-right: 5px;
+}
