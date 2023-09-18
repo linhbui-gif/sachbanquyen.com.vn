@@ -198,24 +198,21 @@ const carousel = {
 function SelectDropdown(optional) {
   const customSelect = document.getElementById(optional.select);
   const customOptions = document.getElementById(optional.options);
-  customSelect &&
-    customSelect.addEventListener("click", () => {
-      customOptions.classList.toggle("active");
-    });
-  customOptions &&
-    customOptions.addEventListener("click", (e) => {
-      if (e.target.classList.contains("option")) {
-        const selectedOption = e.target;
-        const selectedValue = selectedOption.getAttribute("data-value");
-        customSelect.querySelector("." + optional.label).textContent =
-          selectedOption.textContent;
-        customOptions.classList.remove("active");
-        console.log("Selected Value:", selectedValue);
-      }
-    });
-  document.addEventListener("click", (e) => {
-    if (!customSelect.contains(e.target)) {
-      customOptions.classList.remove("active");
+  customSelect && customSelect.addEventListener('click', () => {
+    customOptions.classList.toggle('active')
+  });
+  customOptions && customOptions.addEventListener('click', (e) => {
+    if (e.target.classList.contains('option')) {
+      const selectedOption = e.target;
+      const selectedValue = selectedOption.getAttribute('data-value');
+      customSelect.querySelector('.' + optional.label).textContent = selectedOption.textContent;
+      customOptions.classList.remove('active')
+      console.log('Selected Value:', selectedValue);
+    }
+  });
+  document.addEventListener('click', (e) => {
+    if (customSelect && !customSelect.contains(e.target)) {
+      customOptions.classList.remove('active')
     }
   });
 }
@@ -315,6 +312,8 @@ new SelectDropdown({
   options: "customOptions",
   label: "Select-label",
 });
-new QuantityControl("product");
-new SeeMoreComponent("content", "seeMoreBtn");
-new SeeMoreComponent("see-more", "seeBtn");
+new QuantityControl('product')
+new QuantityControl('BookDetail-data-item-quantity')
+new SeeMoreComponent('content', 'seeMoreBtn');
+new SeeMoreComponent('see-more', 'seeBtn');
+new SeeMoreComponent('content-tab-see', 'seeAboutBtn');
