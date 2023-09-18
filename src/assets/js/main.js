@@ -315,6 +315,8 @@ new SelectDropdown({
   options: "customOptions",
   label: "Select-label",
 });
-new QuantityControl("product");
-new SeeMoreComponent("content", "seeMoreBtn");
-new SeeMoreComponent("see-more", "seeBtn");
+new QuantityControl('product')
+new QuantityControl('BookDetail-data-item-quantity')
+new SeeMoreComponent('content', 'seeMoreBtn');
+new SeeMoreComponent('see-more', 'seeBtn');
+new SeeMoreComponent('content-tab-see', 'seeAboutBtn');
