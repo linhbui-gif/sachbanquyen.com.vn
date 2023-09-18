@@ -1,5 +1,5 @@
 window.onload = () => {
-  carousel.init()
+  carousel.init();
 };
 
 const loading = {
@@ -12,11 +12,11 @@ const carousel = {
   init: function () {
     this.setupBookDetail();
     this.setupHomeBannerCarousel();
-    this.setupFlashSaleBannerCarousel()
-    this.setupFlashSaleBannerCarousel01()
-    this.setupFlashSaleBannerCarousel02()
-    this.setupBookCategory()
-    this.setupBookSuggest()
+    this.setupFlashSaleBannerCarousel();
+    this.setupFlashSaleBannerCarousel01();
+    this.setupFlashSaleBannerCarousel02();
+    this.setupBookCategory();
+    this.setupBookSuggest();
   },
   setupBookDetail: function () {
     const container = document.getElementById("myCarousel");
@@ -26,12 +26,12 @@ const carousel = {
         type: "classic",
       },
     };
-    if (container !== null){
+    if (container !== null) {
       new Carousel(container, options, { Thumbs });
       Fancybox.bind("[data-fancybox]", {
-        Thumbs : {
-          type: "classic"
-        }
+        Thumbs: {
+          type: "classic",
+        },
       });
     }
   },
@@ -56,7 +56,7 @@ const carousel = {
       dots: true,
       nav: false,
       margin: 0,
-    })
+    });
   },
   setupFlashSaleBannerCarousel: function () {
     $("#carouselFlashSale").owlCarousel({
@@ -78,12 +78,12 @@ const carousel = {
       lazyLoad: true,
       dots: false,
       nav: true,
-      margin: 0,
+      margin: 15,
       navText: [
         '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
         '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
       ],
-    })
+    });
   },
   setupFlashSaleBannerCarousel01: function () {
     $("#carouselFlashSale01").owlCarousel({
@@ -105,12 +105,12 @@ const carousel = {
       lazyLoad: true,
       dots: false,
       nav: true,
-      margin: 0,
+      margin: 15,
       navText: [
         '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
         '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
       ],
-    })
+    });
   },
   setupFlashSaleBannerCarousel02: function () {
     $("#carouselFlashSale02").owlCarousel({
@@ -132,12 +132,12 @@ const carousel = {
       lazyLoad: true,
       dots: false,
       nav: true,
-      margin: 7.5,
+      margin: 15,
       navText: [
         '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
         '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
       ],
-    })
+    });
   },
   setupBookCategory: function () {
     $("#carouselBookCategory").owlCarousel({
@@ -164,7 +164,7 @@ const carousel = {
         '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
         '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
       ],
-    })
+    });
   },
   setupBookSuggest: function () {
     $("#carouselBookSuggest").owlCarousel({
@@ -191,52 +191,55 @@ const carousel = {
         '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
         '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
       ],
-    })
+    });
   },
-}
+};
 
-function SelectDropdown(optional){
+function SelectDropdown(optional) {
   const customSelect = document.getElementById(optional.select);
   const customOptions = document.getElementById(optional.options);
-  customSelect && customSelect.addEventListener('click', () => {
-    customOptions.classList.toggle('active')
-  });
-  customOptions && customOptions.addEventListener('click', (e) => {
-    if (e.target.classList.contains('option')) {
-      const selectedOption = e.target;
-      const selectedValue = selectedOption.getAttribute('data-value');
-      customSelect.querySelector('.' + optional.label).textContent = selectedOption.textContent;
-      customOptions.classList.remove('active')
-      console.log('Selected Value:', selectedValue);
-    }
-  });
-  document.addEventListener('click', (e) => {
+  customSelect &&
+    customSelect.addEventListener("click", () => {
+      customOptions.classList.toggle("active");
+    });
+  customOptions &&
+    customOptions.addEventListener("click", (e) => {
+      if (e.target.classList.contains("option")) {
+        const selectedOption = e.target;
+        const selectedValue = selectedOption.getAttribute("data-value");
+        customSelect.querySelector("." + optional.label).textContent =
+          selectedOption.textContent;
+        customOptions.classList.remove("active");
+        console.log("Selected Value:", selectedValue);
+      }
+    });
+  document.addEventListener("click", (e) => {
     if (!customSelect.contains(e.target)) {
-      customOptions.classList.remove('active')
+      customOptions.classList.remove("active");
     }
   });
 }
-function QuantityControl(container){
+function QuantityControl(container) {
   function createQuantityControl(subContainer) {
-    const decreaseButton = subContainer.querySelector('.decrease-button');
-    const increaseButton = subContainer.querySelector('.increase-button');
+    const decreaseButton = subContainer.querySelector(".decrease-button");
+    const increaseButton = subContainer.querySelector(".increase-button");
     const quantityInput = subContainer.querySelector('input[type="number"]');
 
     let quantity = 1;
 
-    decreaseButton.addEventListener('click', () => {
+    decreaseButton.addEventListener("click", () => {
       if (quantity > 1) {
         quantity--;
         quantityInput.value = quantity;
       }
     });
 
-    increaseButton.addEventListener('click', () => {
+    increaseButton.addEventListener("click", () => {
       quantity++;
       quantityInput.value = quantity;
     });
 
-    quantityInput.addEventListener('input', () => {
+    quantityInput.addEventListener("input", () => {
       let newQuantity = parseInt(quantityInput.value);
       if (isNaN(newQuantity) || newQuantity < 1) {
         newQuantity = 1;
@@ -245,9 +248,9 @@ function QuantityControl(container){
       quantityInput.value = quantity;
     });
   }
-  const products = document.querySelectorAll('.' + container);
+  const products = document.querySelectorAll("." + container);
   products.forEach((product) => {
-    createQuantityControl(product.querySelector('.quantity-control'));
+    createQuantityControl(product.querySelector(".quantity-control"));
   });
 }
 function SeeMoreComponent(contentId, seeMoreBtnId) {
@@ -257,60 +260,61 @@ function SeeMoreComponent(contentId, seeMoreBtnId) {
 
   function toggleContent() {
     if (!isExpanded) {
-      content.classList.remove('active')
-      seeMoreBtn.querySelector('span').textContent = "Xem đầy đủ"
+      content.classList.remove("active");
+      seeMoreBtn.querySelector("span").textContent = "Xem đầy đủ";
     } else {
-      if(seeMoreBtn){
-        content.classList.add('active')
-        seeMoreBtn.querySelector('span').textContent = "Thu gọn"
+      if (seeMoreBtn) {
+        content.classList.add("active");
+        seeMoreBtn.querySelector("span").textContent = "Thu gọn";
       }
     }
     isExpanded = !isExpanded;
   }
 
   function setupEventListeners() {
-    seeMoreBtn && seeMoreBtn.addEventListener('click', toggleContent);
+    seeMoreBtn && seeMoreBtn.addEventListener("click", toggleContent);
   }
 
-  if(content){
+  if (content) {
     toggleContent();
   }
-  if(seeMoreBtn){
+  if (seeMoreBtn) {
     setupEventListeners();
   }
 }
 function ActiveItemsComponent(container) {
   const itemsContainer = document.getElementById(container.containerItem);
-  const items = itemsContainer && itemsContainer.querySelectorAll('.item-list');
+  const items = itemsContainer && itemsContainer.querySelectorAll(".item-list");
   let activeItem = null;
 
   function setActiveItem(item) {
     if (activeItem) {
-      activeItem.classList.remove('active');
+      activeItem.classList.remove("active");
     }
-    item && item.classList.add('active');
+    item && item.classList.add("active");
     activeItem = item;
   }
 
-  items && items.forEach((item) => {
-    item.addEventListener('click', () => {
-      setActiveItem(item);
+  items &&
+    items.forEach((item) => {
+      item.addEventListener("click", () => {
+        setActiveItem(item);
+      });
     });
-  });
 
   setActiveItem(items?.[0]);
 }
 new ActiveItemsComponent({
-  containerItem: 'BookDetail-choose'
-})
-new ActiveItemsComponent({
-  containerItem: 'itemsContainer'
-})
-new SelectDropdown({
-  select: 'customSelect',
-  options: 'customOptions',
-  label: 'Select-label'
+  containerItem: "BookDetail-choose",
 });
-new QuantityControl('product')
-new SeeMoreComponent('content', 'seeMoreBtn');
-new SeeMoreComponent('see-more', 'seeBtn');
+new ActiveItemsComponent({
+  containerItem: "itemsContainer",
+});
+new SelectDropdown({
+  select: "customSelect",
+  options: "customOptions",
+  label: "Select-label",
+});
+new QuantityControl("product");
+new SeeMoreComponent("content", "seeMoreBtn");
+new SeeMoreComponent("see-more", "seeBtn");

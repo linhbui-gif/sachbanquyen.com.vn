@@ -1,75 +1,94 @@
-.CardComponent{
+.CardComponent {
   --#{$commonTheme}card-padding-default: 24px 16px;
   --#{$commonTheme}card-padding-book: 16px;
   --#{$commonTheme}card-border-radius-default: 12px;
   padding: var(--#{$commonTheme}card-padding-default);
   border-radius: var(--#{$commonTheme}card-border-radius-default);
   background-color: $white;
-  &.style2{
+  box-shadow: 0px 2px 5px 0px rgba(167, 111, 1, 0.25);
+  &.style2 {
     padding: var(--#{$commonTheme}card-padding-book);
   }
-  &.bg-card-orange{
+  &.bg-card-orange {
     background-color: var(--bgcard);
   }
-  &-image{
+  &-image {
     text-align: center;
-    img{
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    img {
       max-width: 100%;
+      height: 100%;
     }
-    .percent-sale{
+    .percent-sale {
       left: 0;
-      background: url("../images/image-badge-flash-sale.png") no-repeat center center;
+      background: url("../images/image-badge-flash-sale.png") no-repeat center
+        center;
       background-size: cover;
       width: 65px;
       color: $white;
       top: 0;
     }
   }
-  &-body{
-    &-title{
+  &-body {
+    &-title {
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
       @include title-card-18-pt-sm();
+      @media (max-width: 992px) {
+        @include h-5-16-pt-b();
+      }
       text-align: center;
       color: var(--black);
-      a{
+      a {
         color: var(--black);
+        display: block;
+        width: 100%;
+        white-space: break-spaces;
       }
     }
-    &-description{
+    &-description {
       @include body-15-pt-r();
     }
-    &-rate{
-      i{
+    &-rate {
+      i {
         font-size: 12px;
         color: var(--primary---yellow---2);
       }
     }
-    &-sale-price{
+    &-sale-price {
       @include h-6-title-15-pt-b();
       color: var(--badge);
     }
-    &-retail-price{
+    &-retail-price {
       @include tiny-cost-13-r();
       color: var(--text-hidden);
     }
   }
-  &-footer{
-    &-hot{
-      &-text{
+  &-footer {
+    &-hot {
+      &-text {
         @include h-6-title-15-pt-b();
         color: var(--primary-orange);
       }
     }
   }
 }
-.progress{
+.progress {
   --#{$prefix}progress-height: 10px;
   --#{$prefix}border-radius: 5px;
-  --#{$prefix}progress-bg: rgba(255, 180, 11, 0.50);
+  --#{$prefix}progress-bg: rgba(255, 180, 11, 0.5);
 }
-.progress-bar{
-  --#{$prefix}progress-bar-bg: linear-gradient(94deg, #FF370B 3.64%, #FF8F0B 90.42%);
+.progress-bar {
+  --#{$prefix}progress-bar-bg: linear-gradient(
+    94deg,
+    #ff370b 3.64%,
+    #ff8f0b 90.42%
+  );
   background: var(--#{$prefix}progress-bar-bg);
   height: var(--#{$prefix}progress-height);
   border-top-right-radius: var(--#{$prefix}border-radius);
-  border-bottom-right-radius:var(--#{$prefix}border-radius);
+  border-bottom-right-radius: var(--#{$prefix}border-radius);
 }
