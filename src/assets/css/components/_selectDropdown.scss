@@ -13,29 +13,3 @@
     }
   }
 }
-//test
-//see more
-.content {
-  max-height: 100px;
-  overflow: hidden;
-}
-
-.btn-see-more {
-  cursor: pointer;
-  color: blue;
-}
-//active item
-.item {
-  cursor: pointer;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-}
-
-.item.active {
-  background-color: lightgreen;
-}
-
-.item-icon {
-  margin-right: 5px;
-}
