@@ -1,17 +1,18 @@
-@import './fonts/index.scss';
-@import './colors/index.scss';
-@import './settings/variable';
-@import './library/scss/bootstrap.scss';
-@import './settings/utils';
-@import './components/index.scss';
-@import './containers/index.scss';
+@import "./fonts/index.scss";
+@import "./colors/index.scss";
+@import "./settings/variable";
+@import "./library/scss/bootstrap.scss";
+@import "./settings/utils";
+@import "./components/index.scss";
+@import "./containers/index.scss";
+@import "./pages/index.scss";
 
 //Exxample component
 //see more
 .content {
   max-height: 100px;
   overflow: hidden;
-  &.active{
+  &.active {
     max-height: none;
   }
 }
@@ -21,7 +22,7 @@
   color: blue;
 }
 //active item
-#itemsContainer{
+#itemsContainer {
   .item-list {
     cursor: pointer;
     padding: 5px;
@@ -36,5 +37,4 @@
   .item-icon {
     margin-right: 5px;
   }
-
 }

@@ -3,25 +3,25 @@ extends includes/layouts/Guest.pug
 block pages
      include ./includes/containers/Banner
      section.Category.has-bg
-        +HeadingCard({title: "Danh mục sản phẩm", className: 'justify-content-center H0-24-B-heading-card', isViewAll: false})
+        +HeadingCard({title: "Danh mục sản phẩm", className: 'justify-content-center H0-24-B-heading-card Category-title', isViewAll: false})
         .container
           .Category-wrapper.row
             each item in [1,2,3,4,5]
-              .Category-wrapper-item
+              .Category-wrapper-item.col-lg-2.col-md-4.col-6
                 +CardComponent({
                   url: './assets/images/image-card-gif.jpg',
                   imageType: 'rounded-circle',
                   title: 'Sách giấy',
                   description: '3,420 sách',
-                  classTitle: 'mt-theme-4 mb-theme-4'
+                  classTitle: 'mt-theme-4 mb-theme-4 '
                 })
 
      section.Category
-      +HeadingCard({title: "Dịch vụ", className: 'justify-content-center H0-24-B-heading-card', isViewAll: false})
+      +HeadingCard({title: "Dịch vụ", className: 'justify-content-center H0-24-B-heading-card Category-title', isViewAll: false})
       .container
-        .Category-wrapper.row
+        .Category-wrapper.row.mobile-scroll
           each item in [1,2,3,4,5]
-            .Category-wrapper-item
+            .Category-wrapper-item.col-lg-2.col-md-4.col-6
               +CardComponent({
                 url: './assets/images/image-card-service.png',
                 imageType: 'rounded-circle',
@@ -40,7 +40,7 @@ block pages
           .col-12
             +HeadingCard({title: "Top sách giấy bán chạy", className: 'justify-content-between mt-theme-6 mb-theme-6', isViewAll: true})
           .col-12
-            #carouselFlashSale.owl-carousel
+            #carouselFlashSale.owl-carousel.mobile-disable-carousel
               .item
                 +CardComponent({
                   url: './assets/images/image-book-thumbnail.png',
@@ -114,7 +114,7 @@ block pages
                 isViewAll: true
               })
             .col-12
-              #carouselFlashSale01.owl-carousel
+              #carouselFlashSale01.owl-carousel.mobile-disable-carousel
                 .item
                   +CardComponent({
                     url: './assets/images/image-book-thumbnail.png',
@@ -188,7 +188,7 @@ block pages
               isViewAll: true
             })
           .col-12
-            #carouselFlashSale02.owl-carousel
+            #carouselFlashSale02.owl-carousel.mobile-disable-carousel
               .item
                 +CardComponent({
                   url: './assets/images/image-book-thumbnail.png',
