@@ -1,7 +1,5 @@
 window.onload = () => {
   carousel.init()
-  seeMore.init()
-  activeItem.init()
 };
 
 const loading = {
@@ -196,47 +194,6 @@ const carousel = {
     })
   },
 }
-const seeMore = {
-  init:function (){
-    this.seeMore()
-  },
-  seeMore:function (){
-     const TableWrapper = document.querySelector('.BookDetail-table');
-     let isExpand = false;
-     if(TableWrapper == null) return;
-     TableWrapper.addEventListener('click', (event) => {
-       const clicked = event.target;
-       if(clicked.classList.contains('see-full') && !isExpand){
-         clicked.closest('.BookDetail-table').classList.add('active');
-         clicked.innerText = "Thu gọn"
-       } else if(clicked.classList.contains('see-full') && isExpand){
-         clicked.closest('.BookDetail-table').classList.remove('active');
-         clicked.innerText = "Xem đầy đủ"
-       }
-       isExpand = !isExpand;
-     })
-  },
-}
-const activeItem = {
-  init:function (){
-    this.activeItem()
-  },
-  activeItem: function (){
-      const wrapper = document.querySelector('.BookDetail-suggest')
-      const item = document.querySelectorAll('.BookDetail-suggest-wrapper .BookDetail-suggest-wrapper-item')
-      wrapper && wrapper.addEventListener('click', (e) => {
-        const clicked = e.target;
-        item.forEach((element) => element.classList.remove('active'))
-        if(clicked.classList.contains('BookDetail-suggest-wrapper-item')){
-          clicked.classList.add('active')
-        } else {
-          if(clicked.classList.contains('ebook-text')){
-            clicked.closest('.BookDetail-suggest-wrapper-item').classList.add('active')
-          }
-        }
-      })
-  }
-}
 
 function SelectDropdown(optional){
   const customSelect = document.getElementById(optional.select);
@@ -299,18 +256,20 @@ function SeeMoreComponent(contentId, seeMoreBtnId) {
   let isExpanded = false;
 
   function toggleContent() {
-    if (isExpanded) {
-      content.style.maxHeight = '100px';
-      seeMoreBtn.textContent = 'See More';
+    if (!isExpanded) {
+      content.classList.remove('active')
+      seeMoreBtn.querySelector('span').textContent = "Xem đầy đủ"
     } else {
-      content.style.maxHeight = 'none';
-      seeMoreBtn.textContent = 'See Less';
+      if(seeMoreBtn){
+        content.classList.add('active')
+        seeMoreBtn.querySelector('span').textContent = "Thu gọn"
+      }
     }
     isExpanded = !isExpanded;
   }
 
   function setupEventListeners() {
-    seeMoreBtn.addEventListener('click', toggleContent);
+    seeMoreBtn && seeMoreBtn.addEventListener('click', toggleContent);
   }
 
   if(content){
@@ -322,7 +281,7 @@ function SeeMoreComponent(contentId, seeMoreBtnId) {
 }
 function ActiveItemsComponent(container) {
   const itemsContainer = document.getElementById(container.containerItem);
-  const items = itemsContainer && itemsContainer.querySelectorAll('.item');
+  const items = itemsContainer && itemsContainer.querySelectorAll('.item-list');
   let activeItem = null;
 
   function setActiveItem(item) {
@@ -342,6 +301,9 @@ function ActiveItemsComponent(container) {
   setActiveItem(items?.[0]);
 }
 new ActiveItemsComponent({
+  containerItem: 'BookDetail-choose'
+})
+new ActiveItemsComponent({
   containerItem: 'itemsContainer'
 })
 new SelectDropdown({
@@ -351,3 +313,4 @@ new SelectDropdown({
 });
 new QuantityControl('product')
 new SeeMoreComponent('content', 'seeMoreBtn');
+new SeeMoreComponent('see-more', 'seeBtn');
