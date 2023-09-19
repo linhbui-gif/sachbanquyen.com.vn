@@ -1,1 +1,11 @@
-.Header {}
+.header {
+  &-top{
+    &-wrapper{
+      &-logo{
+        img{
+          width: unset;
+        }
+      }
+    }
+  }
+}
