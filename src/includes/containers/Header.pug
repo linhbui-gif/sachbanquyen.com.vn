@@ -8,7 +8,21 @@ header
           .input-group.mb-3
             include ../components/SelectDropdown.pug
             input.form-control(type='text' aria-label='Text input with dropdown button')
-
+        .header-top-wrapper-action
+          .header-top-wrapper-action-item.calling
+            .header-top-wrapper-action-item-phone
+              img(src="../../assets/icons/call-calling.svg" alt="#")
+            .header-top-wrapper-action-item-text
+              span HotLine
+              p 0904506621
+          .header-top-wrapper-action-item
+            a(href="#").header-top-wrapper-action-item-cart
+               img(src="../../assets/icons/shopping-cart.svg" alt="#")
+               span Giỏ hàng
+          .header-top-wrapper-action-item
+            a(href="#").header-top-wrapper-action-item-cart
+              img(src="../../assets/icons/profile-circle.svg" alt="#")
+              span Tài khoản
   nav.header-menu
     .container
        .header-menu-wrapper.d-flex.justify-content-between
