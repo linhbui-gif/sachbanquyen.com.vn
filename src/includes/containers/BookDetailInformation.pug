@@ -1,24 +1,6 @@
 .row
   .col-lg-6
-    .BookDetail-gallery
-      .BookDetail-gallery-thumbnail
-        .BookDetail-gallery-thumbnail-carousel#myCarousel.f-carousel
-          a.f-carousel__slide( href="./assets/images/image-book-cover-detail.png" data-thumb-src='./assets/images/image-book-cover-detail-small.png' data-fancybox="gallery")
-            img(width="100%" alt='' data-lazy-src='./assets/images/image-book-cover-detail.png')
-            span
-              img(src="./assets/images/image-badge-cover.png")
-          a.f-carousel__slide( href="https://lipsum.app/id/35/640x480" data-thumb-src='https://lipsum.app/id/35/192x144' data-fancybox="gallery")
-            img(width="100%" alt='' data-lazy-src='https://lipsum.app/id/35/640x480')
-          a.f-carousel__slide( href="https://lipsum.app/id/34/640x480" data-thumb-src='https://lipsum.app/id/34/192x144' data-fancybox="gallery")
-            img(width="100%" alt='' data-lazy-src='https://lipsum.app/id/34/640x480')
-          a.f-carousel__slide( href="https://lipsum.app/id/60/640x480" data-thumb-src='https://lipsum.app/id/60/192x144' data-fancybox="gallery")
-            img(width="100%" alt='' data-lazy-src='https://lipsum.app/id/60/640x480')
-          a.f-carousel__slide( href="https://lipsum.app/id/33/640x480" data-thumb-src='https://lipsum.app/id/33/192x144' data-fancybox="gallery")
-            img(width="100%" alt='' data-lazy-src='https://lipsum.app/id/33/640x480')
-          a.f-carousel__slide( href="https://lipsum.app/id/59/640x480" data-thumb-src='https://lipsum.app/id/59/192x144' data-fancybox="gallery")
-            img(width="100%" alt='' data-lazy-src='https://lipsum.app/id/59/640x480')
-          a.f-carousel__slide( href="https://lipsum.app/id/37/640x480" data-thumb-src='https://lipsum.app/id/37/192x144' data-fancybox="gallery")
-            img(width="100%" alt='' data-lazy-src='https://lipsum.app/id/37/640x480')
+    include ../containers/BookDetailGallery.pug
     .BookDetail-action.d-flex.mt-theme-30
         button.btn.btn-success.mr-theme-4.w-100 Đọc ngay (153 ngày)
         button.btn.btn-primary.ml-theme-4.w-100 Nghe ngay (13 ngày)

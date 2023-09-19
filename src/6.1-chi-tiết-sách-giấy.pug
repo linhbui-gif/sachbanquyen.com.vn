@@ -22,6 +22,68 @@ block pages
                   title: 'Làm Chủ Cơn Giận',
                   description: 'Tác giả',
                   classTitle: 'mt-theme-4 mb-theme-4',
+                  price: true,
+                })
+              .item
+                +CardComponent({
+                  url: './assets/images/image-book-thumbnail-1.png',
+                  title: 'Làm Chủ Cơn Giận',
+                  description: 'Tác giả',
+                  classTitle: 'mt-theme-4 mb-theme-4',
+                  price: true,
+                })
+              .item
+                +CardComponent({
+                  url: './assets/images/image-book-thumbnail-2.png',
+                  title: 'Làm Chủ Cơn Giận',
+                  description: 'Tác giả',
+                  classTitle: 'mt-theme-4 mb-theme-4',
+                  price: true,
+                })
+              .item
+                +CardComponent({
+                  url: './assets/images/image-book-thumbnail-3.png',
+                  title: 'Làm Chủ Cơn Giận',
+                  description: 'Tác giả',
+                  classTitle: 'mt-theme-4 mb-theme-4',
+                  price: true,
+                })
+              .item
+                +CardComponent({
+                  url: './assets/images/image-book-thumbnail-3.png',
+                  title: 'Làm Chủ Cơn Giận',
+                  description: 'Tác giả',
+                  classTitle: 'mt-theme-4 mb-theme-4',
+                  price: true,
+                })
+              .item
+                +CardComponent({
+                  url: './assets/images/image-book-thumbnail.png',
+                  title: 'Làm Chủ Cơn Giận',
+                  description: 'Tác giả',
+                  classTitle: 'mt-theme-4 mb-theme-4',
+                  price: true,
+                })
+    section.BookDetail-bottom
+      .container
+        .row
+          .col-lg-9
+            include ./includes/containers/BookDetailWrapper.pug
+            include ./includes/containers/BookDetailPublishInformation.pug
+            include ./includes/containers/BookDetailTab.pug
+            include ./includes/components/Comment.pug
+            +HeadingCard({
+              title: "SÁCH CÙNG CHỦ ĐỀ",
+              className: 'justify-content-between mt-theme-6 mb-theme-6',
+              isViewAll: false
+            })
+            #carouselBookSameCategory.owl-carousel
+              .item
+                +CardComponent({
+                  url: './assets/images/image-book-thumbnail.png',
+                  title: 'Làm Chủ Cơn Giận',
+                  description: 'Tác giả',
+                  classTitle: 'mt-theme-4 mb-theme-4',
                   isRate: true,
                   price: true,
                   footer: true,
@@ -79,12 +141,7 @@ block pages
                   footer: true,
                   isSale: true
                 })
-    section.BookDetail-bottom
-      .container
-        .row
-          .col-lg-9
-            //include ./includes/components/Comment.pug
-            include ./includes/containers/BookDetailWrapper.pug
-            include ./includes/containers/BookDetailPublishInformation.pug
-            include ./includes/containers/BookDetailTab.pug
           .col-lg-3
+            aside
+              +ListGroupComponent({isAccordion: true, name: "CHỦ ĐỀ", isSeeMore:false})
+              +ListGroupComponent({isAccordion: false, name: "TÁC GIẢ", className: 'mt-theme-30',isSeeMore:true})
