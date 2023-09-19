@@ -1,6 +1,14 @@
 header
   .header-top
     .container
+      .header-top-wraper
+        .header-top-wrapper-logo
+          img(src="../../assets/images/image-logo.png" width="142" alt="")
+        .header-top-wrapper-search
+          .input-group.mb-3
+            include ../components/SelectDropdown.pug
+            input.form-control(type='text' aria-label='Text input with dropdown button')
+
   nav.header-menu
     .container
        .header-menu-wrapper.d-flex.justify-content-between
