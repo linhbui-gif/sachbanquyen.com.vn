@@ -78,10 +78,11 @@
       align-items: center;
       gap: 4px;
       color: var(--Icon, #54555b);
-      position: absolute;
       bottom: 0;
       left: 0;
-
+      &.absolute {
+        position: absolute;
+      }
       @media (max-width: 1200px) {
         bottom: -32px;
       }
