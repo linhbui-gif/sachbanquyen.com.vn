@@ -4,15 +4,55 @@
 .BookDetail{
   &-gallery{
     &-thumbnail{
-      &-carousel{
-        .f-carousel__slide{
-          span{
-            position: absolute;
-            top: 0;
-            width: 100%;
-            left: 0;
-          }
+      &-nav{
+        width: 30%;
+        img{
+          border-radius: 5px;
         }
+        //.owl-item.active{
+        //
+        //  img{
+        //    border: 1px solid var(--primary);
+        //  }
+        //}
+      }
+      &-image{
+        width: 74px;
+        height: 74px;
+        img{
+          position: absolute;
+
+        }
+        &-overlay{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.75);
+          z-index: 9;
+          color: white;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          display: flex;
+          line-height: 150%;
+          align-items: center;
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+      &-icon{
+        .BookDetail-suggest-wrapper-item{
+          padding: 9px;
+        }
+      }
+      &-carousel-background{
+        top: 0;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
     }
   }

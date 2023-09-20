@@ -1,11 +1,34 @@
 .BookDetail-gallery
   .BookDetail-gallery-thumbnail
-    .BookDetail-gallery-thumbnail-carousel#myCarousel.f-carousel
-      a.f-carousel__slide( href="./assets/images/image-book-cover-detail.png" data-thumb-src='./assets/images/image-book-cover-detail-small.png' data-fancybox="gallery")
-        img(width="100%" alt='' data-lazy-src='./assets/images/image-book-cover-detail.png')
-        span
+    .BookDetail-gallery-thumbnail-carousel#big.owl-carousel.owl-theme
+      a.item.position-relative(href="./assets/images/image-book-cover-detail.png" data-thumb-src='./assets/images/image-book-cover-detail-small.png' data-fancybox="gallery")
+        img(src='./assets/images/image-book-cover-detail.png')
+        span.BookDetail-gallery-thumbnail-carousel-background
           img(src="./assets/images/image-badge-cover.png")
-      a.f-carousel__slide( href="./assets/images/image-book-cover-detail-1.png" data-thumb-src='./assets/images/image-book-cover-detail-small-1.png' data-fancybox="gallery")
-        img(width="100%" alt='' data-lazy-src='./assets/images/image-book-cover-detail-1.png')
-        span
+      a.item.position-relative(href="./assets/images/image-book-cover-detail-1.png" data-thumb-src='./assets/images/image-book-cover-detail-small-1.png' data-fancybox="gallery")
+        img(src='./assets/images/image-book-cover-detail-1.png')
+        span.BookDetail-gallery-thumbnail-carousel-background
           img(src="./assets/images/image-badge-cover.png")
+      a.item.position-relative(href="./assets/images/image-book-cover-detail-2.png" data-thumb-src='./assets/images/image-book-cover-detail-small-2.png' data-fancybox="gallery")
+        img(src='./assets/images/image-book-cover-detail-2.png')
+        span.BookDetail-gallery-thumbnail-carousel-background
+          img(src="./assets/images/image-badge-cover.png")
+    div.d-flex.mt-theme-30.pl-theme-2
+      .BookDetail-gallery-thumbnail-nav
+        #thumbs.owl-carousel.owl-theme
+          .item
+            img(src="./assets/images/image-book-cover-detail-small.png" width="80")
+          .item
+            img(src="./assets/images/image-book-cover-detail-small-1.png" width="80")
+          .item
+            img(src="./assets/images/image-book-cover-detail-small-2.png" width="80")
+      a(href="./assets/images/image-book-cover-detail.png" data-thumb-src='./assets/images/image-book-cover-detail-small.png' data-fancybox="gallery").BookDetail-gallery-thumbnail-image.ml-theme-15.position-relative
+        img(src="./assets/images/image-thumbnail-smallx.png" width="74" height="74")
+        .BookDetail-gallery-thumbnail-image-overlay Xem thêm hình ảnh
+      .BookDetail-gallery-thumbnail-icon.ml-theme-15.d-flex
+        a(href="https://nxbxaydung.com.vn/ebook/10797" target="_blank").BookDetail-suggest-wrapper-item.item-list.d-block
+          img(src="../../assets/icons/icon-book.svg" alt="" width="30" height="30")
+          span.mt-theme-4.ebook-text Đọc thử
+        a(href="https://nxbxaydung.com.vn/ebook/10797" target="_blank").BookDetail-suggest-wrapper-item.item-list.d-block
+          img(src="../../assets/icons/icon-audio.svg" alt="" width="30" height="30")
+          span.mt-theme-4.ebook-text Nghe thử

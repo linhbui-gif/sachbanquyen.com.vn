@@ -1,0 +1,19 @@
+header.is-mobile
+  .container
+    .header-mobile.d-flex.align-items-center.justify-content-between
+      a(href="/").header-mobile-logo
+        img(src="../../assets/images/image-logo.png" width="120" alt="")
+      .header-mobile-action.d-flex.align-items-center
+        .header-mobile-action-item
+          img(src="../../assets/icons/shopping-cart.svg" alt="#")
+        .header-mobile-action-item
+          img(src="../../assets/icons/profile-circle.svg" alt="#")
+        .header-mobile-action-item.bars
+          img(src="../../assets/icons/menu.svg" alt="#")
+    .header-mobile-search
+      .input-group
+        +SelectDropdownCustom({idSelect: 'selectInputMobile', idOptions: 'optionInputMobile', data: dataDropdownSearch})
+        input.form-control(type='text' placeholder="Nhập từ khóa tìm kiếm" aria-label='Text input with dropdown button')
+        span.icon-search
+          img(src="../../assets/icons/search-normal.svg" alt="")
+

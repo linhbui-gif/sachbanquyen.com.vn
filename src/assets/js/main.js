@@ -33,6 +33,7 @@ const carousel = {
         items: 2,
         nav: false,
         dots: false,
+        margin: 15
       });
       $("#thumbs").on("click", ".owl-item", function (e) {
         e.preventDefault();
@@ -241,7 +242,7 @@ const carousel = {
       lazyLoad: true,
       dots: false,
       nav: true,
-      margin: 7.5,
+      margin: 15,
       navText: [
         '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
         '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
@@ -252,7 +253,6 @@ const carousel = {
 
 function SelectDropdown(optional) {
   const customSelect = document.getElementById(optional.select);
-  console.log('customSelect', customSelect)
   const customOptions = document.getElementById(optional.options);
   customSelect && customSelect.addEventListener('click', () => {
     customOptions.classList.toggle('active')
@@ -370,6 +370,10 @@ new SelectDropdown({
 new SelectDropdown({
   select: 'selectInput',
   options: 'optionInput',
+});
+new SelectDropdown({
+  select: 'selectInputMobile',
+  options: 'optionInputMobile',
 });
 new QuantityControl('product')
 new QuantityControl('BookDetail-data-item-quantity')
