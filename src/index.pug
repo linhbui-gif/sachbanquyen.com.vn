@@ -3,11 +3,11 @@ extends includes/layouts/Guest.pug
 block pages
      include ./includes/containers/Banner
      section.Category.has-bg
-        +HeadingCard({title: "Danh mục sản phẩm", className: 'justify-content-center H0-24-B-heading-card Category-title', isViewAll: false})
+        +HeadingCard({title: "Danh mục sản phẩm", className: 'justify-content-center H0-24-B-heading-card', isViewAll: false})
         .container
           .Category-wrapper.row
             each item in [1,2,3,4,5]
-              .Category-wrapper-item.col-lg-2.col-md-4.col-6
+              .Category-wrapper-item
                 +CardComponent({
                   url: './assets/images/image-card-gif.jpg',
                   imageType: 'rounded-circle',
@@ -17,11 +17,11 @@ block pages
                 })
 
      section.Category
-      +HeadingCard({title: "Dịch vụ", className: 'justify-content-center H0-24-B-heading-card Category-title', isViewAll: false})
+      +HeadingCard({title: "Dịch vụ", className: 'justify-content-center H0-24-B-heading-card', isViewAll: false})
       .container
-        .Category-wrapper.row.mobile-scroll
+        .Category-wrapper.row.scroll-mobile
           each item in [1,2,3,4,5]
-            .Category-wrapper-item.col-lg-2.col-md-4.col-6
+            .Category-wrapper-item.mb-3.mb-xl-0
               +CardComponent({
                 url: './assets/images/image-card-service.png',
                 imageType: 'rounded-circle',
@@ -255,7 +255,7 @@ block pages
      section.banner-two.pt-theme-60.pb-theme-60
        .container
          .row
-           .col-lg-6
+           .col-lg-6.col-md-6.mb-3.mb-md-0
              img(src="./assets/images/image-banner-large.png")
-           .col-lg-6
+           .col-lg-6.col-md-6.mb-3.mb-md-0
              img(src="./assets/images/image-banner-large.png")
