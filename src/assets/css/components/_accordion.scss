@@ -1,5 +1,5 @@
-#accordionFlushExample{
-  .accordion-item{
+.accordion{
+  &-item{
     &:first-of-type {
       @include border-top-radius(0);
 
@@ -12,7 +12,7 @@
       border-bottom-left-radius: unset;
     }
   }
-  .accordion-body{
+  &-body{
     padding: 0;
     &-children{
       margin-bottom: 0;
@@ -52,7 +52,7 @@
       }
     }
   }
-  .accordion-button{
+  &-button{
     &:not(.collapsed){
       color: unset;
       background-color: unset;

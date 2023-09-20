@@ -20,21 +20,32 @@ const carousel = {
     this.setupBookSameCategory()
   },
   setupBookDetail: function () {
-    const container = document.getElementById("myCarousel");
-    const options = {
-      Dots: false,
-      Thumbs: {
-        type: "classic",
-      },
-    };
-    if (container !== null){
-      new Carousel(container, options, { Thumbs });
-      Fancybox.bind("[data-fancybox]", {
-        Thumbs : {
-          type: "classic"
-        }
+    $(document).ready(function() {
+      $("#big").owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 10,
+        nav: false,
+        dots: false,
       });
-    }
+
+      $("#thumbs").owlCarousel({
+        items: 2,
+        nav: false,
+        dots: false,
+      });
+      $("#thumbs").on("click", ".owl-item", function (e) {
+        e.preventDefault();
+        var thumbnailIndex = $(this).index();
+        $("#big").trigger("to.owl.carousel", [thumbnailIndex, 300]);
+      });
+        Fancybox.bind("[data-fancybox]", {
+          Thumbs: {
+            type: "classic",
+          },
+        })
+    });
+
   },
   setupHomeBannerCarousel: function () {
     $("#carouselHome").owlCarousel({
@@ -65,10 +76,17 @@ const carousel = {
         0: {
           items: 2,
           slideBy: 2,
+          margin: 10,
         },
-        991: {
+        768: {
+          items: 3,
+          slideBy: 3,
+          margin: 10,
+        },
+        1200: {
           items: 5,
           slideBy: 5,
+          margin: 10,
         },
       },
       loop: true,
@@ -93,9 +111,14 @@ const carousel = {
           items: 2,
           slideBy: 2,
         },
-        991: {
+        768: {
+          items: 3,
+          slideBy: 3,
+        },
+        1200: {
           items: 5,
           slideBy: 5,
+          margin: 10,
         },
       },
       loop: true,
@@ -120,9 +143,14 @@ const carousel = {
           items: 2,
           slideBy: 2,
         },
-        991: {
+        768: {
+          items: 3,
+          slideBy: 3,
+        },
+        1200: {
           items: 5,
           slideBy: 5,
+          margin: 10,
         },
       },
       loop: true,
