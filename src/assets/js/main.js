@@ -1,5 +1,5 @@
 window.onload = () => {
-  carousel.init();
+  carousel.init()
 };
 
 const loading = {
@@ -12,28 +12,40 @@ const carousel = {
   init: function () {
     this.setupBookDetail();
     this.setupHomeBannerCarousel();
-    this.setupFlashSaleBannerCarousel();
-    this.setupFlashSaleBannerCarousel01();
-    this.setupFlashSaleBannerCarousel02();
-    this.setupBookCategory();
-    this.setupBookSuggest();
+    this.setupFlashSaleBannerCarousel()
+    this.setupFlashSaleBannerCarousel01()
+    this.setupFlashSaleBannerCarousel02()
+    this.setupBookCategory()
+    this.setupBookSuggest()
+    this.setupBookSameCategory()
   },
   setupBookDetail: function () {
-    const container = document.getElementById("myCarousel");
-    const options = {
-      Dots: false,
-      Thumbs: {
-        type: "classic",
-      },
-    };
-    if (container !== null) {
-      new Carousel(container, options, { Thumbs });
-      Fancybox.bind("[data-fancybox]", {
-        Thumbs: {
-          type: "classic",
-        },
+    $(document).ready(function() {
+      $("#big").owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 10,
+        nav: false,
+        dots: false,
       });
-    }
+
+      $("#thumbs").owlCarousel({
+        items: 2,
+        nav: false,
+        dots: false,
+      });
+      $("#thumbs").on("click", ".owl-item", function (e) {
+        e.preventDefault();
+        var thumbnailIndex = $(this).index();
+        $("#big").trigger("to.owl.carousel", [thumbnailIndex, 300]);
+      });
+        Fancybox.bind("[data-fancybox]", {
+          Thumbs: {
+            type: "classic",
+          },
+        })
+    });
+
   },
   setupHomeBannerCarousel: function () {
     $("#HomeBanner-top").owlCarousel({
@@ -64,10 +76,17 @@ const carousel = {
         0: {
           items: 2,
           slideBy: 2,
+          margin: 10,
         },
-        991: {
+        768: {
+          items: 3,
+          slideBy: 3,
+          margin: 10,
+        },
+        1200: {
           items: 5,
           slideBy: 5,
+          margin: 10,
         },
       },
       loop: true,
@@ -78,7 +97,7 @@ const carousel = {
       lazyLoad: true,
       dots: false,
       nav: true,
-      margin: 15,
+      margin: 0,
       navText: [
         '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
         '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
@@ -92,7 +111,11 @@ const carousel = {
           items: 2,
           slideBy: 2,
         },
-        991: {
+        768: {
+          items: 3,
+          slideBy: 3,
+        },
+        1200: {
           items: 5,
           slideBy: 5,
         },
@@ -105,7 +128,7 @@ const carousel = {
       lazyLoad: true,
       dots: false,
       nav: true,
-      margin: 15,
+      margin: 0,
       navText: [
         '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
         '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
@@ -119,9 +142,14 @@ const carousel = {
           items: 2,
           slideBy: 2,
         },
-        991: {
+        768: {
+          items: 3,
+          slideBy: 3,
+        },
+        1200: {
           items: 5,
           slideBy: 5,
+          margin: 10,
         },
       },
       loop: true,
@@ -132,7 +160,7 @@ const carousel = {
       lazyLoad: true,
       dots: false,
       nav: true,
-      margin: 15,
+      margin: 7.5,
       navText: [
         '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
         '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
@@ -164,7 +192,7 @@ const carousel = {
         '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
         '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
       ],
-    });
+    })
   },
   setupBookSuggest: function () {
     $("#carouselBookSuggest").owlCarousel({
@@ -191,31 +219,56 @@ const carousel = {
         '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
         '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
       ],
+    })
+  },
+  setupBookSameCategory: function () {
+    $("#carouselBookSameCategory").owlCarousel({
+      responsive: {
+        0: {
+          items: 2,
+          slideBy: 2,
+        },
+        991: {
+          items: 4,
+          slideBy: 4,
+        },
+      },
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: false,
+      smartSpeed: 300,
+      lazyLoad: true,
+      dots: false,
+      nav: true,
+      margin: 7.5,
+      navText: [
+        '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
+        '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+      ],
     });
   },
 };
 
 function SelectDropdown(optional) {
   const customSelect = document.getElementById(optional.select);
+  console.log('customSelect', customSelect)
   const customOptions = document.getElementById(optional.options);
-  customSelect &&
-    customSelect.addEventListener("click", () => {
-      customOptions.classList.toggle("active");
-    });
-  customOptions &&
-    customOptions.addEventListener("click", (e) => {
-      if (e.target.classList.contains("option")) {
-        const selectedOption = e.target;
-        const selectedValue = selectedOption.getAttribute("data-value");
-        customSelect.querySelector("." + optional.label).textContent =
-          selectedOption.textContent;
-        customOptions.classList.remove("active");
-        console.log("Selected Value:", selectedValue);
-      }
-    });
-  document.addEventListener("click", (e) => {
-    if (!customSelect.contains(e.target)) {
-      customOptions.classList.remove("active");
+  customSelect && customSelect.addEventListener('click', () => {
+    customOptions.classList.toggle('active')
+  });
+  customOptions && customOptions.addEventListener('click', (e) => {
+    if (e.target.classList.contains('option')) {
+      const selectedOption = e.target;
+      const selectedValue = selectedOption.getAttribute('data-value');
+      customSelect.querySelector('.Select-label').textContent = selectedOption.textContent;
+      customOptions.classList.remove('active')
+      console.log('Selected Value:', selectedValue);
+    }
+  });
+  document.addEventListener('click', (e) => {
+    if (customSelect && !customSelect.contains(e.target)) {
+      customOptions.classList.remove('active')
     }
   });
 }
@@ -311,10 +364,15 @@ new ActiveItemsComponent({
   containerItem: "itemsContainer",
 });
 new SelectDropdown({
-  select: "customSelect",
-  options: "customOptions",
-  label: "Select-label",
+  select: 'customSelect',
+  options: 'customOptions',
 });
-new QuantityControl("product");
-new SeeMoreComponent("content", "seeMoreBtn");
-new SeeMoreComponent("see-more", "seeBtn");
+new SelectDropdown({
+  select: 'selectInput',
+  options: 'optionInput',
+});
+new QuantityControl('product')
+new QuantityControl('BookDetail-data-item-quantity')
+new SeeMoreComponent('content', 'seeMoreBtn');
+new SeeMoreComponent('see-more', 'seeBtn');
+new SeeMoreComponent('content-tab-see', 'seeAboutBtn');

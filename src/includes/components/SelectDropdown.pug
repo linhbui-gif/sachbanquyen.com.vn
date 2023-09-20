@@ -1,8 +1,8 @@
-.Select
-  .Select-style.d-flex#customSelect
-    h6.Select-label Select an options
-    i.fa.fa-angle-down
-  div.Select-options.shadow#customOptions
-    div.Select-option.option(data-value="1") 1 Tháng
-    div.Select-option.option(data-value="2") 2 Tháng
-    div.Select-option.option(data-value="3") 3 Tháng
+mixin SelectDropdownCustom({idSelect, idOptions, data = []})
+  .Select
+    .Select-style.d-flex.align-items-center.h-100.justify-content-center(id=`${idSelect ? idSelect : 'customSelect'}`)
+      h6.Select-label=data[0].name
+      i.fa.fa-caret-down.ml-theme-4
+    div.Select-options.shadow(id=`${idOptions ? idOptions : 'customOptions'}`)
+      each item in data
+        div.Select-option.option(data-value=`${item.value}`)=item.name
