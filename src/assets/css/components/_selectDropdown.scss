@@ -19,6 +19,7 @@
     border-radius: 5px;
     background-color: $white;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.10);
+    z-index: 99;
     @include bookname-15-pt-m();
     &.active{
       max-height: 100vh;

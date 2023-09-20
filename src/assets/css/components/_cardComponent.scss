@@ -47,6 +47,10 @@
         display: block;
         width: 100%;
         white-space: break-spaces;
+        @include title-card-18-pt-sm();
+        @media (max-width: 992px) {
+          @include h-5-16-pt-b();
+        }
       }
     }
     &-description {

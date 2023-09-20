@@ -1,4 +1,8 @@
 .accordion{
+  &.custom-icon{
+    --bs-accordion-btn-icon: url("../../assets/icons/add-cirlce.svg");
+    --bs-accordion-btn-active-icon:  url("../../assets/icons/minus-cirlce.svg");
+  }
   &-item{
     &:first-of-type {
       @include border-top-radius(0);
@@ -13,7 +17,9 @@
     }
   }
   &-body{
-    padding: 0;
+    &.no-padding{
+      padding: 0;
+    }
     &-children{
       margin-bottom: 0;
       &-item{
@@ -61,11 +67,5 @@
     &:focus{
       box-shadow: unset;
     }
-  }
-}
-.accordion {
-  @media (max-width: 768px) {
-    margin-left: -16px;
-    margin-right: -16px;
   }
 }
