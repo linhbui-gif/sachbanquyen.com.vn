@@ -1,0 +1,87 @@
+section.Cart
+  +HeadingCard({title: "Giỏ sách của bạn", className: '.Cart-title', isViewAll: false})
+  .Cart-wrapper
+    .row.d-flex.justify-content-center.Cart-heading
+      .col-1
+        label.checkbox
+          input(type='checkbox')
+          span.indicator
+      .col-6
+        h4.heading Tất cả (3 sách)
+      .col-5
+        .row.text-right
+          .col-5
+            h6.mt-2 Số lượng
+          .col-5
+            h6.mt-2 Thành tiền
+          .col-2
+            a(href='#').mt-2 
+              img(src="../../assets/images/image-delete-cart.png", alt="", srcset="")
+    .row.d-flex.justify-content-center.border-top.Cart-row
+      .col-1
+        label.checkbox
+          input(type='checkbox')
+          span.indicator
+      .col-6
+        .row.d-flex.Cart-card
+          .Cart-card-book
+            .Cart-card-book-cover 
+              img.book-img(src='https://i.imgur.com/Oj1iQUX.jpg')
+            .Cart-card-tag
+              img(src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAxMSAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wLjYxNjgxMyA4LjQwNTA5Qy0wLjIwNTYwNSA5LjA4MDY1IC0wLjIwNTYwNCAxMC4zMzkzIDAuNjE2ODE0IDExLjAxNDlMMTAuODQ5MSAxOS40MkwxMC44NDkxIDBMMC42MTY4MTMgOC40MDUwOVpNNS45OTk5OCAxMi4wMDAxQzcuMTA0NTUgMTIuMDAwMSA3Ljk5OTk4IDExLjEwNDYgNy45OTk5OCAxMC4wMDAxQzcuOTk5OTggOC44OTU0OSA3LjEwNDU1IDguMDAwMDYgNS45OTk5OCA4LjAwMDA2QzQuODk1NDEgOC4wMDAwNiAzLjk5OTk4IDguODk1NDkgMy45OTk5OCAxMC4wMDAxQzMuOTk5OTggMTEuMTA0NiA0Ljg5NTQxIDEyLjAwMDEgNS45OTk5OCAxMi4wMDAxWiIgZmlsbD0iIzJGNjlGRCIvPgo8L3N2Zz4K", alt="", srcset="")
+              span Sách giấy
+          .my-auto.flex-column.d-flex.pad-left.Cart-card-info
+            .Cart-card-heading Giáo trình Lí thuyết xác suất trong kinh tế và tài chính
+            .Cart-card-description Tác giả: TS. Nguyễn Mạnh Thế, TS. Phạm Ngọc Hưng, ThS. Bùi Dương Hải
+            .Cart-card-label 
+              span Đơn giá:
+              span.Cart-price
+                span 311.500
+                span.Cart-price-unit đ
+              span.Cart-price-old
+                span 311.500
+                span.Cart-price-old-unit đ
+      .col-5
+        .row.text-right
+          .col-5
+            +SelectDropdownCustom({data: dataBookDetail})
+          .col-5.Cart-price
+            span 311.500
+            span.Cart-price-unit đ
+          .col-2
+            a(href='#').mt-2 
+              img(src="../../assets/images/image-delete-cart.png", alt="", srcset="")
+    .row.d-flex.justify-content-center.border-top.Cart-row
+      .col-1
+        label.checkbox
+          input(type='checkbox')
+          span.indicator
+      .col-6
+        .row.d-flex.Cart-card
+          .Cart-card-book
+            .Cart-card-book-cover 
+              img.book-img(src='https://i.imgur.com/Oj1iQUX.jpg')
+            .Cart-card-tag
+              img(src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAxMSAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wLjYxNjgxMyA4LjQwNTA5Qy0wLjIwNTYwNSA5LjA4MDY1IC0wLjIwNTYwNCAxMC4zMzkzIDAuNjE2ODE0IDExLjAxNDlMMTAuODQ5MSAxOS40MkwxMC44NDkxIDBMMC42MTY4MTMgOC40MDUwOVpNNS45OTk5OCAxMi4wMDAxQzcuMTA0NTUgMTIuMDAwMSA3Ljk5OTk4IDExLjEwNDYgNy45OTk5OCAxMC4wMDAxQzcuOTk5OTggOC44OTU0OSA3LjEwNDU1IDguMDAwMDYgNS45OTk5OCA4LjAwMDA2QzQuODk1NDEgOC4wMDAwNiAzLjk5OTk4IDguODk1NDkgMy45OTk5OCAxMC4wMDAxQzMuOTk5OTggMTEuMTA0NiA0Ljg5NTQxIDEyLjAwMDEgNS45OTk5OCAxMi4wMDAxWiIgZmlsbD0iIzJGNjlGRCIvPgo8L3N2Zz4K", alt="", srcset="")
+              span Ebook
+          .my-auto.flex-column.d-flex.pad-left.Cart-card-info
+            .Cart-card-heading Giáo trình Lí thuyết xác suất trong kinh tế và tài chính
+            .Cart-card-description Tác giả: TS. Nguyễn Mạnh Thế, TS. Phạm Ngọc Hưng, ThS. Bùi Dương Hải
+            .Cart-card-label 
+              span Đơn giá:
+              span.Cart-price
+                span 311.500
+                span.Cart-price-unit đ
+              span.Cart-price-old
+                span 311.500
+                span.Cart-price-old-unit đ
+      .col-5
+        .row.text-right
+          .col-5
+            +SelectDropdownCustom({data: dataBookDetail})
+          .col-5.Cart-price
+            span 311.500
+            span.Cart-price-unit đ
+          .col-2
+            a(href='#').mt-2 
+              img(src="../../assets/images/image-delete-cart.png", alt="", srcset="")

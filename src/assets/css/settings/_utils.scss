@@ -39,15 +39,15 @@
     padding-bottom: $value;
   }
 }
-.bg-card-orange{
+.bg-card-orange {
   background: var(--bgcard);
 }
-img{
+img {
   width: 100%;
   display: block;
 }
 .mobile-disable-carousel {
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(sm) {
     .owl-nav {
       display: none;
     }
@@ -68,9 +68,8 @@ img{
       }
     }
   }
-
 }
 
-.slider-nav{
+.slider-nav {
   width: 30%;
 }
