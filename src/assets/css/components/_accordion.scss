@@ -7,11 +7,12 @@
         @include border-top-radius(0);
       }
     }
-    &:last-of-type{
+    &:last-of-type {
       border-bottom-right-radius: unset;
       border-bottom-left-radius: unset;
     }
   }
+  .accordion-body {
   &-body{
     padding: 0;
     &-children{
@@ -61,5 +62,11 @@
     &:focus{
       box-shadow: unset;
     }
+  }
+}
+.accordion {
+  @media (max-width: 768px) {
+    margin-left: -16px;
+    margin-right: -16px;
   }
 }

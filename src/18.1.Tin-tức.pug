@@ -10,7 +10,8 @@ block pages
              .col-12
                 .banner-single.news-banner
                     img(src="./assets/images/image-banner-single.png" alt="")
-                include ./includes/containers/News.pug
+                include ./includes/containers/NewsDetail.pug
+                include ./includes/components/Comment.pug
        .col-lg-3
             aside
                 +ListGroupComponent({ isAccordion:true, name:"CHỦ ĐỀ" })

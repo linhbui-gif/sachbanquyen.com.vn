@@ -1,0 +1,16 @@
+section.News
+  +HeadingCard({title: "Tất cả bài viết (32)", className: 'h-4-heading-card Category-title', isViewAll: false})
+  a(href='#').News-card-first 
+    img(src="../../assets/images/image-news.jpg", alt="", srcset="")
+    .News-card-first-wrapper
+      .News-card-first-title Thông báo tạm ngưng xử lý đơn hàng để kiểm kê kho
+      .News-card-first-description Nói về sự phát triển của văn hóa đọc trong những năm gần đây, ông Nguyễn Nguyên, Cục trưởng Cục Xuất bản, In và Phát hành, Phó Chủ tịch Hội Xuất bản Việt Nam cho biết, mặc dù còn gặp rất nhiều khó khăn, nhưng trong năm qua ngành xuất bản đã đạt được những thắng lợi có tính vượt bậc.
+      .News-card-first-label Cảm nhận sách | eBook
+  +CardNewsComponent({
+    url: './assets/images/image-card-news.jpg',
+    title: 'Thúc đẩy văn hóa đọc phát triển mạnh mẽ hơn nữa',
+    description: 'Nói về sự phát triển của văn hóa đọc trong những năm gần đây, ông Nguyễn Nguyên, Cục trưởng Cục Xuất bản, In và Phát hành, Phó Chủ tịch Hội Xuất bản Việt Nam cho biết, mặc dù còn gặp rất nhiều khó khăn, nhưng trong năm qua ngành xuất bản đã đạt được những thắng lợi có tính vượt bậc.',
+    date: '01/08/2023',
+    time: '14:26'
+  })
+  +Pagination()

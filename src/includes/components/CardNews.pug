@@ -1,0 +1,13 @@
+mixin CardNewsComponent({url, title, description, classTitle, time, date})
+   a(href="#").CardNewsComponent
+      .CardNewsComponent-image
+         img(src=`${url}` alt=`${title}`)
+      .CardNewsComponent-body.text-center
+         h3.CardNewsComponent-body-title=title
+         p.CardNewsComponent-body-description.text-center.mb-0=description
+         span.CardNewsComponent-body-label.absolute
+            img(src="./assets/icons/icon-clock.svg", alt="", srcset="")
+            span=date 
+            span |
+            span=time
+
