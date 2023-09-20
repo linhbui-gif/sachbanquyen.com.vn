@@ -89,7 +89,7 @@
         .BookDetail-data-item.d-flex.align-items-center
           span.BookDetail-data-item-text Chọn thời gian đọc:
           .BookDetail-data-item-time
-            include ../components/SelectDropdown.pug
+            +SelectDropdownCustom({data: dataBookDetail})
     .BookDetail-suggest
       h6.BookDetail-suggest-title Gợi ý cuốn sách này với định dạng khác
       .BookDetail-suggest-wrapper.d-flex.align-items-center.mt-theme-4#BookDetail-choose

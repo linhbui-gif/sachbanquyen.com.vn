@@ -164,7 +164,7 @@ const carousel = {
         '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
         '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
       ],
-    });
+    })
   },
   setupBookSuggest: function () {
     $("#carouselBookSuggest").owlCarousel({
@@ -197,6 +197,7 @@ const carousel = {
 
 function SelectDropdown(optional) {
   const customSelect = document.getElementById(optional.select);
+  console.log('customSelect', customSelect)
   const customOptions = document.getElementById(optional.options);
   customSelect && customSelect.addEventListener('click', () => {
     customOptions.classList.toggle('active')
@@ -205,7 +206,7 @@ function SelectDropdown(optional) {
     if (e.target.classList.contains('option')) {
       const selectedOption = e.target;
       const selectedValue = selectedOption.getAttribute('data-value');
-      customSelect.querySelector('.' + optional.label).textContent = selectedOption.textContent;
+      customSelect.querySelector('.Select-label').textContent = selectedOption.textContent;
       customOptions.classList.remove('active')
       console.log('Selected Value:', selectedValue);
     }
@@ -308,9 +309,12 @@ new ActiveItemsComponent({
   containerItem: "itemsContainer",
 });
 new SelectDropdown({
-  select: "customSelect",
-  options: "customOptions",
-  label: "Select-label",
+  select: 'customSelect',
+  options: 'customOptions',
+});
+new SelectDropdown({
+  select: 'selectInput',
+  options: 'optionInput',
 });
 new QuantityControl('product')
 new QuantityControl('BookDetail-data-item-quantity')
