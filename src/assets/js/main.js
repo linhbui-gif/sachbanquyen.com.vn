@@ -1,5 +1,5 @@
 window.onload = () => {
-  carousel.init();
+  carousel.init()
 };
 
 const loading = {
@@ -12,11 +12,12 @@ const carousel = {
   init: function () {
     this.setupBookDetail();
     this.setupHomeBannerCarousel();
-    this.setupFlashSaleBannerCarousel();
-    this.setupFlashSaleBannerCarousel01();
-    this.setupFlashSaleBannerCarousel02();
-    this.setupBookCategory();
-    this.setupBookSuggest();
+    this.setupFlashSaleBannerCarousel()
+    this.setupFlashSaleBannerCarousel01()
+    this.setupFlashSaleBannerCarousel02()
+    this.setupBookCategory()
+    this.setupBookSuggest()
+    this.setupBookSameCategory()
   },
   setupBookDetail: function () {
     const container = document.getElementById("myCarousel");
@@ -187,6 +188,33 @@ const carousel = {
       dots: false,
       nav: true,
       margin: 12,
+      navText: [
+        '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
+        '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+      ],
+    })
+  },
+  setupBookSameCategory: function () {
+    $("#carouselBookSameCategory").owlCarousel({
+      responsive: {
+        0: {
+          items: 2,
+          slideBy: 2,
+        },
+        991: {
+          items: 4,
+          slideBy: 4,
+        },
+      },
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: false,
+      smartSpeed: 300,
+      lazyLoad: true,
+      dots: false,
+      nav: true,
+      margin: 7.5,
       navText: [
         '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
         '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
