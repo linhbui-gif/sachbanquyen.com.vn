@@ -1,0 +1,4 @@
+mixin Radio({label: title, checked: checked, name: name, id: id})
+  .radio
+    input(type='radio', name=name, checked=checked ? 'checked' : '', id=id)
+    label.radio-label(for=id)= title
