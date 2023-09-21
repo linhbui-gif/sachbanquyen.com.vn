@@ -78,4 +78,12 @@ $btn-active-bg: #EE3D05;
     padding: 4px 12px;
     @include s-btn-15-pt-medium();
   }
+  &-outline-gray{
+    --#{$prefix}btn-hover-bg: var(--text-hidden);
+    --#{$prefix}btn-border-color: var(--text-hidden);
+    --#{$prefix}btn-hover-border-color: var(--text-hidden);
+    --#{$prefix}active-border-color: var(--text-hidden);
+    --#{$prefix}btn-active-bg:var(--text-hidden);
+    background: var(--text-hidden);
+  }
 }

@@ -1,8 +1,4 @@
 .list-group-item {
-  @media (max-width: 768px) {
-    margin-left: -16px;
-    margin-right: -16px;
-  }
   &.header {
     color: var(--#{$prefix}list-group-active-color);
     background-color: var(--#{$prefix}list-group-active-bg);

@@ -206,8 +206,8 @@ const carousel = {
           slideBy: 2,
         },
         991: {
-          items: 7,
-          slideBy: 7,
+          items: 6,
+          slideBy: 1,
         },
       },
       loop: true,
@@ -387,6 +387,23 @@ function ActiveItemsComponent(container) {
 
   setActiveItem(items?.[0]);
 }
+function ShowMenuMobile(){
+  const menuWrapper = document.querySelector('.menu-mobile');
+  const overlay = document.querySelector('.overlay-backdrop')
+  const button = document.querySelector('.header-mobile-action .bars')
+  button && button.addEventListener('click', () => {
+    menuWrapper.classList.add('active')
+    overlay.classList.add('active')
+  })
+  overlay && overlay.addEventListener('click', (ev) => {
+    const clicked = ev.target;
+    if(clicked.classList.contains('overlay-backdrop')){
+      clicked.classList.remove('active')
+      menuWrapper.classList.remove('active')
+    }
+  })
+}
+new ShowMenuMobile()
 new ActiveItemsComponent({
   containerItem: "BookDetail-choose",
 });

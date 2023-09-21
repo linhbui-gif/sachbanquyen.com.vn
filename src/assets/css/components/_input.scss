@@ -19,8 +19,8 @@
    @include body-15-pt-r();
    color: var(--black);
    border-radius: 5px;
-  padding: 12px 15px;
-  border: 1px solid var(--line3);
+    padding: 12px 15px;
+    border: 1px solid var(--line3);
   &:focus{
     box-shadow: unset;
     border-color: var(--line3);
@@ -29,5 +29,10 @@
     color: var(--text-hidden);
     // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
     opacity: 1;
+  }
+  &.has-bg{
+    border: unset;
+    background: var(--bginput);
+    padding: 8px;
   }
 }

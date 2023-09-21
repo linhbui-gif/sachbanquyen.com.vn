@@ -6,8 +6,30 @@
   background: white;
   height: 100%;
   z-index: 99;
-  display: none;
+  transition: .5s;
+  transform: translateX(100%);
+  overflow: scroll;
   @include media-breakpoint-down(lg){
-    display: block;
+    &.active{
+      transform: translateX(0);
+    }
+  }
+  .accordion-item{
+    border: unset;
+    border-bottom: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+  }
+}
+.overlay-backdrop{
+  position: fixed;
+  background: rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  &.active{
+    opacity: 1;
+    visibility: visible;
   }
 }
