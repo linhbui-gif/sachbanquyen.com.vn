@@ -25,6 +25,9 @@
 
   .pt-#{$commonTheme}-#{$key} {
     padding-top: $value;
+    @include media-breakpoint-down(md){
+      padding-top: $value / 2;
+    }
   }
 
   .pl-#{$commonTheme}-#{$key} {
@@ -37,6 +40,9 @@
 
   .pb-#{$commonTheme}-#{$key} {
     padding-bottom: $value;
+    @include media-breakpoint-down(md){
+      padding-bottom: calc($value / 2);
+    }
   }
 }
 .bg-card-orange {

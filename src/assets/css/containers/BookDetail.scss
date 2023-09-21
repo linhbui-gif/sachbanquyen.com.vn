@@ -6,6 +6,19 @@
     &-thumbnail{
       &-nav{
         width: 30%;
+        &.width-100{
+          border-radius: 5px;
+          border: 1px solid var(--line3);
+          width: 100%;
+          padding: 15px;
+          .owl-carousel{
+            .item{
+              border: 1px solid var(--line3);
+              padding: 8px;
+              border-radius: 5px;
+            }
+          }
+        }
         img{
           border-radius: 5px;
         }

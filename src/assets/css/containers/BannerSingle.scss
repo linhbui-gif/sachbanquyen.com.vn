@@ -1,6 +1,9 @@
 .banner-single{
   padding-top: 30px;
   padding-bottom: 60px;
+  @include media-breakpoint-down(md){
+    padding: 0;
+  }
   img{
     width: 100%;
     display: block;

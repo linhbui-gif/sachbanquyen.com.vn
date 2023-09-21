@@ -4,7 +4,7 @@ block pages
   .BookDetail
     .container
       include ./includes/components/Breadcrumb.pug
-      include ./includes/containers/BookDetailInformation
+      +BookDetailInformation({})
   section.top-sale.bg-card-orange
     .container
       .row
@@ -70,7 +70,7 @@ block pages
         .col-lg-9
           include ./includes/containers/BookDetailWrapper.pug
           include ./includes/containers/BookDetailPublishInformation.pug
-          include ./includes/containers/BookDetailTab.pug
+          +BookDetailTab({})
           include ./includes/components/Comment.pug
           +HeadingCard({
             title: "SÁCH CÙNG CHỦ ĐỀ",
