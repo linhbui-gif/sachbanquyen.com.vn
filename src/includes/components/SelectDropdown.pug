@@ -1,8 +1,0 @@
-mixin SelectDropdownCustom({idSelect, idOptions, data = []})
-  .Select
-    .Select-style.d-flex.align-items-center.h-100.justify-content-center(id=`${idSelect ? idSelect : 'customSelect'}`)
-      h6.Select-label=data[0].name
-      i.fa.fa-caret-down.ml-theme-4
-    div.Select-options.shadow(id=`${idOptions ? idOptions : 'customOptions'}`)
-      each item in data
-        div.Select-option.option(data-value=`${item.value}`)=item.name
