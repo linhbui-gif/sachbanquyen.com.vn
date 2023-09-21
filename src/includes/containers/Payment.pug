@@ -1,0 +1,14 @@
+section.Payment
+  +HeadingCard({title: "Thông tin nhận hàng", className: '.Payment-title', isViewAll: false})
+  .Payment-wrapper
+    form
+      +Radio({label: "Giao hàng tận nơi qua đối tác giao vận", checked: 'true', name: 'radio', id: 'radio-1'})
+      +Radio({label: "Tự lấy hàng - tại Kiốt 7, phố sách 19/12", checked: 'false', name: 'radio', id: 'radio-2'})
+    .note-info 
+      span img(src="../../assets/icons/warning-2.svg", alt="", srcset="")
+      span Phí ship tính theo đơn (không giới hạn số lượng sách) đồng giá miền Bắc 20k miền Trung 25k, miền Nam 30k. Không áp dụng phí với đơn tự lấy hàng.
+    hr
+    .Payment-wrapper-info 
+      .Payment-wrapper-info-title 
+        h5 Thông tin người nhận 
+        a Thay đổi
