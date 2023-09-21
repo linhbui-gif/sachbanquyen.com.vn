@@ -1,5 +1,18 @@
 .radio {
   margin: 0.5rem;
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+  padding: 14.5px 0;
+  &-label {
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+  }
+  img {
+    width: 24px;
+    height: 24px;
+  }
   input[type="radio"] {
     position: absolute;
     opacity: 0;

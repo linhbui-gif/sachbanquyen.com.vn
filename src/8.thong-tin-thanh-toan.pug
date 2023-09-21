@@ -4,14 +4,18 @@ block pages
     .container
         include ./includes/components/Breadcrumb.pug
         .row
-            .col-lg-9
+            .col-lg-8
                 section
                 .row
                     .col-12
                         include ./includes/containers/Payment.pug
-            .col-lg-3
+                    .col-12
+                        include ./includes/containers/PaymentMethod.pug
+                    .col-12
+                        +Cart({method: true})
+            .col-lg-4
                     aside
-                        include ./includes/containers/Bill.pug
+                        +Bill({method: true})
         section.top-sale
             .container
                 .row

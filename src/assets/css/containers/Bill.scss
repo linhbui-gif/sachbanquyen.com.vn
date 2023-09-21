@@ -24,9 +24,27 @@
   &-total {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px dashed var(--line-3, #eaeaea);
     padding-bottom: 15px;
-    margin-bottom: 15px;
+
+    &-voucher {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      .input {
+        max-width: 170px;
+        margin: 0;
+      }
+      button {
+        @include label-bold-4();
+        padding: 8px 16px;
+        border-radius: 5px;
+        background: var(--Primary---Green, #26ad60);
+        color: var(--white);
+        border-width: 0;
+      }
+    }
     &-title {
       @include body-15-pt-r();
     }
@@ -44,6 +62,17 @@
         font-weight: 700;
         line-height: 130%;
         text-decoration-line: underline;
+      }
+    }
+    &.big {
+      .Bill-total-price {
+        color: var(--Brand, var(--Branding, #ff4c13));
+        text-align: right;
+        font-family: Roboto;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
       }
     }
   }
@@ -66,7 +95,7 @@
       line-height: 21px;
     }
   }
-  button {
+  button.btn-bill {
     @include l-btn-18-pt-sm();
     padding: 8px 12px;
     border-radius: 5px;

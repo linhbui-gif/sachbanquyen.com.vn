@@ -1,17 +1,19 @@
-.HeadingCard{
-  &-title{
+.HeadingCard {
+  display: flex;
+  justify-content: space-between;
+  &-title {
     @include h-4-heading-card();
     color: var(--black);
   }
-  &-view{
+  &-view {
     @include body-15-pt-r();
     color: var(--primary-yellow);
-    i{
+    i {
       font-size: 13px;
     }
   }
-  &.H0-24-B-heading-card{
-    .HeadingCard-title{
+  &.H0-24-B-heading-card {
+    .HeadingCard-title {
       @include h-0-24-b-heading-card();
     }
   }
