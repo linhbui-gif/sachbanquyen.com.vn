@@ -1,0 +1,13 @@
+.menu-mobile{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  background: white;
+  height: 100%;
+  z-index: 99;
+  display: none;
+  @include media-breakpoint-down(lg){
+    display: block;
+  }
+}
