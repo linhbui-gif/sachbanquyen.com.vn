@@ -1,0 +1,28 @@
+mixin Input({ type, label, icon, options, id })
+  .input
+    if type === 'text'
+      .input-wrapper
+        if icon
+          img(src=icon, alt=label)
+        input(type='text', placeholder=label)
+    else if type === 'dropdown'
+      .input-wrapper.select2
+        if icon
+          img(src=icon, alt=label)
+        select(type='text', id=id)
+            each option in options
+                option(value=option)= option
+            if id
+                script.
+                    function initializeSelect2(id) {
+                        $('#' + id).select2();
+                        }
+                    document.addEventListener('DOMContentLoaded', function() {
+                    var idSelect = '#{id}';
+                    initializeSelect2(idSelect);
+                    });
+    else if type === 'textarea'
+      .input-wrapper
+        if icon
+          img(src=icon, alt=label)
+        textarea(type='text', placeholder=label)

@@ -1,4 +1,7 @@
-mixin Radio({label: title, checked: checked, name: name, id: id})
+mixin Radio({label: title, checked: checked, name: name, id: id, url: url})
   .radio
     input(type='radio', name=name, checked=checked ? 'checked' : '', id=id)
-    label.radio-label(for=id)= title
+    label.radio-label(for=id)
+      if url
+        img(src=url, alt="", srcset="")
+      span=title

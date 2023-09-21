@@ -1,6 +1,6 @@
-mixin HeadingCard({title, isViewAll, className})
+mixin HeadingCard({title, isViewAll, className, isViewLabel})
     .HeadingCard.d-flex.align-items-center(class=`${className ? className : ''}`)
       h3.HeadingCard-title=title
       if isViewAll
-        a.HeadingCard-view(href="") Xem tất cả
+        a.HeadingCard-view(href="")=isViewLabel ? isViewLabel : 'Xem tất cả'
           i.fa.fa-chevron-right.ml-theme-2

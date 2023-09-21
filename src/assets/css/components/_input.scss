@@ -1,5 +1,5 @@
-.input-group{
-  .icon-search{
+.input-group {
+  .icon-search {
     position: absolute;
     right: 15px;
     top: 50%;
@@ -7,7 +7,9 @@
     z-index: 88;
   }
   &:not(.has-validation) {
-    > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
+    > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(
+        .form-floating
+      ),
     > .dropdown-toggle:nth-last-child(n + 3),
     > .form-floating:not(:last-child) > .form-control,
     > .form-floating:not(:last-child) > .form-select {
@@ -15,13 +17,13 @@
     }
   }
 }
-.form-control{
-   @include body-15-pt-r();
-   color: var(--black);
-   border-radius: 5px;
-    padding: 12px 15px;
-    border: 1px solid var(--line3);
-  &:focus{
+.form-control {
+  @include body-15-pt-r();
+  color: var(--black);
+  border-radius: 5px;
+  padding: 12px 15px;
+  border: 1px solid var(--line3);
+  &:focus {
     box-shadow: unset;
     border-color: var(--line3);
   }
@@ -34,5 +36,78 @@
     border: unset;
     background: var(--bginput);
     padding: 8px;
+  }
+}
+.input {
+  border-radius: 5px;
+  border: 1px solid var(--line-3, #eaeaea);
+  background: var(--main-white, #fff);
+  margin-bottom: 16px;
+  &-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 8px 15px;
+    gap: 8px;
+    align-items: center;
+    input {
+      width: calc(100% - 32px);
+      border-width: 0;
+      @include body-15-pt-r();
+      color: var(--Black, var(--Black, #262626));
+      display: flex;
+      align-items: center;
+      &:focus {
+        outline: none;
+      }
+      &:placeholder {
+        color: var(--Text-hidden, #a4a4a4);
+        @include body-15-pt-r();
+        align-items: center;
+        display: flex;
+      }
+    }
+    textarea {
+      width: 100%;
+      border-width: 0;
+      @include body-15-pt-r();
+      color: var(--Black, var(--Black, #262626));
+      display: flex;
+      align-items: center;
+      &:focus {
+        outline: none;
+      }
+      &:placeholder {
+        color: var(--Text-hidden, #a4a4a4);
+        @include body-15-pt-r();
+        align-items: center;
+        display: flex;
+      }
+    }
+    .select2-container {
+      width: 100% !important;
+    }
+    .select2-hidden-accessible,
+    .select2 {
+      span {
+        width: 100%;
+        border-width: 0;
+      }
+    }
+  }
+  img {
+    width: 24px;
+    height: 24px;
+    stroke: var(--Text-hidden, #a4a4a4);
+    fill: var(--Text-hidden, #a4a4a4);
+  }
+}
+.select2-dropdown {
+  border: 1px solid var(--line-3, #eaeaea);
+  input {
+    border: 1px solid var(--line-3, #eaeaea);
+    border-radius: 5px;
+    &:focus {
+      outline: none;
+    }
   }
 }
