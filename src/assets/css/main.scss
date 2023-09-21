@@ -5,35 +5,35 @@
 @import "./settings/utils";
 @import "./components/index.scss";
 @import "./containers/index.scss";
-
-//Exxample component
-//see more
-.content {
-  max-height: 100px;
-  overflow: hidden;
-  &.active {
-    max-height: none;
-  }
-}
-
-.btn-see-more {
-  cursor: pointer;
-  color: blue;
-}
-//active item
-#itemsContainer {
-  .item-list {
-    cursor: pointer;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-  }
-
-  .item-list.active {
-    background-color: lightgreen;
-  }
-
-  .item-icon {
-    margin-right: 5px;
-  }
-}
+//
+////Exxample component
+////see more
+//.content {
+//  max-height: 100px;
+//  overflow: hidden;
+//  &.active {
+//    max-height: none;
+//  }
+//}
+//
+//.btn-see-more {
+//  cursor: pointer;
+//  color: blue;
+//}
+////active item
+//#itemsContainer {
+//  .item-list {
+//    cursor: pointer;
+//    padding: 5px;
+//    display: flex;
+//    align-items: center;
+//  }
+//
+//  .item-list.active {
+//    background-color: lightgreen;
+//  }
+//
+//  .item-icon {
+//    margin-right: 5px;
+//  }
+//}

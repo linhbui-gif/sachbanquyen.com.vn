@@ -74,7 +74,10 @@ gulp.task("iconsMin", () => {
     .pipe(imagesMin())
     .pipe(gulp.dest("dist/assets/icons"));
 });
-
+//library min
+gulp.task("libsMin", () => {
+  return gulp.src("./src/assets/css/library/*.css").pipe(gulp.dest("dist/assets/css/library"));
+});
 // Video - Minify
 gulp.task("videosMin", () => {
   return gulp
@@ -124,6 +127,6 @@ gulp.task(
     "imagesMin",
     "iconsMin",
     "videosMin",
-    "fontsMin"
+    "libsMin"
   )
 );

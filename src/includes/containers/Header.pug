@@ -3,24 +3,24 @@ header
     .container
       .header-top-wraper.d-flex.align-items-center.justify-content-between
         a(href="/").header-top-wrapper-logo
-          img(src="../../assets/images/image-logo.png" width="142" alt="")
+          img(src="./assets/images/image-logo.png" width="142" alt="")
         .header-top-wrapper-search
           include ../components/InputDropdown.pug
         .header-top-wrapper-action.d-flex.align-items-center
           .header-top-wrapper-action-item.calling.d-flex.align-items-center
             .header-top-wrapper-action-item-phone.mr-theme-4
-              img(src="../../assets/icons/call-calling.svg" alt="#")
+              img(src="./assets/icons/call-calling.svg" alt="#")
             .header-top-wrapper-action-item-text
               span HotLine
               a(href="#").d-block 0904506621
           .header-top-wrapper-action-item
             a(href="#").header-top-wrapper-action-item-text.cart
-               img(src="../../assets/icons/shopping-cart.svg" alt="#")
+               img(src="./assets/icons/shopping-cart.svg" alt="#")
                span Giỏ hàng
                span.number-cart 5
           .header-top-wrapper-action-item
             a(href="#").header-top-wrapper-action-item-text
-              img(src="../../assets/icons/profile-circle.svg" alt="#")
+              img(src="./assets/icons/profile-circle.svg" alt="#")
               span Tài khoản
   nav.header-menu
     .container
@@ -29,7 +29,7 @@ header
            i.fa.fa-bars.mr-theme-2
            h6.category.flex-grow-1 Danh mục
            span
-             img(src="../../assets/icons/icon-arrow-down.svg")
+             img(src="./assets/icons/icon-arrow-down.svg")
            .header-menu-wrapper-left-mega-menu
                 .row.m-0
                   each item in [1,2,3]
@@ -46,7 +46,7 @@ header
                               a(href="#" class=`${item == 1 ? 'active' : ''}`).header-menu-wrapper-left-mega-menu-list-category-item-link Kỹ năng sống
                   .col-lg-3.p-0
                     .header-menu-wrapper-left-mega-menu-image
-                      img(src="../../assets/images/image-mega-menu.png")
+                      img(src="./assets/images/image-mega-menu.png")
          ul.header-menu-wrapper-right.d-flex.align-items-center.mb-0
             li.header-menu-wrapper-right-item
                 a(href="#").header-menu-wrapper-right-item-link Trang chủ
@@ -55,7 +55,7 @@ header
                   span
                     | Giới thiệu
                   span.ml-theme-4
-                    img(src="../../assets/icons/icon-arrow-down.svg")
+                    img(src="./assets/icons/icon-arrow-down.svg")
                 ul.header-menu-wrapper-right-dropdown.position-absolute
                   li.header-menu-wrapper-right-dropdown-item
                     a(href="#").header-menu-wrapper-right-dropdown-item-link Giới thiệu 1
