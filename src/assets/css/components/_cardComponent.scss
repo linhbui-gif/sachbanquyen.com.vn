@@ -38,7 +38,7 @@
       margin-right: auto;
       @include title-card-18-pt-sm();
       @media (max-width: 992px) {
-        @include h-5-16-pt-b();
+        @include bookname-15-pt-m();
       }
       text-align: center;
       color: var(--black);
@@ -49,7 +49,7 @@
         white-space: break-spaces;
         @include title-card-18-pt-sm();
         @media (max-width: 992px) {
-          @include h-5-16-pt-b();
+          @include bookname-15-pt-m();
         }
       }
     }

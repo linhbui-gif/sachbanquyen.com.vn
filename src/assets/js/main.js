@@ -11,6 +11,7 @@ const loading = {
 const carousel = {
   init: function () {
     this.setupBookDetail();
+    this.setupBookDetail02();
     this.setupHomeBannerCarousel();
     this.setupFlashSaleBannerCarousel()
     this.setupFlashSaleBannerCarousel01()
@@ -48,8 +49,37 @@ const carousel = {
     });
 
   },
+  setupBookDetail02: function () {
+    $(document).ready(function() {
+      $("#big02").owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 10,
+        nav: true,
+        dots: false,
+        navText: [
+          '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
+          '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+        ],
+      });
+
+      $("#thumbs02").owlCarousel({
+        items: 4,
+        nav: false,
+        dots: false,
+        margin: 15
+      });
+      $("#thumbs02").on("click", ".owl-item", function (e) {
+        e.preventDefault();
+        var thumbnailIndex = $(this).index();
+        console.log('thumbnailIndex', thumbnailIndex)
+        $("#big02").trigger("to.owl.carousel", [thumbnailIndex, 300]);
+      });
+    });
+
+  },
   setupHomeBannerCarousel: function () {
-    $("#HomeBanner-top").owlCarousel({
+    $("#carouselHome").owlCarousel({
       responsive: {
         0: {
           items: 1,
