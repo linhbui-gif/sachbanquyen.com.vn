@@ -1,16 +1,18 @@
-mixin CardComponent({url, title, description, footer, classModify, imageType, isVideoCard, classTitle, isRate, price, isSale})
+mixin CardComponent({url, title, description, footer, classModify, imageType, isVideoCard, classTitle, isRate, price, isSale, isNew})
    .CardComponent(class=`${classModify ? classModify : ''}`)
        .CardComponent-image.position-relative
             img(src=`${url}` class=`${imageType ? imageType : ''} ` alt=`${title}`)
             if isSale
                span.percent-sale.position-absolute -50%
+            if isNew
+               span.is-new.position-absolute Mới
        .CardComponent-body.text-center
             if isRate
               span.CardComponent-body-rate.d-block.w-100.text-center.mt-theme-4
                 each item in [1,2,3,4,5]
                   i.fas.fa-star
             h3.CardComponent-body-title(class=`${classTitle ? classTitle : ''}`)
-               a(href="#")=title
+               a(href="6.1-chi-tiết-sách-giấy.html")=title
             if description
                p.CardComponent-body-description.text-center.mb-0=description
             if price

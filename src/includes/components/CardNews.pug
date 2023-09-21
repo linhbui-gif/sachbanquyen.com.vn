@@ -1,5 +1,5 @@
 mixin CardNewsComponent({url, title, description, classTitle, time, date})
-   a(href="#").CardNewsComponent
+   a(href="18.1.Tin-tức.html").CardNewsComponent
       .CardNewsComponent-image
          img(src=`${url}` alt=`${title}`)
       .CardNewsComponent-body.text-center
@@ -7,7 +7,7 @@ mixin CardNewsComponent({url, title, description, classTitle, time, date})
          p.CardNewsComponent-body-description.text-center.mb-0=description
          span.CardNewsComponent-body-label.absolute
             img(src="./assets/icons/icon-clock.svg", alt="", srcset="")
-            span=date 
+            span=date
             span |
             span=time
 
