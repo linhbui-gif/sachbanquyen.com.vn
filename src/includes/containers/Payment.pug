@@ -5,16 +5,10 @@ section.Payment
       +Radio({label: "Giao hàng tận nơi qua đối tác giao vận", checked: 'true', name: 'radio', id: 'radio-1'})
       +Radio({label: "Tự lấy hàng - tại Kiốt 7, phố sách 19/12", checked: 'false', name: 'radio', id: 'radio-2'})
     .note-info
-      span img(src="../../assets/icons/warning-2.svg", alt="", srcset="")
+      span
+        img(src="./assets/icons/warning-2.svg", alt="", srcset="")
       span Phí ship tính theo đơn (không giới hạn số lượng sách) đồng giá miền Bắc 20k miền Trung 25k, miền Nam 30k. Không áp dụng phí với đơn tự lấy hàng.
     hr
-    .Payment-wrapper-info
-      .Payment-wrapper-info-title
-        h5 Thông tin người nhận
-        a Thay đổi
-      span
-        img(src="../../assets/icons/warning-2.svg", alt="", srcset="")
-      span Phí ship tính theo đơn (không giới hạn số lượng sách) đồng giá miền Bắc 20k miền Trung 25k, miền Nam 30k. Không áp dụng phí với đơn tự lấy hàng.
     .dash
     .Payment-wrapper-info
       .Payment-wrapper-info-title
@@ -22,20 +16,20 @@ section.Payment
         a(href="#") Thay đổi
       form.row
         .col-lg-12
-          +Input({ type: 'text', label: 'Họ và tên', icon: '../../assets/icons/profile-circle-info.svg' })
+          +Input({ type: 'text', label: 'Họ và tên', icon: './assets/icons/profile-circle-info.svg' })
         .col-lg-6
-          +Input({ type: 'text', label: 'Số điện thoại', icon: '../../assets/icons/phone-2.svg' })
+          +Input({ type: 'text', label: 'Số điện thoại', icon: './assets/icons/phone-2.svg' })
         .col-lg-6
-          +Input({ type: 'text', label: 'Email (không bắt buộc)', icon: '../../assets/icons/sms.svg' })
+          +Input({ type: 'text', label: 'Email (không bắt buộc)', icon: './assets/icons/sms.svg' })
         .dash
         .col-lg-6
-          +Input({ type: 'dropdown', label: 'Chọn Tỉnh/TP', icon: '../../assets/icons/map.svg', options: ['Tùy chọn 1', 'Tùy chọn 2', 'Tùy chọn 3'], id: 'dropdown-1'})
+          +Input({ type: 'dropdown', label: 'Chọn Tỉnh/TP', icon: './assets/icons/map.svg', options: ['Tùy chọn 1', 'Tùy chọn 2', 'Tùy chọn 3'], id: 'dropdown-1'})
         .col-lg-6
-          +Input({ type: 'dropdown', label: 'Chọn Quận/Huyện', icon: '../../assets/icons/map.svg', options: ['Tùy chọn 1', 'Tùy chọn 2', 'Tùy chọn 3'], id: 'dropdown-2'})
+          +Input({ type: 'dropdown', label: 'Chọn Quận/Huyện', icon: './assets/icons/map.svg', options: ['Tùy chọn 1', 'Tùy chọn 2', 'Tùy chọn 3'], id: 'dropdown-2'})
         .col-lg-12
-          +Input({ type: 'dropdown', label: 'Chọn Xã/Phường', icon: '../../assets/icons/routing.svg', options: ['Tùy chọn 1', 'Tùy chọn 2', 'Tùy chọn 3'], id: 'dropdown-3'})
+          +Input({ type: 'dropdown', label: 'Chọn Xã/Phường', icon: './assets/icons/routing.svg', options: ['Tùy chọn 1', 'Tùy chọn 2', 'Tùy chọn 3'], id: 'dropdown-3'})
         .col-lg-12
-          +Input({ type: 'text', label: 'Nhập vị trí', icon: '../../assets/icons/location.svg' })
+          +Input({ type: 'text', label: 'Nhập vị trí', icon: './assets/icons/location.svg' })
         .col-lg-12
           +Input({ type: 'textarea', label: 'Thêm ghi chú (ví dụ: Giao hàng vào giờ hành chính' })
 
