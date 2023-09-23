@@ -1,0 +1,16 @@
+extends includes/layouts/Guest.pug
+
+block pages
+    .container
+        include ./includes/components/Breadcrumb.pug
+        .row
+            .col-lg-8
+                section
+                .row
+                    .col-12
+                        include ./includes/containers/PaymentMethodBank.pug
+                    .col-12
+                        +Cart({method: true})
+            .col-lg-4
+                    aside
+                        +Bill({method: true, success: true})
