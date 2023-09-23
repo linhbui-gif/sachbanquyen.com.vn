@@ -1,0 +1,19 @@
+mixin InputCopy({ main, value})
+  form.input-copy(data-copy='true' class=main ? 'main' : '')
+    input(type='text' value=`${value}` readonly)
+    button.button
+      img(src="../../assets/icons/file-copy-line.svg", alt="", srcset="")
+
+  script.
+    var copyButtons = document.querySelectorAll("[data-copy]");
+    for (var i = 0; i < copyButtons.length; i++) {
+      var el = copyButtons[i];
+      el.addEventListener("click", function(e) {
+        e.preventDefault();
+        var textInput = e.target.closest('.input-copy').querySelector('input[type="text"]');
+        if (textInput) {
+          textInput.select();
+          document.execCommand("copy");
+        }
+      });
+    }

@@ -35,6 +35,10 @@
       .input {
         max-width: 170px;
         margin: 0;
+        width: calc(100% - 110px);
+        @media (max-width: 991px) {
+          max-width: 342px;
+        }
       }
       button {
         @include label-bold-4();
@@ -64,6 +68,11 @@
         text-decoration-line: underline;
       }
     }
+    &-wrapper-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
     &.big {
       .Bill-total-price {
         color: var(--Brand, var(--Branding, #ff4c13));
@@ -85,6 +94,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 21px; /* 161.538% */
+    margin-top: 15px;
     span {
       color: var(--Secondary, var(--body-text, #333));
       font-feature-settings: "clig" off, "liga" off;
@@ -97,12 +107,30 @@
   }
   button.btn-bill {
     @include l-btn-18-pt-sm();
-    padding: 8px 12px;
-    border-radius: 5px;
-    background: var(--Brand, #ff4c13);
-    color: var(--white);
     width: 100%;
-    border-width: 0;
-    margin-bottom: 15px;
+    span {
+      &:last-child {
+        color: var(--main-white, var(--Trng, #fff));
+        font-family: Roboto;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+      }
+    }
+  }
+  button.btn-bill {
+    @include l-btn-18-pt-sm();
+    width: 100%;
+    span {
+      &:last-child {
+        color: var(--main-white, var(--Trng, #fff));
+        font-family: Roboto;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+      }
+    }
   }
 }

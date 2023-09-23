@@ -1,4 +1,4 @@
-mixin Bill({method})
+mixin Bill({method, success})
   section.Bill
     .Bill-shape
     .Bill-wrapper 
@@ -32,7 +32,15 @@ mixin Bill({method})
         span.Bill-total-price 
           span 311.500đ
           span.Bill-total-price-unit đ
-      button.btn-bill Mua hàng
+      if success
+        .Bill-total-wrapper-btns
+          button.btn.btn-success.btn-bill 
+            span Tôi đã chuyển khoản
+            br 
+            span (Kiểm tra trạng thái đơn hàng 300 giây)
+          button.btn.btn-outline-gray-2.btn-bill Quay lại trang chủ
+      else 
+        button.btn.btn-orange-brand.btn-bill Mua hàng
       .Bill-note Bằng việc tiến hành đặt mua hàng, bạn đồng ý với Điều khoản của 
         span Công ty cổ phần Văn hóa và Bản quyền Benito
       .Bill-bottom

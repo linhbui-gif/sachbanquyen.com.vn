@@ -1,0 +1,48 @@
+section.PaymentMethod
+  +HeadingCard({title: "Thông tin thanh toán", className: '.PaymentMethod-title', isViewAll: false})
+  .PaymentMethod-wrapper
+    .row
+      .col-md-6 
+        img(src="../../assets/images/image-QR.jpg", alt="", srcset="")
+      .col-md-6 
+        .PaymentMethod-qr-title
+          span 
+            img(src="../../assets/icons/arrow-left.svg", alt="", srcset="")
+          h5 Quét mã qua ứng dụng Ngân hàng
+        .PaymentMethod-qr-wrapper 
+          a(href='#').PaymentMethod-qr-warning
+            img(src="../../assets/icons/warning-2.svg", alt="", srcset="")
+            p Xem hướng dẫn thanh toán
+          .PaymentMethod-qr-btns.row
+            .col-6
+              button.btn.btn-outline-gray-2 Tải mã QR
+            .col-6
+              button.btn.btn-outline-gray-2 Chia sẻ
+          .PaymentMethod-qr-note-2 
+            span Đơn hàng sẽ được tự động xử lý, nếu sau 
+            strong 5 phút 
+            span đơn hàng vẫn chưa được xử lý, bạn vui lòng liên hệ hotline hoặc livechat để được hỗ trợ.
+    .dash
+    .PaymentMethod-info
+      h5.PaymentMethod-info-title Hoặc nhập thông tin chuyển khoản
+      .PaymentMethod-info-wraning
+        p 
+          strong Nội dung Chuyển khoản:
+        +InputCopy({ main: true, value: '464754' })
+        p 
+          span Lưu ý: Điền 
+          strong chính xác 
+          span mã trên đây vào nội dung chuyển khoản
+      .PaymentMethod-info-wrapper
+        p Ngân hàng
+        +InputCopy({ value: 'Ngân hàng Thương mại Cổ phần Quân Đội ' })
+      .PaymentMethod-info-wrapper
+        p Chi nhánh
+        +InputCopy({ value: 'Lãn Ông' })
+      .PaymentMethod-info-wrapper
+        p Số tài khoản: 
+        +InputCopy({ value: '0601119779999' })
+      .PaymentMethod-info-wrapper
+        p Chủ tài khoản:
+        +InputCopy({ value: 'Nhà xuất bản Xây dựng' })
+      
