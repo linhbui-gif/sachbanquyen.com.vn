@@ -11,6 +11,21 @@ mixin BookDetailInformation({typeGallery = false,isQuantity = false, action = fa
           button.btn.btn-primary.ml-theme-4.w-100 Nghe ngay (13 ngày)
     .col-lg-6
       .BookDetail-infor
+        .BookDetail-suggest.d-lg-none.d-block.mb-theme-15
+          h6.BookDetail-suggest-title Gợi ý cuốn sách này với định dạng khác
+          .BookDetail-suggest-wrapper.d-flex.align-items-center.mt-theme-4#BookDetail-choose
+            .BookDetail-suggest-wrapper-item.item-list.active
+              img(src="./assets/icons/icon-book.svg" alt="" width="30" height="30")
+              span.mt-theme-4.ebook-text Sách in
+            .BookDetail-suggest-wrapper-item.item-list
+              img(src="./assets/icons/icon-ebook.svg" alt="" width="30" height="30")
+              span.mt-theme-4.ebook-text Ebook
+            .BookDetail-suggest-wrapper-item.item-list
+              img(src="./assets/icons/icon-audio.svg" alt="" width="30" height="30")
+              span.mt-theme-4.ebook-text Audio
+            .BookDetail-suggest-wrapper-item.item-list
+              img(src="./assets/icons/icon-video.svg" alt="" width="30" height="30")
+              span.mt-theme-4.ebook-text Video
         h1.BookDetail-infor-title [Sách giấy]  Cơ thể siêu rắc rối
         h3.BookDetail-infor-subtitle.mt-theme-4.mb-theme-4 Hà Nội, Hải Phòng, Vinh, Huế, Đà Nẵng, Hội An, Đà Lạt, Nha Trang
         .BookDetail-infor-rate.d-flex.align-items-center.justify-content-between
@@ -18,12 +33,14 @@ mixin BookDetailInformation({typeGallery = false,isQuantity = false, action = fa
             span.mr-theme-4  4.5
             each item in [1,2,3,4,5]
               i.fas.fa-star
-          .BookDetail-infor-rate-item
+          .BookDetail-infor-rate-item.d-flex.align-items-center
             span.mr-theme-4 52358
-            span Lượt xem
-          .BookDetail-infor-rate-item
+            span.d-lg-block.d-none Lượt xem
+            i.fa.fa-eye.d-lg-none.d-block
+          .BookDetail-infor-rate-item.d-flex.align-items-center
             span.mr-theme-4 3639
-            span Đã bán
+            span.d-lg-block.d-none Đã bán
+            i.fa.fa-eye.d-lg-none.d-block
           .BookDetail-infor-rate-item
             a(href="").share
               svg(xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewbox='0 0 16 16' fill='none')
@@ -78,7 +95,7 @@ mixin BookDetailInformation({typeGallery = false,isQuantity = false, action = fa
             span.BookDetail-data-item-text Chọn thời gian đọc:
             .BookDetail-data-item-time
               +SelectDropdownCustom({data: dataBookDetail})
-      .BookDetail-suggest
+      .BookDetail-suggest.d-lg-block.d-none
         h6.BookDetail-suggest-title Gợi ý cuốn sách này với định dạng khác
         .BookDetail-suggest-wrapper.d-flex.align-items-center.mt-theme-4#BookDetail-choose
           .BookDetail-suggest-wrapper-item.item-list.active
@@ -106,9 +123,10 @@ mixin BookDetailInformation({typeGallery = false,isQuantity = false, action = fa
                 h6.BookDetail-promotion-body-item-left-title.ml-theme-4 Khuyến mãi:
               .BookDetail-promotion-body-item-right.ml-theme-4 Mua bộ sách giấy tặng bộ ebook
       .line-dash
-      .BookDetail-action.d-flex.align-items-center
-        button.btn.btn-orange-brand.w-100.mr-theme-6 Mua ngay
-        button.btn.btn-outline-orange.w-100 Thêm vào giỏ
+      div.d-lg-block.d-none
+        .BookDetail-action.d-flex.align-items-center
+          button.btn.btn-orange-brand.w-100.mr-theme-6 Mua ngay
+          button.btn.btn-outline-orange.w-100 Thêm vào giỏ
       ul.BookDetail-service
         each item in [1,2,3,4,5]
           li.BookDetail-service-item.d-flex.align-items-center.mb-theme-4

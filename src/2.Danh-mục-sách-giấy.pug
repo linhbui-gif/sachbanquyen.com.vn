@@ -2,47 +2,72 @@ extends includes/layouts/Guest.pug
 
 block pages
   include ./includes/containers/Banner
-  section.Category.has-bg
-    +HeadingCard({title: "Danh mục sản phẩm", className: 'justify-content-center H0-24-B-heading-card', isViewAll: false})
+  section.Category.has-bg.pt-theme-30.pb-theme-30
+    +HeadingCard({title: "Quấy sách benitor", className: 'justify-content-center H0-24-B-heading-card', isViewAll: false})
     .container
-      .Category-wrapper.row
-        each item in [1,2,3,4,5]
-          .Category-wrapper-item.mb-3.mb-xl-0
-            +CardComponent({
-              url: './assets/images/image-card-gif.jpg',
-              imageType: 'rounded-circle',
-              title: 'Sách giấy',
-              description: '3,420 sách',
-              classTitle: 'mt-theme-4 mb-theme-4',
-              classModifyImage: 'radius-50-percent no-effect'
-            })
-
-  section.Category
-    +HeadingCard({title: "Dịch vụ", className: 'justify-content-center H0-24-B-heading-card', isViewAll: false})
-    .container
-      .Category-wrapper.row.scroll-mobile
-        each item in [1,2,3,4,5]
-          .Category-wrapper-item.mb-3.mb-xl-0
-            +CardComponent({
-              url: './assets/images/image-card-service.png',
-              imageType: 'rounded-circle',
-              title: 'Cung cấp sách thư viện',
-              classModify: 'bg-card-orange no-shadow',
-              classTitle: 'mt-theme-4 mb-theme-4',
-              classModifyImage: 'radius-50-percent no-effect'
-            })
-  section.banner-single
+      .row
+        .col-12
+          #carouselBookBenitor.owl-carousel.owl-theme
+            .item
+              +CardComponent({
+                url: './assets/images/image-book-benitor.png',
+                imageType: 'rounded-circle',
+                title: 'NXB Hà Nội',
+                classTitle: 'mt-theme-4 mb-theme-4',
+                classModifyImage: 'no-effect'
+              })
+            .item
+              +CardComponent({
+                url: './assets/images/image-book-category-01.png',
+                imageType: 'rounded-circle',
+                title: 'NXB Hà Nội',
+                classTitle: 'mt-theme-4 mb-theme-4',
+                classModifyImage: 'no-effect'
+              })
+            .item
+              +CardComponent({
+                url: './assets/images/image-book-category-02.png',
+                imageType: 'rounded-circle',
+                title: 'NXB Hà Nội',
+                classTitle: 'mt-theme-4 mb-theme-4',
+                classModifyImage: 'no-effect'
+              })
+            .item
+              +CardComponent({
+                url: './assets/images/image-book-category-03.png',
+                imageType: 'rounded-circle',
+                title: 'NXB Hà Nội',
+                classTitle: 'mt-theme-4 mb-theme-4',
+                classModifyImage: 'no-effect'
+              })
+            .item
+              +CardComponent({
+                url: './assets/images/image-book-category-04.png',
+                imageType: 'rounded-circle',
+                title: 'NXB Hà Nội',
+                classTitle: 'mt-theme-4 mb-theme-4',
+                classModifyImage: 'no-effect'
+              })
+            .item
+              +CardComponent({
+                url: './assets/images/image-book-category-06.png',
+                imageType: 'rounded-circle',
+                title: 'NXB Hà Nội',
+                classTitle: 'mt-theme-4 mb-theme-4',
+                classModifyImage: 'no-effect'
+              })
+  section.banner-single.pb-theme-15.pt-theme-30
     .container
       .row
         .col-12
           img(src="./assets/images/image-banner-single.png" alt="")
-  section.top-sale.bg-card-orange
+  section.top-sale.pt-theme-15.pb-theme-15
     .container
       .row
         .col-12
-          +HeadingCard({title: "Top sách giấy bán chạy", className: 'justify-content-between mt-theme-6 mb-theme-6', isViewAll: true})
+          +HeadingCard({title: "Flash Sale", className: 'justify-content-between mt-theme-6 mb-theme-6', isViewAll: true})
         .col-12
-          #carouselFlashSale.owl-carousel.mobile-disable-carousel
+          #carouselFlashSale.owl-carousel
             .item
               +CardComponent({
                 url: './assets/images/image-book-thumbnail.png',
@@ -112,17 +137,38 @@ block pages
                 isSale: true,
                 classModify: "style2"
               })
-  section.top-sale
+  section.top-sale.bg-card-orange.pt-theme-15.pb-theme-15
+    .container
+      +HeadingCard({
+        title: "Danh mục nổi bật",
+        className: 'justify-content-between mt-theme-6 mb-theme-6',
+        isViewAll: true
+      })
+      .Category-wrapper.row.scroll-mobile
+        each item in [1,2,3,4,5,6,7,8,9]
+          .Category-wrapper-category-item.mb-3.mb-xl-0
+            +CardComponent({
+              url: './assets/images/image-book-category-small-01.png',
+              title: 'Truyện cổ tích',
+              classTitle: 'mt-theme-4 mb-theme-4 style-category-features',
+              classModify: 'card-category no-shadow'
+            })
+  section.banner-single.pb-theme-30.pt-theme-30
+    .container
+      .row
+        .col-12
+          img(src="./assets/images/image-banner-single.png" alt="")
+  section.top-sale.pt-theme-15.pb-theme-15
     .container
       .row
         .col-12
           +HeadingCard({
-            title: "Top Ebook bán chạy",
+            title: "Gợi ý cho bạn",
             className: 'justify-content-between mt-theme-6 mb-theme-6',
             isViewAll: true
           })
         .col-12
-          #carouselFlashSale01.owl-carousel.mobile-disable-carousel
+          #carouselFlashSale01.owl-carousel
             .item
               +CardComponent({
                 url: './assets/images/image-book-thumbnail.png',
@@ -192,17 +238,17 @@ block pages
                 isSale: true,
                 classModify: "style2"
               })
-  section.top-sale.bg-card-orange
+  section.top-sale.bg-card-orange.pt-theme-15.pb-theme-15
     .container
       .row
         .col-12
           +HeadingCard({
-            title: "Top AudioBook bán chạy",
+            title: "Tuyển tập sách hay",
             className: 'justify-content-between mt-theme-6 mb-theme-6',
             isViewAll: true
           })
         .col-12
-          #carouselFlashSale02.owl-carousel.mobile-disable-carousel
+          #carouselFlashSale02.owl-carousel
             .item
               +CardComponent({
                 url: './assets/images/image-book-thumbnail.png',
@@ -272,10 +318,57 @@ block pages
                 isSale: true,
                 classModify: "style2"
               })
-  section.banner-two.pt-theme-60.pb-theme-60
+  section.banner-single.pb-theme-30.pt-theme-30
     .container
       .row
-        .col-lg-6.col-md-6.mb-3.mb-md-0
-          img(src="./assets/images/image-banner-large.png")
-        .col-lg-6.col-md-6.mb-3.mb-md-0
-          img(src="./assets/images/image-banner-large.png")
+        .col-12
+          img(src="./assets/images/image-banner-single.png" alt="")
+  section.top-sale.bg-card-orange.pt-theme-15.pb-theme-15
+    .container
+      .row
+        .col-12
+          +HeadingCard({
+            title: "Tủ sách thiếu nhi",
+            className: 'justify-content-between mt-theme-6 mb-theme-6',
+            isViewAll: true
+          })
+        each item in [1,2,3,4,5,6,7,8]
+          .col-lg-3.mb-theme-30.col-6
+            +CardComponent({
+              url: './assets/images/image-book-thumbnail.png',
+              title: 'Làm Chủ Cơn Giận',
+              description: 'Tác giả',
+              classTitle: 'mt-theme-4 mb-theme-4 bookname-15-pt-m',
+              isRate: true,
+              price: true,
+              footer: true,
+              isSale: true,
+              classModify: "style2"
+            })
+  section.banner-single.bg-card-orange.pt-theme-15.pb-theme-15
+    .container
+      .row
+        .col-12
+          img(src="./assets/images/image-banner-single.png" alt="")
+  section.top-sale.bg-card-orange.pt-theme-15.pb-theme-15
+    .container
+      .row
+        .col-12
+          +HeadingCard({
+            title: "Tủ sách xây dựng",
+            className: 'justify-content-between mt-theme-6 mb-theme-6',
+            isViewAll: true
+          })
+        each item in [1,2,3,4,5,6,7,8]
+          .col-lg-3.mb-theme-30.col-6
+            +CardComponent({
+              url: './assets/images/image-book-thumbnail.png',
+              title: 'Làm Chủ Cơn Giận',
+              description: 'Tác giả',
+              classTitle: 'mt-theme-4 mb-theme-4 bookname-15-pt-m',
+              isRate: true,
+              price: true,
+              footer: true,
+              isSale: true,
+              classModify: "style2"
+            })

@@ -1,6 +1,5 @@
 .HeadingCard {
   display: flex;
-  justify-content: space-between;
   &-title {
     @include h-4-heading-card();
     color: var(--black);

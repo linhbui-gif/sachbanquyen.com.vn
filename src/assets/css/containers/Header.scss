@@ -170,6 +170,10 @@ header{
               padding: 12px 16px;
               @include nav-menu-15-pt-m();
               color: var(--icon);
+              transition: .5s;
+              &:hover{
+                color: var(--hoveryellow);
+              }
             }
             &:last-child{
               .header-menu-wrapper-right-item-link{

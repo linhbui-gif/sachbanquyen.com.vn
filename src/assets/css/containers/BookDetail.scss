@@ -28,6 +28,9 @@
         //    border: 1px solid var(--primary);
         //  }
         //}
+        @include media-breakpoint-down(sm){
+          width: 74px;
+        }
       }
       &-image{
         width: 74px;
@@ -58,6 +61,12 @@
       &-icon{
         .BookDetail-suggest-wrapper-item{
           padding: 9px;
+          @include media-breakpoint-down(sm){
+            padding: 4px;
+          }
+        }
+        @include media-breakpoint-down(sm){
+          margin-left: 8px!important;
         }
       }
       &-carousel-background{
@@ -78,9 +87,14 @@
       @include h-4-book-subtitle-detail-18-pt-b();
     }
     &-rate{
+      flex-wrap: wrap;
       &-item{
         padding: 0 32px;
         border-right: 1px solid #D1D1D1;
+        @include media-breakpoint-down(sm){
+          padding: 0 4px;
+          border-right: unset;
+         }
         i{
           font-size: 13px;
           color: var(--primary-yellow);
@@ -164,6 +178,11 @@
          width: 82px;
          padding: 12px;
          text-align: center;
+         @include media-breakpoint-down(sm){
+           width: 74px;
+           margin: 0 4px;
+           height: 74px;
+         }
          span{
            @include tiny-body-13-pt-r();
            color: #6F6F6F;
@@ -172,6 +191,10 @@
            border: 2px solid var(--branding);
          }
        }
+    }
+    @include media-breakpoint-down(sm){
+      border: 1px solid var(--line3);
+      padding: 8px;
     }
   }
   &-promotion{
@@ -228,6 +251,9 @@
   }
   &-bottom{
     padding: 30px;
+    @include media-breakpoint-down(sm){
+      padding: 0;
+    }
   }
   &-publishInformation{
      &-title{
@@ -235,6 +261,21 @@
        color: var(--body-text);
        margin: 12px 0;
      }
+  }
+  &-action{
+    @include media-breakpoint-down(sm){
+      margin: 15px 0;
+    }
+    &.fixed-mobile-bottom{
+      position: fixed;
+      bottom: 0;
+      z-index: 999;
+      width: 100%;
+      background: white;
+      padding: 15px;
+      border-top: 1px solid var(--line3);
+      margin: 0;
+    }
   }
 }
 .line-dash{
