@@ -9,6 +9,10 @@
         @include bookname-15-pt-m();
         color: var(--icon);
         position: relative;
+        transition: .5s;
+        &:hover{
+          color: var(--hoveryellow);
+        }
         &:after{
           position: absolute;
           content: "";
@@ -20,8 +24,15 @@
         }
       }
     }
+    @include media-breakpoint-down(lg){
+      width: 100%;
+    }
   }
   &-input{
     width: calc(100%/3);
+    @include media-breakpoint-down(lg){
+      width: 100%;
+      margin: 15px 0;
+    }
   }
 }

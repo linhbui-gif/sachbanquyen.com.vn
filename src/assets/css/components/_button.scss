@@ -50,6 +50,9 @@ $btn-active-bg: #EE3D05;
     min-width: 66px;
     border-radius: 4px;
     display: block;
+    @include media-breakpoint-down(sm){
+      padding: 4px;
+    }
   }
   &-outline-radius{
     --#{$prefix}btn-border-color: rgba(47, 105, 253, 0.10);
