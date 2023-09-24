@@ -28,7 +28,7 @@
         //    border: 1px solid var(--primary);
         //  }
         //}
-        @include media-breakpoint-down(sm){
+        @include media-breakpoint-down(lg){
           width: 74px;
         }
       }

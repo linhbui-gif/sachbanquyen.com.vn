@@ -1,4 +1,5 @@
 mixin Bill({method, success})
+  +Modal({title: 'Xác nhận thanh toán', description: 'Bạn có chắc chắn muốn thanh toán chuyển khoản'})
   section.Bill
     .Bill-shape
     .Bill-wrapper
@@ -34,9 +35,8 @@ mixin Bill({method, success})
             span 311.500đ
             span.Bill-total-price-unit đ
         if success
-          +Modal({title: 'Xác nhận thanh toán', description: 'Bạn có chắc chắn muốn thanh toán chuyển khoản'})
           .Bill-total-wrapper-btns
-            button.btn.btn-success(type='button', data-toggle='modal', data-target='#myModal')
+            button.btn.btn-success(type='button', data-bs-toggle='modal', data-bs-target='#myModal')
               span Tôi đã chuyển khoản
               br
               span (Kiểm tra trạng thái đơn hàng 300 giây)

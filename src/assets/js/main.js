@@ -60,7 +60,7 @@ const carousel = {
         })
     });
 
-    var mobileQuery = window.matchMedia('(max-width: 575px)');
+    var mobileQuery = window.matchMedia('(max-width: 992px)');
     mobileQuery.addListener(handleWindowSizeChange);
     function handleWindowSizeChange(e) {
       if (e.matches) {
@@ -286,6 +286,10 @@ const carousel = {
           items: 2,
           slideBy: 2,
         },
+        767: {
+          items: 4,
+          slideBy: 1,
+        },
         991: {
           items: 4,
           slideBy: 4,
@@ -479,6 +483,7 @@ new SelectDropdown({
 });
 new QuantityControl('product')
 new QuantityControl('BookDetail-data-item-quantity')
+new QuantityControl('Cart-info-mobile-btn')
 new SeeMoreComponent('content', 'seeMoreBtn');
 new SeeMoreComponent('see-more', 'seeBtn');
 new SeeMoreComponent('content-tab-see', 'seeAboutBtn');

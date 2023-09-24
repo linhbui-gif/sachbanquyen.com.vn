@@ -153,6 +153,8 @@ img {
   border-radius: 50%;
 }
 .scroll-mobile{
-  flex-wrap: nowrap;
-  overflow-x: scroll;
+  @include media-breakpoint-down(sm){
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
 }
