@@ -105,32 +105,10 @@
       line-height: 21px;
     }
   }
-  button.btn-bill {
-    @include l-btn-18-pt-sm();
-    width: 100%;
-    span {
-      &:last-child {
-        color: var(--main-white, var(--Trng, #fff));
-        font-family: Roboto;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 130%;
-      }
-    }
-  }
-  button.btn-bill {
-    @include l-btn-18-pt-sm();
-    width: 100%;
-    span {
-      &:last-child {
-        color: var(--main-white, var(--Trng, #fff));
-        font-family: Roboto;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 130%;
-      }
+  &-discount{
+    gap: 8px;
+    .btn-success{
+      line-height: 10px;
     }
   }
 }

@@ -25,12 +25,6 @@
          width: calc(100% / 3);
        }
      }
-    &.scroll-mobile{
-      @include media-breakpoint-down(md){
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-      }
-    }
   }
   .HeadingCard{
     margin-bottom: 42px;

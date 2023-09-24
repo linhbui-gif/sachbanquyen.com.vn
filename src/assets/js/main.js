@@ -184,7 +184,7 @@ const carousel = {
       lazyLoad: true,
       dots: false,
       nav: true,
-      margin: 0,
+      margin: 10,
       navText: [
         '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
         '<img src="./assets/icons/icon-circle-right.svg" alt="" />',

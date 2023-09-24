@@ -8,25 +8,37 @@ block pages
          section
            .row
              .col-12
-                .banner-single.news-banner
+                .banner-single.pt-theme-0.pb-theme-0
                     img(src="./assets/images/image-banner-single.png" alt="")
+                div.News-category-wrapper
+                  +HeadingCard({
+                    title: "Danh mục tin",
+                    className: 'h-4-heading-card Category-title mt-theme-15 mb-theme-15',
+                    isViewAll: false
+                  })
+                  ul.News-category-mobile.d-flex.mb-0.scroll-mobile
+                    li.News-category-mobile-item
+                      a(href="").News-category-mobile-item-link Tin tức
+                    li.News-category-mobile-item
+                      a(href="").News-category-mobile-item-link Điểm sách
+                    li.News-category-mobile-item
+                      a(href="").News-category-mobile-item-link Khuyến mại
+                    li.News-category-mobile-item
+                      a(href="").News-category-mobile-item-link Khuyến mại
+                    li.News-category-mobile-item
+                      a(href="").News-category-mobile-item-link Khuyến mại
                 include ./includes/containers/News.pug
        .col-lg-3
             aside
-                +ListGroupComponent({ isAccordion:true, name:"CHỦ ĐỀ" })
+                +ListGroupComponent({ isAccordion:true, name:"CHỦ ĐỀ", className:'d-lg-block d-none' })
                 .list-news
                     h3.list-news-title Tin nổi bật
-                    a(href="18.1.Tin-tức.html").CardNewsComponent
+                    each item in [1,2,3,4,5,6]
+                      a(href="18.1.Tin-tức.html").CardNewsComponent.card-small
                         .CardNewsComponent-image
-                            img(src="./assets/images/image-news.jpg", alt="", srcset="")
+                          img(src="./assets/images/image-card-news-2.png", alt="", srcset="")
                         .CardNewsComponent-body.text-center
-                            h3.CardNewsComponent-body-title Thông báo tạm ngưng xử lý đơn hàng để kiểm kê kho
-                            p.CardNewsComponent-body-description.text-center.mb-0 Nói về sự phát triển của văn hóa đọc trong những năm gần đây, ông Nguyễn Nguyên, Cục trưởng Cục Xuất bản, In và Phát hành, Phó Chủ tịch Hội Xuất bản Việt Nam cho biết, mặc dù còn gặp rất nhiều khó khăn, nhưng trong năm qua ngành xuất bản đã đạt được những thắng lợi có tính vượt bậc.
-                    a(href="18.1.Tin-tức.html").CardNewsComponent
-                        .CardNewsComponent-image
-                            img(src="./assets/images/image-news.jpg", alt="", srcset="")
-                        .CardNewsComponent-body.text-center
-                            h3.CardNewsComponent-body-title Thông báo tạm ngưng xử lý đơn hàng để kiểm kê kho
-                            p.CardNewsComponent-body-description.text-center.mb-0 Nói về sự phát triển của văn hóa đọc trong những năm gần đây, ông Nguyễn Nguyên, Cục trưởng Cục Xuất bản, In và Phát hành, Phó Chủ tịch Hội Xuất bản Việt Nam cho biết, mặc dù còn gặp rất nhiều khó khăn, nhưng trong năm qua ngành xuất bản đã đạt được những thắng lợi có tính vượt bậc.
+                          h3.CardNewsComponent-body-title Phiên vận chuyển sách giấy dịp tết nguyên đán 2021
+                          p.CardNewsComponent-body-description.mb-0 Do nhu cầu vận chuyển và số lượng đơn hàng từ các ...
                     a(href="#").list-news-item.text-center
                         | Xem thêm

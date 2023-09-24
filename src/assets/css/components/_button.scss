@@ -15,8 +15,9 @@ $btn-active-bg: #ee3d05;
     --#{$prefix}btn-color: #{$btn-color};
     --#{$prefix}btn-hover-color: #{$btn-color};
     --#{$prefix}btn-active-color: #{$btn-color};
-    font-weight: 700;
+    font-weight: 400;
     line-height: 21px;
+    white-space: nowrap;
   }
   &-orange-brand {
     --#{$prefix}btn-color: #{$btn-color};
@@ -120,6 +121,20 @@ $btn-active-bg: #ee3d05;
       background: rgba(164, 164, 164, 0.05);
       &:hover {
         opacity: 0.8;
+      }
+    }
+  }
+  &-bill {
+    @include l-btn-18-pt-sm();
+    width: 100%;
+    span {
+      &:last-child {
+        color: var(--main-white, var(--Trng, #fff));
+        font-family: "Roboto";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
       }
     }
   }
