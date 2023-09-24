@@ -178,6 +178,10 @@
          width: 74px;
          padding: 12px;
          text-align: center;
+         img{
+           width: 40px;
+           margin: auto;
+         }
          @include media-breakpoint-down(sm){
            width: 74px;
            margin: 0 4px;
