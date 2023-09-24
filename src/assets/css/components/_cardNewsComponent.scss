@@ -10,6 +10,28 @@
     align-items: center;
     padding: 15px 0px;
   }
+  &.card-small{
+    gap: 15px;
+    padding: 8px 15px;
+    .CardNewsComponent-body-title{
+      @include ellipsis(2)
+    }
+    .CardNewsComponent-body-description{
+      @include ellipsis(2);
+      min-height: unset;
+      text-align: left;
+    }
+    .CardNewsComponent-image{
+      flex: 0 0 69px;
+      max-width: 69px;
+      aspect-ratio:unset;
+      @media (max-width: 768px) {
+        max-width: 69px;
+        border-radius: 0px;
+        min-width: unset;
+      }
+    }
+  }
   &-image {
     text-align: center;
     border-radius: 12px;

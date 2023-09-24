@@ -18,6 +18,7 @@ $font-family-sans-serif: "Roboto";
 $orange-brand: var(--branding);
 $spacer-theme: 2px;
 $spacers-theme: (
+  0: 0,
   1: $spacer-theme * 1,
   2: $spacer-theme * 2,
   3: $spacer-theme * 3,

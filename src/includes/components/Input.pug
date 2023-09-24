@@ -1,14 +1,15 @@
 mixin Input({ type, label, icon, options, id })
-  .input
     if type === 'text'
-      .input-wrapper
+      .input-group(class=`${icon ? 'has-icon' : ''}`)
         if icon
-          img(src=icon, alt=label)
-        input(type='text', placeholder=label)
+          .input-group-icon
+            img(src=icon, alt="")
+        input(type='text', placeholder=label).form-control
     else if type === 'dropdown'
-      .input-wrapper.select2
+      .input-group(class=`${icon ? 'has-icon' : ''}`)
         if icon
-          img(src=icon, alt=label)
+          .input-group-icon
+            img(src=icon, alt="")
         select(type='text', id=id)
             each option in options
                 option(value=option)= option
@@ -22,7 +23,8 @@ mixin Input({ type, label, icon, options, id })
                     initializeSelect2(idSelect);
                     });
     else if type === 'textarea'
-      .input-wrapper
+      .input-group
         if icon
-          img(src=icon, alt=label)
-        textarea(type='text', placeholder=label)
+          .input-group-icon
+            img(src=icon, alt="")
+        textarea(type='text', placeholder=label).form-control

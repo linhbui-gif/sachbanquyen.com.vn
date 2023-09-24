@@ -152,3 +152,7 @@ img {
 .radius-50-percent{
   border-radius: 50%;
 }
+.scroll-mobile{
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}

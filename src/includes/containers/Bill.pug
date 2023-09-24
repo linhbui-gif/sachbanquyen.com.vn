@@ -1,47 +1,47 @@
 mixin Bill({method, success})
   section.Bill
     .Bill-shape
-    .Bill-wrapper 
-      .Bill-total
+    .Bill-wrapper
+      .Bill-total.pb-theme-0
         span.Bill-total-title Tạm tính:
-        span.Bill-total-price 
+        span.Bill-total-price
           span 311.500
           span.Bill-total-price-unit đ
       if method
-        .Bill-total-voucher
-          +Input({ type: 'text', label: 'Nhập mã giảm giả', icon: '../../assets/icons/ticket-discount.svg' })
-          button Áp dụng
+        .Bill-discount.d-flex.mt-theme-15.mb-theme-15
+          +Input({type: 'text', label: 'Nhập mã giảm giả', icon: '../../assets/icons/ticket-discount.svg'})
+          button.btn.btn-success Mua ngay
         .Bill-total
           span.Bill-total-title Giảm giá trực tiếp
-          span.Bill-total-price 
+          span.Bill-total-price
             span 500
             span.Bill-total-price-unit đ
         .Bill-total
           span.Bill-total-title Giảm giá voucher
-          span.Bill-total-price 
+          span.Bill-total-price
             span 1.500
             span.Bill-total-price-unit đ
         .Bill-total
           span.Bill-total-title Tiết kiệm được
-          span.Bill-total-price 
+          span.Bill-total-price
             span 2.000
             span.Bill-total-price-unit đ
       .dash
       .Bill-total.big
         span.Bill-total-title Tổng tiền:
-        span.Bill-total-price 
+        span.Bill-total-price
           span 311.500đ
           span.Bill-total-price-unit đ
       if success
         .Bill-total-wrapper-btns
-          button.btn.btn-success.btn-bill 
+          button.btn.btn-success.btn-bill
             span Tôi đã chuyển khoản
-            br 
+            br
             span (Kiểm tra trạng thái đơn hàng 300 giây)
           button.btn.btn-outline-gray-2.btn-bill Quay lại trang chủ
-      else 
-        button.btn.btn-orange-brand.btn-bill Mua hàng
-      .Bill-note Bằng việc tiến hành đặt mua hàng, bạn đồng ý với Điều khoản của 
+      else
+        button.btn.btn-orange-brand.w-100 Mua ngay
+      .Bill-note Bằng việc tiến hành đặt mua hàng, bạn đồng ý với Điều khoản của
         span Công ty cổ phần Văn hóa và Bản quyền Benito
       .Bill-bottom
         img(src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyIiB2aWV3Qm94PSIwIDAgMzQwIDIyIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMEgzNDBWMjJIMzMwLjk5QzMzMC43MjggMTUuMzI4MiAzMjUuMjM2IDEwIDMxOC41IDEwQzMxMS43NjQgMTAgMzA2LjI3MiAxNS4zMjgyIDMwNi4wMSAyMkgyOTcuOTlDMjk3LjcyOCAxNS4zMjgyIDI5Mi4yMzYgMTAgMjg1LjUgMTBDMjc4Ljc2NCAxMCAyNzMuMjcyIDE1LjMyODIgMjczLjAxIDIySDI2NC45OUMyNjQuNzI4IDE1LjMyODIgMjU5LjIzNiAxMCAyNTIuNSAxMEMyNDUuNzY0IDEwIDI0MC4yNzIgMTUuMzI4MiAyNDAuMDEgMjJIMjMxLjk5QzIzMS43MjggMTUuMzI4MiAyMjYuMjM2IDEwIDIxOS41IDEwQzIxMi43NjQgMTAgMjA3LjI3MiAxNS4zMjgyIDIwNy4wMSAyMkgxOTguOTlDMTk4LjcyOCAxNS4zMjgyIDE5My4yMzYgMTAgMTg2LjUgMTBDMTc5Ljc2NCAxMCAxNzQuMjcyIDE1LjMyODIgMTc0LjAxIDIySDE2NS45OUMxNjUuNzI4IDE1LjMyODIgMTYwLjIzNiAxMCAxNTMuNSAxMEMxNDYuNzY0IDEwIDE0MS4yNzIgMTUuMzI4MiAxNDEuMDEgMjJIMTMyLjk5QzEzMi43MjggMTUuMzI4MiAxMjcuMjM2IDEwIDEyMC41IDEwQzExMy43NjQgMTAgMTA4LjI3MiAxNS4zMjgyIDEwOC4wMSAyMkg5OS45OTAyQzk5LjcyNzcgMTUuMzI4MiA5NC4yMzYxIDEwIDg3LjUgMTBDODAuNzYzOSAxMCA3NS4yNzIzIDE1LjMyODIgNzUuMDA5OCAyMkg2Ni45OTAyQzY2LjcyNzcgMTUuMzI4MiA2MS4yMzYxIDEwIDU0LjUgMTBDNDcuNzYzOSAxMCA0Mi4yNzIzIDE1LjMyODIgNDIuMDA5OCAyMkgzMy45OTAyQzMzLjcyNzcgMTUuMzI4MiAyOC4yMzYxIDEwIDIxLjUgMTBDMTQuNzYzOSAxMCA5LjI3MjI3IDE1LjMyODIgOS4wMDk4MiAyMkgwVjBaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K", alt="", srcset="")
