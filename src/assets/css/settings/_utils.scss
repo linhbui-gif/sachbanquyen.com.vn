@@ -90,6 +90,10 @@ img {
        text-transform: uppercase;
        color: var(--black);
        padding-right: 9px;
+       @include media-breakpoint-down(sm){
+         margin-bottom: 8px;
+       }
+
        svg{
          width: 23px;
          height: 23px;
@@ -103,6 +107,9 @@ img {
          color: var(--body-text);
          padding: 0 9px;
          border-left: 1px solid var(--icon);
+         @include media-breakpoint-down(sm){
+           border-left: unset;
+         }
        }
        &-item{
          font-family: "Roboto";
@@ -121,9 +128,17 @@ img {
      }
    }
   &-nav{
+    @include media-breakpoint-down(lg){
+      margin-top: 20px;
+    }
    &-item{
      padding: 15px 53px;
      text-align: center;
+     @include media-breakpoint-down(lg){
+       padding: 0 20px;
+       min-width: 200px;
+       display: block;
+     }
      &-title{
        font-family: "Roboto";
        font-size: 20px;
@@ -153,7 +168,7 @@ img {
   border-radius: 50%;
 }
 .scroll-mobile{
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(lg){
     flex-wrap: nowrap;
     overflow-x: scroll;
   }

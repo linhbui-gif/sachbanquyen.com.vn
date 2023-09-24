@@ -5,14 +5,36 @@ block pages
       include ./includes/components/Breadcrumb.pug
     .flash-sale-all
       section
-        .container
-          .row
-            .col-12
-              img(src="./assets/images/image-banner-flashsale.png" alt="")
+        .container.d-lg-block.d-none
+          img(src="./assets/images/image-banner-flashsale.png" alt="")
+        .d-lg-none.d-block
+          img(src="./assets/images/image-banner-flash-sale-mb.png" alt="")
       section.flash-sale-tab
+        .fash-sale-background.pt-theme-30.d-lg-none.d-block
+          .flash-sale-tab-header.d-flex.align-items-center.justify-content-center.flex-wrap
+            h1.flash-sale-tab-header-title
+              | Fl
+              svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none')
+                path(d='M8.16269 0.840125C8.25409 0.529338 8.53932 0.315918 8.86327 0.315918H14.7054C14.9401 0.315918 15.1605 0.428759 15.2978 0.619189C15.4351 0.809618 15.4724 1.05442 15.3982 1.27711L12.7975 9.07907H18.3567C18.6356 9.07907 18.8902 9.23795 19.0127 9.4885C19.1352 9.73905 19.1044 10.0375 18.9331 10.2577L8.70945 23.4024C8.49301 23.6807 8.10867 23.7646 7.79594 23.6019C7.48321 23.4392 7.33137 23.0763 7.43504 22.7393L10.0653 14.1909H5.21196C4.98181 14.1909 4.76513 14.0824 4.62725 13.8982C4.48937 13.7139 4.44643 13.4754 4.51137 13.2546L8.16269 0.840125Z' fill='#FFB40B')
+              | sh sales
+            .flash-sale-tab-header-timeEnd
+              span.flash-sale-tab-header-timeEnd-in Kết thúc trong
+              span.flash-sale-tab-header-timeEnd-item 04
+              span.flash-sale-tab-header-timeEnd-item.dot :
+              span.flash-sale-tab-header-timeEnd-item 15
+              span.flash-sale-tab-header-timeEnd-item.dot :
+              span.flash-sale-tab-header-timeEnd-item 02
+          .flash-sale-tab-nav.d-flex.scroll-mobile
+            a.flash-sale-tab-nav-item.active(href="" title="")
+              span.flash-sale-tab-nav-item-title.d-block 12:00
+              span.flash-sale-tab-nav-item-des.d-block Đang diễn ra
+            each item in [1,2,3,4,5]
+              a.flash-sale-tab-nav-item(href="" title="")
+                span.flash-sale-tab-nav-item-title.d-block 12:00
+                span.flash-sale-tab-nav-item-des.d-block Đang diễn ra
         .container
-          .fash-sale-background.pt-theme-30
-            .flash-sale-tab-header.d-flex.align-items-center.justify-content-center
+          .fash-sale-background.pt-theme-30.d-lg-block.d-none
+            .flash-sale-tab-header.d-flex.align-items-center.justify-content-center.flex-wrap
               h1.flash-sale-tab-header-title
                 | Fl
                 svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none')
@@ -25,7 +47,7 @@ block pages
                 span.flash-sale-tab-header-timeEnd-item 15
                 span.flash-sale-tab-header-timeEnd-item.dot :
                 span.flash-sale-tab-header-timeEnd-item 02
-            .flash-sale-tab-nav.d-flex
+            .flash-sale-tab-nav.d-flex.scroll-mobile
               a.flash-sale-tab-nav-item.active(href="" title="")
                 span.flash-sale-tab-nav-item-title.d-block 12:00
                 span.flash-sale-tab-nav-item-des.d-block Đang diễn ra
@@ -35,7 +57,7 @@ block pages
                   span.flash-sale-tab-nav-item-des.d-block Đang diễn ra
           .row.mt-theme-15
             each item in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-              .col-lg-3.mb-theme-15
+              .col-lg-3.mb-theme-15.col-6
                 +CardComponent({
                   url: './assets/images/image-book-thumbnail.png',
                   title: 'Làm Chủ Cơn Giận',
