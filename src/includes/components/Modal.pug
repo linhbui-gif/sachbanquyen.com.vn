@@ -1,0 +1,11 @@
+mixin Modal({title, description})
+  .modal.fade#myModal(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-body
+          img(src="../../assets/icons/question-circle.svg", alt="", srcset="")
+          h4.modal-title#myModalLabel= title
+          p= description
+        .modal-footer
+          button.btn.btn-secondary(type='button', data-dismiss='modal') Hủy
+          button.btn.btn-primary(type='button') Xác nhận

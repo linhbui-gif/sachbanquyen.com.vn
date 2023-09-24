@@ -4,10 +4,15 @@
   gap: 8px;
   flex-direction: row;
   padding: 14.5px 0;
+  @media (max-width: 991px) {
+    padding: 0;
+  }
   &-label {
     display: flex;
     gap: 8px;
     flex-direction: row;
+    @include body-15-pt-r();
+    align-items: center;
   }
   img {
     width: 24px;
@@ -33,6 +38,7 @@
         cursor: pointer;
         text-align: center;
         transition: all 250ms ease;
+        min-width: 24px;
       }
     }
     &:checked {

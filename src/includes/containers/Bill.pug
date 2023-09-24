@@ -27,20 +27,22 @@ mixin Bill({method, success})
             span 2.000
             span.Bill-total-price-unit đ
       .dash
-      .Bill-total.big
-        span.Bill-total-title Tổng tiền:
-        span.Bill-total-price
-          span 311.500đ
-          span.Bill-total-price-unit đ
-      if success
-        .Bill-total-wrapper-btns
-          button.btn.btn-success.btn-bill
-            span Tôi đã chuyển khoản
-            br
-            span (Kiểm tra trạng thái đơn hàng 300 giây)
-          button.btn.btn-outline-gray-2.btn-bill Quay lại trang chủ
-      else
-        button.btn.btn-orange-brand.w-100 Mua ngay
+      .Bill-total-wrapper
+        .Bill-total.big
+          span.Bill-total-title Tổng tiền:
+          span.Bill-total-price
+            span 311.500đ
+            span.Bill-total-price-unit đ
+        if success
+          +Modal({title: 'Xác nhận thanh toán', description: 'Bạn có chắc chắn muốn thanh toán chuyển khoản'})
+          .Bill-total-wrapper-btns
+            button.btn.btn-success(type='button', data-toggle='modal', data-target='#myModal')
+              span Tôi đã chuyển khoản
+              br
+              span (Kiểm tra trạng thái đơn hàng 300 giây)
+            button.btn.btn-outline-gray-2.btn-bill Quay lại trang chủ
+        else
+          button.btn.btn-orange-brand.w-100 Mua ngay
       .Bill-note Bằng việc tiến hành đặt mua hàng, bạn đồng ý với Điều khoản của
         span Công ty cổ phần Văn hóa và Bản quyền Benito
       .Bill-bottom

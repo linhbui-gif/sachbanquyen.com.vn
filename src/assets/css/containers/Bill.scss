@@ -1,4 +1,7 @@
 .Bill {
+  @media (max-width: 991px) {
+    margin-bottom: 64px;
+  }
   &-shape {
     width: 100%;
     height: 16px;
@@ -13,6 +16,9 @@
     box-shadow: -1px 15px 10px 0px rgba(0, 0, 0, 0.1);
     position: relative;
     background: var(--white);
+    @media (max-width: 991px) {
+      box-shadow: -1px 20px 20px 12px rgba(0, 0, 0, 0.1);
+    }
   }
   &-bottom {
     width: 100%;
@@ -25,7 +31,18 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 15px;
-
+    &-wrapper {
+      @media (max-width: 991px) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: var(--white);
+        padding: 15px;
+        z-index: 100;
+      }
+    }
     &-voucher {
       display: flex;
       flex-direction: row;
@@ -105,9 +122,9 @@
       line-height: 21px;
     }
   }
-  &-discount{
+  &-discount {
     gap: 8px;
-    .btn-success{
+    .btn-success {
       line-height: 10px;
     }
   }
