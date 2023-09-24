@@ -7,7 +7,7 @@ mixin Cart({ method })
           +Checkbox("")
         .col-6
           h4.heading Tất cả (3 sách)
-        .col-5
+        .col-5.Cart-heading-title
           .row.text-right
             .col-5
               h6.mt-2 Số lượng
@@ -31,16 +31,16 @@ mixin Cart({ method })
               .Cart-card-heading Giáo trình Lí thuyết xác suất trong kinh tế và tài chính
               .Cart-card-description Tác giả: TS. Nguyễn Mạnh Thế, TS. Phạm Ngọc Hưng, ThS. Bùi Dương Hải
               .Cart-card-label
-                span Đơn giá:
+                span.Cart-price-label Đơn giá:
                 span.Cart-price
                   span 311.500
                   span.Cart-price-unit đ
                 span.Cart-price-old
                   span 311.500
                   span.Cart-price-old-unit đ
-        .col-5
-          .row.text-right
-            .col-5
+        .col-5.Cart-info-mobile
+          .row.text-right.Cart-info-mobile-wrapper
+            .col-5.Cart-info-mobile-btn
                 if method
                   | 1 cuốn
                 else
@@ -66,16 +66,16 @@ mixin Cart({ method })
               .Cart-card-heading Giáo trình Lí thuyết xác suất trong kinh tế và tài chính
               .Cart-card-description Tác giả: TS. Nguyễn Mạnh Thế, TS. Phạm Ngọc Hưng, ThS. Bùi Dương Hải
               .Cart-card-label
-                span Đơn giá:
+                span.Cart-price-label Đơn giá:
                 span.Cart-price
                   span 311.500
                   span.Cart-price-unit đ
                 span.Cart-price-old
                   span 311.500
                   span.Cart-price-old-unit đ
-        .col-5
-          .row.text-right
-            .col-5
+        .col-5.Cart-info-mobile
+          .row.text-right.Cart-info-mobile-wrapper
+            .col-5.Cart-info-mobile-btn
               if method
                 | 1 cuốn
               else

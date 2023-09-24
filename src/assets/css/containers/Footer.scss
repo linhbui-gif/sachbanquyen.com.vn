@@ -2,6 +2,9 @@
   border-top: 1px solid var(--line-3, #eaeaea);
   background: #fcfcfc;
   padding-top: 45px;
+  @media (max-width: 768px) {
+    overflow-x: hidden;
+  }
   .copy-right {
     color: var(--main-white, var(--Trng, #fff));
     text-align: center;
@@ -50,7 +53,7 @@
       gap: 6px;
       align-items: center;
       justify-content: flex-start;
-      img{
+      img {
         width: unset;
       }
     }
