@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Template Gulp</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/library/fancybox.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/library/carousel.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/library/carousel.thumbs.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/library/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/library/select2.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
     <link rel="icon" type="image/png" href="./assets/images/favicon.png">
@@ -278,9 +277,21 @@
             <section>
               <div class="row">
                 <div class="col-12">
-                  <div class="banner-single news-banner"><img src="./assets/images/image-banner-single.png" alt=""></div>
+                  <div class="banner-single pt-theme-0 pb-theme-0"><img src="./assets/images/image-banner-single.png" alt=""></div>
+                  <div class="News-category-wrapper">
+                    <div class="HeadingCard d-flex align-items-center h-4-heading-card Category-title mt-theme-15 mb-theme-15">
+                      <h3 class="HeadingCard-title">Danh mục tin</h3>
+                    </div>
+                    <ul class="News-category-mobile d-flex mb-0 scroll-mobile">
+                      <li class="News-category-mobile-item"><a class="News-category-mobile-item-link" href="">Tin tức</a></li>
+                      <li class="News-category-mobile-item"><a class="News-category-mobile-item-link" href="">Điểm sách</a></li>
+                      <li class="News-category-mobile-item"><a class="News-category-mobile-item-link" href="">Khuyến mại</a></li>
+                      <li class="News-category-mobile-item"><a class="News-category-mobile-item-link" href="">Khuyến mại</a></li>
+                      <li class="News-category-mobile-item"><a class="News-category-mobile-item-link" href="">Khuyến mại</a></li>
+                    </ul>
+                  </div>
                   <section class="News">
-                    <div class="HeadingCard d-flex align-items-center h-4-heading-card Category-title">
+                    <div class="HeadingCard d-flex align-items-center h-4-heading-card Category-title mt-theme-15 mb-theme-15">
                       <h3 class="HeadingCard-title">Tất cả bài viết (32)</h3>
                     </div><a class="News-card-first" href="18.1.Tin-tức.html"><img src="./assets/images/image-news.jpg" alt="" srcset="">
                       <div class="News-card-first-wrapper">
@@ -312,7 +323,7 @@
           </div>
           <div class="col-lg-3">
             <aside>
-              <div class="list-group">
+              <div class="list-group d-lg-block d-none">
                 <h3 class="list-group-item header">CHỦ ĐỀ</h3>
                 <div class="accordion" id="accordionFlushExample">
                   <div class="accordion-item">
@@ -369,16 +380,36 @@
                 </div>
               </div>
               <div class="list-news">
-                <h3 class="list-news-title">Tin nổi bật</h3><a class="CardNewsComponent" href="18.1.Tin-tức.html">
-                  <div class="CardNewsComponent-image"><img src="./assets/images/image-news.jpg" alt="" srcset=""></div>
+                <h3 class="list-news-title">Tin nổi bật</h3><a class="CardNewsComponent card-small" href="18.1.Tin-tức.html">
+                  <div class="CardNewsComponent-image"><img src="./assets/images/image-card-news-2.png" alt="" srcset=""></div>
                   <div class="CardNewsComponent-body text-center">
-                    <h3 class="CardNewsComponent-body-title">Thông báo tạm ngưng xử lý đơn hàng để kiểm kê kho</h3>
-                    <p class="CardNewsComponent-body-description text-center mb-0">Nói về sự phát triển của văn hóa đọc trong những năm gần đây, ông Nguyễn Nguyên, Cục trưởng Cục Xuất bản, In và Phát hành, Phó Chủ tịch Hội Xuất bản Việt Nam cho biết, mặc dù còn gặp rất nhiều khó khăn, nhưng trong năm qua ngành xuất bản đã đạt được những thắng lợi có tính vượt bậc.</p>
-                  </div></a><a class="CardNewsComponent" href="18.1.Tin-tức.html">
-                  <div class="CardNewsComponent-image"><img src="./assets/images/image-news.jpg" alt="" srcset=""></div>
+                    <h3 class="CardNewsComponent-body-title">Phiên vận chuyển sách giấy dịp tết nguyên đán 2021</h3>
+                    <p class="CardNewsComponent-body-description mb-0">Do nhu cầu vận chuyển và số lượng đơn hàng từ các ...</p>
+                  </div></a><a class="CardNewsComponent card-small" href="18.1.Tin-tức.html">
+                  <div class="CardNewsComponent-image"><img src="./assets/images/image-card-news-2.png" alt="" srcset=""></div>
                   <div class="CardNewsComponent-body text-center">
-                    <h3 class="CardNewsComponent-body-title">Thông báo tạm ngưng xử lý đơn hàng để kiểm kê kho</h3>
-                    <p class="CardNewsComponent-body-description text-center mb-0">Nói về sự phát triển của văn hóa đọc trong những năm gần đây, ông Nguyễn Nguyên, Cục trưởng Cục Xuất bản, In và Phát hành, Phó Chủ tịch Hội Xuất bản Việt Nam cho biết, mặc dù còn gặp rất nhiều khó khăn, nhưng trong năm qua ngành xuất bản đã đạt được những thắng lợi có tính vượt bậc.</p>
+                    <h3 class="CardNewsComponent-body-title">Phiên vận chuyển sách giấy dịp tết nguyên đán 2021</h3>
+                    <p class="CardNewsComponent-body-description mb-0">Do nhu cầu vận chuyển và số lượng đơn hàng từ các ...</p>
+                  </div></a><a class="CardNewsComponent card-small" href="18.1.Tin-tức.html">
+                  <div class="CardNewsComponent-image"><img src="./assets/images/image-card-news-2.png" alt="" srcset=""></div>
+                  <div class="CardNewsComponent-body text-center">
+                    <h3 class="CardNewsComponent-body-title">Phiên vận chuyển sách giấy dịp tết nguyên đán 2021</h3>
+                    <p class="CardNewsComponent-body-description mb-0">Do nhu cầu vận chuyển và số lượng đơn hàng từ các ...</p>
+                  </div></a><a class="CardNewsComponent card-small" href="18.1.Tin-tức.html">
+                  <div class="CardNewsComponent-image"><img src="./assets/images/image-card-news-2.png" alt="" srcset=""></div>
+                  <div class="CardNewsComponent-body text-center">
+                    <h3 class="CardNewsComponent-body-title">Phiên vận chuyển sách giấy dịp tết nguyên đán 2021</h3>
+                    <p class="CardNewsComponent-body-description mb-0">Do nhu cầu vận chuyển và số lượng đơn hàng từ các ...</p>
+                  </div></a><a class="CardNewsComponent card-small" href="18.1.Tin-tức.html">
+                  <div class="CardNewsComponent-image"><img src="./assets/images/image-card-news-2.png" alt="" srcset=""></div>
+                  <div class="CardNewsComponent-body text-center">
+                    <h3 class="CardNewsComponent-body-title">Phiên vận chuyển sách giấy dịp tết nguyên đán 2021</h3>
+                    <p class="CardNewsComponent-body-description mb-0">Do nhu cầu vận chuyển và số lượng đơn hàng từ các ...</p>
+                  </div></a><a class="CardNewsComponent card-small" href="18.1.Tin-tức.html">
+                  <div class="CardNewsComponent-image"><img src="./assets/images/image-card-news-2.png" alt="" srcset=""></div>
+                  <div class="CardNewsComponent-body text-center">
+                    <h3 class="CardNewsComponent-body-title">Phiên vận chuyển sách giấy dịp tết nguyên đán 2021</h3>
+                    <p class="CardNewsComponent-body-description mb-0">Do nhu cầu vận chuyển và số lượng đơn hàng từ các ...</p>
                   </div></a><a class="list-news-item text-center" href="#">Xem thêm</a>
               </div>
             </aside>
@@ -456,6 +487,7 @@
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/popper.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/select2.min.js"></script>
     <script src="./assets/js/owl.carousel.min.js"></script>
     <script src="./assets/js/fancybox.umd.js"></script>
     <script src="./assets/js/main.js"></script>

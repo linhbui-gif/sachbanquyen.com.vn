@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Template Gulp</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/library/fancybox.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/library/carousel.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/library/carousel.thumbs.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/library/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/library/select2.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
     <link rel="icon" type="image/png" href="./assets/images/favicon.png">
@@ -274,7 +273,7 @@
           </ol>
         </nav>
         <div class="row">
-          <div class="col-lg-9">
+          <div class="col-lg-8">
             <section></section>
             <div class="row">
               <div class="col-12">
@@ -292,7 +291,7 @@
                       <div class="col-6">
                         <h4 class="heading">Tất cả (3 sách)</h4>
                       </div>
-                      <div class="col-5">
+                      <div class="col-5 Cart-heading-title">
                         <div class="row text-right">
                           <div class="col-5">
                             <h6 class="mt-2">Số lượng</h6>
@@ -319,13 +318,13 @@
                           <div class="my-auto flex-column d-flex pad-left Cart-card-info">
                             <div class="Cart-card-heading">Giáo trình Lí thuyết xác suất trong kinh tế và tài chính</div>
                             <div class="Cart-card-description">Tác giả: TS. Nguyễn Mạnh Thế, TS. Phạm Ngọc Hưng, ThS. Bùi Dương Hải</div>
-                            <div class="Cart-card-label"><span>Đơn giá:</span><span class="Cart-price"><span>311.500</span><span class="Cart-price-unit">đ</span></span><span class="Cart-price-old"><span>311.500</span><span class="Cart-price-old-unit">đ</span></span></div>
+                            <div class="Cart-card-label"><span class="Cart-price-label">Đơn giá:</span><span class="Cart-price"><span>311.500</span><span class="Cart-price-unit">đ</span></span><span class="Cart-price-old"><span>311.500</span><span class="Cart-price-old-unit">đ</span></span></div>
                           </div>
                         </div>
                       </div>
-                      <div class="col-5">
-                        <div class="row text-right">
-                          <div class="col-5">
+                      <div class="col-5 Cart-info-mobile">
+                        <div class="row text-right Cart-info-mobile-wrapper">
+                          <div class="col-5 Cart-info-mobile-btn">
                             <div class="quantity-control">
                               <button class="btn btn-default decrease-button">-</button>
                               <input type="number" min="1" value="1">
@@ -352,13 +351,13 @@
                           <div class="my-auto flex-column d-flex pad-left Cart-card-info">
                             <div class="Cart-card-heading">Giáo trình Lí thuyết xác suất trong kinh tế và tài chính</div>
                             <div class="Cart-card-description">Tác giả: TS. Nguyễn Mạnh Thế, TS. Phạm Ngọc Hưng, ThS. Bùi Dương Hải</div>
-                            <div class="Cart-card-label"><span>Đơn giá:</span><span class="Cart-price"><span>311.500</span><span class="Cart-price-unit">đ</span></span><span class="Cart-price-old"><span>311.500</span><span class="Cart-price-old-unit">đ</span></span></div>
+                            <div class="Cart-card-label"><span class="Cart-price-label">Đơn giá:</span><span class="Cart-price"><span>311.500</span><span class="Cart-price-unit">đ</span></span><span class="Cart-price-old"><span>311.500</span><span class="Cart-price-old-unit">đ</span></span></div>
                           </div>
                         </div>
                       </div>
-                      <div class="col-5">
-                        <div class="row text-right">
-                          <div class="col-5">
+                      <div class="col-5 Cart-info-mobile">
+                        <div class="row text-right Cart-info-mobile-wrapper">
+                          <div class="col-5 Cart-info-mobile-btn">
                             <div class="Select">
                               <div class="Select-style d-flex align-items-center h-100 justify-content-center" id="customSelect">
                                 <h6 class="Select-label">1 tháng</h6><i class="fa fa-caret-down ml-theme-4"></i>
@@ -379,14 +378,32 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-4">
             <aside>
+              <div class="modal fade Modal-confirm-checkout" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body"><img src="./assets/icons/question-circle.svg" alt="" srcset="">
+                      <h4 class="mt-theme-15 mb-theme-15 modal-title" id="myModalLabel">Xác nhận thanh toán</h4>
+                      <p class="mb-0">Bạn có chắc chắn muốn thanh toán chuyển khoản</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-success" type="button">Xác nhận</button>
+                      <button class="btn btn-outline-gray-2" type="button" data-dismiss="modal">Hủy</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <section class="Bill">
                 <div class="Bill-shape"></div>
-                <div class="Bill-wrapper"> 
-                  <div class="Bill-total"><span class="Bill-total-title">Tạm tính:</span><span class="Bill-total-price"> <span>311.500</span><span class="Bill-total-price-unit">đ</span></span></div>
-                  <button>Mua hàng</button>
-                  <div class="Bill-note">Bằng việc tiến hành đặt mua hàng, bạn đồng ý với Điều khoản của <span>Công ty cổ phần Văn hóa và Bản quyền Benito</span></div>
+                <div class="Bill-wrapper">
+                  <div class="Bill-total pb-theme-0"><span class="Bill-total-title">Tạm tính:</span><span class="Bill-total-price"><span>311.500</span><span class="Bill-total-price-unit">đ</span></span></div>
+                  <div class="dash"></div>
+                  <div class="Bill-total-wrapper">
+                    <div class="Bill-total big"><span class="Bill-total-title">Tổng tiền:</span><span class="Bill-total-price"><span>311.500đ</span><span class="Bill-total-price-unit">đ</span></span></div>
+                    <button class="btn btn-orange-brand w-100">Mua ngay</button>
+                  </div>
+                  <div class="Bill-note">Bằng việc tiến hành đặt mua hàng, bạn đồng ý với Điều khoản của<span>Công ty cổ phần Văn hóa và Bản quyền Benito</span></div>
                   <div class="Bill-bottom"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyIiB2aWV3Qm94PSIwIDAgMzQwIDIyIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMEgzNDBWMjJIMzMwLjk5QzMzMC43MjggMTUuMzI4MiAzMjUuMjM2IDEwIDMxOC41IDEwQzMxMS43NjQgMTAgMzA2LjI3MiAxNS4zMjgyIDMwNi4wMSAyMkgyOTcuOTlDMjk3LjcyOCAxNS4zMjgyIDI5Mi4yMzYgMTAgMjg1LjUgMTBDMjc4Ljc2NCAxMCAyNzMuMjcyIDE1LjMyODIgMjczLjAxIDIySDI2NC45OUMyNjQuNzI4IDE1LjMyODIgMjU5LjIzNiAxMCAyNTIuNSAxMEMyNDUuNzY0IDEwIDI0MC4yNzIgMTUuMzI4MiAyNDAuMDEgMjJIMjMxLjk5QzIzMS43MjggMTUuMzI4MiAyMjYuMjM2IDEwIDIxOS41IDEwQzIxMi43NjQgMTAgMjA3LjI3MiAxNS4zMjgyIDIwNy4wMSAyMkgxOTguOTlDMTk4LjcyOCAxNS4zMjgyIDE5My4yMzYgMTAgMTg2LjUgMTBDMTc5Ljc2NCAxMCAxNzQuMjcyIDE1LjMyODIgMTc0LjAxIDIySDE2NS45OUMxNjUuNzI4IDE1LjMyODIgMTYwLjIzNiAxMCAxNTMuNSAxMEMxNDYuNzY0IDEwIDE0MS4yNzIgMTUuMzI4MiAxNDEuMDEgMjJIMTMyLjk5QzEzMi43MjggMTUuMzI4MiAxMjcuMjM2IDEwIDEyMC41IDEwQzExMy43NjQgMTAgMTA4LjI3MiAxNS4zMjgyIDEwOC4wMSAyMkg5OS45OTAyQzk5LjcyNzcgMTUuMzI4MiA5NC4yMzYxIDEwIDg3LjUgMTBDODAuNzYzOSAxMCA3NS4yNzIzIDE1LjMyODIgNzUuMDA5OCAyMkg2Ni45OTAyQzY2LjcyNzcgMTUuMzI4MiA2MS4yMzYxIDEwIDU0LjUgMTBDNDcuNzYzOSAxMCA0Mi4yNzIzIDE1LjMyODIgNDIuMDA5OCAyMkgzMy45OTAyQzMzLjcyNzcgMTUuMzI4MiAyOC4yMzYxIDEwIDIxLjUgMTBDMTQuNzYzOSAxMCA5LjI3MjI3IDE1LjMyODIgOS4wMDk4MiAyMkgwVjBaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K" alt="" srcset=""></div>
                 </div>
               </section>
@@ -404,7 +421,7 @@
               <div class="col-12">
                 <div class="owl-carousel mobile-disable-carousel" id="carouselFlashSale01">
                   <div class="item">
-                    <div class="CardComponent">
+                    <div class="CardComponent no-shadow">
                       <div class="CardComponent-image position-relative"><img class="" src="./assets/images/image-book-thumbnail.png" alt="Làm Chủ Cơn Giận"><span class="percent-sale position-absolute">-50%</span>
                       </div>
                       <div class="CardComponent-body text-center"><span class="CardComponent-body-rate d-block w-100 text-center mt-theme-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
@@ -414,7 +431,7 @@
                       </div>
                       <div class="CardComponent-footer mt-theme-4">
                         <div class="CardComponent-footer-hot d-flex align-items-end justify-content-center">
-                          <div class="CardComponent-footer-hot-img"><img src="./assets/images/image-hot.png" alt=""></div><span class="CardComponent-footer-hot-text">Cháy Hàng</span>
+                          <div class="CardComponent-footer-hot-img"><img src="./assets/images/gif-hot-sale.gif" alt=""></div><span class="CardComponent-footer-hot-text">Cháy Hàng</span>
                         </div>
                         <div class="progress mt-theme-2">
                           <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
@@ -423,7 +440,7 @@
                     </div>
                   </div>
                   <div class="item">
-                    <div class="CardComponent">
+                    <div class="CardComponent no-shadow">
                       <div class="CardComponent-image position-relative"><img class="" src="./assets/images/image-book-thumbnail-1.png" alt="Làm Chủ Cơn Giận">
                       </div>
                       <div class="CardComponent-body text-center"><span class="CardComponent-body-rate d-block w-100 text-center mt-theme-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
@@ -433,7 +450,7 @@
                       </div>
                       <div class="CardComponent-footer mt-theme-4">
                         <div class="CardComponent-footer-hot d-flex align-items-end justify-content-center">
-                          <div class="CardComponent-footer-hot-img"><img src="./assets/images/image-hot.png" alt=""></div><span class="CardComponent-footer-hot-text">Cháy Hàng</span>
+                          <div class="CardComponent-footer-hot-img"><img src="./assets/images/gif-hot-sale.gif" alt=""></div><span class="CardComponent-footer-hot-text">Cháy Hàng</span>
                         </div>
                         <div class="progress mt-theme-2">
                           <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
@@ -442,7 +459,7 @@
                     </div>
                   </div>
                   <div class="item">
-                    <div class="CardComponent">
+                    <div class="CardComponent no-shadow">
                       <div class="CardComponent-image position-relative"><img class="" src="./assets/images/image-book-thumbnail-2.png" alt="Làm Chủ Cơn Giận">
                       </div>
                       <div class="CardComponent-body text-center"><span class="CardComponent-body-rate d-block w-100 text-center mt-theme-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
@@ -452,7 +469,7 @@
                       </div>
                       <div class="CardComponent-footer mt-theme-4">
                         <div class="CardComponent-footer-hot d-flex align-items-end justify-content-center">
-                          <div class="CardComponent-footer-hot-img"><img src="./assets/images/image-hot.png" alt=""></div><span class="CardComponent-footer-hot-text">Cháy Hàng</span>
+                          <div class="CardComponent-footer-hot-img"><img src="./assets/images/gif-hot-sale.gif" alt=""></div><span class="CardComponent-footer-hot-text">Cháy Hàng</span>
                         </div>
                         <div class="progress mt-theme-2">
                           <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
@@ -461,7 +478,7 @@
                     </div>
                   </div>
                   <div class="item">
-                    <div class="CardComponent">
+                    <div class="CardComponent no-shadow">
                       <div class="CardComponent-image position-relative"><img class="" src="./assets/images/image-book-thumbnail-3.png" alt="Làm Chủ Cơn Giận">
                       </div>
                       <div class="CardComponent-body text-center"><span class="CardComponent-body-rate d-block w-100 text-center mt-theme-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
@@ -471,7 +488,7 @@
                       </div>
                       <div class="CardComponent-footer mt-theme-4">
                         <div class="CardComponent-footer-hot d-flex align-items-end justify-content-center">
-                          <div class="CardComponent-footer-hot-img"><img src="./assets/images/image-hot.png" alt=""></div><span class="CardComponent-footer-hot-text">Cháy Hàng</span>
+                          <div class="CardComponent-footer-hot-img"><img src="./assets/images/gif-hot-sale.gif" alt=""></div><span class="CardComponent-footer-hot-text">Cháy Hàng</span>
                         </div>
                         <div class="progress mt-theme-2">
                           <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
@@ -480,7 +497,7 @@
                     </div>
                   </div>
                   <div class="item">
-                    <div class="CardComponent">
+                    <div class="CardComponent no-shadow">
                       <div class="CardComponent-image position-relative"><img class="" src="./assets/images/image-book-thumbnail-3.png" alt="Làm Chủ Cơn Giận"><span class="percent-sale position-absolute">-50%</span>
                       </div>
                       <div class="CardComponent-body text-center"><span class="CardComponent-body-rate d-block w-100 text-center mt-theme-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
@@ -490,7 +507,7 @@
                       </div>
                       <div class="CardComponent-footer mt-theme-4">
                         <div class="CardComponent-footer-hot d-flex align-items-end justify-content-center">
-                          <div class="CardComponent-footer-hot-img"><img src="./assets/images/image-hot.png" alt=""></div><span class="CardComponent-footer-hot-text">Cháy Hàng</span>
+                          <div class="CardComponent-footer-hot-img"><img src="./assets/images/gif-hot-sale.gif" alt=""></div><span class="CardComponent-footer-hot-text">Cháy Hàng</span>
                         </div>
                         <div class="progress mt-theme-2">
                           <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
@@ -499,7 +516,7 @@
                     </div>
                   </div>
                   <div class="item">
-                    <div class="CardComponent">
+                    <div class="CardComponent no-shadow">
                       <div class="CardComponent-image position-relative"><img class="" src="./assets/images/image-book-thumbnail.png" alt="Làm Chủ Cơn Giận"><span class="percent-sale position-absolute">-50%</span>
                       </div>
                       <div class="CardComponent-body text-center"><span class="CardComponent-body-rate d-block w-100 text-center mt-theme-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
@@ -509,7 +526,7 @@
                       </div>
                       <div class="CardComponent-footer mt-theme-4">
                         <div class="CardComponent-footer-hot d-flex align-items-end justify-content-center">
-                          <div class="CardComponent-footer-hot-img"><img src="./assets/images/image-hot.png" alt=""></div><span class="CardComponent-footer-hot-text">Cháy Hàng</span>
+                          <div class="CardComponent-footer-hot-img"><img src="./assets/images/gif-hot-sale.gif" alt=""></div><span class="CardComponent-footer-hot-text">Cháy Hàng</span>
                         </div>
                         <div class="progress mt-theme-2">
                           <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
@@ -594,6 +611,7 @@
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/popper.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/select2.min.js"></script>
     <script src="./assets/js/owl.carousel.min.js"></script>
     <script src="./assets/js/fancybox.umd.js"></script>
     <script src="./assets/js/main.js"></script>

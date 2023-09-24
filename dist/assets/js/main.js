@@ -13,12 +13,13 @@ const carousel = {
     this.setupBookDetail();
     this.setupBookDetail02();
     this.setupHomeBannerCarousel();
-    this.setupFlashSaleBannerCarousel()
-    this.setupFlashSaleBannerCarousel01()
-    this.setupFlashSaleBannerCarousel02()
-    this.setupBookCategory()
-    this.setupBookSuggest()
-    this.setupBookSameCategory()
+    this.setupFlashSaleBannerCarousel();
+    this.setupFlashSaleBannerCarousel01();
+    this.setupFlashSaleBannerCarousel02();
+    this.setupBookCategory();
+    this.setupBookSuggest();
+    this.setupBookSameCategory();
+    this.setupBookBenitorCategory();
   },
   setupBookDetail: function () {
     $(document).ready(function() {
@@ -34,7 +35,18 @@ const carousel = {
         items: 2,
         nav: false,
         dots: false,
-        margin: 15
+        margin: 15,
+        responsive: {
+          0: {
+            items: 1,
+            slideBy: 1,
+            margin: 4
+          },
+          991: {
+            items: 2,
+            slideBy: 1,
+          },
+        },
       });
       $("#thumbs").on("click", ".owl-item", function (e) {
         e.preventDefault();
@@ -48,6 +60,17 @@ const carousel = {
         })
     });
 
+    var mobileQuery = window.matchMedia('(max-width: 992px)');
+    mobileQuery.addListener(handleWindowSizeChange);
+    function handleWindowSizeChange(e) {
+      if (e.matches) {
+        console.log($("#thumbs").find('.owl-item').css('width', '74px'))
+        $("#thumbs").find('.owl-item').css('width', '74px');
+      }
+    }
+
+    // Khởi chạy hàm xử lý ban đầu
+    handleWindowSizeChange(mobileQuery);
   },
   setupBookDetail02: function () {
     $(document).ready(function() {
@@ -108,6 +131,7 @@ const carousel = {
           items: 2,
           slideBy: 2,
           margin: 10,
+          nav: false,
         },
         768: {
           items: 3,
@@ -141,6 +165,7 @@ const carousel = {
         0: {
           items: 2,
           slideBy: 2,
+          nav:false
         },
         768: {
           items: 3,
@@ -159,7 +184,7 @@ const carousel = {
       lazyLoad: true,
       dots: false,
       nav: true,
-      margin: 0,
+      margin: 10,
       navText: [
         '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
         '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
@@ -172,6 +197,7 @@ const carousel = {
         0: {
           items: 2,
           slideBy: 2,
+          nav:false
         },
         768: {
           items: 3,
@@ -202,8 +228,8 @@ const carousel = {
     $("#carouselBookCategory").owlCarousel({
       responsive: {
         0: {
-          items: 2,
-          slideBy: 2,
+          items: 3,
+          slideBy: 1,
         },
         991: {
           items: 6,
@@ -231,6 +257,7 @@ const carousel = {
         0: {
           items: 2,
           slideBy: 2,
+          nav:false
         },
         991: {
           items: 4,
@@ -259,12 +286,44 @@ const carousel = {
           items: 2,
           slideBy: 2,
         },
+        767: {
+          items: 4,
+          slideBy: 1,
+        },
         991: {
           items: 4,
           slideBy: 4,
         },
       },
       loop: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: false,
+      smartSpeed: 300,
+      lazyLoad: true,
+      dots: false,
+      nav: true,
+      margin: 15,
+      navText: [
+        '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
+        '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+      ],
+    });
+  },
+  setupBookBenitorCategory: function () {
+    $("#carouselBookBenitor").owlCarousel({
+      responsive: {
+        0: {
+          items: 2.2,
+          slideBy: 1,
+          nav: false
+        },
+        991: {
+          items: 5,
+          slideBy: 1,
+        },
+      },
+      loop: false,
       autoplay: true,
       autoplayTimeout: 4000,
       autoplayHoverPause: false,
@@ -424,6 +483,7 @@ new SelectDropdown({
 });
 new QuantityControl('product')
 new QuantityControl('BookDetail-data-item-quantity')
+new QuantityControl('Cart-info-mobile-btn')
 new SeeMoreComponent('content', 'seeMoreBtn');
 new SeeMoreComponent('see-more', 'seeBtn');
 new SeeMoreComponent('content-tab-see', 'seeAboutBtn');
