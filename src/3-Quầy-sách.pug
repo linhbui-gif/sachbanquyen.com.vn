@@ -13,6 +13,10 @@ block pages
            .row
              .col-12
                img(src="./assets/images/image-banner-single.png" alt="")
+         section.d-lg-none.d-block
+           .row
+             .col-12
+               img(src="./assets/images/image-banner-single.png" alt="")
          section.top-sale.bg-card-orange.mt-theme-30.d-lg-block.d-none
            .container
              .row
@@ -26,17 +30,19 @@ block pages
                  #carouselBookCategory.owl-carousel
                    .item
                      +CardComponent({
-                       url: './assets/images/image-book-category-small-01.png',
+                       url: './assets/images/image-card-features-small.png',
                        title: 'Truyện cổ tích',
                        classTitle: 'mt-theme-4 mb-theme-4 style-category-features',
-                       classModify:'card-category'
+                       classModify:'card-category',
+                       classModifyImage:'resize-card-small'
                      })
                    .item
                      +CardComponent({
-                       url: './assets/images/image-category-small.png',
+                       url: './assets/images/image-card-features-small.png',
                        title: 'Truyện cổ tích',
                        classTitle: 'mt-theme-4 mb-theme-4 style-category-features',
-                       classModify:'card-category'
+                       classModify:'card-category',
+                       classModifyImage:'resize-card-small'
                      })
          section.top-sale.bg-card-orange.mt-theme-30.mt-theme-30.d-lg-block.d-none
            .container
@@ -56,7 +62,8 @@ block pages
                        description: 'Tác giả',
                        classTitle: 'mt-theme-4 mb-theme-4 bookname-15-pt-m',
                        price: true,
-                       classModify: "style2"
+                       classModify: "style2",
+                       classModifyImage: 'resize-card'
                      })
                    .item
                      +CardComponent({
@@ -65,7 +72,8 @@ block pages
                        description: 'Tác giả',
                        classTitle: 'mt-theme-4 mb-theme-4 bookname-15-pt-m',
                        price: true,
-                       classModify: "style2"
+                       classModify: "style2",
+                       classModifyImage: 'resize-card'
                      })
                    .item
                      +CardComponent({
@@ -74,7 +82,8 @@ block pages
                        description: 'Tác giả',
                        classTitle: 'mt-theme-4 mb-theme-4 bookname-15-pt-m',
                        price: true,
-                       classModify: "style2"
+                       classModify: "style2",
+                       classModifyImage: 'resize-card'
                      })
                    .item
                      +CardComponent({
@@ -83,7 +92,8 @@ block pages
                        description: 'Tác giả',
                        classTitle: 'mt-theme-4 mb-theme-4 bookname-15-pt-m',
                        price: true,
-                       classModify: "style2"
+                       classModify: "style2",
+                       classModifyImage: 'resize-card'
                      })
                    .item
                      +CardComponent({
@@ -92,7 +102,8 @@ block pages
                        description: 'Tác giả',
                        classTitle: 'mt-theme-4 mb-theme-4 bookname-15-pt-m',
                        price: true,
-                       classModify: "style2"
+                       classModify: "style2",
+                       classModifyImage: 'resize-card'
                      })
                    .item
                      +CardComponent({
@@ -101,7 +112,8 @@ block pages
                        description: 'Tác giả',
                        classTitle: 'mt-theme-4 mb-theme-4 bookname-15-pt-m',
                        price: true,
-                       classModify: "style2"
+                       classModify: "style2",
+                       classModifyImage: 'resize-card'
                      })
          section.top-sale.mt-theme-30.mt-theme-30
            .container
@@ -113,15 +125,27 @@ block pages
                    isViewAll: false
                  })
                include ./includes/containers/SearchBox.pug
-               each item in [1,2,3,4,5,6,7,8,9,10,11,12]
+               each item in [1,2,3,4,5,6,7,8,9,10]
                  .col-lg-4.mb-theme-15.col-6.col-md-4
                    +CardComponent({
-                     url: './assets/images/image-book-cover.png',
+                     url: 'https://s3-alpha-sig.figma.com/img/5112/ac69/6d14cf14d83b0c363bdc8a8ba78a3f8b?Expires=1696809600&Signature=l3MckxG5N5xghfxAqb8ysWQJxjmyiE-knkkWlEvmBO7j6MnCNgFeNI5LlfQIBZPxXieDVb4ZV4jkehXqrBJ1dmyyoxu2kI1fKVXW3-91S2CWiku8u3X8trzs-pqr61z9FeCj3yyWaDpdArsgsYh9dMTVuL7GUWi2Pz9zb13PK-Dc3bpspZDJCE7EMvV8qSVIKqNdskzgIm9QeqE9FNrUN3gi7Ee3AspoyWZV4vhtxH~qUJgbv23USZsU9xTyr-ZL4gkN9WYUuY6sEghLCY1-bYCc6FqP8KpOVZMgJGOqD1AewYXAluOYhxFEDtIPrnA8P1w3Yzp8ECfXF8uarN-4Lg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
                      title: 'Làm Chủ Cơn Giận',
                      description: 'Tác giả',
                      classTitle: 'mt-theme-4 mb-theme-4 bookname-15-pt-m',
                      price: true,
                      isNew:true,
-                     classModify: "style2"
+                     classModify: "style2",
+                       classModifyImage: 'resize-card'
+                   })
+                 .col-lg-4.mb-theme-15.col-6.col-md-4
+                   +CardComponent({
+                     url:'https://s3-alpha-sig.figma.com/img/b81a/6efd/903407b5dc68553d7bae119eb36ff6aa?Expires=1696809600&Signature=BWJ8HQqCloq790p0QViWEhyARj9Zuuv9X-e2N~sWR9XmJwz60L5FfWh7~2bj8JYvH45xAt0vl~huEAu6O6trmh9VbVLr-rbss~Ncl-UezbZOeNhdABC506ghvP3AUoOBRF5eMdP8izVxBPgdUaq8SDFuje22EfyIbAa1dGFdrmUwV4Kz3xEJXTRDj0~1-9TGUWn1orc-A8zeAlu9adT3g0wnHlv5z6oROy8UsxefbAlrZyApHf8FdIM6soVL0Rncl76Uo4NCfq1XziQ5Z2ZYRKZ7bq~Dhk-kzBem406chmJZHlYR-R-70tubF4~ZYCIgV5qGnaPbG~eVdNup5h~gpA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+                     title: 'Làm Chủ Cơn Giận',
+                     description: 'Tác giả',
+                     classTitle: 'mt-theme-4 mb-theme-4 bookname-15-pt-m',
+                     price: true,
+                     isNew: true,
+                     classModify: "style2",
+                     classModifyImage: 'resize-card'
                    })
                +Pagination()
