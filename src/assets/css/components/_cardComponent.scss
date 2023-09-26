@@ -24,7 +24,7 @@
     box-shadow: unset;
     background: $white;
     @include media-breakpoint-down(sm){
-        padding: 0;
+        padding: 8px 8px 16px 8px;
     }
   }
   &.bg-card-orange {
