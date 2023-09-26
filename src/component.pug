@@ -5,14 +5,14 @@ block pages
     const options = ['Tùy chọn 1', 'Tùy chọn 2', 'Tùy chọn 3']
   .container
     .row
-      .col-12
-        +Input({ type: 'text', label: 'Nhập vị trí', icon: './assets/icons/location.svg' })
-        +Input({ type: 'dropdown', label: 'Chọn Tỉnh/TP', icon: './assets/icons/map.svg', options: ['Tùy chọn 1', 'Tùy chọn 2', 'Tùy chọn 3'], id: 'dropdown-1'})
-        +Input({ type: 'textarea', label: 'Thêm ghi chú (ví dụ: Giao hàng vào giờ hành chính' })
-      .col-2
-        button.btn.btn-primary.d-block.w-100 Mua ngay
-        button.btn.btn-orange-brand.mt-4.w-100 Mua ngay
-        button.btn.btn-success.mt-4 Mua ngay
+      //.col-12
+      //  +Input({ type: 'text', label: 'Nhập vị trí', icon: './assets/icons/location.svg' })
+      //  +Input({ type: 'dropdown', label: 'Chọn Tỉnh/TP', icon: './assets/icons/map.svg', options: ['Tùy chọn 1', 'Tùy chọn 2', 'Tùy chọn 3'], id: 'dropdown-1'})
+      //  +Input({ type: 'textarea', label: 'Thêm ghi chú (ví dụ: Giao hàng vào giờ hành chính' })
+      //.col-2
+      //  button.btn.btn-primary.d-block.w-100 Mua ngay
+      //  button.btn.btn-orange-brand.mt-4.w-100 Mua ngay
+      //  button.btn.btn-success.mt-4 Mua ngay
       //.col-12
       //  include ./includes/components/SelectDropdown.pug
       //  .cart
@@ -46,45 +46,27 @@ block pages
     //    aside.category
     //      +ListGroupComponent({ isAccordion:true, name:'chủ đề' })
 
-    //.row
-    //  .col-2
-    //    +CardComponent({url: './assets/images/image-card.png', title:'Benito', classTitle:'mt-theme-4 mb-theme-4'})
-    //  .col-2
-    //    +CardComponent({
-    //      url: './assets/images/image-card-service.png',
-    //      imageType:'rounded-circle' ,
-    //      title: 'Cung cấp sách thư viện',
-    //      classModify:'bg-card-orange',
-    //      classTitle:'mt-theme-4 mb-theme-4'
-    //    })
-    //  .col-2
-    //    +CardComponent({
-    //      url: './assets/images/image-card-gif.jpg',
-    //      imageType: 'rounded-circle',
-    //      title: 'Sách giấy',
-    //      description:'3,420 sách',
-    //      classTitle:'mt-theme-4 mb-theme-4'
-    //    })
-    //  .col-2
-    //    +CardComponent({
-    //      url: './assets/images/image-book-thumbnail.png',
-    //      title: 'Làm Chủ Cơn Giận',
-    //      description: 'Tác giả',
-    //      classTitle:'mt-theme-4 mb-theme-4',
-    //      isRate: true,
-    //      price: true
-    //    })
-    //  .col-2
-    //      +CardComponent({
-    //        url: './assets/images/image-book-thumbnail.png',
-    //        title: 'Làm Chủ Cơn Giận',
-    //        description: 'Tác giả',
-    //        classTitle: 'mt-theme-4 mb-theme-4',
-    //        isRate: true,
-    //        price: true,
-    //        footer:true,
-    //        isSale: true
-    //      })
+    .row
+      .col-3
+        +CardComponent({
+          url: './assets/images/image-book-thumbnail.png',
+          title: 'Làm Chủ Cơn Giận',
+          description: 'Tác giả',
+          classTitle:'mt-theme-4 mb-theme-4',
+          isRate: true,
+          price: true,
+          classModifyImage:'resize-card'
+        })
+      .col-3
+        +CardComponent({
+          url: './assets/images/image-book-chu-nhat.png',
+          title: 'Làm Chủ Cơn Giận',
+          description: 'Tác giả',
+          classTitle: 'mt-theme-4 mb-theme-4',
+          isRate: true,
+          price: true,
+          classModifyImage: 'resize-card'
+        })
     //  .col-12
     //    .owl-carousel#HomeBanner-top.style-dots-rectangle
     //      .item
