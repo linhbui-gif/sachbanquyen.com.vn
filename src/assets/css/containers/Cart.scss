@@ -112,20 +112,35 @@
       aspect-ratio: 1;
       display: flex;
       align-items: center;
+      margin-right: 23px;
       &-cover {
         width: 100%;
-        aspect-ratio: 1;
         overflow: hidden;
         position: relative;
+        max-width: 100px;
+        height: 100px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bgcard);
+        border-radius: 8px;
         img.book-img {
-          width: 100%;
-          max-height: 100%;
-          min-height: 100%;
-          min-width: 100%;
-          object-fit: contain;
-          object-position: center;
-          margin: auto;
           position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          max-width: 100%;
+          max-height: 100%;
+          margin: auto;
+          width: unset!important;
+          -o-object-fit: contain;
+          object-fit: contain;
+          -o-object-position: center;
+          object-position: center;
+          border-radius: 8px;
+          transition: .5s;
         }
       }
     }

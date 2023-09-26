@@ -4,14 +4,17 @@
   min-width: 109px;
   background-color: var(--line3);
   padding: 5px 8px;
-  border-radius: 5px;
+  border-top-right-radius: 0px!important;
+  border-bottom-right-radius: 0px!important;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
   &-label{
     @include bookname-15-pt-m();
   }
   &-options{
     position: absolute;
     top: calc(100% + 8px);
-    width: 100px;
+    width: 100%;
     max-height: 0;
     overflow: hidden;
     transition: .4s;
@@ -20,14 +23,19 @@
     background-color: $white;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.10);
     z-index: 99;
+
     @include bookname-15-pt-m();
     &.active{
       max-height: 100vh;
     }
   }
   &-option{
+    transition: .5s;
     border-bottom: 1px solid var(--bginput);
     padding: 8px;
     text-align: center;
+    &:hover{
+      background: var(--line3);
+    }
   }
 }
