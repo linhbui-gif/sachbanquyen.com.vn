@@ -3,7 +3,7 @@ mixin ListGroupComponent({isAccordion, name, className, isSeeMore})
     h3.list-group-item.header=name
     if !isAccordion
        each item in [1,2,3,4,5]
-         a.list-group-item.list-group-item-action Phan Thị Vàng Anh
+         a(href="#").list-group-item.list-group-item-action Phan Thị Vàng Anh
     else
       +AccordionComponent()
     if isSeeMore

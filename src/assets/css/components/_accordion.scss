@@ -72,7 +72,9 @@
     &:not(.collapsed){
       color: unset;
       background-color: unset;
-      border-color: unset;
+      //border-color: unset;
+      border-bottom: 1px dashed var(--line3);
+      box-shadow: unset;
     }
     &:focus{
       box-shadow: unset;

@@ -33,6 +33,13 @@ header{
         }
         &-action{
           &-item{
+            &-phone{
+              width: 34px;
+              height: 34px;
+              img{
+                width: 100%!important;
+              }
+            }
             &:nth-child(1){
               padding-right: 15px;
             }
@@ -204,6 +211,13 @@ header{
                 border-bottom: 1px solid #E0E0E0;
                 @include nav-menu-15-pt-m();
                 color: var(--icon);
+                transition: .4s;
+                &:hover{
+                  color: var(--hoveryellow);
+                }
+                &.active{
+                  color: var(--hoveryellow);
+                }
               }
             }
           }
