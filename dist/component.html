@@ -263,37 +263,14 @@
     <main>
       <div class="container">
         <div class="row">
-          <div class="col-12">
-            <div class="input-group has-icon">
-              <div class="input-group-icon"><img src="./assets/icons/location.svg" alt=""></div>
-              <input class="form-control" type="text" placeholder="Nhập vị trí">
-            </div>
-            <div class="input-group has-icon">
-              <div class="input-group-icon"><img src="./assets/icons/map.svg" alt=""></div>
-              <select type="text" id="dropdown-1">
-                <option value="Tùy chọn 1">Tùy chọn 1</option>
-                <option value="Tùy chọn 2">Tùy chọn 2</option>
-                <option value="Tùy chọn 3">Tùy chọn 3</option>
-                <script>
-                  function initializeSelect2(id) {
-                      $('#' + id).select2();
-                      }
-                  document.addEventListener('DOMContentLoaded', function() {
-                  var idSelect = 'dropdown-1';
-                  initializeSelect2(idSelect);
-                  });
-                </script>
-              </select>
-            </div>
-            <div class="input-group">
-              <textarea class="form-control" type="text" placeholder="Thêm ghi chú (ví dụ: Giao hàng vào giờ hành chính"></textarea>
-            </div>
-          </div>
-          <div class="col-2">
-            <button class="btn btn-primary d-block w-100">Mua ngay</button>
-            <button class="btn btn-orange-brand mt-4 w-100">Mua ngay</button>
-            <button class="btn btn-success mt-4">Mua ngay</button>
-          </div>
+          <!--.col-12-->
+          <!--  +Input({ type: 'text', label: 'Nhập vị trí', icon: './assets/icons/location.svg' })-->
+          <!--  +Input({ type: 'dropdown', label: 'Chọn Tỉnh/TP', icon: './assets/icons/map.svg', options: ['Tùy chọn 1', 'Tùy chọn 2', 'Tùy chọn 3'], id: 'dropdown-1'})-->
+          <!--  +Input({ type: 'textarea', label: 'Thêm ghi chú (ví dụ: Giao hàng vào giờ hành chính' })-->
+          <!--.col-2-->
+          <!--  button.btn.btn-primary.d-block.w-100 Mua ngay-->
+          <!--  button.btn.btn-orange-brand.mt-4.w-100 Mua ngay-->
+          <!--  button.btn.btn-success.mt-4 Mua ngay-->
           <!--.col-12-->
           <!--  include ./includes/components/SelectDropdown.pug-->
           <!--  .cart-->
@@ -326,45 +303,41 @@
         <!--  .col-4-->
         <!--    aside.category-->
         <!--      +ListGroupComponent({ isAccordion:true, name:'chủ đề' })-->
-        <!--.row-->
-        <!--  .col-2-->
-        <!--    +CardComponent({url: './assets/images/image-card.png', title:'Benito', classTitle:'mt-theme-4 mb-theme-4'})-->
-        <!--  .col-2-->
-        <!--    +CardComponent({-->
-        <!--      url: './assets/images/image-card-service.png',-->
-        <!--      imageType:'rounded-circle' ,-->
-        <!--      title: 'Cung cấp sách thư viện',-->
-        <!--      classModify:'bg-card-orange',-->
-        <!--      classTitle:'mt-theme-4 mb-theme-4'-->
-        <!--    })-->
-        <!--  .col-2-->
-        <!--    +CardComponent({-->
-        <!--      url: './assets/images/image-card-gif.jpg',-->
-        <!--      imageType: 'rounded-circle',-->
-        <!--      title: 'Sách giấy',-->
-        <!--      description:'3,420 sách',-->
-        <!--      classTitle:'mt-theme-4 mb-theme-4'-->
-        <!--    })-->
-        <!--  .col-2-->
-        <!--    +CardComponent({-->
-        <!--      url: './assets/images/image-book-thumbnail.png',-->
-        <!--      title: 'Làm Chủ Cơn Giận',-->
-        <!--      description: 'Tác giả',-->
-        <!--      classTitle:'mt-theme-4 mb-theme-4',-->
-        <!--      isRate: true,-->
-        <!--      price: true-->
-        <!--    })-->
-        <!--  .col-2-->
-        <!--      +CardComponent({-->
-        <!--        url: './assets/images/image-book-thumbnail.png',-->
-        <!--        title: 'Làm Chủ Cơn Giận',-->
-        <!--        description: 'Tác giả',-->
-        <!--        classTitle: 'mt-theme-4 mb-theme-4',-->
-        <!--        isRate: true,-->
-        <!--        price: true,-->
-        <!--        footer:true,-->
-        <!--        isSale: true-->
-        <!--      })-->
+        <div class="row">
+          <div class="col-6">
+            <div class="BookDetail-gallery mb-theme-15">
+              <div class="BookDetail-gallery-thumbnail">
+                <div class="BookDetail-gallery-thumbnail-carousel owl-carousel owl-theme" id="big02">
+                  <div class="item position-relative resize-card-thumb-preview"><img src="./assets/images/image-book-cover-v2.png"></div>
+                  <div class="item position-relative resize-card-thumb-preview"><img src="./assets/images/image-book-cover-v2.png"></div>
+                </div>
+                <div class="d-flex mt-theme-30 pl-theme-2">
+                  <div class="BookDetail-gallery-thumbnail-nav width-100">
+                    <h6 class="mb-theme-4">Gợi ý các gói tài khoản khác của BenBooks:</h6>
+                    <div class="owl-carousel owl-theme" id="thumbs02">
+                      <div class="item"><img src="./assets/images/image-book-cover-v2-small.png" width="80">
+                        <p class="text-center mt-theme-2">Vip 6 tháng</p>
+                      </div>
+                      <div class="item"><img src="./assets/images/image-book-cover-v2-small.png" width="80">
+                        <p class="text-center mt-theme-2">Vip 6 tháng</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--.col-3-->
+          <!--  +CardComponent({-->
+          <!--    url: './assets/images/image-book-chu-nhat.png',-->
+          <!--    title: 'Làm Chủ Cơn Giận',-->
+          <!--    description: 'Tác giả',-->
+          <!--    classTitle: 'mt-theme-4 mb-theme-4',-->
+          <!--    isRate: true,-->
+          <!--    price: true,-->
+          <!--    classModifyImage: 'resize-card'-->
+          <!--  })-->
+        </div>
         <!--  .col-12-->
         <!--    .owl-carousel#HomeBanner-top.style-dots-rectangle-->
         <!--      .item-->
