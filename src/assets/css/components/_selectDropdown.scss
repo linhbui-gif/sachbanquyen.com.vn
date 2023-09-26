@@ -5,6 +5,7 @@
   background-color: var(--line3);
   padding: 5px 8px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   border-top-right-radius: 0px!important;
   border-bottom-right-radius: 0px!important;
   border-bottom-left-radius: 5px;
@@ -12,6 +13,12 @@
   &-label{
 =======
   border-radius: 8px;
+=======
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+>>>>>>> e645789 (fix css)
   &-label {
 >>>>>>> 73d63f0 (fix spacing)
     @include bookname-15-pt-m();
@@ -39,11 +46,19 @@
     transition: .5s;
 =======
   &-option {
+<<<<<<< HEAD
 >>>>>>> 73d63f0 (fix spacing)
     border-bottom: 1px solid var(--bginput);
     padding: 8px;
     text-align: center;
     &:hover{
+=======
+    transition: 0.5s;
+    border-bottom: 1px solid var(--bginput);
+    padding: 8px;
+    text-align: center;
+    &:hover {
+>>>>>>> e645789 (fix css)
       background: var(--line3);
     }
   }

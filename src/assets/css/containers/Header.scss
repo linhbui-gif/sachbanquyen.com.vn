@@ -45,6 +45,13 @@ header {
 =======
         &-action {
           &-item {
+            &-phone {
+              width: 34px;
+              height: 34px;
+              img {
+                width: 100% !important;
+              }
+            }
             &:nth-child(1) {
 >>>>>>> 73d63f0 (fix spacing)
               padding-right: 15px;
@@ -222,11 +229,19 @@ header {
                 border-bottom: 1px solid #e0e0e0;
                 @include nav-menu-15-pt-m();
                 color: var(--icon);
+<<<<<<< HEAD
                 transition: .4s;
                 &:hover{
                   color: var(--hoveryellow);
                 }
                 &.active{
+=======
+                transition: 0.4s;
+                &:hover {
+                  color: var(--hoveryellow);
+                }
+                &.active {
+>>>>>>> e645789 (fix css)
                   color: var(--hoveryellow);
                 }
               }
