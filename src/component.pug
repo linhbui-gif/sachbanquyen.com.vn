@@ -47,26 +47,18 @@ block pages
     //      +ListGroupComponent({ isAccordion:true, name:'chủ đề' })
 
     .row
-      .col-3
-        +CardComponent({
-          url: './assets/images/image-book-thumbnail.png',
-          title: 'Làm Chủ Cơn Giận',
-          description: 'Tác giả',
-          classTitle:'mt-theme-4 mb-theme-4',
-          isRate: true,
-          price: true,
-          classModifyImage:'resize-card'
-        })
-      .col-3
-        +CardComponent({
-          url: './assets/images/image-book-chu-nhat.png',
-          title: 'Làm Chủ Cơn Giận',
-          description: 'Tác giả',
-          classTitle: 'mt-theme-4 mb-theme-4',
-          isRate: true,
-          price: true,
-          classModifyImage: 'resize-card'
-        })
+      .col-6
+        include ./includes/containers/BookDetailGallery02.pug
+      //.col-3
+      //  +CardComponent({
+      //    url: './assets/images/image-book-chu-nhat.png',
+      //    title: 'Làm Chủ Cơn Giận',
+      //    description: 'Tác giả',
+      //    classTitle: 'mt-theme-4 mb-theme-4',
+      //    isRate: true,
+      //    price: true,
+      //    classModifyImage: 'resize-card'
+      //  })
     //  .col-12
     //    .owl-carousel#HomeBanner-top.style-dots-rectangle
     //      .item

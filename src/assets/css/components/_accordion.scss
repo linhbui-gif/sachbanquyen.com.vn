@@ -1,4 +1,7 @@
 .accordion{
+  &-button{
+    font-size: 15px;
+  }
   &.custom-icon{
     --bs-accordion-btn-icon: url("../../assets/icons/add-cirlce.svg");
     --bs-accordion-btn-active-icon:  url("../../assets/icons/minus-cirlce.svg");
@@ -30,6 +33,7 @@
           transition: .3s;
           position: relative;
           border-bottom: 1px dashed var(--line3);
+          font-size: 15px;
           //&.active{
           //  background-color: #FCF8F1;
           //  &:after{

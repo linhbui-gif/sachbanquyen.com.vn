@@ -28,20 +28,9 @@
   .CardComponent-image {
     border-radius: 12px;
     overflow: hidden;
-    &.resize-card-small{
-      max-width: 73px;
-      height: 73px;
-      overflow: hidden;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--bgcard);
-      border-radius: 5px;
-    }
-    &.resize-card-thumb-preview{
-      max-width: 525px;
-      height: 525px;
+    &.resize-card-category{
+      max-width: 148px;
+      height: 148px;
       overflow: hidden;
       margin: auto;
       display: flex;
@@ -64,6 +53,17 @@
         border-radius: 5px;
         transition: .5s;
       }
+    }
+    &.resize-card-small{
+      max-width: 73px;
+      height: 73px;
+      overflow: hidden;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bgcard);
+      border-radius: 5px;
     }
     &.resize-card{
       border-radius: 12px;
