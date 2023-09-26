@@ -111,7 +111,11 @@ header {
         }
         &-left {
           cursor: pointer;
+<<<<<<< HEAD
           min-width: 25%;
+=======
+          min-width: 279px;
+>>>>>>> f4c7e76 (fix responsive and spacing)
           border: 1px solid var(--line3);
           background: var(--bginput);
           padding: 12px 15px;
