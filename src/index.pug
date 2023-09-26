@@ -14,7 +14,7 @@ block pages
               title: 'Sách giấy',
               description: '3,420 sách',
               classTitle: 'mt-theme-4 mb-theme-4',
-              classModifyImage: 'radius-50-percent no-effect'
+              classModifyImage: 'resize-card-category radius-50-percent no-effect '
             })
 
   section.Category
@@ -42,7 +42,7 @@ block pages
         .col-12
           +HeadingCard({title: "Top sách giấy bán chạy", className: 'justify-content-between mt-theme-6 mb-theme-6', isViewAll: true})
         .col-12
-          #carouselFlashSale.owl-carousel.mobile-disable-carousel
+          #carouselFlashSale.owl-carousel.mobile-disable-carousel.mt-theme-15
             .item
               +CardComponent({
                 url: './assets/images/image-book-chu-nhat.png',
@@ -128,7 +128,7 @@ block pages
             isViewAll: true
           })
         .col-12
-          #carouselFlashSale01.owl-carousel.mobile-disable-carousel
+          #carouselFlashSale01.owl-carousel.mobile-disable-carousel.mt-theme-15
             .item
               +CardComponent({
                 url: './assets/images/image-book-chu-nhat.png',
@@ -214,7 +214,7 @@ block pages
             isViewAll: true
           })
         .col-12
-          #carouselFlashSale02.owl-carousel.mobile-disable-carousel
+          #carouselFlashSale02.owl-carousel.mobile-disable-carousel.mt-theme-15
             .item
               +CardComponent({
                 url: './assets/images/image-book-thumbnail.png',

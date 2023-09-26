@@ -1,5 +1,5 @@
 mixin CardComponent({url, title, description, footer, classModify, imageType, isVideoCard, classTitle, isRate, price, isSale, isNew, classModifyImage})
-   a(href="6.1-chi-tiết-sách-giấy.html" class=`${classModify ? classModify : ''}`).CardComponent.d-block
+   a(href="6.1-chi-tiết-sách-giấy.html" class=`${classModify ? classModify : ''}`).CardComponent.d-block.h-100
        .CardComponent-image.position-relative(class=`${classModifyImage ? classModifyImage : ''}`)
             img(src=`${url}` class=`${imageType ? imageType : ''} ` alt=`${title}`)
             if isSale

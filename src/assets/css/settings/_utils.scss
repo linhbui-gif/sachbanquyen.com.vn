@@ -165,7 +165,7 @@ img {
   box-shadow: unset;
 }
 .radius-50-percent{
-  border-radius: 50%;
+  border-radius: 50%!important;
 }
 .scroll-mobile{
   @include media-breakpoint-down(lg){
