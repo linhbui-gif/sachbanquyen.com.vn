@@ -237,6 +237,15 @@ img {
     width: calc(100% / 2);
   }
 }
+<<<<<<< HEAD
+=======
+@media (min-width: 992px) {
+  .row-cols-lg-5 > * {
+    flex: 0 0 auto;
+    width: calc(100% / 4);
+  }
+}
+>>>>>>> 61a98f2 (fix update)
 @media (min-width: 1200px) {
   .row-cols-lg-5 > * {
     flex: 0 0 auto;
