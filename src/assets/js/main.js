@@ -57,6 +57,8 @@ const carousel = {
           Thumbs: {
             type: "classic",
           },
+          width: 525,
+          height:525
         })
     });
 
