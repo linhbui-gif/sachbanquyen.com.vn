@@ -173,3 +173,29 @@ img {
     overflow-x: scroll;
   }
 }
+.resize-thumb-fancybox{
+  max-width: 525px!important;
+  height: 525px!important;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    width: unset!important;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center;
+    object-position: center;
+    border-radius: 5px;
+    transition: .5s;
+  }
+}
