@@ -157,6 +157,7 @@
       text-align: center;
       color: var(--black);
       @include ellipsis(2);
+      margin-bottom: 4px !important;
       &.bookname-15-pt-m {
         @include bookname-15-pt-m();
         a {
