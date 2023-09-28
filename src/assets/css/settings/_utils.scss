@@ -212,18 +212,6 @@ img {
 @media (min-width: 992px) {
   .row-cols-lg-5 > * {
     flex: 0 0 auto;
-    width: 20%;
-  }
-}
-@media (min-width: 575px) {
-  .row-cols-lg-5 > * {
-    flex: 0 0 auto;
-    width: calc(100% / 3);
-  }
-}
-@media (min-width: 992px) {
-  .row-cols-lg-5 > * {
-    flex: 0 0 auto;
     width: calc(100% / 4);
   }
 }
