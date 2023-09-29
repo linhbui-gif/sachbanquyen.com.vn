@@ -1,0 +1,19 @@
+.support {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: fixed;
+  top: 50%;
+  right: 35px;
+  transform: translateY(-50%);
+  z-index: 1000;
+  img {
+    width: 56px;
+  }
+  @media (max-width: 768px) {
+    right: 16px;
+    img {
+      width: 40px;
+    }
+  }
+}

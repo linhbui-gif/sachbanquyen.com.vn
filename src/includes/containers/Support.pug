@@ -1,0 +1,13 @@
+.support
+  a.support-item(href='#')
+    img(src="./assets/images/facebook-mess.png" alt="")
+  a.support-item(href='#')
+    img(src="./assets/images/zalo-mess.png" alt="")
+  a.support-item.btn-scroll(href='#')
+    img(src="./assets/images/btn-sroll.png" alt="")
+
+  script.
+    $('.btn-scroll').on('click', function(event) {
+      event.preventDefault(); 
+      $('html, body').animate({ scrollTop: 0 }, 'slow');
+    });
