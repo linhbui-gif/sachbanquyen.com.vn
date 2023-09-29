@@ -109,8 +109,17 @@
     }
     img {
       height: 100%;
+<<<<<<< HEAD
       transition: 0.5s;
+=======
+<<<<<<< HEAD
+      transition: .5s;
+>>>>>>> 8a31cea (fix confilg)
       width: 100%;
+=======
+      transition: 0.5s;
+      width: unset;
+>>>>>>> b4c805f (fix confilg)
       margin: auto;
       &:hover {
         transform: scale(1.2);
@@ -165,7 +174,10 @@
       text-align: center;
       color: var(--black);
       @include ellipsis(2);
+<<<<<<< HEAD
       margin-bottom: 4px !important;
+=======
+>>>>>>> 8a31cea (fix confilg)
       &.bookname-15-pt-m {
         @include bookname-15-pt-m();
         a {

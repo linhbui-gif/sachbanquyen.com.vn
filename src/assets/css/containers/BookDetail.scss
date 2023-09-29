@@ -4,6 +4,7 @@
 .BookDetail {
   &-gallery {
     &-thumbnail {
+<<<<<<< HEAD
       &-wrapper{
         @include media-breakpoint-between(lg,xl){
           margin-top: 0!important;
@@ -14,6 +15,10 @@
         @include media-breakpoint-between(lg,xl){
           width: 149px !important;
         }
+=======
+      &-nav {
+        width: 30%;
+>>>>>>> 8a31cea (fix confilg)
         &.width-100 {
           border-radius: 8px;
           border: 1px solid var(--line3);
@@ -324,7 +329,12 @@
     }
   }
 }
+<<<<<<< HEAD
 .resize-card-thumb-preview {
+=======
+<<<<<<< HEAD
+.resize-card-thumb-preview{
+>>>>>>> 8a31cea (fix confilg)
   max-width: 525px;
   height: 525px;
   overflow: hidden;
@@ -353,6 +363,10 @@
     transition: 0.5s;
   }
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8a31cea (fix confilg)
 // .BookDetail-gallery-thumbnail-carousel {
 //   .item {
 //     position: relative;
@@ -370,3 +384,7 @@
 //     }
 //   }
 // }
+<<<<<<< HEAD
+=======
+>>>>>>> 73d63f0 (fix spacing)
+>>>>>>> 8a31cea (fix confilg)
