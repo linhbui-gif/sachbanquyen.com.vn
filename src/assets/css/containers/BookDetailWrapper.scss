@@ -1,53 +1,52 @@
-.BookDetail-wrapper{
-  border-radius: 5px;
+.BookDetail-wrapper {
+  border-radius: 8px;
   border: 1px solid var(--line3);
   padding: 16px;
   flex-wrap: wrap;
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(sm) {
     border: unset;
     padding: 0;
   }
-  &-item{
+  &-item {
     width: 50%;
 
-    &.author{
+    &.author {
       padding-right: 24px;
-      border-right: 1px solid #E6E6E6;
-      @include media-breakpoint-down(sm){
+      border-right: 1px solid #e6e6e6;
+      @include media-breakpoint-down(sm) {
         border-right: 0;
       }
     }
-    &.provider{
+    &.provider {
       padding-left: 24px;
     }
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       width: 100%;
       border: 1px solid var(--line3);
-      padding: 8px!important;
-      border-radius: 5px;
+      padding: 8px !important;
+      border-radius: 8px;
       margin-bottom: 15px;
     }
-    &-title{
-       @include bookname-15-pt-m();
-       color: var(--gray2);
+    &-title {
+      @include bookname-15-pt-m();
+      color: var(--gray2);
     }
-    &-left{
-      &-image{
-
+    &-left {
+      &-image {
       }
-      &-body{
+      &-body {
         color: var(--body-text);
         flex: 1;
-        &-title{
+        &-title {
           @include h-6-title-15-pt-b();
         }
-        &-desc{
-         @include small-14-pt-r();
+        &-desc {
+          @include small-14-pt-r();
         }
       }
     }
   }
-  img{
+  img {
     width: unset;
   }
 }

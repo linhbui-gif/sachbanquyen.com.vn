@@ -6,11 +6,11 @@
   border-radius: var(--#{$commonTheme}card-border-radius-default);
   background-color: $white;
   box-shadow: 0px 2px 5px 0px rgba(167, 111, 1, 0.25);
-  transition: .5s;
-  &:hover{
-    background: #FFF7E3;
+  transition: 0.5s;
+  &:hover {
+    background: #fff7e3;
   }
-  &.card-category{
+  &.card-category {
     padding: 8px;
     border-radius: 0;
   }
@@ -23,8 +23,13 @@
     padding: var(--#{$commonTheme}card-padding-book);
     box-shadow: unset;
     background: $white;
+<<<<<<< HEAD
     @include media-breakpoint-down(sm){
         padding: 8px 8px 16px 8px;
+=======
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+>>>>>>> 73d63f0 (fix spacing)
     }
   }
   &.bg-card-orange {
@@ -101,16 +106,16 @@
     img {
       max-width: 100%;
       height: 100%;
-      transition: .5s;
+      transition: 0.5s;
       width: unset;
       margin: auto;
-      &:hover{
+      &:hover {
         transform: scale(1.2);
       }
     }
-    &.no-effect{
-      img{
-        &:hover{
+    &.no-effect {
+      img {
+        &:hover {
           transform: scale(1);
         }
       }
@@ -125,7 +130,7 @@
       top: 0;
       padding-left: 8px;
     }
-    .is-new{
+    .is-new {
       background: var(--badge);
       width: 36px;
       height: 36px;
@@ -152,9 +157,9 @@
       text-align: center;
       color: var(--black);
       @include ellipsis(2);
-      &.bookname-15-pt-m{
+      &.bookname-15-pt-m {
         @include bookname-15-pt-m();
-        a{
+        a {
           @include bookname-15-pt-m();
         }
       }
@@ -168,9 +173,9 @@
           @include bookname-15-pt-m();
         }
       }
-      &.style-category-features{
+      &.style-category-features {
         @include small-14-pt-m();
-        a{
+        a {
           @include small-14-pt-m();
         }
       }
@@ -195,9 +200,9 @@
   }
   &-footer {
     &-hot {
-      &-img{
-        img{
-          width: 30px!important;
+      &-img {
+        img {
+          width: 30px !important;
         }
       }
       &-text {
@@ -209,7 +214,7 @@
 }
 .progress {
   --#{$prefix}progress-height: 10px;
-  --#{$prefix}border-radius: 5px;
+  --#{$prefix}border-radius: 8px;
   --#{$prefix}progress-bg: rgba(255, 180, 11, 0.5);
 }
 .progress-bar {

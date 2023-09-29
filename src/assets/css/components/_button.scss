@@ -76,7 +76,7 @@ $btn-active-bg: #ee3d05;
     min-width: 66px;
     border-radius: 4px;
     display: block;
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       padding: 4px;
     }
   }
@@ -115,7 +115,7 @@ $btn-active-bg: #ee3d05;
     --#{$prefix}btn-active-bg: var(--text-hidden);
     background: var(--text-hidden);
     &-2 {
-      border-radius: 5px;
+      border-radius: 8px;
       @include body-15-pt-r();
       border: 1px solid var(--line-3, #eaeaea);
       background: rgba(164, 164, 164, 0.05);
