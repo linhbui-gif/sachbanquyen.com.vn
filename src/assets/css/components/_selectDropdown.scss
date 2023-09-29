@@ -8,9 +8,12 @@
   border-bottom-right-radius: 0px !important;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
+<<<<<<< HEAD
   &.has-radius{
     border-radius: 5px!important;
   }
+=======
+>>>>>>> 6321dbd (fix conflig 4)
   &-label {
     @include bookname-15-pt-m();
   }
@@ -33,6 +36,7 @@
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   &-option {
     transition: 0.5s;
 =======
@@ -43,6 +47,10 @@
   &-option {
 >>>>>>> 73d63f0 (fix spacing)
 >>>>>>> 8a31cea (fix confilg)
+=======
+  &-option {
+    transition: 0.5s;
+>>>>>>> 6321dbd (fix conflig 4)
     border-bottom: 1px solid var(--bginput);
     padding: 8px;
     text-align: center;

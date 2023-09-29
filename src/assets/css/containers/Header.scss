@@ -41,7 +41,6 @@ header {
               }
             }
             &:nth-child(1) {
-
               padding-right: 15px;
             }
             &:nth-child(2) {
@@ -107,6 +106,7 @@ header {
         &-left {
           cursor: pointer;
 <<<<<<< HEAD
+<<<<<<< HEAD
           min-width: 25%;
 =======
 <<<<<<< HEAD
@@ -119,6 +119,9 @@ header {
           min-width: 25%;
 >>>>>>> cfa41c1 (update)
 >>>>>>> a2a8c86 (fix confilg 2)
+=======
+          min-width: 25%;
+>>>>>>> 6321dbd (fix conflig 4)
           border: 1px solid var(--line3);
           background: var(--bginput);
           padding: 12px 15px;

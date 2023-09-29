@@ -201,6 +201,21 @@ img {
     object-position: center;
     border-radius: 5px;
     transition: 0.5s;
+<<<<<<< HEAD
+=======
+  }
+}
+@media (min-width: 575px) {
+  .row-cols-lg-5 > * {
+    flex: 0 0 auto;
+    width: calc(100% / 3);
+  }
+}
+@media (min-width: 992px) {
+  .row-cols-lg-5 > * {
+    flex: 0 0 auto;
+    width: 20%;
+>>>>>>> 6321dbd (fix conflig 4)
   }
 }
 @media (max-width: 768px) {
