@@ -23,17 +23,8 @@
     padding: var(--#{$commonTheme}card-padding-book);
     box-shadow: unset;
     background: $white;
-<<<<<<< HEAD
-    @include media-breakpoint-down(sm){
-        padding: 8px 8px 16px 8px;
-=======
     @include media-breakpoint-down(sm) {
-<<<<<<< HEAD
-      padding: 0;
->>>>>>> 73d63f0 (fix spacing)
-=======
       padding: 8px 8px 16px 8px;
->>>>>>> 6a65273 (fix card)
     }
   }
   &.bg-card-orange {

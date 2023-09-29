@@ -306,12 +306,7 @@
     }
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-.resize-card-thumb-preview{
-=======
 .resize-card-thumb-preview {
->>>>>>> f4c7e76 (fix responsive and spacing)
   max-width: 525px;
   height: 525px;
   overflow: hidden;
@@ -319,17 +314,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
-  @include media-breakpoint-down(sm){
-    height: 328px;
-  }
-  img{
-=======
   @include media-breakpoint-down(sm) {
     height: 328px;
   }
   img {
->>>>>>> f4c7e76 (fix responsive and spacing)
     position: absolute;
     top: 0;
     left: 0;
@@ -338,41 +326,12 @@
     max-width: 100%;
     max-height: 100%;
     margin: auto;
-<<<<<<< HEAD
-    width: unset!important;
-=======
     width: unset !important;
->>>>>>> f4c7e76 (fix responsive and spacing)
     -o-object-fit: contain;
     object-fit: contain;
     -o-object-position: center;
     object-position: center;
     border-radius: 5px;
-<<<<<<< HEAD
-    transition: .5s;
-  }
-}
-=======
-// .BookDetail-gallery-thumbnail-carousel {
-//   .item {
-//     position: relative;
-//     img {
-//       width: 100%;
-//       max-height: 100%;
-//       min-height: 100%;
-//       min-width: 100%;
-//       -o-object-fit: contain;
-//       object-fit: contain;
-//       -o-object-position: center;
-//       object-position: center;
-//       margin: auto;
-//       position: absolute;
-//     }
-//   }
-// }
->>>>>>> 73d63f0 (fix spacing)
-=======
     transition: 0.5s;
   }
 }
->>>>>>> f4c7e76 (fix responsive and spacing)
