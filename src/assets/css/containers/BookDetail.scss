@@ -4,9 +4,9 @@
 .BookDetail {
   &-gallery {
     &-thumbnail {
-      &-wrapper {
-        @include media-breakpoint-between(lg, xl) {
-          margin-top: 0 !important;
+      &-wrapper{
+        @include media-breakpoint-between(lg,xl){
+          margin-top: 0!important;
         }
       }
       &-nav {
@@ -353,31 +353,3 @@
     transition: 0.5s;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8a31cea (fix confilg)
-// .BookDetail-gallery-thumbnail-carousel {
-//   .item {
-//     position: relative;
-//     img {
-//       width: 100%;
-//       max-height: 100%;
-//       min-height: 100%;
-//       min-width: 100%;
-//       -o-object-fit: contain;
-//       object-fit: contain;
-//       -o-object-position: center;
-//       object-position: center;
-//       margin: auto;
-//       position: absolute;
-//     }
-//   }
-// }
-<<<<<<< HEAD
-=======
->>>>>>> 73d63f0 (fix spacing)
->>>>>>> 8a31cea (fix confilg)
-=======
->>>>>>> 6321dbd (fix conflig 4)

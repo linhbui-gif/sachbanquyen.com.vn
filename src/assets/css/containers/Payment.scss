@@ -129,3 +129,22 @@
   border-bottom: 1px dashed var(--line-3, hsl(0, 0%, 92%));
   margin-bottom: 16px;
 }
+<<<<<<< HEAD
+=======
+.note-info {
+  border-radius: 8px;
+  background: rgba(47, 105, 253, 0.1);
+  padding: 15px;
+  @include small-14-pt-r();
+  color: var(--Link, var(--Link, #2f69fd));
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  img {
+    width: 16px;
+    height: 16px;
+  }
+}
+>>>>>>> 8a31cea (fix confilg)
