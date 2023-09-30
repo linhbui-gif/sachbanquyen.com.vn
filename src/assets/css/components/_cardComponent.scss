@@ -6,16 +6,16 @@
   border-radius: var(--#{$commonTheme}card-border-radius-default);
   background-color: $white;
   box-shadow: 0px 2px 5px 0px rgba(167, 111, 1, 0.25);
-  transition: .5s;
-  &:hover{
-    background: #FFF7E3;
+  transition: 0.5s;
+  &:hover {
+    background: #fff7e3;
   }
-  &.card-category{
+  &.card-category {
     padding: 8px;
     border-radius: 0;
   }
-  &.card-service{
-    &:hover{
+  &.card-service {
+    &:hover {
       background: rgba(255, 180, 11, 0.15);
     }
   }
@@ -23,8 +23,8 @@
     padding: var(--#{$commonTheme}card-padding-book);
     box-shadow: unset;
     background: $white;
-    @include media-breakpoint-down(sm){
-        padding: 8px 8px 16px 8px;
+    @include media-breakpoint-down(sm) {
+      padding: 8px 8px 16px 8px;
     }
   }
   &.bg-card-orange {
@@ -33,7 +33,7 @@
   .CardComponent-image {
     border-radius: 12px;
     overflow: hidden;
-    &.resize-card-category{
+    &.resize-card-category {
       max-width: 148px;
       height: 148px;
       overflow: hidden;
@@ -41,7 +41,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      img{
+      img {
         position: absolute;
         top: 0;
         left: 0;
@@ -50,16 +50,22 @@
         max-width: 100%;
         max-height: 100%;
         margin: auto;
-        width: unset!important;
+        width: unset !important;
         -o-object-fit: contain;
         object-fit: contain;
         -o-object-position: center;
         object-position: center;
         border-radius: 5px;
-        transition: .5s;
+        transition: 0.5s;
+      }
+      @media (max-width: 1200px) {
+        height: unset;
+        img {
+          position: relative;
+        }
       }
     }
-    &.resize-card-small{
+    &.resize-card-small {
       max-width: 73px;
       height: 73px;
       overflow: hidden;
@@ -69,11 +75,11 @@
       justify-content: center;
       background: var(--bgcard);
       border-radius: 5px;
-      img{
+      img {
         width: unset;
       }
     }
-    &.resize-card{
+    &.resize-card {
       border-radius: 12px;
       max-width: 184px;
       height: 184px;
@@ -83,7 +89,7 @@
       align-items: center;
       justify-content: center;
       background: var(--bgcard);
-      img{
+      img {
         position: absolute;
         top: 0;
         left: 0;
@@ -92,33 +98,33 @@
         max-width: 100%;
         max-height: 100%;
         margin: auto;
-        width: unset!important;
+        width: unset !important;
         -o-object-fit: contain;
         object-fit: contain;
         -o-object-position: center;
         object-position: center;
         border-radius: 5px;
-        transition: .5s;
+        transition: 0.5s;
       }
     }
     img {
       height: 100%;
-      transition: .5s;
+      transition: 0.5s;
       width: 100%;
       margin: auto;
-      &:hover{
+      &:hover {
         transform: scale(1.2);
       }
     }
-    &.no-effect{
-      img{
-        &:hover{
+    &.no-effect {
+      img {
+        &:hover {
           transform: scale(1);
         }
       }
     }
-    &.unset-width{
-      img{
+    &.unset-width {
+      img {
         width: unset;
       }
     }
@@ -132,7 +138,7 @@
       top: 0;
       padding-left: 8px;
     }
-    .is-new{
+    .is-new {
       background: var(--badge);
       width: 36px;
       height: 36px;
@@ -159,9 +165,10 @@
       text-align: center;
       color: var(--black);
       @include ellipsis(2);
-      &.bookname-15-pt-m{
+      margin-bottom: 4px !important;
+      &.bookname-15-pt-m {
         @include bookname-15-pt-m();
-        a{
+        a {
           @include bookname-15-pt-m();
         }
       }
@@ -175,9 +182,9 @@
           @include bookname-15-pt-m();
         }
       }
-      &.style-category-features{
+      &.style-category-features {
         @include small-14-pt-m();
-        a{
+        a {
           @include small-14-pt-m();
         }
       }
@@ -202,9 +209,9 @@
   }
   &-footer {
     &-hot {
-      &-img{
-        img{
-          width: 30px!important;
+      &-img {
+        img {
+          width: 30px !important;
         }
       }
       &-text {
@@ -216,7 +223,7 @@
 }
 .progress {
   --#{$prefix}progress-height: 10px;
-  --#{$prefix}border-radius: 5px;
+  --#{$prefix}border-radius: 8px;
   --#{$prefix}progress-bg: rgba(255, 180, 11, 0.5);
 }
 .progress-bar {

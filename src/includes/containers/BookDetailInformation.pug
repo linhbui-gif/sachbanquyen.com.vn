@@ -7,13 +7,17 @@ mixin BookDetailInformation({typeGallery = false,isQuantity = false, action = fa
          include ../containers/BookDetailGallery02.pug
       if action
         .BookDetail-action.d-flex.mt-theme-30
-          button.btn.btn-success.mr-theme-4.w-100 Đọc ngay (153 ngày)
-          button.btn.btn-primary.ml-theme-4.w-100 Nghe ngay (13 ngày)
+          button.btn.btn-success.mr-theme-4.w-100 
+            strong Đọc ngay 
+            span (153 ngày)
+          button.btn.btn-primary.ml-theme-4.w-100 
+            strong Nghe ngay 
+            span (13 ngày)
     .col-lg-6
       .BookDetail-infor
         if personRead
           .BookDetail-suggest.d-lg-none.d-block.mb-theme-15
-            h6.BookDetail-suggest-title Gợi ý cuốn sách này với định dạng khác
+            h6.BookDetail-suggest-title Chọn định dạng sách
             .BookDetail-suggest-wrapper.d-flex.align-items-center.mt-theme-4#BookDetail-choose
               .BookDetail-suggest-wrapper-item.item-list.active
                 img(src="./assets/icons/icon-book.svg" alt="" width="30" height="30")

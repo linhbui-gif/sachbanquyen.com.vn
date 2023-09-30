@@ -72,7 +72,7 @@
       @include h-6-title-15-pt-b();
     }
     &-wraning {
-      border-radius: 5px;
+      border-radius: 8px;
       background: var(--bg-card, #fcf8f1);
       display: flex;
       padding: 16px;
@@ -115,7 +115,7 @@
   margin-bottom: 16px;
 }
 .note-info {
-  border-radius: 5px;
+  border-radius: 8px;
   background: rgba(47, 105, 253, 0.1);
   padding: 15px;
   @include small-14-pt-r();
