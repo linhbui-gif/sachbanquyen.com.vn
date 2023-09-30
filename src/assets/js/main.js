@@ -62,17 +62,26 @@ const carousel = {
         })
     });
 
-    var mobileQuery = window.matchMedia('(max-width: 992px)');
+    var mobileQuery = window.matchMedia('(max-width: 991px)');
+    var tabletQuery = window.matchMedia('(max-width: 1200px) and (min-width:992px)');
+
     mobileQuery.addListener(handleWindowSizeChange);
+    tabletQuery.addListener(handleWindowSizeChangeTablet);
     function handleWindowSizeChange(e) {
       if (e.matches) {
-        console.log($("#thumbs").find('.owl-item').css('width', '74px'))
         $("#thumbs").find('.owl-item').css('width', '74px');
       }
     }
-
+    function handleWindowSizeChangeTablet(e) {
+      console.log('e',e)
+      if (e.matches) {
+        console.log('e',e)
+        $("#thumbs").find('.owl-item').css('width', '100px');
+      }
+    }
     // Khởi chạy hàm xử lý ban đầu
     handleWindowSizeChange(mobileQuery);
+    handleWindowSizeChangeTablet(tabletQuery);
   },
   setupBookDetail02: function () {
     $(document).ready(function() {
@@ -83,8 +92,8 @@ const carousel = {
         nav: true,
         dots: false,
         navText: [
-          '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
-          '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+          '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+          '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
         ],
       });
 
@@ -156,8 +165,8 @@ const carousel = {
       nav: true,
       margin: 0,
       navText: [
-        '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
-        '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
       ],
     });
   },
@@ -188,8 +197,8 @@ const carousel = {
       nav: true,
       margin: 10,
       navText: [
-        '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
-        '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
       ],
     });
   },
@@ -221,8 +230,8 @@ const carousel = {
       nav: true,
       margin: 7.5,
       navText: [
-        '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
-        '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
       ],
     });
   },
@@ -248,8 +257,8 @@ const carousel = {
       nav: true,
       margin: 12,
       navText: [
-        '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
-        '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
       ],
     })
   },
@@ -276,8 +285,8 @@ const carousel = {
       nav: true,
       margin: 12,
       navText: [
-        '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
-        '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
       ],
     })
   },
@@ -307,8 +316,8 @@ const carousel = {
       nav: true,
       margin: 15,
       navText: [
-        '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
-        '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
       ],
     });
   },
@@ -335,8 +344,8 @@ const carousel = {
       nav: true,
       margin: 15,
       navText: [
-        '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
-        '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
       ],
     });
   },

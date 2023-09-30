@@ -3,7 +3,7 @@ extends includes/layouts/Guest.pug
 block pages
   include ./includes/containers/Banner
   section.Category.has-bg.pt-theme-30.pb-theme-30
-    +HeadingCard({title: "Quấy sách benitor", className: 'justify-content-center H0-24-B-heading-card', isViewAll: false})
+    +HeadingCard({title: "Quầy sách benitor", className: 'justify-content-center H0-24-B-heading-card', isViewAll: false})
     .container
       .row
         .col-12
@@ -14,7 +14,7 @@ block pages
                 imageType: 'rounded-circle',
                 title: 'NXB Hà Nội',
                 classTitle: 'mt-theme-4 mb-theme-4',
-                classModifyImage: 'no-effect'
+                classModifyImage: 'unset-width no-effect'
               })
             .item
               +CardComponent({
@@ -22,7 +22,7 @@ block pages
                 imageType: 'rounded-circle',
                 title: 'NXB Hà Nội',
                 classTitle: 'mt-theme-4 mb-theme-4',
-                classModifyImage: 'no-effect'
+                classModifyImage: 'unset-width no-effect'
               })
             .item
               +CardComponent({
@@ -30,7 +30,7 @@ block pages
                 imageType: 'rounded-circle',
                 title: 'NXB Hà Nội',
                 classTitle: 'mt-theme-4 mb-theme-4',
-                classModifyImage: 'no-effect'
+                classModifyImage: 'unset-width no-effect'
               })
             .item
               +CardComponent({
@@ -38,7 +38,7 @@ block pages
                 imageType: 'rounded-circle',
                 title: 'NXB Hà Nội',
                 classTitle: 'mt-theme-4 mb-theme-4',
-                classModifyImage: 'no-effect'
+                classModifyImage: 'unset-width no-effect'
               })
             .item
               +CardComponent({
@@ -46,7 +46,7 @@ block pages
                 imageType: 'rounded-circle',
                 title: 'NXB Hà Nội',
                 classTitle: 'mt-theme-4 mb-theme-4',
-                classModifyImage: 'no-effect'
+                classModifyImage: 'unset-width no-effect'
               })
             .item
               +CardComponent({
@@ -54,7 +54,7 @@ block pages
                 imageType: 'rounded-circle',
                 title: 'NXB Hà Nội',
                 classTitle: 'mt-theme-4 mb-theme-4',
-                classModifyImage: 'no-effect'
+                classModifyImage: 'unset-width no-effect'
               })
   section.banner-single.pb-theme-15.pt-theme-30
     .container
@@ -342,7 +342,7 @@ block pages
       .row
         .col-12
           img(src="./assets/images/image-banner-single.png" alt="")
-  section.top-sale.bg-card-orange.pt-theme-15.pb-theme-15
+  section.top-sale.pt-theme-15.pb-theme-15
     .container
       .row
         .col-12
@@ -351,8 +351,9 @@ block pages
             className: 'justify-content-between mt-theme-6 mb-theme-6',
             isViewAll: true
           })
+      .row.row-cols-lg-5
         each item in [1,2,3,4,5,6,7,8]
-          .col-lg-3.mb-theme-30.col-6
+          .col.col-lg-3.mb-theme-30.col-6
             +CardComponent({
               url: './assets/images/image-book-thumbnail.png',
               title: 'Làm Chủ Cơn Giận',
@@ -365,7 +366,7 @@ block pages
               classModify: "style2",
                 classModifyImage: 'resize-card'
             })
-  section.banner-single.bg-card-orange.pt-theme-15.pb-theme-15
+  section.banner-single.bg-card-orange.pt-theme-30.pb-theme-15
     .container
       .row
         .col-12
@@ -379,8 +380,9 @@ block pages
             className: 'justify-content-between mt-theme-6 mb-theme-6',
             isViewAll: true
           })
+      .row.row-cols-lg-5.mt-theme-16
         each item in [1,2,3,4,5,6,7,8]
-          .col-lg-3.mb-theme-30.col-6
+          .col.col-lg-3.mb-theme-30.col-6
             +CardComponent({
               url: './assets/images/image-book-thumbnail.png',
               title: 'Làm Chủ Cơn Giận',
@@ -391,5 +393,34 @@ block pages
               footer: true,
               isSale: true,
               classModify: "style2",
-                classModifyImage: 'resize-card'
+              classModifyImage: 'resize-card'
+            })
+  section.banner-single.pt-theme-15.pb-theme-15
+    .container
+      .row
+        .col-12
+          img(src="./assets/images/image-banner-single.png" alt="")
+  section.top-sale.pt-theme-15.pb-theme-15
+    .container
+      .row
+        .col-12
+          +HeadingCard({
+            title: "Tủ sách y học",
+            className: 'justify-content-between mt-theme-6 mb-theme-6',
+            isViewAll: true
+          })
+      .row.row-cols-lg-5
+        each item in [1,2,3,4,5,6,7,8]
+          .col.col-lg-3.mb-theme-30.col-6
+            +CardComponent({
+              url: './assets/images/image-book-thumbnail.png',
+              title: 'Làm Chủ Cơn Giận',
+              description: 'Tác giả',
+              classTitle: 'mt-theme-4 mb-theme-4 bookname-15-pt-m',
+              isRate: true,
+              price: true,
+              footer: true,
+              isSale: true,
+              classModify: "style2",
+              classModifyImage: 'resize-card'
             })
