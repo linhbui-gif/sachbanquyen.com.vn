@@ -18,10 +18,23 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   cursor: pointer;
-  transition: .3s ease;
+}
+.owl-carousel .owl-next img, .owl-carousel .owl-prev img{
+  width: unset;
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
+  background: #3333332b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: .4s;
+  &:hover{
+    background: rgb(51 51 51 / 48%);
+  }
 }
 .owl-carousel .owl-next{
   right: 0;

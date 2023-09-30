@@ -76,6 +76,9 @@
       justify-content: center;
       background: var(--bgcard);
       border-radius: 5px;
+      img {
+        width: unset;
+      }
     }
     &.resize-card {
       border-radius: 12px;
@@ -106,10 +109,9 @@
       }
     }
     img {
-      max-width: 100%;
       height: 100%;
       transition: 0.5s;
-      width: unset;
+      width: 100%;
       margin: auto;
       &:hover {
         transform: scale(1.2);
@@ -120,6 +122,11 @@
         &:hover {
           transform: scale(1);
         }
+      }
+    }
+    &.unset-width {
+      img {
+        width: unset;
       }
     }
     .percent-sale {
