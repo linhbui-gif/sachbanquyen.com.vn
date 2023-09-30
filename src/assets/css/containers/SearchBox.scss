@@ -9,8 +9,8 @@
     &-item {
       @include h-6-title-15-pt-b();
       color: #737373;
-      &:first-child {
-        @include media-breakpoint-down(md) {
+      &:first-child{
+        @include media-breakpoint-down(lg){
           display: none;
         }
       }
