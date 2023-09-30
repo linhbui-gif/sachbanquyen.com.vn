@@ -205,10 +205,10 @@ img {
 =======
   }
 }
-@media (min-width: 575px) {
+@media (max-width: 768px) {
   .row-cols-lg-5 > * {
     flex: 0 0 auto;
-    width: calc(100% / 3);
+    width: calc(100% / 2);
   }
 }
 @media (min-width: 992px) {
