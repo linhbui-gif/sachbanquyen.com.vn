@@ -1,4 +1,6 @@
 .accordion{
+  --bs-accordion-border-radius: 8px;
+  --bs-accordion-inner-border-radius: 8px;
   &-button{
     font-size: 15px;
   }
@@ -15,8 +17,7 @@
       }
     }
     &:last-of-type {
-      border-bottom-right-radius: unset;
-      border-bottom-left-radius: unset;
+
     }
   }
   &-body{

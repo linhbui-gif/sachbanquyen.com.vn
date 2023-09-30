@@ -8,7 +8,9 @@
   border-bottom-right-radius: 0px !important;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
-  border-radius: 8px;
+  &.has-radius{
+    border-radius: 5px!important;
+  }
   &-label {
     @include bookname-15-pt-m();
   }

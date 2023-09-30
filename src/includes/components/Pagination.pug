@@ -1,12 +1,12 @@
 mixin Pagination()
   nav(aria-label='Page navigation example').mt-theme-6
-    ul.pagination.justify-content-center
+    ul.pagination.justify-content-center.flex-wrap
       li.page-item
         a.page-link(href='#' tabindex='-1')
-          i.fa.fa-angle-double-left
+          i.bi.bi-chevron-double-left
       li.page-item
         a.page-link(href='#' tabindex='-1')
-          i.fa.fa-angle-left
+          i.bi.bi-chevron-left
       li.page-item
         a.page-link(href='#') 1
       li.page-item.active
@@ -17,7 +17,7 @@ mixin Pagination()
         a.page-link(href='#') ...
       li.page-item
         a.page-link(href='#')
-          i.fa.fa-angle-right
+          i.bi.bi-chevron-right
       li.page-item
         a.page-link(href='#')
-          i.fa.fa-angle-double-right
+          i.bi.bi-chevron-double-right

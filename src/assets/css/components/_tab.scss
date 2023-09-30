@@ -19,6 +19,8 @@
   padding: 30px;
   border: 1px solid #dee2e6;
   border-top: unset;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   .tab-pane {
     #content-tab-see {
       max-height: 189px;
@@ -36,7 +38,7 @@
   }
 }
 .btn-see-more {
-  min-height: 44px;
+  min-height: 43px;
   position: absolute;
   bottom: 0;
   left: 0;

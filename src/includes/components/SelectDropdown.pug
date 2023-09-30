@@ -1,5 +1,5 @@
-mixin SelectDropdownCustom({idSelect, idOptions, data = []})
-  .Select
+mixin SelectDropdownCustom({idSelect, idOptions, data = [], className= ''})
+  .Select(class=`${className ? className : ''}`)
     .Select-style.d-flex.align-items-center.h-100.justify-content-center(id=`${idSelect ? idSelect : 'customSelect'}`)
       h6.Select-label=data[0].name
       i.fa.fa-caret-down.ml-theme-4

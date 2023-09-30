@@ -1,3 +1,10 @@
+.list-group{
+  &.has-see-more{
+    .accordion-item:last-of-type{
+      border-radius: unset;
+    }
+  }
+}
 .list-group-item {
   &.header {
     color: var(--#{$prefix}list-group-active-color);

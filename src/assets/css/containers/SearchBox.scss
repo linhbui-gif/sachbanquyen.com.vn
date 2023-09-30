@@ -5,13 +5,14 @@
       @include h-6-title-15-pt-b();
       color: #737373;
       &:first-child{
-        @include media-breakpoint-down(sm){
+        @include media-breakpoint-down(lg){
           display: none;
         }
       }
       &-link{
         padding: 8px;
         @include bookname-15-pt-m();
+        font-size: 14px;
         color: var(--icon);
         position: relative;
         transition: .5s;

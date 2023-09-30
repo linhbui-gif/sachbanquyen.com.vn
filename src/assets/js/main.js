@@ -17,7 +17,9 @@ const carousel = {
     this.setupFlashSaleBannerCarousel01();
     this.setupFlashSaleBannerCarousel02();
     this.setupBookCategory();
+    this.setupBookCategoryQuaySach();
     this.setupBookSuggest();
+    this.carouselBookSuggestQuaySach();
     this.setupBookSameCategory();
     this.setupBookBenitorCategory();
   },
@@ -175,16 +177,20 @@ const carousel = {
       responsive: {
         0: {
           items: 2,
-          slideBy: 2,
+          slideBy: 1,
           nav:false
         },
         768: {
           items: 3,
-          slideBy: 3,
+          slideBy: 1,
+        },
+        992: {
+          items: 4,
+          slideBy: 1,
         },
         1200: {
           items: 5,
-          slideBy: 5,
+          slideBy: 1,
         },
       },
       loop: true,
@@ -262,6 +268,33 @@ const carousel = {
       ],
     })
   },
+  setupBookCategoryQuaySach: function () {
+    $("#carouselBookCategoryQuaysach").owlCarousel({
+      responsive: {
+        0: {
+          items: 3,
+          slideBy: 1,
+        },
+        991: {
+          items: 7,
+          slideBy: 1,
+        },
+      },
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: false,
+      smartSpeed: 300,
+      lazyLoad: true,
+      dots: false,
+      nav: true,
+      margin: 12,
+      navText: [
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
+      ],
+    })
+  },
   setupBookSuggest: function () {
     $("#carouselBookSuggest").owlCarousel({
       responsive: {
@@ -273,6 +306,38 @@ const carousel = {
         991: {
           items: 4,
           slideBy: 4,
+        },
+      },
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: false,
+      smartSpeed: 300,
+      lazyLoad: true,
+      dots: false,
+      nav: true,
+      margin: 12,
+      navText: [
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
+      ],
+    })
+  },
+  carouselBookSuggestQuaySach: function () {
+    $("#carouselBookSuggestQuaySach").owlCarousel({
+      responsive: {
+        0: {
+          items: 2,
+          slideBy: 2,
+          nav:false
+        },
+        991: {
+          items: 3,
+          slideBy: 1,
+        },
+        1200: {
+          items: 4,
+          slideBy: 1,
         },
       },
       loop: true,
