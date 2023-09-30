@@ -353,6 +353,38 @@ const carousel = {
       ],
     })
   },
+  carouselBookSuggestQuaySach: function () {
+    $("#carouselBookSuggestQuaySach").owlCarousel({
+      responsive: {
+        0: {
+          items: 2,
+          slideBy: 2,
+          nav:false
+        },
+        991: {
+          items: 3,
+          slideBy: 1,
+        },
+        1200: {
+          items: 4,
+          slideBy: 1,
+        },
+      },
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: false,
+      smartSpeed: 300,
+      lazyLoad: true,
+      dots: false,
+      nav: true,
+      margin: 12,
+      navText: [
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
+      ],
+    })
+  },
   setupBookSameCategory: function () {
     $("#carouselBookSameCategory").owlCarousel({
       responsive: {

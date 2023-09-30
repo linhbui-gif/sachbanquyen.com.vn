@@ -10,7 +10,11 @@
       @include h-6-title-15-pt-b();
       color: #737373;
       &:first-child{
+<<<<<<< HEAD
         @include media-breakpoint-down(md){
+=======
+        @include media-breakpoint-down(lg){
+>>>>>>> 4d28560 (fix bug)
           display: none;
         }
       }
