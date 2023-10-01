@@ -4,14 +4,14 @@
 .BookDetail {
   &-gallery {
     &-thumbnail {
-      &-wrapper{
-        @include media-breakpoint-between(lg,xl){
-          margin-top: 0!important;
+      &-wrapper {
+        @include media-breakpoint-between(lg, xl) {
+          margin-top: 0 !important;
         }
       }
       &-nav {
         width: 30%;
-        @include media-breakpoint-between(lg,xl){
+        @include media-breakpoint-between(lg, xl) {
           width: 149px !important;
         }
         &.width-100 {
