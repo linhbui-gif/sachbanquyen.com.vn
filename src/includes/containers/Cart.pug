@@ -2,7 +2,7 @@ mixin Cart({ method })
   section.Cart(class=method ? 'Medthod' : '')
     +HeadingCard({title: "Giỏ sách của bạn", className: '.Cart-title', isViewAll: true, isViewLabel: 'Chọn lại'})
     .Cart-wrapper
-      .row.d-flex.justify-content-center.Cart-heading
+      .row.d-flex.Cart-heading
         .col-1
           +Checkbox("")
         .col-6
@@ -39,10 +39,10 @@ mixin Cart({ method })
         .col-5.Cart-info-mobile
           .row.text-right.Cart-info-mobile-wrapper
             .col-5.Cart-info-mobile-btn
-                if method
-                  | 1 cuốn
-                else
-                  include ../../includes/components/Quantity.pug
+              if method
+                | 1 cuốn
+              else
+                include ../../includes/components/Quantity.pug
             .col-5.Cart-price
               span 311.500
               span.Cart-price-unit đ
