@@ -2,7 +2,7 @@ section.PaymentMethod
   +HeadingCard({title: "Thông tin thanh toán", className: '.PaymentMethod-title', isViewAll: false})
   .PaymentMethod-wrapper
     .row
-      .col-md-6
+      .col-md-6.QR
         img(src="./assets/images/image-QR.jpg", alt="", srcset="")
       .col-md-6
         .PaymentMethod-qr-title
@@ -19,8 +19,8 @@ section.PaymentMethod
             .col-6
               button.btn.btn-outline-gray-2 Chia sẻ
           .PaymentMethod-qr-note-2
-            span Đơn hàng sẽ được tự động xử lý, nếu sau
-            strong 5 phút
+            span Đơn hàng sẽ được tự động xử lý, nếu sau 
+            strong 5 phút 
             span đơn hàng vẫn chưa được xử lý, bạn vui lòng liên hệ hotline hoặc livechat để được hỗ trợ.
     .dash
     .PaymentMethod-info
@@ -33,15 +33,16 @@ section.PaymentMethod
           span Lưu ý: Điền
           strong chính xác
           span  mã trên đây vào nội dung chuyển khoản
-      .PaymentMethod-info-wrapper
-        p Ngân hàng
-        +InputCopy({ value: 'Ngân hàng Thương mại Cổ phần Quân Đội ' })
-      .PaymentMethod-info-wrapper
-        p Chi nhánh
-        +InputCopy({ value: 'Lãn Ông' })
-      .PaymentMethod-info-wrapper
-        p Số tài khoản:
-        +InputCopy({ value: '0601119779999' })
-      .PaymentMethod-info-wrapper
-        p Chủ tài khoản:
-        +InputCopy({ value: 'Nhà xuất bản Xây dựng' })
+      .PaymentMethod-info-form
+        .PaymentMethod-info-wrapper
+          p Ngân hàng
+          +InputCopy({ value: 'Ngân hàng Thương mại Cổ phần Quân Đội ' })
+        .PaymentMethod-info-wrapper
+          p Chi nhánh
+          +InputCopy({ value: 'Lãn Ông' })
+        .PaymentMethod-info-wrapper
+          p Số tài khoản:
+          +InputCopy({ value: '0601119779999' })
+        .PaymentMethod-info-wrapper
+          p Chủ tài khoản:
+          +InputCopy({ value: 'Nhà xuất bản Xây dựng' })
