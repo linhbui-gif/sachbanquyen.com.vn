@@ -17,7 +17,9 @@ const carousel = {
     this.setupFlashSaleBannerCarousel01();
     this.setupFlashSaleBannerCarousel02();
     this.setupBookCategory();
+    this.setupBookCategoryQuaySach();
     this.setupBookSuggest();
+    this.carouselBookSuggestQuaySach();
     this.setupBookSameCategory();
     this.setupBookBenitorCategory();
   },
@@ -57,19 +59,19 @@ const carousel = {
           Thumbs: {
             type: "classic",
           },
+          width: 525,
+          height:525
         })
     });
 
-    var mobileQuery = window.matchMedia('(max-width: 992px)');
+    var mobileQuery = window.matchMedia('(max-width: 1200px)');
+
     mobileQuery.addListener(handleWindowSizeChange);
     function handleWindowSizeChange(e) {
       if (e.matches) {
-        console.log($("#thumbs").find('.owl-item').css('width', '74px'))
         $("#thumbs").find('.owl-item').css('width', '74px');
       }
     }
-
-    // Khởi chạy hàm xử lý ban đầu
     handleWindowSizeChange(mobileQuery);
   },
   setupBookDetail02: function () {
@@ -81,8 +83,8 @@ const carousel = {
         nav: true,
         dots: false,
         navText: [
-          '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
-          '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+          '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+          '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
         ],
       });
 
@@ -154,8 +156,8 @@ const carousel = {
       nav: true,
       margin: 0,
       navText: [
-        '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
-        '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
       ],
     });
   },
@@ -164,16 +166,20 @@ const carousel = {
       responsive: {
         0: {
           items: 2,
-          slideBy: 2,
+          slideBy: 1,
           nav:false
         },
         768: {
           items: 3,
-          slideBy: 3,
+          slideBy: 1,
+        },
+        992: {
+          items: 4,
+          slideBy: 1,
         },
         1200: {
           items: 5,
-          slideBy: 5,
+          slideBy: 1,
         },
       },
       loop: true,
@@ -186,8 +192,8 @@ const carousel = {
       nav: true,
       margin: 10,
       navText: [
-        '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
-        '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
       ],
     });
   },
@@ -219,8 +225,8 @@ const carousel = {
       nav: true,
       margin: 7.5,
       navText: [
-        '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
-        '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
       ],
     });
   },
@@ -229,6 +235,10 @@ const carousel = {
       responsive: {
         0: {
           items: 3,
+          slideBy: 1,
+        },
+        767: {
+          items: 4,
           slideBy: 1,
         },
         991: {
@@ -246,22 +256,21 @@ const carousel = {
       nav: true,
       margin: 12,
       navText: [
-        '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
-        '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
       ],
     })
   },
-  setupBookSuggest: function () {
-    $("#carouselBookSuggest").owlCarousel({
+  setupBookCategoryQuaySach: function () {
+    $("#carouselBookCategoryQuaysach").owlCarousel({
       responsive: {
         0: {
-          items: 2,
-          slideBy: 2,
-          nav:false
+          items: 3,
+          slideBy: 1,
         },
         991: {
-          items: 4,
-          slideBy: 4,
+          items: 7,
+          slideBy: 1,
         },
       },
       loop: true,
@@ -274,8 +283,73 @@ const carousel = {
       nav: true,
       margin: 12,
       navText: [
-        '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
-        '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
+      ],
+    })
+  },
+  setupBookSuggest: function () {
+    $("#carouselBookSuggest").owlCarousel({
+      responsive: {
+        0: {
+          items: 2,
+          slideBy: 2,
+          nav:false
+        },
+        767: {
+          items: 3,
+          slideBy: 1,
+          nav:false
+        },
+        1200: {
+          items: 4,
+          slideBy: 1,
+        },
+      },
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: false,
+      smartSpeed: 300,
+      lazyLoad: true,
+      dots: false,
+      nav: true,
+      margin: 12,
+      navText: [
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
+      ],
+    })
+  },
+  carouselBookSuggestQuaySach: function () {
+    $("#carouselBookSuggestQuaySach").owlCarousel({
+      responsive: {
+        0: {
+          items: 2,
+          slideBy: 2,
+          nav:false
+        },
+        991: {
+          items: 3,
+          slideBy: 1,
+        },
+        1200: {
+          items: 4,
+          slideBy: 1,
+        },
+      },
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: false,
+      smartSpeed: 300,
+      lazyLoad: true,
+      dots: false,
+      nav: true,
+      margin: 12,
+      navText: [
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
       ],
     })
   },
@@ -305,8 +379,8 @@ const carousel = {
       nav: true,
       margin: 15,
       navText: [
-        '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
-        '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
       ],
     });
   },
@@ -333,8 +407,8 @@ const carousel = {
       nav: true,
       margin: 15,
       navText: [
-        '<img src="./assets/icons/icon-circle-left.svg" alt="" />',
-        '<img src="./assets/icons/icon-circle-right.svg" alt="" />',
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
       ],
     });
   },
@@ -462,6 +536,30 @@ function ShowMenuMobile(){
     }
   })
 }
+function CountDown(options){
+   const countDownDate = new Date("Oct 31, 2023 15:37:25").getTime();
+   let container = document.getElementById(options.container);
+   const x = setInterval(function() {
+
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+     // document.querySelector(".days").innerHTML = days;
+     if(container){
+       container.querySelector(".hours").innerHTML = hours;
+       container.querySelector(".minutes").innerHTML = minutes;
+       container.querySelector(".seconds").innerHTML = seconds;
+       if (distance < 0) {
+         clearInterval(x);
+         container.innerHTML = "EXPIRED";
+       }
+     }
+  }, 1000);
+}
 new ShowMenuMobile()
 new ActiveItemsComponent({
   containerItem: "BookDetail-choose",
@@ -487,3 +585,13 @@ new QuantityControl('Cart-info-mobile-btn')
 new SeeMoreComponent('content', 'seeMoreBtn');
 new SeeMoreComponent('see-more', 'seeBtn');
 new SeeMoreComponent('content-tab-see', 'seeAboutBtn');
+new CountDown({
+  container: "CountDown"
+});
+new CountDown({
+  container: "countdown2"
+});
+$('.btn-scroll').on('click', function(event) {
+  event.preventDefault();
+  $('html, body').animate({ scrollTop: 0 }, 'slow');
+});
