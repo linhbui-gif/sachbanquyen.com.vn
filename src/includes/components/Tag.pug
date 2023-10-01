@@ -1,0 +1,17 @@
+mixin Tag({ tag })
+    if tag === 'Ebook'
+        .Cart-card-tag.success
+            .img-tag
+            span Ebook
+    else if tag === 'Audio book'
+        .Cart-card-tag.warning
+            .img-tag
+            span Audio book
+    else if tag === 'Video'
+        .Cart-card-tag.pupple
+            .img-tag
+            span Video
+    else 
+        .Cart-card-tag
+            .img-tag
+            span Sách giấy
