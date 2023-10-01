@@ -8,18 +8,9 @@
   border-bottom-right-radius: 0px !important;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  &.has-radius{
-    border-radius: 5px!important;
+  &.has-radius {
+    border-radius: 5px !important;
   }
-=======
->>>>>>> 6321dbd (fix conflig 4)
-=======
-  &.has-radius{
-    border-radius: 5px!important;
-  }
->>>>>>> 4d28560 (fix bug)
   &-label {
     @include bookname-15-pt-m();
   }
@@ -41,22 +32,8 @@
       max-height: 100vh;
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
   &-option {
     transition: 0.5s;
-=======
-<<<<<<< HEAD
-  &-option{
-    transition: .5s;
-=======
-  &-option {
->>>>>>> 73d63f0 (fix spacing)
->>>>>>> 8a31cea (fix confilg)
-=======
-  &-option {
-    transition: 0.5s;
->>>>>>> 6321dbd (fix conflig 4)
     border-bottom: 1px solid var(--bginput);
     padding: 8px;
     text-align: center;
