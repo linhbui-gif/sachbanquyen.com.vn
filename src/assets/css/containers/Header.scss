@@ -31,9 +31,9 @@ header {
           padding: 0 60px;
           flex: 1;
         }
-        &-action{
-          &-item{
-            &-phone{
+        &-action {
+          &-item {
+            &-phone {
               width: 34px;
               height: 34px;
               img {
@@ -105,23 +105,8 @@ header {
         }
         &-left {
           cursor: pointer;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          min-width: 25%;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-          min-width: 25%;
-=======
           min-width: 279px;
->>>>>>> f4c7e76 (fix responsive and spacing)
-=======
           min-width: 25%;
->>>>>>> cfa41c1 (update)
->>>>>>> a2a8c86 (fix confilg 2)
-=======
-          min-width: 25%;
->>>>>>> 6321dbd (fix conflig 4)
           border: 1px solid var(--line3);
           background: var(--bginput);
           padding: 12px 15px;
