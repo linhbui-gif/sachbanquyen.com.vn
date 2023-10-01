@@ -4,15 +4,15 @@
 .BookDetail {
   &-gallery {
     &-thumbnail {
-      &-wrapper{
-        @include media-breakpoint-between(lg,xl){
-          margin-top: 0!important;
+      &-wrapper {
+        @include media-breakpoint-between(lg, xl) {
+          margin-top: 0 !important;
         }
       }
       &-nav {
         width: 30%;
-        @include media-breakpoint-between(lg,xl){
-          width: 169px !important;
+        @include media-breakpoint-between(lg, xl) {
+          width: 159px !important;
         }
         &.width-100 {
           border-radius: 8px;
@@ -30,10 +30,10 @@
         img {
           border-radius: 8px;
         }
-        .owl-carousel .owl-item{
-          .item{
-            img{
-              @include media-breakpoint-between(lg,xl){
+        .owl-carousel .owl-item {
+          .item {
+            img {
+              @include media-breakpoint-between(lg, xl) {
                 width: 74px;
               }
             }
@@ -353,20 +353,3 @@
     transition: 0.5s;
   }
 }
-// .BookDetail-gallery-thumbnail-carousel {
-//   .item {
-//     position: relative;
-//     img {
-//       width: 100%;
-//       max-height: 100%;
-//       min-height: 100%;
-//       min-width: 100%;
-//       -o-object-fit: contain;
-//       object-fit: contain;
-//       -o-object-position: center;
-//       object-position: center;
-//       margin: auto;
-//       position: absolute;
-//     }
-//   }
-// }
