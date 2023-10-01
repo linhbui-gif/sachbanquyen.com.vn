@@ -130,6 +130,34 @@ img {
         }
       }
     }
+    &.style2{
+      .flash-sale-tab-header-title{
+        font-family: "Roboto";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 150%;
+        text-transform: uppercase;
+        @include media-breakpoint-down(sm){
+          margin-bottom: 0;
+        }
+      }
+      .flash-sale-tab-header-timeEnd-in{
+        @include media-breakpoint-down(sm){
+          display: none;
+        }
+      }
+      .flash-sale-tab-header-timeEnd-item{
+        border-radius: 3px;
+        color: white;
+        padding: 3px 5px;
+        background: var(--body-text);
+        &.dot{
+          background: transparent;
+          color: var(--blacktext-yl);
+        }
+      }
+    }
   }
   &-nav {
     @include media-breakpoint-down(lg) {

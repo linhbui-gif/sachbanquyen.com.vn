@@ -12,7 +12,7 @@
       &-nav {
         width: 30%;
         @include media-breakpoint-between(lg,xl){
-          width: 149px !important;
+          width: 169px !important;
         }
         &.width-100 {
           border-radius: 8px;

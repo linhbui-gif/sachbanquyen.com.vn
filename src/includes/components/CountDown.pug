@@ -1,5 +1,13 @@
-mixin CountDown()
-  ul#CountDown
-    li.days.CountDown-item
-    li.hours.CountDown-item
-    li.minutes.CountDown-item
+mixin CountDown({type1 = false,className = '', idCustom=""})
+  ul.d-flex(class=`${className ? className : ''}` id=`${idCustom ? idCustom : 'CountDown'}`).mb-0.align-items-center
+    if type1
+      li.flash-sale-tab-header-timeEnd-in Kết thúc trong
+      li.flash-sale-tab-header-timeEnd-item.hours 04
+      li.flash-sale-tab-header-timeEnd-item.dot :
+      li.flash-sale-tab-header-timeEnd-item.minutes 15
+      li.flash-sale-tab-header-timeEnd-item.dot :
+      li.flash-sale-tab-header-timeEnd-item.seconds 02
+    else
+      li.hours.CountDown-item
+      li.minutes.CountDown-item
+      li.seconds.CountDown-item

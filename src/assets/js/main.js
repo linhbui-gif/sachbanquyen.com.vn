@@ -536,8 +536,9 @@ function ShowMenuMobile(){
     }
   })
 }
-function CountDown(){
+function CountDown(options){
    const countDownDate = new Date("Oct 31, 2023 15:37:25").getTime();
+   let container = document.getElementById(options.container);
    const x = setInterval(function() {
 
     const now = new Date().getTime();
@@ -547,16 +548,16 @@ function CountDown(){
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    const countDownWrapper = document.getElementById("CountDown")
-     document.querySelector(".days").innerHTML = days;
-     document.querySelector(".hours").innerHTML = hours;
-     document.querySelector(".minutes").innerHTML = minutes;
-     // document.querySelector(".seconds").innerHTML = seconds;
-
-    if (distance < 0) {
-      clearInterval(x);
-      countDownWrapper.innerHTML = "EXPIRED";
-    }
+     // document.querySelector(".days").innerHTML = days;
+     if(container){
+       container.querySelector(".hours").innerHTML = hours;
+       container.querySelector(".minutes").innerHTML = minutes;
+       container.querySelector(".seconds").innerHTML = seconds;
+       if (distance < 0) {
+         clearInterval(x);
+         container.innerHTML = "EXPIRED";
+       }
+     }
   }, 1000);
 }
 new ShowMenuMobile()
@@ -584,4 +585,13 @@ new QuantityControl('Cart-info-mobile-btn')
 new SeeMoreComponent('content', 'seeMoreBtn');
 new SeeMoreComponent('see-more', 'seeBtn');
 new SeeMoreComponent('content-tab-see', 'seeAboutBtn');
-new CountDown();
+new CountDown({
+  container: "CountDown"
+});
+new CountDown({
+  container: "countdown2"
+});
+$('.btn-scroll').on('click', function(event) {
+  event.preventDefault();
+  $('html, body').animate({ scrollTop: 0 }, 'slow');
+});
