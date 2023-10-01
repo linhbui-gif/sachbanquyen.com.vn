@@ -1,6 +1,10 @@
 .quantity-control {
   display: flex;
   align-items: center;
+  width: 121px;
+  @media (max-width: 991px) {
+    width: unset;
+  }
   .btn-default {
     &:first-child {
       border-top-left-radius: 5px;
@@ -21,7 +25,6 @@
   height: 32px;
   border: none;
   background-color: var(--bginput);
-  padding-left: 11px;
   &:focus {
     outline: none;
   }
