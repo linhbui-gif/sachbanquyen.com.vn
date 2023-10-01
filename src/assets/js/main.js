@@ -248,6 +248,10 @@ const carousel = {
           items: 3,
           slideBy: 1,
         },
+        767: {
+          items: 4,
+          slideBy: 1,
+        },
         991: {
           items: 6,
           slideBy: 1,
@@ -303,9 +307,14 @@ const carousel = {
           slideBy: 2,
           nav:false
         },
-        991: {
+        767: {
+          items: 3,
+          slideBy: 1,
+          nav:false
+        },
+        1200: {
           items: 4,
-          slideBy: 4,
+          slideBy: 1,
         },
       },
       loop: true,

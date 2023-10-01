@@ -1,11 +1,16 @@
 .search-box{
+  &-category{
+    @include media-breakpoint-down(lg){
+         width: 100%;
+    }
+  }
   &-left{
-    width: calc(100%/2);
+    //width: calc(100%/2);
     &-item{
       @include h-6-title-15-pt-b();
       color: #737373;
       &:first-child{
-        @include media-breakpoint-down(lg){
+        @include media-breakpoint-down(md){
           display: none;
         }
       }
