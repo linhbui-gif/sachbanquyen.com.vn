@@ -71,11 +71,11 @@
     }
     &-price {
       @include h-6-title-15-pt-b();
-      color: var(--Link, var(--Link, #2f69fd));
       display: flex;
       align-items: center;
       text-align: center;
       justify-content: center;
+
       &-unit {
         font-family: Roboto;
         font-size: 13px;
@@ -85,10 +85,24 @@
         text-decoration-line: underline;
       }
     }
+    &:first-child {
+      .Bill-total-price {
+        color: var(--Link, var(--Link, #2f69fd));
+      }
+    }
     &-wrapper-btns {
       display: flex;
       flex-direction: column;
       gap: 11px;
+      button {
+        strong {
+          font-family: Roboto;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 130%;
+        }
+      }
     }
     &.big {
       .Bill-total-price {

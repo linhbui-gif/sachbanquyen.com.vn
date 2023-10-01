@@ -1,6 +1,6 @@
 .radio {
-  margin: 0.5rem;
   display: flex;
+  margin-bottom: 15px;
   gap: 8px;
   flex-direction: row;
   padding: 14.5px 0;
@@ -26,14 +26,14 @@
     + .radio-label {
       &:before {
         content: "";
-        background: transparent;
+        background: #fff;
         border-radius: 100%;
         border: 0.5px solid var(--line3, #eaeaea);
         display: inline-block;
         width: 24px;
         height: 24px;
         position: relative;
-        margin-right: 1em;
+        margin-right: 0;
         vertical-align: top;
         cursor: pointer;
         text-align: center;
