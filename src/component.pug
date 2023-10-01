@@ -5,6 +5,8 @@ block pages
     const options = ['Tùy chọn 1', 'Tùy chọn 2', 'Tùy chọn 3']
   .container
     .row
+      .col-12
+        +CountDown()
       //.col-12
       //  +Input({ type: 'text', label: 'Nhập vị trí', icon: './assets/icons/location.svg' })
       //  +Input({ type: 'dropdown', label: 'Chọn Tỉnh/TP', icon: './assets/icons/map.svg', options: ['Tùy chọn 1', 'Tùy chọn 2', 'Tùy chọn 3'], id: 'dropdown-1'})
@@ -46,9 +48,9 @@ block pages
     //    aside.category
     //      +ListGroupComponent({ isAccordion:true, name:'chủ đề' })
 
-    .row
-      .col-6
-        include ./includes/containers/BookDetailGallery.pug
+    //.row
+    //  .col-6
+    //    include ./includes/containers/BookDetailGallery.pug
       //.col-3
       //  +CardComponent({
       //    url: './assets/images/image-book-chu-nhat.png',

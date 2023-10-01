@@ -7,11 +7,11 @@ mixin BookDetailInformation({typeGallery = false,isQuantity = false, action = fa
          include ../containers/BookDetailGallery02.pug
       if action
         .BookDetail-action.d-flex.mt-theme-30
-          button.btn.btn-success.mr-theme-4.w-100 
-            strong Đọc ngay 
+          button.btn.btn-success.mr-theme-4.w-100
+            strong Đọc ngay
             span (153 ngày)
-          button.btn.btn-primary.ml-theme-4.w-100 
-            strong Nghe ngay 
+          button.btn.btn-primary.ml-theme-4.w-100
+            strong Nghe ngay
             span (13 ngày)
     .col-lg-6
       .BookDetail-infor
@@ -79,7 +79,7 @@ mixin BookDetailInformation({typeGallery = false,isQuantity = false, action = fa
             svg(width='18' height='18' viewbox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg')
               path(d='M12 9.3335L8.70711 6.0406C8.31658 5.65008 7.68342 5.65008 7.29289 6.0406L4 9.3335' stroke='#0065CA' stroke-width='1.5' stroke-linecap='round')
             span.ml-theme-4.see-full Xem đầy đủ
-      .BookDetail-data.mt-theme-4
+      .BookDetail-data.mt-theme-15
         .BookDetail-data-item.d-flex.align-items-center
           span.BookDetail-data-item-text Danh mục:
           .BookDetail-data-item-category
@@ -99,7 +99,7 @@ mixin BookDetailInformation({typeGallery = false,isQuantity = false, action = fa
           .BookDetail-data-item.d-flex.align-items-center
             span.BookDetail-data-item-text Chọn thời gian đọc:
             .BookDetail-data-item-time
-              +SelectDropdownCustom({data: dataBookDetail})
+              +SelectDropdownCustom({data: dataBookDetail,className:"has-radius"})
       .BookDetail-suggest.d-lg-block.d-none
         h6.BookDetail-suggest-title Gợi ý cuốn sách này với định dạng khác
         .BookDetail-suggest-wrapper.d-flex.align-items-center.mt-theme-4#BookDetail-choose

@@ -3,9 +3,10 @@ extends includes/layouts/Guest.pug
 block pages
   include ./includes/containers/Banner
   section.Category.has-bg.pt-theme-30.pb-theme-30
-    +HeadingCard({title: "Quầy sách benitor", className: 'justify-content-center H0-24-B-heading-card', isViewAll: false})
     .container
       .row
+        .col-12
+          +HeadingCard({title: "Quầy sách benitor", className: 'justify-content-center H0-24-B-heading-card', isViewAll: false})
         .col-12
           #carouselBookBenitor.owl-carousel.owl-theme
             .item
@@ -145,11 +146,12 @@ block pages
               })
   section.top-sale.bg-card-orange.pt-theme-15.pb-theme-15
     .container
-      +HeadingCard({
-        title: "Danh mục nổi bật",
-        className: 'justify-content-between mt-theme-6 mb-theme-6',
-        isViewAll: true
-      })
+      .col-12
+        +HeadingCard({
+          title: "Danh mục nổi bật",
+          className: 'justify-content-between mt-theme-6 mb-theme-6',
+          isViewAll: true
+        })
       .Category-wrapper.row.scroll-mobile
         each item in [1,2,3,4,5,6,7,8,9]
           .Category-wrapper-category-item.mb-3.mb-xl-0

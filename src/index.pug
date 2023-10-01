@@ -3,8 +3,9 @@ extends includes/layouts/Guest.pug
 block pages
   include ./includes/containers/Banner
   section.Category.has-bg
-    +HeadingCard({title: "Danh mục sản phẩm", className: 'justify-content-center H0-24-B-heading-card', isViewAll: false})
     .container
+      .col-12
+        +HeadingCard({title: "Danh mục sản phẩm", className: 'justify-content-center H0-24-B-heading-card', isViewAll: false})
       .Category-wrapper.row
         each item in [1,2,3,4,5]
           .Category-wrapper-item.mb-3.mb-xl-0
@@ -18,8 +19,9 @@ block pages
             })
 
   section.Category
-    +HeadingCard({title: "Dịch vụ", className: 'justify-content-center H0-24-B-heading-card', isViewAll: false})
     .container
+      .col-12
+        +HeadingCard({title: "Dịch vụ", className: 'justify-content-center H0-24-B-heading-card', isViewAll: false})
       .Category-wrapper.row.scroll-mobile
         each item in [1,2,3,4,5]
           .Category-wrapper-item.mb-3.mb-xl-0

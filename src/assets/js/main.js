@@ -64,26 +64,15 @@ const carousel = {
         })
     });
 
-    var mobileQuery = window.matchMedia('(max-width: 991px)');
-    var tabletQuery = window.matchMedia('(max-width: 1200px) and (min-width:992px)');
+    var mobileQuery = window.matchMedia('(max-width: 1200px)');
 
     mobileQuery.addListener(handleWindowSizeChange);
-    tabletQuery.addListener(handleWindowSizeChangeTablet);
     function handleWindowSizeChange(e) {
       if (e.matches) {
         $("#thumbs").find('.owl-item').css('width', '74px');
       }
     }
-    function handleWindowSizeChangeTablet(e) {
-      console.log('e',e)
-      if (e.matches) {
-        console.log('e',e)
-        $("#thumbs").find('.owl-item').css('width', '100px');
-      }
-    }
-    // Khởi chạy hàm xử lý ban đầu
     handleWindowSizeChange(mobileQuery);
-    handleWindowSizeChangeTablet(tabletQuery);
   },
   setupBookDetail02: function () {
     $(document).ready(function() {
@@ -547,6 +536,29 @@ function ShowMenuMobile(){
     }
   })
 }
+function CountDown(){
+   const countDownDate = new Date("Oct 31, 2023 15:37:25").getTime();
+   const x = setInterval(function() {
+
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const countDownWrapper = document.getElementById("CountDown")
+     document.querySelector(".days").innerHTML = days;
+     document.querySelector(".hours").innerHTML = hours;
+     document.querySelector(".minutes").innerHTML = minutes;
+     // document.querySelector(".seconds").innerHTML = seconds;
+
+    if (distance < 0) {
+      clearInterval(x);
+      countDownWrapper.innerHTML = "EXPIRED";
+    }
+  }, 1000);
+}
 new ShowMenuMobile()
 new ActiveItemsComponent({
   containerItem: "BookDetail-choose",
@@ -572,3 +584,4 @@ new QuantityControl('Cart-info-mobile-btn')
 new SeeMoreComponent('content', 'seeMoreBtn');
 new SeeMoreComponent('see-more', 'seeBtn');
 new SeeMoreComponent('content-tab-see', 'seeAboutBtn');
+new CountDown();

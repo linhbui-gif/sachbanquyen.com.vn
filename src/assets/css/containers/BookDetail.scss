@@ -4,8 +4,16 @@
 .BookDetail {
   &-gallery {
     &-thumbnail {
+      &-wrapper{
+        @include media-breakpoint-between(lg,xl){
+          margin-top: 0!important;
+        }
+      }
       &-nav {
         width: 30%;
+        @include media-breakpoint-between(lg,xl){
+          width: 149px !important;
+        }
         &.width-100 {
           border-radius: 8px;
           border: 1px solid var(--line3);
@@ -22,6 +30,16 @@
         img {
           border-radius: 8px;
         }
+        .owl-carousel .owl-item{
+          .item{
+            img{
+              @include media-breakpoint-between(lg,xl){
+                width: 74px;
+              }
+            }
+          }
+        }
+
         //.owl-item.active{
         //
         //  img{
