@@ -11,7 +11,7 @@
       }
       &-nav {
         width: 30%;
-        @include media-breakpoint-between(lg, xl) {
+        @include media-breakpoint-between(lg,xl){
           width: 149px !important;
         }
         &.width-100 {
