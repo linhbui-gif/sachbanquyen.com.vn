@@ -6,6 +6,7 @@
   }
 }
 .list-group-item {
+  @include body-15-pt-r();
   &.header {
     color: var(--#{$prefix}list-group-active-color);
     background-color: var(--#{$prefix}list-group-active-bg);

@@ -50,6 +50,9 @@
   border: 1px solid var(--line3);
   border-top: unset;
   background: $white;
+  @include media-breakpoint-down(sm){
+    min-height: 29px;
+  }
   svg {
     transform: rotate(180deg);
   }
