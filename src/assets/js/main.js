@@ -604,12 +604,12 @@ function Tabs(options){
       resetActive()
       clicked.classList.add('active');
       const contentIndex = clicked.dataset.index;
-      container.querySelectorAll('.' + options.tabContent)[contentIndex].classList.add('active')
+      container && container.querySelectorAll('.' + options.tabContent)[contentIndex].classList.add('active')
     } else{
       resetActive()
       clicked.closest('.' + options.tabButton).classList.add('active');
       const contentIndex = clicked.closest('.' + options.tabButton).dataset.index;
-      container.querySelectorAll('.' + options.tabContent)[contentIndex].classList.add('active')
+      container && container.querySelectorAll('.' + options.tabContent)[contentIndex].classList.add('active')
     }
   }
   function resetActive(){
@@ -621,15 +621,14 @@ function Tabs(options){
       numberIndex = 0;
     }
     resetActive();
-    console.log('tabContent', tabContent)
     tabButton[numberIndex].classList.add('active')
     tabContent[numberIndex].classList.add('active')
   }
   function initEvent(){
-    container.addEventListener('click', handlerClick)
+    container && container.addEventListener('click', handlerClick)
   }
   function initIndexTabItem(){
-    tabButton.forEach((element, index) => {
+    tabButton && tabButton.forEach((element, index) => {
       element.setAttribute('data-index', index)
     })
   }
