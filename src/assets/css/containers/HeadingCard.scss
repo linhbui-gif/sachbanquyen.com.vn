@@ -17,4 +17,7 @@
       @include h-0-24-b-heading-card();
     }
   }
+  &.center{
+    justify-content: center;
+  }
 }
