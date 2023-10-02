@@ -9,7 +9,7 @@ block pages
         img(src="./assets/images/image-banner-flashsale.png" alt="")
       .d-lg-none.d-block
         img(src="./assets/images/image-banner-flash-sale-mb.png" alt="")
-    section.flash-sale-tab
+    section.flash-sale-tab#tabContainerFlashSale
       .flash-sale-background.pt-theme-30.d-lg-none.d-block
         .flash-sale-tab-header.d-flex.align-items-center.justify-content-center.flex-wrap
           h1.flash-sale-tab-header-title
@@ -19,11 +19,11 @@ block pages
             | sh sales
           +CountDown({className: 'flash-sale-tab-header-timeEnd', type1: true })
         .flash-sale-tab-nav.d-flex.scroll-mobile
-          a.flash-sale-tab-nav-item.active(href="" title="")
+          div.flash-sale-tab-nav-item.active(data-index="0")
             span.flash-sale-tab-nav-item-title.d-block 12:00
             span.flash-sale-tab-nav-item-des.d-block Đang diễn ra
           each item in [1,2,3,4,5]
-            a.flash-sale-tab-nav-item(href="" title="")
+            div.flash-sale-tab-nav-item(data-index=`${item}`)
               span.flash-sale-tab-nav-item-title.d-block 12:00
               span.flash-sale-tab-nav-item-des.d-block Đang diễn ra
       .container
@@ -36,25 +36,60 @@ block pages
               | sh sales
             +CountDown({className: 'flash-sale-tab-header-timeEnd', type1: true,idCustom:'countdown2' })
           .flash-sale-tab-nav.d-flex.scroll-mobile
-            a.flash-sale-tab-nav-item.active(href="" title="")
+            div.flash-sale-tab-nav-item.active(data-index="100")
               span.flash-sale-tab-nav-item-title.d-block 12:00
               span.flash-sale-tab-nav-item-des.d-block Đang diễn ra
             each item in [1,2,3,4,5]
-              a.flash-sale-tab-nav-item(href="" title="")
+              div.flash-sale-tab-nav-item(data-index=`${item}`)
                 span.flash-sale-tab-nav-item-title.d-block 12:00
                 span.flash-sale-tab-nav-item-des.d-block Đang diễn ra
-        .row.mt-theme-15.row-cols-lg-5
-          each item in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-            .col.mb-theme-15.col-6
-              +CardComponent({
-                url: './assets/images/image-book-chu-nhat.png',
-                title: 'Làm Chủ Cơn Giận',
-                description: 'Tác giả',
-                classTitle: 'mt-theme-4 mb-theme-4 bookname-15-pt-m',
-                isRate: true,
-                price: true,
-                footer: true,
-                isSale: true,
-                classModify: "style2",
-                classModifyImage: 'resize-card'
-              })
+        .Tab-panels
+          .Tab-panel.active
+            .row.mt-theme-15.row-cols-lg-5
+              each item in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+                .col.mb-theme-15.col-6
+                  +CardComponent({
+                    url: './assets/images/image-book-chu-nhat.png',
+                    title: 'Làm Chủ Cơn Giận',
+                    description: 'Tác giả',
+                    classTitle: 'mt-theme-4 mb-theme-4 bookname-15-pt-m',
+                    isRate: true,
+                    price: true,
+                    footer: true,
+                    isSale: true,
+                    classModify: "style2",
+                    classModifyImage: 'resize-card'
+                  })
+          .Tab-panel
+            .row.mt-theme-15.row-cols-lg-5
+              each item in [1]
+                .col.mb-theme-15.col-6
+                  +CardComponent({
+                    url: './assets/images/image-book-chu-nhat.png',
+                    title: 'Làm Chủ Cơn Giận',
+                    description: 'Tác giả',
+                    classTitle: 'mt-theme-4 mb-theme-4 bookname-15-pt-m',
+                    isRate: true,
+                    price: true,
+                    footer: true,
+                    isSale: true,
+                    classModify: "style2",
+                    classModifyImage: 'resize-card'
+                  })
+          each item in [2,3,4,5,6,7,8]
+            .Tab-panel
+              .row.mt-theme-15.row-cols-lg-5
+                each item in [1,2,3,4]
+                  .col.mb-theme-15.col-6
+                    +CardComponent({
+                      url: './assets/images/image-book-chu-nhat.png',
+                      title: 'Làm Chủ Cơn Giận',
+                      description: 'Tác giả',
+                      classTitle: 'mt-theme-4 mb-theme-4 bookname-15-pt-m',
+                      isRate: true,
+                      price: true,
+                      footer: true,
+                      isSale: true,
+                      classModify: "style2",
+                      classModifyImage: 'resize-card'
+                    })

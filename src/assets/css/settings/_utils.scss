@@ -166,6 +166,7 @@ img {
     &-item {
       padding: 15px 53px;
       text-align: center;
+      cursor: pointer;
       @include media-breakpoint-down(lg) {
         padding: 0 20px;
         min-width: 200px;
@@ -247,5 +248,13 @@ img {
   .row-cols-lg-5 > * {
     flex: 0 0 auto;
     width: calc(100% / 3);
+  }
+}
+.Tab-panels{
+  .Tab-panel{
+    display: none;
+    &.active{
+      display: block;
+    }
   }
 }
