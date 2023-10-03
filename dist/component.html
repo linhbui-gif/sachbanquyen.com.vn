@@ -265,11 +265,22 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <ul class="d-flex mb-0 align-items-center" id="CountDown">
-              <li class="hours CountDown-item"></li>
-              <li class="minutes CountDown-item"></li>
-              <li class="seconds CountDown-item"></li>
-            </ul>
+            <div class="col-lg-6 mb-theme-15">
+              <div class="input-group has-icon">
+                <div class="input-group-icon"><img src="./assets/icons/sms.svg" alt=""></div>
+                <input class="form-control" type="text" placeholder="Email (không bắt buộc)">
+              </div>
+              <div class="input-group has-icon">
+                <div class="input-group-icon"><img src="./assets/icons/icon-unlock.svg" alt=""></div>
+                <input class="password form-control" type="password" placeholder="Số điện thoại"><span class="input-group-text input-group-text-icon"><i class="fa fa-eye-slash" id="togglePassword" style="cursor: pointer"></i></span>
+              </div>
+              <button class="btn btn-primary has-icon w-100">
+                <div class="btn-icon mr-theme-4"><img src="./assets/icons/icon-facebook.svg" alt=""></div><span class="btn-text">Facebook</span>
+              </button>
+              <button class="btn btn-danger has-icon w-100">
+                <div class="btn-icon mr-theme-4"><img src="./assets/icons/icon-google.svg" alt=""></div><span class="btn-text">Google</span>
+              </button>
+            </div>
           </div>
           <!--.col-12-->
           <!--  +Input({ type: 'text', label: 'Nhập vị trí', icon: './assets/icons/location.svg' })-->

@@ -353,6 +353,38 @@ const carousel = {
       ],
     })
   },
+  carouselBookSuggestQuaySach: function () {
+    $("#carouselBookSuggestQuaySach").owlCarousel({
+      responsive: {
+        0: {
+          items: 2,
+          slideBy: 2,
+          nav:false
+        },
+        991: {
+          items: 3,
+          slideBy: 1,
+        },
+        1200: {
+          items: 4,
+          slideBy: 1,
+        },
+      },
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: false,
+      smartSpeed: 300,
+      lazyLoad: true,
+      dots: false,
+      nav: true,
+      margin: 12,
+      navText: [
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
+      ],
+    })
+  },
   setupBookSameCategory: function () {
     $("#carouselBookSameCategory").owlCarousel({
       responsive: {
@@ -437,25 +469,25 @@ function SelectDropdown(optional) {
 }
 function QuantityControl(container) {
   function createQuantityControl(subContainer) {
-    const decreaseButton = subContainer.querySelector(".decrease-button");
-    const increaseButton = subContainer.querySelector(".increase-button");
-    const quantityInput = subContainer.querySelector('input[type="number"]');
+    const decreaseButton =  subContainer && subContainer.querySelector(".decrease-button");
+    const increaseButton = subContainer && subContainer.querySelector(".increase-button");
+    const quantityInput = subContainer && subContainer.querySelector('input[type="number"]');
 
     let quantity = 1;
 
-    decreaseButton.addEventListener("click", () => {
+    decreaseButton && decreaseButton.addEventListener("click", () => {
       if (quantity > 1) {
         quantity--;
         quantityInput.value = quantity;
       }
     });
 
-    increaseButton.addEventListener("click", () => {
+    increaseButton && increaseButton.addEventListener("click", () => {
       quantity++;
       quantityInput.value = quantity;
     });
 
-    quantityInput.addEventListener("input", () => {
+    quantityInput &&  quantityInput.addEventListener("input", () => {
       let newQuantity = parseInt(quantityInput.value);
       if (isNaN(newQuantity) || newQuantity < 1) {
         newQuantity = 1;
@@ -465,7 +497,7 @@ function QuantityControl(container) {
     });
   }
   const products = document.querySelectorAll("." + container);
-  products.forEach((product) => {
+  products && products.forEach((product) => {
     createQuantityControl(product.querySelector(".quantity-control"));
   });
 }
@@ -560,6 +592,52 @@ function CountDown(options){
      }
   }, 1000);
 }
+function Tabs(options){
+  console.log(options);
+  const container = document.querySelector('#' + options.tabContainer);
+  const tabButton = document.querySelectorAll('.' + options.tabButton);
+  const tabContent = document.querySelectorAll('.' + options.tabContent);
+
+  function handlerClick(event){
+    const clicked = event.target;
+    if(clicked.classList.contains(options.tabButton)){
+      resetActive()
+      clicked.classList.add('active');
+      const contentIndex = clicked.dataset.index;
+      container && container.querySelectorAll('.' + options.tabContent)[contentIndex].classList.add('active')
+    } else{
+      resetActive()
+      clicked.closest('.' + options.tabButton).classList.add('active');
+      const contentIndex = clicked.closest('.' + options.tabButton).dataset.index;
+      container && container.querySelectorAll('.' + options.tabContent)[contentIndex].classList.add('active')
+    }
+  }
+  function resetActive(){
+    tabButton.forEach(element => element.classList.remove('active'))
+    tabContent.forEach(element => element.classList.remove('active'))
+  }
+  function defaultActiveTab(numberIndex){
+    if(numberIndex >= length || numberIndex < 0){
+      numberIndex = 0;
+    }
+    resetActive();
+    tabButton[numberIndex].classList.add('active')
+    tabContent[numberIndex].classList.add('active')
+  }
+  function initEvent(){
+    container && container.addEventListener('click', handlerClick)
+  }
+  function initIndexTabItem(){
+    tabButton && tabButton.forEach((element, index) => {
+      element.setAttribute('data-index', index)
+    })
+  }
+  initEvent();
+  initIndexTabItem()
+  return {
+    defaultActiveTab: defaultActiveTab
+  }
+}
 new ShowMenuMobile()
 new ActiveItemsComponent({
   containerItem: "BookDetail-choose",
@@ -595,3 +673,23 @@ $('.btn-scroll').on('click', function(event) {
   event.preventDefault();
   $('html, body').animate({ scrollTop: 0 }, 'slow');
 });
+const tabComponent = new Tabs(
+  {
+    tabContainer: "tabContainerFlashSale",
+    tabButton: "flash-sale-tab-nav-item",
+    tabContent: "Tab-panel"
+  }
+)
+$("#togglePassword").click(function (e) {
+  e.preventDefault();
+  var type = $(this).parent().parent().find(".password").attr("type");
+  console.log(type);
+  if(type == "password"){
+    $(this).removeClass("fa-eye-slash");
+    $(this).addClass("fa-eye");
+    $(this).parent().parent().find(".password").attr("type","text");
+  }else if(type == "text"){
+    $(this).removeClass("fa-eye");
+    $(this).addClass("fa-eye-slash");
+    $(this).parent().parent().find(".password").attr("type","password");
+  }});
