@@ -258,3 +258,19 @@ img {
     }
   }
 }
+aside{
+  position: sticky;
+  top: 0;
+}
+.Auth{
+   border: 1px solid var(--line3);
+   border-radius: 8px;
+
+  &-form{
+    padding: 30px;
+    border-right: 1px solid var(--line3);
+  }
+  &-social{
+    padding: 30px;
+  }
+}

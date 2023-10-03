@@ -1,30 +1,33 @@
-mixin Input({ type, label, icon, options, id })
+mixin Input({ type, label, icon, options, id,classModify = '', typePassword = false })
     if type === 'text'
-      .input-group(class=`${icon ? 'has-icon' : ''}`)
+      .input-group(class=`${icon ? 'has-icon' : ""}`)(class=`${classModify ? classModify : ''}`)
         if icon
           .input-group-icon
             img(src=icon, alt="")
-        input(type='text', placeholder=label).form-control
+        input(type=`${typePassword ? "password" : 'text'}`, placeholder=label class=`${typePassword ? "password" : ''}`).form-control
+        if typePassword
+          span.input-group-text.input-group-text-icon
+            i#togglePassword.fa.fa-eye-slash(style='cursor: pointer')
     else if type === 'dropdown'
-      .input-group(class=`${icon ? 'has-icon' : ''}`)
-        if icon
-          .input-group-icon
-            img(src=icon, alt="")
-        select(type='text', id=id)
-            each option in options
-                option(value=option)= option
-            if id
-                script.
-                    function initializeSelect2(id) {
-                        $('#' + id).select2();
-                        }
-                    document.addEventListener('DOMContentLoaded', function() {
-                    var idSelect = '#{id}';
-                    initializeSelect2(idSelect);
-                    });
+          .input-group(class=`${icon ? 'has-icon' : ''}`)
+            if icon
+              .input-group-icon
+                img(src=icon, alt="")
+            select(type='text', id=id)
+                each option in options
+                    option(value=option)= option
+                if id
+                    script.
+                        function initializeSelect2(id) {
+                            $('#' + id).select2();
+                            }
+                        document.addEventListener('DOMContentLoaded', function() {
+                        var idSelect = '#{id}';
+                        initializeSelect2(idSelect);
+                        });
     else if type === 'textarea'
-      .input-group
-        if icon
-          .input-group-icon
-            img(src=icon, alt="")
-        textarea(type='text', placeholder=label).form-control
+          .input-group
+            if icon
+              .input-group-icon
+                img(src=icon, alt="")
+            textarea(type='text', placeholder=label).form-control

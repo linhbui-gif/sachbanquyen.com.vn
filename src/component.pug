@@ -6,7 +6,17 @@ block pages
   .container
     .row
       .col-12
-        +CountDown({})
+        .col-lg-6.mb-theme-15
+          +Input({type: 'text', label: 'Email (không bắt buộc)', icon: './assets/icons/sms.svg'})
+          +Input({type: 'text', label: 'Số điện thoại', icon: './assets/icons/icon-unlock.svg', typePassword:true})
+          button.btn.btn-primary.has-icon.w-100
+            .btn-icon.mr-theme-4
+              img(src="./assets/icons/icon-facebook.svg" alt="")
+            span.btn-text Facebook
+          button.btn.btn-danger.has-icon.w-100
+            .btn-icon.mr-theme-4
+              img(src="./assets/icons/icon-google.svg" alt="")
+            span.btn-text Google
       //.col-12
       //  +Input({ type: 'text', label: 'Nhập vị trí', icon: './assets/icons/location.svg' })
       //  +Input({ type: 'dropdown', label: 'Chọn Tỉnh/TP', icon: './assets/icons/map.svg', options: ['Tùy chọn 1', 'Tùy chọn 2', 'Tùy chọn 3'], id: 'dropdown-1'})

@@ -469,25 +469,25 @@ function SelectDropdown(optional) {
 }
 function QuantityControl(container) {
   function createQuantityControl(subContainer) {
-    const decreaseButton = subContainer.querySelector(".decrease-button");
-    const increaseButton = subContainer.querySelector(".increase-button");
-    const quantityInput = subContainer.querySelector('input[type="number"]');
+    const decreaseButton =  subContainer && subContainer.querySelector(".decrease-button");
+    const increaseButton = subContainer && subContainer.querySelector(".increase-button");
+    const quantityInput = subContainer && subContainer.querySelector('input[type="number"]');
 
     let quantity = 1;
 
-    decreaseButton.addEventListener("click", () => {
+    decreaseButton && decreaseButton.addEventListener("click", () => {
       if (quantity > 1) {
         quantity--;
         quantityInput.value = quantity;
       }
     });
 
-    increaseButton.addEventListener("click", () => {
+    increaseButton && increaseButton.addEventListener("click", () => {
       quantity++;
       quantityInput.value = quantity;
     });
 
-    quantityInput.addEventListener("input", () => {
+    quantityInput &&  quantityInput.addEventListener("input", () => {
       let newQuantity = parseInt(quantityInput.value);
       if (isNaN(newQuantity) || newQuantity < 1) {
         newQuantity = 1;
@@ -497,7 +497,7 @@ function QuantityControl(container) {
     });
   }
   const products = document.querySelectorAll("." + container);
-  products.forEach((product) => {
+  products && products.forEach((product) => {
     createQuantityControl(product.querySelector(".quantity-control"));
   });
 }
@@ -680,3 +680,16 @@ const tabComponent = new Tabs(
     tabContent: "Tab-panel"
   }
 )
+$("#togglePassword").click(function (e) {
+  e.preventDefault();
+  var type = $(this).parent().parent().find(".password").attr("type");
+  console.log(type);
+  if(type == "password"){
+    $(this).removeClass("fa-eye-slash");
+    $(this).addClass("fa-eye");
+    $(this).parent().parent().find(".password").attr("type","text");
+  }else if(type == "text"){
+    $(this).removeClass("fa-eye");
+    $(this).addClass("fa-eye-slash");
+    $(this).parent().parent().find(".password").attr("type","password");
+  }});

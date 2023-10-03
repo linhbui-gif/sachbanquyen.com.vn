@@ -4,6 +4,17 @@
       border-radius: unset;
     }
   }
+  .accordion-item:last-of-type .accordion-button.collapsed{
+    border-bottom-right-radius: unset;
+    border-bottom-left-radius: unset;
+  }
+  .accordion-item:last-of-type .accordion-collapse{
+    border-bottom-right-radius: unset;
+    border-bottom-left-radius: unset;
+  }
+  .accordion{
+    --bs-accordion-border-radius: 0;
+  }
 }
 .list-group-item {
   @include body-15-pt-r();

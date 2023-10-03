@@ -7,9 +7,39 @@ $btn-active-bg: #ee3d05;
 .btn {
   --#{$prefix}btn-font-size: #{$btn-font-size};
   --#{$prefix}btn-font-weight: #{$btn-font-weight};
+  &.has-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .btn-icon{
+      img{
+        width: unset;
+      }
+    }
+    .btn-text{
+      font-family: "Roboto";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }
   &-primary {
     font-weight: 700;
     line-height: 21px;
+  }
+  &-danger {
+    --#{$prefix}btn-color: #{$btn-color};
+    --#{$prefix}btn-bg: var(--badge);
+    --#{$prefix}btn-border-color: var(--badge);
+    --#{$prefix}btn-hover-color: #{$btn-hover-color};
+    --#{$prefix}btn-hover-bg: var(--badge);
+    --#{$prefix}btn-hover-border-color: var(--badge);
+    --#{$prefix}btn-active-color: #{$btn-color};
+    --#{$prefix}btn-active-bg: var(--badge);
+    --#{$prefix}active-border-color: var(--badge);
+    --#{$prefix}disabled-bg: var(--badge);
+    --#{$prefix}disabled-border-color: var(--badge);
   }
   &-success {
     --#{$prefix}btn-color: #{$btn-color};
@@ -106,6 +136,10 @@ $btn-active-bg: #ee3d05;
     --#{$prefix}btn-active-color: #{$white};
     padding: 4px 12px;
     @include s-btn-15-pt-medium();
+    &.warning-style2{
+      padding: 8px 12px;
+      @include l-btn-18-pt-sm();
+    }
   }
   &-outline-gray {
     --#{$prefix}btn-hover-bg: var(--text-hidden);

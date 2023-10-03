@@ -1,5 +1,35 @@
 extends includes/layouts/Guest.pug
 
 block pages
-  .container
-    include ./includes/components/Breadcrumb.pug
+    .container
+      include ./includes/components/Breadcrumb.pug
+      form.Auth.mb-theme-30
+        .row.mx-lg-0
+          .col-lg-6.px-lg-0
+            .Auth-form
+              .Auth-form-header.d-flex.align-items-center.justify-content-between.mb-theme-24
+                h4.Auth-form-header-title Đăng nhập
+                a.Auth-form-header-text(href="#") Đăng ký
+              .AUth-form-body
+                +Input({type: 'text', label: 'Email (không bắt buộc)', icon: './assets/icons/sms.svg',classModify:'mb-theme-24' })
+                +Input({type: 'text', label: 'Số điện thoại', icon: './assets/icons/call-calling.svg',classModify:'mb-theme-24'})
+                +Input({type: 'text', label: 'Nhập mật khẩu của bạn', icon: './assets/icons/icon-unlock.svg', typePassword:true})
+              .Auth-form-footer
+                div.mt-theme-15.mb-theme-15.d-flex.align-items-center.justify-content-between
+                  .form-check
+                    input#flexCheckDefault.form-check-input(type='checkbox' value='')
+                    label.form-check-label(for='flexCheckDefault')
+                      | Nhớ mật khẩu
+                  a(href="") Quên mật khẩu
+                button.btn.btn-warning.w-100.warning-style2 Đăng nhập
+          .col-lg-6.px-lg-0
+            .Auth-social
+              button.btn.btn-danger.has-icon.w-100.mb-theme-16
+                .btn-icon.mr-theme-4
+                  img(src="./assets/icons/icon-google.svg" alt="")
+                span.btn-text Google
+              button.btn.btn-primary.has-icon.w-100
+                .btn-icon.mr-theme-4
+                  img(src="./assets/icons/icon-facebook.svg" alt="")
+                span.btn-text Facebook
+
