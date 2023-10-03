@@ -27,6 +27,7 @@
     align-items: center;
     padding-top: 21.5px;
     padding-bottom: 21.5px;
+    justify-content: center;
     h4,
     h6,
     a {
@@ -82,6 +83,7 @@
         }
         &-btn {
           width: auto;
+          white-space: nowrap;
         }
         .Cart-price {
           display: none;
