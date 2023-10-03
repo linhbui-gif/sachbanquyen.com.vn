@@ -269,6 +269,25 @@ aside{
   &-form{
     padding: 30px;
     border-right: 1px solid var(--line3);
+    @include media-breakpoint-down(lg){
+      border-right: unset;
+      border-bottom: 1px solid var(--line3);;
+    }
+    &-header{
+      &-title{
+        @include h-4-18-pt-b-tieude-the();
+      }
+      &-text{
+        @include bookname-15-pt-m();
+        color: var(--link);
+      }
+    }
+    &-footer{
+      a{
+        @include body-15-pt-r();
+        color: var(--badge);
+      }
+    }
   }
   &-social{
     padding: 30px;
