@@ -263,153 +263,61 @@
     </div>
     <main>
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="col-lg-6 mb-theme-15">
-              <div class="input-group has-icon">
-                <div class="input-group-icon"><img src="./assets/icons/sms.svg" alt=""></div>
-                <input class="form-control" type="text" placeholder="Email (không bắt buộc)">
+        <nav class="mt-theme-15 mb-theme-15" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">
+                <svg width="16" height="17" viewbox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.8868 5.84005L9.52014 2.34672C8.6668 1.66672 7.33347 1.66005 6.4868 2.34005L2.12014 5.84005C1.49347 6.34005 1.11347 7.34005 1.2468 8.12672L2.0868 13.1534C2.28014 14.2801 3.3268 15.1667 4.4668 15.1667H11.5335C12.6601 15.1667 13.7268 14.2601 13.9201 13.1467L14.7601 8.12005C14.8801 7.34005 14.5001 6.34005 13.8868 5.84005ZM8.50014 12.5001C8.50014 12.7734 8.27347 13.0001 8.00014 13.0001C7.7268 13.0001 7.50014 12.7734 7.50014 12.5001V10.5001C7.50014 10.2267 7.7268 10.0001 8.00014 10.0001C8.27347 10.0001 8.50014 10.2267 8.50014 10.5001V12.5001Z" fill="#062233" fill-opacity="0.5"></path>
+                </svg></a></li>
+            <li class="breadcrumb-item"><a href="#">Sách giấy</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chi tiết sách</li>
+          </ol>
+        </nav>
+        <form class="Auth mb-theme-30">
+          <div class="row mx-lg-0">
+            <div class="col-lg-6 px-lg-0">
+              <div class="Auth-form">
+                <div class="Auth-form-header d-flex align-items-center justify-content-between mb-theme-24">
+                  <h4 class="Auth-form-header-title">Đăng nhập</h4><a class="Auth-form-header-text" href="#">Đăng ký</a>
+                </div>
+                <div class="AUth-form-body">
+                  <div class="input-group has-icon mb-theme-24">
+                    <div class="input-group-icon"><img src="./assets/icons/sms.svg" alt=""></div>
+                    <input class="form-control" type="text" placeholder="Email (không bắt buộc)">
+                  </div>
+                  <div class="input-group has-icon mb-theme-24">
+                    <div class="input-group-icon"><img src="./assets/icons/call-calling.svg" alt=""></div>
+                    <input class="form-control" type="text" placeholder="Số điện thoại">
+                  </div>
+                  <div class="input-group has-icon">
+                    <div class="input-group-icon"><img src="./assets/icons/icon-unlock.svg" alt=""></div>
+                    <input class="password form-control" type="password" placeholder="Nhập mật khẩu của bạn"><span class="input-group-text input-group-text-icon"><i class="fa fa-eye-slash" id="togglePassword" style="cursor: pointer"></i></span>
+                  </div>
+                </div>
+                <div class="Auth-form-footer">
+                  <div class="mt-theme-15 mb-theme-15 d-flex align-items-center justify-content-between">
+                    <div class="form-check">
+                      <input class="form-check-input" id="flexCheckDefault" type="checkbox" value="">
+                      <label class="form-check-label" for="flexCheckDefault">Nhớ mật khẩu</label>
+                    </div><a href="">Quên mật khẩu</a>
+                  </div>
+                  <button class="btn btn-warning w-100 warning-style2">Đăng nhập</button>
+                </div>
               </div>
-              <div class="input-group has-icon">
-                <div class="input-group-icon"><img src="./assets/icons/icon-unlock.svg" alt=""></div>
-                <input class="password form-control" type="password" placeholder="Số điện thoại"><span class="input-group-text input-group-text-icon"><i class="fa fa-eye-slash" id="togglePassword" style="cursor: pointer"></i></span>
+            </div>
+            <div class="col-lg-6 px-lg-0">
+              <div class="Auth-social">
+                <div class="Auth-social-or text-center mb-theme-16"><span>--</span><span class="ml-theme-4 mr-theme-4">Hoặc đăng nhập qua</span><span>--</span></div>
+                <button class="btn btn-danger has-icon w-100 mb-theme-16">
+                  <div class="btn-icon mr-theme-4"><img src="./assets/icons/icon-google.svg" alt=""></div><span class="btn-text">Google</span>
+                </button>
+                <button class="btn btn-primary has-icon w-100">
+                  <div class="btn-icon mr-theme-4"><img src="./assets/icons/icon-facebook.svg" alt=""></div><span class="btn-text">Facebook</span>
+                </button>
               </div>
-              <button class="btn btn-primary has-icon w-100">
-                <div class="btn-icon mr-theme-4"><img src="./assets/icons/icon-facebook.svg" alt=""></div><span class="btn-text">Facebook</span>
-              </button>
-              <button class="btn btn-danger has-icon w-100">
-                <div class="btn-icon mr-theme-4"><img src="./assets/icons/icon-google.svg" alt=""></div><span class="btn-text">Google</span>
-              </button>
             </div>
           </div>
-          <!--.col-12-->
-          <!--  +Input({ type: 'text', label: 'Nhập vị trí', icon: './assets/icons/location.svg' })-->
-          <!--  +Input({ type: 'dropdown', label: 'Chọn Tỉnh/TP', icon: './assets/icons/map.svg', options: ['Tùy chọn 1', 'Tùy chọn 2', 'Tùy chọn 3'], id: 'dropdown-1'})-->
-          <!--  +Input({ type: 'textarea', label: 'Thêm ghi chú (ví dụ: Giao hàng vào giờ hành chính' })-->
-          <!--.col-2-->
-          <!--  button.btn.btn-primary.d-block.w-100 Mua ngay-->
-          <!--  button.btn.btn-orange-brand.mt-4.w-100 Mua ngay-->
-          <!--  button.btn.btn-success.mt-4 Mua ngay-->
-          <!--.col-12-->
-          <!--  include ./includes/components/SelectDropdown.pug-->
-          <!--  .cart-->
-          <!--    each item in [1,2,3,4,5]-->
-          <!--      .product-->
-          <!--        include ./includes/components/Quantity.pug-->
-          <div class="col-12">
-            <!--include ./includes/components/AccordionCustomIcon.pug-->
-            <!--#content.content-->
-            <!--  each item in [1,2,3,4,5,6,7,8,9]-->
-            <!--    p-->
-            <!--      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget venenatis purus, at elementum purus. Integer vel enim non est malesuada consectetur. Fusce fermentum, nunc at convallis iaculis, elit ex posuere urna, sit amet euismod nulla nunc vel massa.-->
-            <!--p#seeMoreBtn.btn-see-more-->
-            <!--   span See More-->
-            <!--#itemsContainer-->
-            <!--  .item-list-->
-            <!--    span.item-icon &#x2B50;&#xFE0F;-->
-            <!--    span Item 1-->
-            <!--  .item-list-->
-            <!--    span Item 2-->
-            <!--  .item-list-->
-            <!--    span.item-icon &#x1F31F;-->
-            <!--    span Item 3-->
-          </div>
-          <!--.col-6-->
-          <!--  .BookDetail-->
-          <!--    include ./includes/containers/BookDetailGallery02.pug-->
-          <!--    include ./includes/containers/BookDetailGallery.pug-->
-        </div>
-        <!--  .col-4-->
-        <!--    aside.category-->
-        <!--      +ListGroupComponent({ isAccordion:true, name:'chủ đề' })-->
-        <!--.row-->
-        <!--  .col-6-->
-        <!--    include ./includes/containers/BookDetailGallery.pug
-        //.col-3
-        //  +CardComponent({
-        //    url: './assets/images/image-book-chu-nhat.png',
-        //    title: 'Làm Chủ Cơn Giận',
-        //    description: 'Tác giả',
-        //    classTitle: 'mt-theme-4 mb-theme-4',
-        //    isRate: true,
-        //    price: true,
-        //    classModifyImage: 'resize-card'
-        //  })
-        -->
-        <!--  .col-12-->
-        <!--    .owl-carousel#HomeBanner-top.style-dots-rectangle-->
-        <!--      .item-->
-        <!--        img(src="./assets/images/image-banner-slider-home.png" alt="")-->
-        <!--      .item-->
-        <!--        img(src="./assets/images/image-banner-slider-home-1.png" alt="")-->
-        <!--  .col-12-->
-        <!--    #carouselFlashSale.owl-carousel-->
-        <!--      .item-->
-        <!--        +CardComponent({-->
-        <!--          url: './assets/images/image-book-thumbnail.png',-->
-        <!--          title: 'Làm Chủ Cơn Giận',-->
-        <!--          description: 'Tác giả',-->
-        <!--          classTitle: 'mt-theme-4 mb-theme-4',-->
-        <!--          isRate: true,-->
-        <!--          price: true,-->
-        <!--          footer: true,-->
-        <!--          isSale: true-->
-        <!--        })-->
-        <!--      .item-->
-        <!--        +CardComponent({-->
-        <!--          url: './assets/images/image-book-thumbnail-1.png',-->
-        <!--          title: 'Làm Chủ Cơn Giận',-->
-        <!--          description: 'Tác giả',-->
-        <!--          classTitle: 'mt-theme-4 mb-theme-4',-->
-        <!--          isRate: true,-->
-        <!--          price: true,-->
-        <!--          footer: true-->
-        <!--        })-->
-        <!--      .item-->
-        <!--        +CardComponent({-->
-        <!--          url: './assets/images/image-book-thumbnail-2.png',-->
-        <!--          title: 'Làm Chủ Cơn Giận',-->
-        <!--          description: 'Tác giả',-->
-        <!--          classTitle: 'mt-theme-4 mb-theme-4',-->
-        <!--          isRate: true,-->
-        <!--          price: true,-->
-        <!--          footer: true-->
-        <!--        })-->
-        <!--      .item-->
-        <!--        +CardComponent({-->
-        <!--          url: './assets/images/image-book-thumbnail-3.png',-->
-        <!--          title: 'Làm Chủ Cơn Giận',-->
-        <!--          description: 'Tác giả',-->
-        <!--          classTitle: 'mt-theme-4 mb-theme-4',-->
-        <!--          isRate: true,-->
-        <!--          price: true,-->
-        <!--          footer: true-->
-        <!--        })-->
-        <!--      .item-->
-        <!--        +CardComponent({-->
-        <!--          url: './assets/images/image-book-thumbnail-3.png',-->
-        <!--          title: 'Làm Chủ Cơn Giận',-->
-        <!--          description: 'Tác giả',-->
-        <!--          classTitle: 'mt-theme-4 mb-theme-4',-->
-        <!--          isRate: true,-->
-        <!--          price: true,-->
-        <!--          footer: true,-->
-        <!--          isSale: true-->
-        <!--        })-->
-        <!--      .item-->
-        <!--        +CardComponent({-->
-        <!--          url: './assets/images/image-book-thumbnail.png',-->
-        <!--          title: 'Làm Chủ Cơn Giận',-->
-        <!--          description: 'Tác giả',-->
-        <!--          classTitle: 'mt-theme-4 mb-theme-4',-->
-        <!--          isRate: true,-->
-        <!--          price: true,-->
-        <!--          footer: true,-->
-        <!--          isSale: true-->
-        <!--        })-->
-        <!--  .col-12-->
-        <!--    +HeadingCard({title:"Dịch vụ", className:'justify-content-center H0-24-B-heading-card', isViewAll: false})-->
-        <!--    +HeadingCard({title:"Top sách giấy bán chạy", className:'justify-content-between', isViewAll: true})-->
+        </form>
       </div>
       <div class="support"><a class="support-item" href="#"><img src="./assets/images/facebook-mess.png" alt=""></a><a class="support-item" href="#"><img src="./assets/images/zalo-mess.png" alt=""></a><a class="support-item btn-scroll" href="#"><img src="./assets/images/btn-sroll.png" alt=""></a></div>
     </main>
