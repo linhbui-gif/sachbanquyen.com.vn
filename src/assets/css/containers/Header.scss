@@ -106,7 +106,8 @@ header {
         &-left {
           cursor: pointer;
           min-width: 25%;
-          border: 1px solid var(--line3);
+          border-left: 1px solid var(--line3);
+          border-right: 1px solid var(--line3);
           background: var(--bginput);
           padding: 12px 15px;
           i {
@@ -200,7 +201,7 @@ header {
             transition: 0.3s ease;
             top: 100%;
             width: 200px;
-            padding: 0 15px;
+            //padding: 0 15px;
             opacity: 0;
             visibility: hidden;
             z-index: 10;
@@ -208,16 +209,16 @@ header {
               &-link {
                 display: block;
                 width: 100%;
-                padding: 8px 0;
-                border-bottom: 1px solid #e0e0e0;
+                padding: 8px 15px;
+                //border-bottom: 1px solid #e0e0e0;
                 @include nav-menu-15-pt-m();
                 color: var(--icon);
                 transition: 0.4s;
                 &:hover {
-                  color: var(--hoveryellow);
+                 background: var(--line3);
                 }
                 &.active {
-                  color: var(--hoveryellow);
+                  background: var(--line3);
                 }
               }
             }

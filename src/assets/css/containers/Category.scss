@@ -12,10 +12,10 @@
       width: calc(100% / 5);
       padding: 0 15px;
       @include media-breakpoint-down(md) {
-        width: 50%;
+        width: 47%;
       }
       @include media-breakpoint-between(md, lg) {
-        width: calc(100% / 3);
+        width: calc(100% / 3 - 30px);
       }
     }
     &-category-item {

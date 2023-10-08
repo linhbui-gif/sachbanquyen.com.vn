@@ -3,12 +3,17 @@
   --bs-accordion-inner-border-radius: 8px;
   &-button{
     font-size: 15px;
+    padding: 12px;
   }
   &.custom-icon{
     --bs-accordion-btn-icon: url("../../assets/icons/add-cirlce.svg");
     --bs-accordion-btn-active-icon:  url("../../assets/icons/minus-cirlce.svg");
   }
   &-item{
+    border-bottom: 1px dashed var(--line3);
+    &:last-child{
+      border-bottom: 1px solid var(--line3);
+    }
     &:first-of-type {
       @include border-top-radius(0);
 

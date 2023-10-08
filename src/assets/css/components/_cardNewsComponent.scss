@@ -4,7 +4,7 @@
   align-items: flex-start;
   gap: 30px;
   flex-direction: row;
-  border-bottom: 1px solid var(--line-3, #eaeaea);
+  border-bottom: 1px dashed var(--line3);
   @media (max-width: 768px) {
     gap: 8px;
     align-items: center;
