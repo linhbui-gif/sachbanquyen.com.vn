@@ -140,6 +140,11 @@ const carousel = {
           slideBy: 3,
           margin: 10,
         },
+        992: {
+          items: 4,
+          slideBy: 4,
+          margin: 10,
+        },
         1200: {
           items: 5,
           slideBy: 5,
@@ -208,6 +213,10 @@ const carousel = {
         768: {
           items: 3,
           slideBy: 3,
+        },
+        992: {
+          items: 4,
+          slideBy: 1,
         },
         1200: {
           items: 5,
@@ -300,6 +309,10 @@ const carousel = {
           items: 3,
           slideBy: 1,
           nav:false
+        },
+        992: {
+          items: 4,
+          slideBy: 1,
         },
         1200: {
           items: 4,
