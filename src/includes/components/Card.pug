@@ -15,9 +15,10 @@ mixin CardComponent({url, title, description, footer, classModify, imageType, is
             if description
                p.CardComponent-body-description.text-center.mb-0=description
             if price
-               span.CardComponent-body-sale-price.mr-theme-4 50.0000 đ
-               span.CardComponent-body-retail-price
-                  del 50.0000 đ
+               div.CardComponent-body-retail-price.d-flex.align-items-center.justify-content-center
+                 span.CardComponent-body-sale-price.mr-theme-4 50.0000 đ
+                 span.CardComponent-body-retail-price
+                   del 50.0000 đ
        if footer
           .CardComponent-footer.mt-theme-4
             .CardComponent-footer-hot.d-flex.align-items-end.justify-content-center
