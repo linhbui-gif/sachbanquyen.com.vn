@@ -6,7 +6,7 @@ block pages
     .row
       .col-lg-3.d-lg-block.d-none
         aside
-          +ListGroupComponent({ isAccordion:true, name:"CHỦ ĐỀ",isSeeMore:true })
+          +ListGroupComponent({ isAccordion:true, name:"CHỦ ĐỀ",isSeeMore:true, className: 'has-see-more' })
           +ListGroupComponent({ isAccordion:false, name:"TÁC GIẢ", className:'mt-theme-30',isSeeMore:true })
       .col-lg-9.col-12
         section.d-lg-block.d-none
@@ -124,20 +124,9 @@ block pages
                 })
               include ./includes/containers/SearchBox.pug
               each item in [1,2,3,4,5,6,7,8,9,10]
-                .col-lg-4.mb-theme-15.col-6.col-md-4
+                .col-lg-3.mb-theme-15.col-6.col-md-3
                   +CardComponent({
-                    url: 'https://s3-alpha-sig.figma.com/img/5112/ac69/6d14cf14d83b0c363bdc8a8ba78a3f8b?Expires=1696809600&Signature=l3MckxG5N5xghfxAqb8ysWQJxjmyiE-knkkWlEvmBO7j6MnCNgFeNI5LlfQIBZPxXieDVb4ZV4jkehXqrBJ1dmyyoxu2kI1fKVXW3-91S2CWiku8u3X8trzs-pqr61z9FeCj3yyWaDpdArsgsYh9dMTVuL7GUWi2Pz9zb13PK-Dc3bpspZDJCE7EMvV8qSVIKqNdskzgIm9QeqE9FNrUN3gi7Ee3AspoyWZV4vhtxH~qUJgbv23USZsU9xTyr-ZL4gkN9WYUuY6sEghLCY1-bYCc6FqP8KpOVZMgJGOqD1AewYXAluOYhxFEDtIPrnA8P1w3Yzp8ECfXF8uarN-4Lg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
-                    title: 'Làm Chủ Cơn Giận',
-                    description: 'Tác giả',
-                    classTitle: 'mt-theme-4 mb-theme-4 bookname-15-pt-m',
-                    price: true,
-                    isNew: true,
-                    classModify: "style2",
-                    classModifyImage: 'resize-card'
-                  })
-                .col-lg-4.mb-theme-15.col-6.col-md-4
-                  +CardComponent({
-                    url: 'https://s3-alpha-sig.figma.com/img/b81a/6efd/903407b5dc68553d7bae119eb36ff6aa?Expires=1696809600&Signature=BWJ8HQqCloq790p0QViWEhyARj9Zuuv9X-e2N~sWR9XmJwz60L5FfWh7~2bj8JYvH45xAt0vl~huEAu6O6trmh9VbVLr-rbss~Ncl-UezbZOeNhdABC506ghvP3AUoOBRF5eMdP8izVxBPgdUaq8SDFuje22EfyIbAa1dGFdrmUwV4Kz3xEJXTRDj0~1-9TGUWn1orc-A8zeAlu9adT3g0wnHlv5z6oROy8UsxefbAlrZyApHf8FdIM6soVL0Rncl76Uo4NCfq1XziQ5Z2ZYRKZ7bq~Dhk-kzBem406chmJZHlYR-R-70tubF4~ZYCIgV5qGnaPbG~eVdNup5h~gpA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+                    url: './assets/images/image-book-thumbnail-1.png',
                     title: 'Làm Chủ Cơn Giận',
                     description: 'Tác giả',
                     classTitle: 'mt-theme-4 mb-theme-4 bookname-15-pt-m',

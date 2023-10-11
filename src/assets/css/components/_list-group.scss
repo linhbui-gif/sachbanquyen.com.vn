@@ -14,6 +14,12 @@
   }
   .accordion{
     //--bs-accordion-border-radius: 0;
+    .accordion-body-children-item-link{
+      transition: .5s;
+      &:hover{
+        background: var(--bs-tertiary-bg);
+      }
+    }
   }
 }
 .list-group-item {

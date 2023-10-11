@@ -15,22 +15,22 @@ mixin BookDetailInformation({typeGallery = false,isQuantity = false, action = fa
             span (13 ngày)
     .col-lg-6
       .BookDetail-infor
-        if personRead
-          .BookDetail-suggest.d-lg-none.d-block.mb-theme-15.mt-theme-15
-            h6.BookDetail-suggest-title Chọn định dạng sách
-            .BookDetail-suggest-wrapper.d-flex.align-items-center.mt-theme-4#BookDetail-choose
-              .BookDetail-suggest-wrapper-item.item-list.active
-                img(src="./assets/icons/icon-book.svg" alt="" width="30" height="30")
-                span.mt-theme-4.ebook-text Sách in
-              .BookDetail-suggest-wrapper-item.item-list
-                img(src="./assets/icons/icon-ebook.svg" alt="" width="30" height="30")
-                span.mt-theme-4.ebook-text Ebook
-              .BookDetail-suggest-wrapper-item.item-list
-                img(src="./assets/icons/icon-audio.svg" alt="" width="30" height="30")
-                span.mt-theme-4.ebook-text Audio
-              .BookDetail-suggest-wrapper-item.item-list
-                img(src="./assets/icons/icon-video.svg" alt="" width="30" height="30")
-                span.mt-theme-4.ebook-text Video
+        //if personRead
+        //  .BookDetail-suggest.d-lg-none.d-block.mb-theme-15.mt-theme-15
+        //    h6.BookDetail-suggest-title Chọn định dạng sách
+        //    .BookDetail-suggest-wrapper.d-flex.align-items-center.mt-theme-4#BookDetail-choose
+        //      .BookDetail-suggest-wrapper-item.item-list.active
+        //        img(src="./assets/icons/icon-book.svg" alt="" width="30" height="30")
+        //        span.mt-theme-4.ebook-text Sách in
+        //      .BookDetail-suggest-wrapper-item.item-list
+        //        img(src="./assets/icons/icon-ebook.svg" alt="" width="30" height="30")
+        //        span.mt-theme-4.ebook-text Ebook
+        //      .BookDetail-suggest-wrapper-item.item-list
+        //        img(src="./assets/icons/icon-audio.svg" alt="" width="30" height="30")
+        //        span.mt-theme-4.ebook-text Audio
+        //      .BookDetail-suggest-wrapper-item.item-list
+        //        img(src="./assets/icons/icon-video.svg" alt="" width="30" height="30")
+        //        span.mt-theme-4.ebook-text Video
         h1.BookDetail-infor-title [Sách giấy]  Cơ thể siêu rắc rối
         h3.BookDetail-infor-subtitle.mt-theme-4.mb-theme-4 Hà Nội, Hải Phòng, Vinh, Huế, Đà Nẵng, Hội An, Đà Lạt, Nha Trang
         .BookDetail-infor-rate.d-flex.align-items-center.justify-content-between
@@ -100,7 +100,7 @@ mixin BookDetailInformation({typeGallery = false,isQuantity = false, action = fa
             span.BookDetail-data-item-text Chọn thời gian đọc:
             .BookDetail-data-item-time
               +SelectDropdownCustom({data: dataBookDetail,className:"has-radius"})
-      .BookDetail-suggest.d-lg-block.d-none
+      .BookDetail-suggest
         h6.BookDetail-suggest-title Gợi ý cuốn sách này với định dạng khác
         .BookDetail-suggest-wrapper.d-flex.align-items-center.mt-theme-4#BookDetail-choose
           .BookDetail-suggest-wrapper-item.item-list.active

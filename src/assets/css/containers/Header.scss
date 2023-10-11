@@ -2,6 +2,9 @@ header {
   .header {
     &-mobile {
       padding: 16px 0;
+      @include media-breakpoint-down(md){
+        border-bottom: 1px solid var(--line3);
+      }
       &-logo {
         img {
           width: unset;
@@ -12,6 +15,9 @@ header {
           padding: 6px;
           &:nth-child(1) {
             margin: 0 12px;
+            @include media-breakpoint-down(sm){
+              margin: 0;
+            }
           }
         }
       }

@@ -6,6 +6,7 @@
   @include media-breakpoint-down(sm) {
     border: unset;
     padding: 0;
+    margin-top: 15px;
   }
   &-item {
     width: 50%;

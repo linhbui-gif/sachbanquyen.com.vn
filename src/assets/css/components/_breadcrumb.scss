@@ -1,8 +1,11 @@
 
 .breadcrumb{
-
+  padding-left: 15px;
 }
 .breadcrumb-item{
    @include body-15-pt-r();
    color: var(--icon);
+  a:hover{
+    color: var(--hoveryellow)
+  }
 }

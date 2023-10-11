@@ -157,6 +157,9 @@ $btn-active-bg: #ee3d05;
         opacity: 0.8;
       }
     }
+    &-light{
+      background: var(--line3);
+    }
   }
   &-bill {
     @include l-btn-18-pt-sm();
