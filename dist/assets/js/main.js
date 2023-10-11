@@ -16,6 +16,7 @@ const carousel = {
     this.setupFlashSaleBannerCarousel();
     this.setupFlashSaleBannerCarousel01();
     this.setupFlashSaleBannerCarousel02();
+    this.setupFlashSaleBannerHomeCarousel01();
     this.setupBookCategory();
     this.setupBookCategoryQuaySach();
     this.setupBookSuggest();
@@ -168,6 +169,42 @@ const carousel = {
   },
   setupFlashSaleBannerCarousel01: function () {
     $("#carouselFlashSale01").owlCarousel({
+      responsive: {
+        0: {
+          items: 2,
+          slideBy: 1,
+          nav:false
+        },
+        768: {
+          items: 3,
+          slideBy: 1,
+        },
+        992: {
+          items: 4,
+          slideBy: 1,
+        },
+        1200: {
+          items: 5,
+          slideBy: 1,
+        },
+      },
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: false,
+      smartSpeed: 300,
+      lazyLoad: true,
+      dots: false,
+      nav: true,
+      margin: 10,
+      navText: [
+        '<img src="./assets/icons/arrow-left-single.svg" alt="" />',
+        '<img src="./assets/icons/arrow-right-single.svg" alt="" />',
+      ],
+    });
+  },
+  setupFlashSaleBannerHomeCarousel01: function () {
+    $("#carouselFlashSaleHome01").owlCarousel({
       responsive: {
         0: {
           items: 2,
