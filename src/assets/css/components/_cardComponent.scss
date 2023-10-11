@@ -204,6 +204,7 @@
     }
     &-retail-price {
       @include tiny-cost-13-r();
+      text-decoration:none;
       color: var(--text-hidden);
     }
   }
