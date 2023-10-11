@@ -56,13 +56,13 @@ const carousel = {
         var thumbnailIndex = $(this).index();
         $("#big").trigger("to.owl.carousel", [thumbnailIndex, 300]);
       });
-        Fancybox.bind("[data-fancybox]", {
-          Thumbs: {
-            type: "classic",
-          },
-          width: 525,
-          height:525
-        })
+      Fancybox.bind("[data-fancybox]", {
+        Thumbs: {
+          type: "classic",
+        },
+        width: 525,
+        height:525
+      })
     });
 
     var mobileQuery = window.matchMedia('(max-width: 1200px)');
@@ -121,7 +121,7 @@ const carousel = {
       autoplayTimeout: 4000,
       autoplayHoverPause: false,
       smartSpeed: 300,
-      lazyLoad: true,
+      lazyLoad: false,
       dots: true,
       nav: false,
       margin: 0,
@@ -157,7 +157,7 @@ const carousel = {
       autoplayTimeout: 4000,
       autoplayHoverPause: false,
       smartSpeed: 300,
-      lazyLoad: true,
+      lazyLoad: false,
       dots: false,
       nav: true,
       margin: 0,
@@ -193,7 +193,7 @@ const carousel = {
       autoplayTimeout: 4000,
       autoplayHoverPause: false,
       smartSpeed: 300,
-      lazyLoad: true,
+      lazyLoad: false,
       dots: false,
       nav: true,
       margin: 10,
@@ -229,7 +229,7 @@ const carousel = {
       autoplayTimeout: 4000,
       autoplayHoverPause: false,
       smartSpeed: 300,
-      lazyLoad: true,
+      lazyLoad: false,
       dots: false,
       nav: true,
       margin: 10,
@@ -266,7 +266,7 @@ const carousel = {
       autoplayTimeout: 4000,
       autoplayHoverPause: false,
       smartSpeed: 300,
-      lazyLoad: true,
+      lazyLoad: false,
       dots: false,
       nav: true,
       margin: 7.5,
@@ -297,7 +297,7 @@ const carousel = {
       autoplayTimeout: 4000,
       autoplayHoverPause: false,
       smartSpeed: 300,
-      lazyLoad: true,
+      lazyLoad: false,
       dots: false,
       nav: true,
       margin: 12,
@@ -324,7 +324,7 @@ const carousel = {
       autoplayTimeout: 4000,
       autoplayHoverPause: false,
       smartSpeed: 300,
-      lazyLoad: true,
+      lazyLoad: false,
       dots: false,
       nav: true,
       margin: 12,
@@ -361,7 +361,7 @@ const carousel = {
       autoplayTimeout: 4000,
       autoplayHoverPause: false,
       smartSpeed: 300,
-      lazyLoad: true,
+      lazyLoad: false,
       dots: false,
       nav: true,
       margin: 12,
@@ -393,7 +393,7 @@ const carousel = {
       autoplayTimeout: 4000,
       autoplayHoverPause: false,
       smartSpeed: 300,
-      lazyLoad: true,
+      lazyLoad: false,
       dots: false,
       nav: true,
       margin: 12,
@@ -425,7 +425,7 @@ const carousel = {
       autoplayTimeout: 4000,
       autoplayHoverPause: false,
       smartSpeed: 300,
-      lazyLoad: true,
+      lazyLoad: false,
       dots: false,
       nav: true,
       margin: 12,
@@ -456,7 +456,7 @@ const carousel = {
       autoplayTimeout: 4000,
       autoplayHoverPause: false,
       smartSpeed: 300,
-      lazyLoad: true,
+      lazyLoad: false,
       dots: false,
       nav: true,
       margin: 15,
@@ -484,7 +484,7 @@ const carousel = {
       autoplayTimeout: 4000,
       autoplayHoverPause: false,
       smartSpeed: 300,
-      lazyLoad: true,
+      lazyLoad: false,
       dots: false,
       nav: true,
       margin: 15,
@@ -594,11 +594,11 @@ function ActiveItemsComponent(container) {
   }
 
   items &&
-    items.forEach((item) => {
-      item.addEventListener("click", () => {
-        setActiveItem(item);
-      });
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      setActiveItem(item);
     });
+  });
 
   setActiveItem(items?.[0]);
 }
@@ -619,9 +619,9 @@ function ShowMenuMobile(){
   })
 }
 function CountDown(options){
-   const countDownDate = new Date("Oct 31, 2023 15:37:25").getTime();
-   let container = document.getElementById(options.container);
-   const x = setInterval(function() {
+  const countDownDate = new Date("Oct 31, 2023 15:37:25").getTime();
+  let container = document.getElementById(options.container);
+  const x = setInterval(function() {
 
     const now = new Date().getTime();
     const distance = countDownDate - now;
@@ -630,16 +630,16 @@ function CountDown(options){
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-     // document.querySelector(".days").innerHTML = days;
-     if(container){
-       container.querySelector(".hours").innerHTML = hours;
-       container.querySelector(".minutes").innerHTML = minutes;
-       container.querySelector(".seconds").innerHTML = seconds;
-       if (distance < 0) {
-         clearInterval(x);
-         container.innerHTML = "EXPIRED";
-       }
-     }
+    // document.querySelector(".days").innerHTML = days;
+    if(container){
+      container.querySelector(".hours").innerHTML = hours;
+      container.querySelector(".minutes").innerHTML = minutes;
+      container.querySelector(".seconds").innerHTML = seconds;
+      if (distance < 0) {
+        clearInterval(x);
+        container.innerHTML = "EXPIRED";
+      }
+    }
   }, 1000);
 }
 function Tabs(options){
@@ -724,11 +724,11 @@ $('.btn-scroll').on('click', function(event) {
   $('html, body').animate({ scrollTop: 0 }, 'slow');
 });
 const tabComponent = new Tabs(
-  {
-    tabContainer: "tabContainerFlashSale",
-    tabButton: "flash-sale-tab-nav-item",
-    tabContent: "Tab-panel"
-  }
+    {
+      tabContainer: "tabContainerFlashSale",
+      tabButton: "flash-sale-tab-nav-item",
+      tabContent: "Tab-panel"
+    }
 )
 $("#togglePassword").click(function (e) {
   e.preventDefault();
