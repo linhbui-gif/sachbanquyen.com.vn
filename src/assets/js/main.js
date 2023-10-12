@@ -13,6 +13,7 @@ const carousel = {
     this.setupBookDetail();
     this.setupBookDetail02();
     this.setupHomeBannerCarousel();
+    this.setupHomeBannerMobileCarousel();
     this.setupFlashSaleBannerCarousel();
     this.setupFlashSaleBannerCarousel01();
     this.setupFlashSaleBannerCarousel02();
@@ -106,6 +107,29 @@ const carousel = {
   },
   setupHomeBannerCarousel: function () {
     $("#carouselHome").owlCarousel({
+      responsive: {
+        0: {
+          items: 1,
+          slideBy: 1,
+        },
+        991: {
+          items: 1,
+          slideBy: 1,
+        },
+      },
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: false,
+      smartSpeed: 300,
+      lazyLoad: false,
+      dots: true,
+      nav: false,
+      margin: 0,
+    });
+  },
+  setupHomeBannerMobileCarousel: function () {
+    $("#carouselHomeMobile").owlCarousel({
       responsive: {
         0: {
           items: 1,
