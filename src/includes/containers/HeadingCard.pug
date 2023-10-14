@@ -1,4 +1,4 @@
-mixin HeadingCard({title, isViewAll, className, isViewLabel, hasCountDown=false, classNameModify = ''})
+mixin HeadingCard({title, isViewAll, className, isViewLabel, hasCountDown=false, classNameModify = '', isViewLink = false})
     .HeadingCard.d-flex.align-items-center(class=`${className ? className : ''}`)
       if hasCountDown
         .flash-sale-tab-header.d-flex.align-items-center.flex-wrap(class=`${classNameModify ? classNameModify : ''}`)
@@ -14,3 +14,6 @@ mixin HeadingCard({title, isViewAll, className, isViewLabel, hasCountDown=false,
         a.HeadingCard-view(href="")
           span=isViewLabel ? isViewLabel : 'Xem tất cả'
           i.fa.fa-chevron-right.ml-theme-2
+      if isViewLink
+        a(href='3-Quầy-sách.html').isViewLink-item
+          img(src="./assets/icons/arrow-left-single.svg" width= alt = "")

@@ -6,7 +6,7 @@ block pages
     .container
       .row
         .col-12
-          +HeadingCard({title: "Quầy sách benitor", className: 'center H0-24-B-heading-card', isViewAll: false})
+            +HeadingCard({title: "Quầy sách benitor", className: 'center H0-24-B-heading-card isViewLink', isViewAll: false, isViewLink:true})
         .col-12
           #carouselBookBenitor.owl-carousel.owl-theme
             .item
@@ -355,7 +355,7 @@ block pages
           })
       .row.row-cols-lg-5.g-3
         each item in [1,2,3,4,5,6,7,8]
-          .col.col-lg-3.mb-theme-30.col-6
+          .col.col-lg-3.col-6
             +CardComponent({
               url: './assets/images/image-book-thumbnail.png',
               title: 'Làm Chủ Cơn Giận',
@@ -384,7 +384,7 @@ block pages
           })
       .row.row-cols-lg-5.mt-theme-16.g-3
         each item in [1,2,3,4,5,6,7,8]
-          .col.col-lg-3.mb-theme-30.col-6
+          .col.col-lg-3.col-6
             +CardComponent({
               url: './assets/images/image-book-thumbnail.png',
               title: 'Làm Chủ Cơn Giận',
@@ -413,7 +413,7 @@ block pages
           })
       .row.row-cols-lg-5.g-3
         each item in [1,2,3,4,5,6,7,8]
-          .col.col-lg-3.mb-theme-30.col-6
+          .col.col-lg-3.col-6
             +CardComponent({
               url: './assets/images/image-book-thumbnail.png',
               title: 'Làm Chủ Cơn Giận',

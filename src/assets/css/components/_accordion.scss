@@ -12,6 +12,7 @@
   }
   &-item{
     border-bottom: 1px dashed var(--line3);
+    border-top: unset;
     &:last-child{
       border-bottom: 1px solid var(--line3);
     }
@@ -33,6 +34,12 @@
     &-children{
       margin-bottom: 0;
       &-item{
+        &:first-child{
+          .accordion-body-children-item-link{
+            border-top: 1px dashed var(--line3);
+          }
+
+        }
         &-link{
           display: block;
           width: 100%;
@@ -41,18 +48,18 @@
           position: relative;
           border-bottom: 1px dashed var(--line3);
           font-size: 15px;
-          //&.active{
-          //  background-color: #FCF8F1;
-          //  &:after{
-          //    position: absolute;
-          //    width: 5px;
-          //    content: "";
-          //    background-color: #FB693C;
-          //    height: 100%;
-          //    top: 0;
-          //    left: 0;
-          //  }
-          //}
+          &.active{
+            background-color: #FCF8F1;
+            &:after{
+              position: absolute;
+              width: 5px;
+              content: "";
+              background-color: #FB693C;
+              height: 100%;
+              top: 0;
+              left: 0;
+            }
+          }
           //&:hover{
           //  background-color: #FCF8F1;
           //  &:after{
@@ -76,6 +83,7 @@
     }
   }
   &-button{
+    flex: 0;
     &:not(.collapsed){
       color: unset;
       background-color: unset;
@@ -85,6 +93,15 @@
     }
     &:focus{
       box-shadow: unset;
+    }
+  }
+  &-header{
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    &-text{
+      flex: 1;
+      @include body-15-pt-r();
     }
   }
 }

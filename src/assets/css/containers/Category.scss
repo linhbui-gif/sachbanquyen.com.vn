@@ -8,14 +8,21 @@
     background: #fee8bd;
   }
   &-wrapper {
+    &.scroll-mobile{
+      .Category-wrapper-item{
+        @include media-breakpoint-down(md) {
+          width: 47%;
+        }
+      }
+    }
     &-item {
       width: calc(100% / 5);
       padding: 0 15px;
       @include media-breakpoint-down(md) {
-        width: 47%;
+        width: 50%;
       }
       @include media-breakpoint-between(md, lg) {
-        width: calc(100% / 3 - 30px);
+        width: calc(100% / 3);
       }
     }
     &-category-item {
