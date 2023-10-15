@@ -10,22 +10,22 @@
     align-items: center;
     padding: 15px 0px;
   }
-  &.card-small{
+  &.card-small {
     gap: 15px;
     padding: 8px 15px;
-    .CardNewsComponent-body-title{
+    .CardNewsComponent-body-title {
       @include ellipsis(2);
       @include bookname-15-pt-m();
     }
-    .CardNewsComponent-body-description{
+    .CardNewsComponent-body-description {
       @include ellipsis(2);
       min-height: unset;
       text-align: left;
     }
-    .CardNewsComponent-image{
+    .CardNewsComponent-image {
       flex: 0 0 69px;
       max-width: 69px;
-      aspect-ratio:unset;
+      aspect-ratio: unset;
       @media (max-width: 768px) {
         max-width: 69px;
         border-radius: 0px;
@@ -61,8 +61,6 @@
   &-body {
     position: relative;
     height: 100%;
-    @media (max-width: 768px) {
-    }
     &-title {
       color: var(--text-dark);
       @include h-5-16-pt-b();

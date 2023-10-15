@@ -44,6 +44,11 @@
       height: 16px;
     }
   }
+  form {
+    .radio {
+      padding: 0;
+    }
+  }
 }
 .PaymentSuccess {
   max-width: 500px;
@@ -128,4 +133,28 @@
   height: 1px;
   border-bottom: 1px dashed var(--line-3, hsl(0, 0%, 92%));
   margin-bottom: 16px;
+}
+.Cart.Medthod {
+  @media (min-width: 992px) {
+    .col-6 {
+      width: calc(100% - 295px);
+    }
+    .Cart-row,
+    .Cart-heading {
+      justify-content: space-between;
+      gap: 0;
+    }
+    .Cart-info-mobile-wrapper,
+    .Cart-heading-title .text-right {
+      justify-content: flex-end;
+      .col-2 {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 370px) {
+    .Cart-card {
+      flex-direction: row;
+    }
+  }
 }
