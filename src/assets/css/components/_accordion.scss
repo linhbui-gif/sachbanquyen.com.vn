@@ -9,6 +9,10 @@
   &.custom-icon{
     --bs-accordion-btn-icon: url("../../assets/icons/add-cirlce.svg");
     --bs-accordion-btn-active-icon:  url("../../assets/icons/minus-cirlce.svg");
+    border-top: 1px solid var(--bs-border-color);
+    .accordion-button{
+      flex: 1;
+    }
   }
   &-item{
     border-bottom: 1px dashed var(--line3);
