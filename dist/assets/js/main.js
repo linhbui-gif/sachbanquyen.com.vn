@@ -523,23 +523,30 @@ const carousel = {
 function SelectDropdown(optional) {
   const customSelect = document.getElementById(optional.select);
   const customOptions = document.getElementById(optional.options);
-  customSelect && customSelect.addEventListener('click', () => {
-    customOptions.classList.toggle('active')
-  });
-  customOptions && customOptions.addEventListener('click', (e) => {
-    if (e.target.classList.contains('option')) {
-      const selectedOption = e.target;
-      const selectedValue = selectedOption.getAttribute('data-value');
-      customSelect.querySelector('.Select-label').textContent = selectedOption.textContent;
-      customOptions.classList.remove('active')
-      console.log('Selected Value:', selectedValue);
-    }
-  });
-  document.addEventListener('click', (e) => {
-    if (customSelect && !customSelect.contains(e.target)) {
-      customOptions.classList.remove('active')
-    }
-  });
+  const selectModifyMutiple = document.querySelectorAll('.' + optional.classModify)
+
+  if(Array.from(selectModifyMutiple).length){
+    console.log('selectModifyMutiple', selectModifyMutiple)
+  } else {
+    customSelect && customSelect.addEventListener('click', () => {
+      customOptions.classList.toggle('active')
+    });
+    customOptions && customOptions.addEventListener('click', (e) => {
+      if (e.target.classList.contains('option')) {
+        const selectedOption = e.target;
+        const selectedValue = selectedOption.getAttribute('data-value');
+        customSelect.querySelector('.Select-label').textContent = selectedOption.textContent;
+        customOptions.classList.remove('active')
+        console.log('Selected Value:', selectedValue);
+      }
+    });
+    document.addEventListener('click', (e) => {
+      if (customSelect && !customSelect.contains(e.target)) {
+        customOptions.classList.remove('active')
+      }
+    });
+  }
+
 }
 function QuantityControl(container) {
   function createQuantityControl(subContainer) {
@@ -630,6 +637,7 @@ function ShowMenuMobile(){
   const menuWrapper = document.querySelector('.menu-mobile');
   const overlay = document.querySelector('.overlay-backdrop')
   const button = document.querySelector('.header-mobile-action .bars')
+  const closeBtn = document.querySelector('.menu-mobile .close-menu')
   button && button.addEventListener('click', () => {
     menuWrapper.classList.add('active')
     overlay.classList.add('active')
@@ -640,6 +648,10 @@ function ShowMenuMobile(){
       clicked.classList.remove('active')
       menuWrapper.classList.remove('active')
     }
+  })
+  closeBtn && closeBtn.addEventListener('click', (ev) => {
+    menuWrapper.classList.remove('active')
+    overlay.classList.remove('active')
   })
 }
 function CountDown(options){
@@ -722,6 +734,7 @@ new ActiveItemsComponent({
 new SelectDropdown({
   select: 'customSelect',
   options: 'customOptions',
+  classModify:'select-dropdown-cart'
 });
 new SelectDropdown({
   select: 'selectInput',
