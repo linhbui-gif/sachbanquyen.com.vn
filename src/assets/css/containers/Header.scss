@@ -174,12 +174,16 @@ header {
                     @include body-15-pt-r();
                     color: var(--body-text);
                     transition: 0.5s;
+                    border-bottom: 1px dashed var(--line3);
                     &:hover {
                       color: var(--hoveryellow);
                     }
                     &.active {
                       color: var(--hoveryellow);
                     }
+                  }
+                  &:last-child .header-menu-wrapper-left-mega-menu-list-category-item-link{
+                    border-bottom: unset;
                   }
                 }
               }
