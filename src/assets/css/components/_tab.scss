@@ -15,12 +15,16 @@
     }
   }
 }
+.nav-tabs {
+  border-bottom: 0 solid transparent;
+}
 .tabContent-custom-style-1 {
   padding: 30px;
-  border: 1px solid #dee2e6;
+  border: 1px solid #dee2e6 !important;
   border-top: unset;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
   .tab-pane {
     #content-tab-see {
       max-height: 189px;
@@ -50,7 +54,7 @@
   border: 1px solid var(--line3);
   border-top: unset;
   background: $white;
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(sm) {
     min-height: 29px;
   }
   svg {
