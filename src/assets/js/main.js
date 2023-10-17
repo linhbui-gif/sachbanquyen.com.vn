@@ -637,6 +637,7 @@ function ShowMenuMobile(){
   const menuWrapper = document.querySelector('.menu-mobile');
   const overlay = document.querySelector('.overlay-backdrop')
   const button = document.querySelector('.header-mobile-action .bars')
+  const closeBtn = document.querySelector('.menu-mobile .close-menu')
   button && button.addEventListener('click', () => {
     menuWrapper.classList.add('active')
     overlay.classList.add('active')
@@ -647,6 +648,10 @@ function ShowMenuMobile(){
       clicked.classList.remove('active')
       menuWrapper.classList.remove('active')
     }
+  })
+  closeBtn && closeBtn.addEventListener('click', (ev) => {
+    menuWrapper.classList.remove('active')
+    overlay.classList.remove('active')
   })
 }
 function CountDown(options){

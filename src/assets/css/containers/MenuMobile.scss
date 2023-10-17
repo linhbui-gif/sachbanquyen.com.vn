@@ -8,7 +8,7 @@
   z-index: 99999;
   transition: 0.5s;
   transform: translateX(100%);
-  overflow: scroll;
+  //overflow: scroll;
   @include media-breakpoint-down(lg) {
     &.active {
       transform: translateX(0);
