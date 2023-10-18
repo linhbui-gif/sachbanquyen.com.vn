@@ -55,6 +55,7 @@
         height: 74px;
         img {
           position: absolute;
+          border-radius: 8px;
         }
         &-overlay {
           position: absolute;
@@ -73,6 +74,7 @@
           align-items: center;
           text-align: center;
           cursor: pointer;
+          border-radius: 8px;
         }
       }
       &-icon {
