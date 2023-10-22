@@ -1,5 +1,4 @@
 header {
-  position: sticky;
   width: 100%;
   top: 0;
   left: 0;
@@ -8,7 +7,7 @@ header {
   .header {
     &-mobile {
       padding: 16px 0;
-      @include media-breakpoint-down(md){
+      @include media-breakpoint-down(md) {
         border-bottom: 1px solid var(--line3);
       }
       &-logo {
@@ -21,11 +20,11 @@ header {
           padding: 6px;
           &:nth-child(1) {
             margin: 0 12px;
-            @include media-breakpoint-down(sm){
+            @include media-breakpoint-down(sm) {
               margin: 0;
             }
           }
-          img{
+          img {
             width: 28px;
           }
         }
@@ -155,7 +154,7 @@ header {
               border-right: 1px solid var(--line3);
               .HeadingCard {
                 padding: 12px 15px;
-                border-bottom: 1px solid var(--line3);
+                border-bottom: 0.5px solid var(--line3);
                 &-title {
                   @include h-6-title-15-pt-b();
                   color: var(--black);
@@ -174,7 +173,7 @@ header {
                     @include body-15-pt-r();
                     color: var(--body-text);
                     transition: 0.5s;
-                    border-bottom: 1px dashed var(--line3);
+                    border-bottom: 0.5px dashed var(--line3);
                     &:hover {
                       color: var(--hoveryellow);
                     }
@@ -182,7 +181,8 @@ header {
                       color: var(--hoveryellow);
                     }
                   }
-                  &:last-child .header-menu-wrapper-left-mega-menu-list-category-item-link{
+                  &:last-child
+                    .header-menu-wrapper-left-mega-menu-list-category-item-link {
                     border-bottom: unset;
                   }
                 }
@@ -234,7 +234,7 @@ header {
                 color: var(--icon);
                 transition: 0.4s;
                 &:hover {
-                 background: var(--line3);
+                  background: var(--line3);
                 }
                 &.active {
                   background: var(--line3);

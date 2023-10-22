@@ -67,7 +67,7 @@
   }
   ul {
     list-style: disc;
-    margin-left: 24px;
+    margin-left: 16px;
     margin-bottom: 0;
     li {
       color: var(--body-text, #333);
@@ -85,8 +85,10 @@
   .btn {
     @include l-btn-18-pt-sm();
     width: 100%;
+    font-size: 15px;
     &-info-outline {
       @include m-btn-18-pt-r();
+      font-size: 15px;
     }
   }
 
@@ -99,6 +101,7 @@
     @include small-14-pt-r();
     margin-bottom: 15px;
     align-items: center;
+    color: rgba(255, 76, 19, 0.75);
     img {
       width: 16px;
       height: 16px;

@@ -6,7 +6,7 @@
   }
 }
 .News {
-  padding: 15px 30px;
+  padding: 23px 30px;
   border-radius: 12px;
   border: 1px solid var(--line-3, #eaeaea);
   &-social {
@@ -65,6 +65,8 @@
       img {
         border-radius: 8px;
         aspect-ratio: 1.5;
+        object-position: center;
+        object-fit: cover;
       }
     }
     &-title,

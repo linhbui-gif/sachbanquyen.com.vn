@@ -19,7 +19,7 @@
   span {
     @include body-15-pt-r();
   }
-  strong{
+  strong {
     @include body-15-pt-r();
     font-weight: 700;
   }
@@ -101,7 +101,7 @@
       margin: 0 64px;
     }
     @media (max-width: 767px) {
-      margin: 0 16px;
+      margin: 0;
     }
   }
 }

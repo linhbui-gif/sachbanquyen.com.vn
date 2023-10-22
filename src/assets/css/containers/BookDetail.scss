@@ -139,6 +139,9 @@
           justify-content: center;
           width: 36px;
           height: 36px;
+          &:hover {
+            opacity: 0.6;
+          }
         }
       }
     }
@@ -198,6 +201,9 @@
         min-width: 74px;
         padding: 12px;
         text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
         img {
           width: 30px;
           margin: auto;
