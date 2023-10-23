@@ -637,8 +637,13 @@ function ShowMenuMobile(){
   const menuWrapper = document.querySelector('.menu-mobile');
   const overlay = document.querySelector('.overlay-backdrop')
   const button = document.querySelector('.header-mobile-action .bars')
+  const button2 = document.querySelector('.search-box-bars')
   const closeBtn = document.querySelector('.menu-mobile .close-menu')
   button && button.addEventListener('click', () => {
+    menuWrapper.classList.add('active')
+    overlay.classList.add('active')
+  })
+  button2 && button2.addEventListener('click', () => {
     menuWrapper.classList.add('active')
     overlay.classList.add('active')
   })

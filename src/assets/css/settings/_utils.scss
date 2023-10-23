@@ -261,7 +261,7 @@ img {
 }
 aside {
   position: sticky;
-  top: 139px;
+  top: 0px;
 }
 .Auth {
   border: 1px solid var(--line3);
@@ -410,5 +410,11 @@ table {
     object-position: center;
     border-radius: 5px;
     transition: 0.5s;
+  }
+}
+.border-top-line3{
+  border-top: 1px solid var(--line3);
+  @include media-breakpoint-up(sm){
+    border-top: unset;
   }
 }
