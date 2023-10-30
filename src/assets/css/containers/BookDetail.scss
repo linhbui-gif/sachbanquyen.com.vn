@@ -306,6 +306,9 @@
       border-top: 1px solid var(--line3);
       margin: 0;
     }
+    .btn-primary{
+      font-weight: 400;
+    }
   }
 }
 .line-dash {
@@ -351,7 +354,7 @@
     bottom: 0;
     max-width: 100%;
     max-height: 100%;
-    margin: auto;
+    margin:0 auto;
     width: unset !important;
     -o-object-fit: contain;
     object-fit: contain;

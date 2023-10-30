@@ -109,6 +109,7 @@
         object-position: center;
         border-radius: 5px;
         transition: 0.5s;
+        aspect-ratio: 1;
       }
       @media (max-width: 1200px) {
         height: unset;
