@@ -284,6 +284,16 @@
     @include media-breakpoint-down(sm) {
       padding: 0;
     }
+    .tabContent-custom-style-1 {
+      .accordion.custom-icon {
+        border-top: 0px solid var(--bs-border-color);
+      }
+      .accordion-item:first-of-type {
+        border-top: 1px solid var(--bs-border-color);
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+    }
   }
   &-publishInformation {
     &-title {
@@ -306,7 +316,7 @@
       border-top: 1px solid var(--line3);
       margin: 0;
     }
-    .btn-primary{
+    .btn-primary {
       font-weight: 400;
     }
   }
@@ -354,7 +364,7 @@
     bottom: 0;
     max-width: 100%;
     max-height: 100%;
-    margin:0 auto;
+    margin: 0 auto;
     width: unset !important;
     -o-object-fit: contain;
     object-fit: contain;
