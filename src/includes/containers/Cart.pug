@@ -57,6 +57,39 @@ mixin Cart({ method })
             .Cart-card-book
               .Cart-card-book-cover
                 img.book-img(src='https://i.imgur.com/Oj1iQUX.jpg')
+              +Tag({tag: 'Video'})
+            .my-auto.flex-column.d-flex.pad-left.Cart-card-info
+              .Cart-card-heading Giáo trình Lí thuyết xác suất trong kinh tế và tài chính
+              .Cart-card-description Tác giả: TS. Nguyễn Mạnh Thế, TS. Phạm Ngọc Hưng, ThS. Bùi Dương Hải
+              .Cart-card-label
+                span.Cart-price-label Đơn giá:
+                span.Cart-price
+                  span 311.500
+                  span.Cart-price-unit đ
+                span.Cart-price-old
+                  span 311.500
+                  span.Cart-price-old-unit đ
+        .col-5.Cart-info-mobile
+          .row.text-right.Cart-info-mobile-wrapper
+            .col-5.Cart-info-mobile-btn
+              if method
+                | 1 cuốn
+              else
+                include ../../includes/components/Quantity.pug
+            .col-5.Cart-price
+              span 311.500
+              span.Cart-price-unit đ
+            .col-2
+              a(href='#').mt-2
+                img(src="./assets/images/image-delete-cart.png", alt="", srcset="")
+      .row.d-flex.justify-content-center.border-top.Cart-row
+        .col-1
+          +Checkbox("")
+        .col-6
+          .d-flex.Cart-card
+            .Cart-card-book
+              .Cart-card-book-cover
+                img.book-img(src='https://i.imgur.com/Oj1iQUX.jpg')
               +Tag({tag: 'Ebook'})
             .my-auto.flex-column.d-flex.pad-left.Cart-card-info
               .Cart-card-heading Giáo trình Lí thuyết xác suất trong kinh tế và tài chính
