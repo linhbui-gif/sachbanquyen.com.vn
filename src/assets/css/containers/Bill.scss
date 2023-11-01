@@ -43,7 +43,7 @@
         background: var(--white);
         padding: 15px;
         z-index: 100;
-        border-top: 1px solid var(--line3)
+        border-top: 1px solid var(--line3);
       }
     }
     &-voucher {
@@ -144,15 +144,11 @@
     .btn-success {
       line-height: 10px;
     }
-    .form-control{
+    .form-control {
       height: 36px;
     }
   }
-  button.btn-success:hover {
-    color: var(--bs-btn-hover-color);
-    background-color: #007a34;
-    border-color: var(--bs-btn-hover-border-color);
-  }
+
   .btn-outline-gray-2:hover {
     opacity: 1;
     background: #c1c1c1;

@@ -7,16 +7,16 @@ $btn-active-bg: #ee3d05;
 .btn {
   --#{$prefix}btn-font-size: #{$btn-font-size};
   --#{$prefix}btn-font-weight: #{$btn-font-weight};
-  &.has-icon{
+  &.has-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    .btn-icon{
-      img{
+    .btn-icon {
+      img {
         width: unset;
       }
     }
-    .btn-text{
+    .btn-text {
       font-family: "Roboto";
       font-size: 14px;
       font-style: normal;
@@ -48,6 +48,9 @@ $btn-active-bg: #ee3d05;
     font-weight: 400;
     line-height: 21px;
     white-space: nowrap;
+    &:hover {
+      filter: contrast(0.8);
+    }
   }
   &-orange-brand {
     --#{$prefix}btn-color: #{$btn-color};
@@ -136,7 +139,7 @@ $btn-active-bg: #ee3d05;
     --#{$prefix}btn-active-color: #{$white};
     padding: 4px 12px;
     @include s-btn-15-pt-medium();
-    &.warning-style2{
+    &.warning-style2 {
       padding: 8px 12px;
       @include l-btn-18-pt-sm();
     }
@@ -155,9 +158,10 @@ $btn-active-bg: #ee3d05;
       background: rgba(164, 164, 164, 0.05);
       &:hover {
         opacity: 0.8;
+        filter: contrast(0.1);
       }
     }
-    &-light{
+    &-light {
       background: var(--line3);
     }
   }
