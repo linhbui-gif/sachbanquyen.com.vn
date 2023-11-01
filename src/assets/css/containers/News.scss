@@ -64,9 +64,9 @@
 
       img {
         border-radius: 8px;
-        aspect-ratio: 1.5;
         object-position: center;
-        object-fit: cover;
+        object-fit: contain;
+        height: 230px;
       }
     }
     &-title,
