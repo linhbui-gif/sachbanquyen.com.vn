@@ -50,7 +50,7 @@ html
       include ../containers/Support.pug
 
     include ../containers/Footer.pug
-
+    +Modal({title: 'Xác nhận thanh toán', description: 'Bạn có chắc chắn muốn thanh toán chuyển khoản'})
     block script
     //- Java Script
     script(src="./assets/js/jquery.min.js")
