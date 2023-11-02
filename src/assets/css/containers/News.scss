@@ -9,6 +9,10 @@
   padding: 23px 30px;
   border-radius: 12px;
   border: 1px solid var(--line-3, #eaeaea);
+  @include media-breakpoint-down(lg){
+    padding-top: 10px;
+    margin-top: 10px!important;
+  }
   &-social {
     display: flex;
     justify-content: space-between;
@@ -18,9 +22,14 @@
       display: flex;
       gap: 12px;
       a {
-        filter: grayscale(1);
-        &:hover {
-          filter: unset;
+        svg{
+          path:first-child, rect{
+            fill: #A4A4A4;
+            transition: .5s;
+            &:hover{
+              fill: #2F69FD;
+            }
+          }
         }
       }
       img {
@@ -57,7 +66,10 @@
     aspect-ratio: 2;
     z-index: 3;
     display: block;
-    @media (max-width: 768px) {
+    img{
+      border-radius: 5px;
+    }
+    @media (max-width: 575px) {
       border-bottom: 1px solid var(--line-3, #eaeaea);
       overflow: unset;
       border-radius: 0;
@@ -67,6 +79,13 @@
         object-position: center;
         object-fit: contain;
         height: 230px;
+      }
+    }
+    @media (min-width: 576px) and (max-width: 992px) {
+      overflow: unset;
+      img {
+        object-position: center;
+        height: 258px;
       }
     }
     &-title,
@@ -173,7 +192,7 @@
   &-category {
     &-wrapper {
       display: none;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(lg) {
         display: block;
       }
     }
