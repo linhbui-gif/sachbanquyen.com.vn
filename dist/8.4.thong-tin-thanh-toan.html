@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template Gulp</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/library/fancybox.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/library/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/library/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="container">
+          <div class="header-top-wraper d-flex align-items-center justify-content-between"><a class="header-top-wrapper-logo" href="/"><img src="./assets/images/image-logo.png" width="142" alt=""></a>
+            <div class="header-top-wrapper-search">
+              <div class="input-group">
+                <div class="Select">
+                  <div class="Select-style d-flex align-items-center h-100 justify-content-center" id="selectInput">
+                    <h6 class="Select-label">Sách giấy</h6><i class="fa fa-caret-down ml-theme-4"></i>
+                  </div>
+                  <div class="Select-options shadow" id="optionInput">
+                    <div class="Select-option option" data-value="1">Sách giấy</div>
+                    <div class="Select-option option" data-value="2">Audio Book</div>
+                  </div>
+                </div>
+                <input class="form-control" type="text" placeholder="Nhập từ khóa tìm kiếm" aria-label="Text input with dropdown button"><span class="icon-search"><img src="./assets/icons/search-normal.svg" alt=""></span>
+              </div>
+            </div>
+            <div class="header-top-wrapper-action d-flex align-items-center">
+              <div class="header-top-wrapper-action-item calling d-flex align-items-center">
+                <div class="header-top-wrapper-action-item-phone mr-theme-4"><img src="./assets/icons/call-calling.svg" alt="#"></div>
+                <div class="header-top-wrapper-action-item-text"><span>HotLine</span><a class="d-block" href="#">0904506621</a></div>
+              </div>
+              <div class="header-top-wrapper-action-item"><a class="header-top-wrapper-action-item-text cart" href="#"><img src="./assets/icons/shopping-cart.svg" alt="#"><span>Giỏ hàng</span><span class="number-cart">5</span></a></div>
+              <div class="header-top-wrapper-action-item"><a class="header-top-wrapper-action-item-text" href="#"><img src="./assets/icons/profile-circle.svg" alt="#"><span>Tài khoản</span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="header-menu">
+        <div class="container">
+          <div class="header-menu-wrapper d-flex justify-content-between align-items-center position-relative">
+            <div class="header-menu-wrapper-left d-flex align-items-center"><i class="fa fa-bars mr-theme-2"></i>
+              <h6 class="category flex-grow-1">Danh mục</h6><span><img src="./assets/icons/icon-arrow-down.svg"></span>
+              <div class="header-menu-wrapper-left-mega-menu">
+                <div class="row m-0">
+                  <div class="col-lg-3 p-0">
+                    <div class="header-menu-wrapper-left-mega-menu-list">
+                      <div class="HeadingCard d-flex align-items-center justify-content-between">
+                        <h3 class="HeadingCard-title">Sách giấy</h3><a class="HeadingCard-view" href=""><span>Xem tất cả</span><i class="fa fa-chevron-right ml-theme-2"></i></a>
+                      </div>
+                      <ul class="header-menu-wrapper-left-mega-menu-list-category mb-0">
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="active header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 p-0">
+                    <div class="header-menu-wrapper-left-mega-menu-list">
+                      <div class="HeadingCard d-flex align-items-center justify-content-between">
+                        <h3 class="HeadingCard-title">Sách giấy</h3><a class="HeadingCard-view" href=""><span>Xem tất cả</span><i class="fa fa-chevron-right ml-theme-2"></i></a>
+                      </div>
+                      <ul class="header-menu-wrapper-left-mega-menu-list-category mb-0">
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="active header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 p-0">
+                    <div class="header-menu-wrapper-left-mega-menu-list">
+                      <div class="HeadingCard d-flex align-items-center justify-content-between">
+                        <h3 class="HeadingCard-title">Sách giấy</h3><a class="HeadingCard-view" href=""><span>Xem tất cả</span><i class="fa fa-chevron-right ml-theme-2"></i></a>
+                      </div>
+                      <ul class="header-menu-wrapper-left-mega-menu-list-category mb-0">
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="active header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                        <li class="header-menu-wrapper-left-mega-menu-list-category-item"><a class="header-menu-wrapper-left-mega-menu-list-category-item-link" href="#">Kỹ năng sống</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 p-0">
+                    <div class="header-menu-wrapper-left-mega-menu-image"><img src="./assets/images/image-mega-menu.png"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="header-menu-wrapper-right d-flex align-items-center mb-0">
+              <li class="header-menu-wrapper-right-item"><a class="header-menu-wrapper-right-item-link" href="#">Trang chủ</a></li>
+              <li class="header-menu-wrapper-right-item"><a class="header-menu-wrapper-right-item-link d-flex align-items-center" href="#"><span>Giới thiệu</span><span class="ml-theme-4"><img src="./assets/icons/icon-arrow-down.svg"></span></a>
+                <ul class="header-menu-wrapper-right-dropdown position-absolute">
+                  <li class="header-menu-wrapper-right-dropdown-item"><a class="header-menu-wrapper-right-dropdown-item-link" href="#">Giới thiệu 1</a></li>
+                  <li class="header-menu-wrapper-right-dropdown-item"><a class="header-menu-wrapper-right-dropdown-item-link" href="#">Giới thiệu 2</a></li>
+                  <li class="header-menu-wrapper-right-dropdown-item"><a class="header-menu-wrapper-right-dropdown-item-link" href="#">Giới thiệu 3</a></li>
+                </ul>
+              </li>
+              <li class="header-menu-wrapper-right-item"><a class="header-menu-wrapper-right-item-link" href="18.Tin-tức.html">Tin tức</a></li>
+              <li class="header-menu-wrapper-right-item"><a class="header-menu-wrapper-right-item-link" href="#">Hợp tác xuất bản</a></li>
+              <li class="header-menu-wrapper-right-item"><a class="header-menu-wrapper-right-item-link" href="#">Tải danh mục sách</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <header class="is-mobile">
+      <div class="container">
+        <div class="header-mobile d-flex align-items-center justify-content-between"><a class="header-mobile-logo" href="/"><img src="./assets/images/image-logo.png" width="120" alt=""></a>
+          <div class="header-mobile-action d-flex align-items-center">
+            <div class="header-mobile-action-item"><img src="./assets/icons/shopping-cart.svg" alt="#"></div>
+            <div class="header-mobile-action-item"><img src="./assets/icons/profile-circle.svg" alt="#"></div>
+            <div class="header-mobile-action-item bars"><img src="./assets/icons/menu.svg" alt="#"></div>
+          </div>
+        </div>
+        <div class="header-mobile-search">
+          <div class="input-group">
+            <div class="Select">
+              <div class="Select-style d-flex align-items-center h-100 justify-content-center" id="selectInputMobile">
+                <h6 class="Select-label">Sách giấy</h6><i class="fa fa-caret-down ml-theme-4"></i>
+              </div>
+              <div class="Select-options shadow" id="optionInputMobile">
+                <div class="Select-option option" data-value="1">Sách giấy</div>
+                <div class="Select-option option" data-value="2">Audio Book</div>
+              </div>
+            </div>
+            <input class="form-control" type="text" placeholder="Nhập từ khóa tìm kiếm" aria-label="Text input with dropdown button"><span class="icon-search"><img src="./assets/icons/search-normal.svg" alt=""></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="overlay-backdrop"></div>
+    <div class="menu-mobile">
+      <div class="list-group">
+        <h3 class="list-group-item header">CHỦ ĐỀ</h3>
+        <div class="accordion" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne"><a class="accordion-header-text" href="google.com">Văn học</a>
+              <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"></div>
+            </h2>
+            <div class="accordion-collapse collapse" id="flush-collapseOne" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body p-0">
+                <ul class="accordion-body-children">
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link active" href="#"> Vừa học vừa chơi</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo"><a class="accordion-header-text" href="google.com">Văn học 1</a>
+              <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"></div>
+            </h2>
+            <div class="accordion-collapse collapse" id="flush-collapseTwo" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body p-0">
+                <ul class="accordion-body-children">
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link active" href="#"> Vừa học vừa chơi</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree"><a class="accordion-header-text" href="#">Văn học 2</a>
+              <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"></div>
+            </h2>
+            <div class="accordion-collapse collapse" id="flush-collapseThree" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body p-0">
+                <ul class="accordion-body-children">
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link active" href="#"> Vừa học vừa chơi</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list-group dropdown-one-level">
+        <h3 class="list-group-item header">TÁC GIẢ</h3><a class="list-group-item list-group-item-action" href="#">Phan Thị Vàng Anh</a><a class="list-group-item list-group-item-action" href="#">Phan Thị Vàng Anh</a><a class="list-group-item list-group-item-action" href="#">Phan Thị Vàng Anh</a><a class="list-group-item list-group-item-action" href="#">Phan Thị Vàng Anh</a><a class="list-group-item list-group-item-action" href="#">Phan Thị Vàng Anh</a>
+      </div>
+      <div class="list-group">
+        <h3 class="list-group-item header">TÁC GIẢ</h3>
+        <div class="accordion" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne"><a class="accordion-header-text" href="google.com">Văn học</a>
+              <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"></div>
+            </h2>
+            <div class="accordion-collapse collapse" id="flush-collapseOne" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body p-0">
+                <ul class="accordion-body-children">
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link active" href="#"> Vừa học vừa chơi</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo"><a class="accordion-header-text" href="google.com">Văn học 1</a>
+              <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"></div>
+            </h2>
+            <div class="accordion-collapse collapse" id="flush-collapseTwo" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body p-0">
+                <ul class="accordion-body-children">
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link active" href="#"> Vừa học vừa chơi</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree"><a class="accordion-header-text" href="#">Văn học 2</a>
+              <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"></div>
+            </h2>
+            <div class="accordion-collapse collapse" id="flush-collapseThree" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body p-0">
+                <ul class="accordion-body-children">
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link active" href="#"> Vừa học vừa chơi</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                  <li class="accordion-body-children-item"><a class="accordion-body-children-item-link" href="#"> Kỹ năng thuyết trình</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="close-menu"><img src="./assets/images/close-circle.svg" alt="" srcset=""></div>
+    </div>
+    <main>
+      <div class="container">
+        <nav class="mt-theme-15 mb-theme-15 coverbreadcrumb" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">
+                <svg width="16" height="17" viewbox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.8868 5.84005L9.52014 2.34672C8.6668 1.66672 7.33347 1.66005 6.4868 2.34005L2.12014 5.84005C1.49347 6.34005 1.11347 7.34005 1.2468 8.12672L2.0868 13.1534C2.28014 14.2801 3.3268 15.1667 4.4668 15.1667H11.5335C12.6601 15.1667 13.7268 14.2601 13.9201 13.1467L14.7601 8.12005C14.8801 7.34005 14.5001 6.34005 13.8868 5.84005ZM8.50014 12.5001C8.50014 12.7734 8.27347 13.0001 8.00014 13.0001C7.7268 13.0001 7.50014 12.7734 7.50014 12.5001V10.5001C7.50014 10.2267 7.7268 10.0001 8.00014 10.0001C8.27347 10.0001 8.50014 10.2267 8.50014 10.5001V12.5001Z" fill="#062233" fill-opacity="0.5"></path>
+                </svg></a></li>
+            <li class="breadcrumb-item"><a href="#">Sách giấy</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chi tiết sách</li>
+          </ol>
+        </nav>
+        <div class="row">
+          <div class="col-lg-8">
+            <section></section>
+            <div class="row">
+              <div class="col-12">
+                <section class="PaymentMethod">
+                  <div class="HeadingCard d-flex align-items-center .PaymentMethod-title">
+                    <h3 class="HeadingCard-title">Thông tin thanh toán</h3>
+                  </div>
+                  <div class="PaymentMethod-wrapper">
+                    <div class="row">
+                      <div class="col-md-6 QR"><img src="./assets/images/image-QR.jpg" alt="" srcset=""></div>
+                      <div class="col-md-6">
+                        <div class="PaymentMethod-qr-title"><span><img src="./assets/icons/arrow-left.svg" alt="" srcset=""></span>
+                          <h5>Quét mã qua ứng dụng Ngân hàng</h5>
+                        </div>
+                        <div class="PaymentMethod-qr-wrapper"><a class="PaymentMethod-qr-warning" href="#"><img src="./assets/icons/warning-2.svg" alt="" srcset="">
+                            <p>Xem hướng dẫn thanh toán</p></a>
+                          <div class="PaymentMethod-qr-btns row">
+                            <div class="col-6">
+                              <button class="btn btn-outline-gray-2">Tải mã QR</button>
+                            </div>
+                            <div class="col-6">
+                              <button class="btn btn-outline-gray-2">Chia sẻ</button>
+                            </div>
+                          </div>
+                          <div class="PaymentMethod-qr-note-2"><span>Đơn hàng sẽ được tự động xử lý, nếu sau </span><strong>5 phút </strong><span>đơn hàng vẫn chưa được xử lý, bạn vui lòng liên hệ hotline hoặc livechat để được hỗ trợ.</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dash"></div>
+                    <div class="PaymentMethod-info">
+                      <h5 class="PaymentMethod-info-title">Hoặc nhập thông tin chuyển khoản</h5>
+                      <div class="PaymentMethod-info-wraning">
+                        <p><strong>Nội dung Chuyển khoản:</strong></p>
+                        <form class="input-copy main" data-copy="true">
+                          <input type="text" value="464754" readonly="readonly">
+                          <button class="button"><img src="./assets/icons/file-copy-line.svg" alt="" srcset=""></button>
+                        </form>
+                        <script>
+                          var copyButtons = document.querySelectorAll("[data-copy]");
+                          for (var i = 0; i < copyButtons.length; i++) {
+                            var el = copyButtons[i];
+                            el.addEventListener("click", function(e) {
+                              e.preventDefault();
+                              var textInput = e.target.closest('.input-copy').querySelector('input[type="text"]');
+                              if (textInput) {
+                                textInput.select();
+                                document.execCommand("copy");
+                              }
+                            });
+                          }
+                        </script>
+                        <p><span>Lưu ý: Điền</span><strong>chính xác</strong><span> mã trên đây vào nội dung chuyển khoản</span></p>
+                      </div>
+                      <div class="PaymentMethod-info-form">
+                        <div class="PaymentMethod-info-wrapper">
+                          <p>Ngân hàng</p>
+                          <form class="input-copy" data-copy="true">
+                            <input type="text" value="Ngân hàng Thương mại Cổ phần Quân Đội " readonly="readonly">
+                            <button class="button"><img src="./assets/icons/file-copy-line.svg" alt="" srcset=""></button>
+                          </form>
+                          <script>
+                            var copyButtons = document.querySelectorAll("[data-copy]");
+                            for (var i = 0; i < copyButtons.length; i++) {
+                              var el = copyButtons[i];
+                              el.addEventListener("click", function(e) {
+                                e.preventDefault();
+                                var textInput = e.target.closest('.input-copy').querySelector('input[type="text"]');
+                                if (textInput) {
+                                  textInput.select();
+                                  document.execCommand("copy");
+                                }
+                              });
+                            }
+                          </script>
+                        </div>
+                        <div class="PaymentMethod-info-wrapper">
+                          <p>Chi nhánh</p>
+                          <form class="input-copy" data-copy="true">
+                            <input type="text" value="Lãn Ông" readonly="readonly">
+                            <button class="button"><img src="./assets/icons/file-copy-line.svg" alt="" srcset=""></button>
+                          </form>
+                          <script>
+                            var copyButtons = document.querySelectorAll("[data-copy]");
+                            for (var i = 0; i < copyButtons.length; i++) {
+                              var el = copyButtons[i];
+                              el.addEventListener("click", function(e) {
+                                e.preventDefault();
+                                var textInput = e.target.closest('.input-copy').querySelector('input[type="text"]');
+                                if (textInput) {
+                                  textInput.select();
+                                  document.execCommand("copy");
+                                }
+                              });
+                            }
+                          </script>
+                        </div>
+                        <div class="PaymentMethod-info-wrapper">
+                          <p>Số tài khoản:</p>
+                          <form class="input-copy" data-copy="true">
+                            <input type="text" value="0601119779999" readonly="readonly">
+                            <button class="button"><img src="./assets/icons/file-copy-line.svg" alt="" srcset=""></button>
+                          </form>
+                          <script>
+                            var copyButtons = document.querySelectorAll("[data-copy]");
+                            for (var i = 0; i < copyButtons.length; i++) {
+                              var el = copyButtons[i];
+                              el.addEventListener("click", function(e) {
+                                e.preventDefault();
+                                var textInput = e.target.closest('.input-copy').querySelector('input[type="text"]');
+                                if (textInput) {
+                                  textInput.select();
+                                  document.execCommand("copy");
+                                }
+                              });
+                            }
+                          </script>
+                        </div>
+                        <div class="PaymentMethod-info-wrapper">
+                          <p>Chủ tài khoản:</p>
+                          <form class="input-copy" data-copy="true">
+                            <input type="text" value="Nhà xuất bản Xây dựng" readonly="readonly">
+                            <button class="button"><img src="./assets/icons/file-copy-line.svg" alt="" srcset=""></button>
+                          </form>
+                          <script>
+                            var copyButtons = document.querySelectorAll("[data-copy]");
+                            for (var i = 0; i < copyButtons.length; i++) {
+                              var el = copyButtons[i];
+                              el.addEventListener("click", function(e) {
+                                e.preventDefault();
+                                var textInput = e.target.closest('.input-copy').querySelector('input[type="text"]');
+                                if (textInput) {
+                                  textInput.select();
+                                  document.execCommand("copy");
+                                }
+                              });
+                            }
+                          </script>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <aside>
+              <section class="Bill">
+                <div class="Bill-shape"></div>
+                <div class="Bill-wrapper">
+                  <div class="Bill-total pb-theme-0"><span class="Bill-total-title">Tạm tính:</span><span class="Bill-total-price"><span>311.500</span><span class="Bill-total-price-unit">đ</span></span></div>
+                  <div class="Bill-discount d-flex mt-theme-15 mb-theme-15">
+                    <div class="input-group has-icon">
+                      <div class="input-group-icon"><img src="./assets/icons/ticket-discount.svg" alt=""></div>
+                      <input class="form-control" type="text" placeholder="Nhập mã giảm giả">
+                    </div>
+                    <button class="btn btn-success">Mua ngay</button>
+                  </div>
+                  <div class="Bill-total"><span class="Bill-total-title">Giảm giá trực tiếp</span><span class="Bill-total-price"><span>500</span><span class="Bill-total-price-unit">đ</span></span></div>
+                  <div class="Bill-total"><span class="Bill-total-title">Giảm giá voucher</span><span class="Bill-total-price"><span>1.500</span><span class="Bill-total-price-unit">đ</span></span></div>
+                  <div class="Bill-total"><span class="Bill-total-title">Tiết kiệm được</span><span class="Bill-total-price"><span>2.000</span><span class="Bill-total-price-unit">đ</span></span></div>
+                  <div class="dash"></div>
+                  <div class="Bill-total-wrapper">
+                    <div class="Bill-total big"><span class="Bill-total-title">Tổng tiền:</span><span class="Bill-total-price"><span>311.500đ</span><span class="Bill-total-price-unit">đ</span></span></div>
+                    <div class="Bill-total-wrapper-btns">
+                      <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#myModal"><strong>Tôi đã chuyển khoản</strong><br><span>(Kiểm tra trạng thái đơn hàng 300 giây)</span></button>
+                      <button class="btn btn-outline-gray-2 btn-bill">Quay lại trang chủ</button>
+                    </div>
+                  </div>
+                  <div class="Bill-note">Bằng việc tiến hành đặt mua hàng, bạn đồng ý với Điều khoản của<span>Công ty cổ phần Văn hóa và Bản quyền Benito</span></div>
+                  <div class="Bill-bottom"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyIiB2aWV3Qm94PSIwIDAgMzQwIDIyIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMEgzNDBWMjJIMzMwLjk5QzMzMC43MjggMTUuMzI4MiAzMjUuMjM2IDEwIDMxOC41IDEwQzMxMS43NjQgMTAgMzA2LjI3MiAxNS4zMjgyIDMwNi4wMSAyMkgyOTcuOTlDMjk3LjcyOCAxNS4zMjgyIDI5Mi4yMzYgMTAgMjg1LjUgMTBDMjc4Ljc2NCAxMCAyNzMuMjcyIDE1LjMyODIgMjczLjAxIDIySDI2NC45OUMyNjQuNzI4IDE1LjMyODIgMjU5LjIzNiAxMCAyNTIuNSAxMEMyNDUuNzY0IDEwIDI0MC4yNzIgMTUuMzI4MiAyNDAuMDEgMjJIMjMxLjk5QzIzMS43MjggMTUuMzI4MiAyMjYuMjM2IDEwIDIxOS41IDEwQzIxMi43NjQgMTAgMjA3LjI3MiAxNS4zMjgyIDIwNy4wMSAyMkgxOTguOTlDMTk4LjcyOCAxNS4zMjgyIDE5My4yMzYgMTAgMTg2LjUgMTBDMTc5Ljc2NCAxMCAxNzQuMjcyIDE1LjMyODIgMTc0LjAxIDIySDE2NS45OUMxNjUuNzI4IDE1LjMyODIgMTYwLjIzNiAxMCAxNTMuNSAxMEMxNDYuNzY0IDEwIDE0MS4yNzIgMTUuMzI4MiAxNDEuMDEgMjJIMTMyLjk5QzEzMi43MjggMTUuMzI4MiAxMjcuMjM2IDEwIDEyMC41IDEwQzExMy43NjQgMTAgMTA4LjI3MiAxNS4zMjgyIDEwOC4wMSAyMkg5OS45OTAyQzk5LjcyNzcgMTUuMzI4MiA5NC4yMzYxIDEwIDg3LjUgMTBDODAuNzYzOSAxMCA3NS4yNzIzIDE1LjMyODIgNzUuMDA5OCAyMkg2Ni45OTAyQzY2LjcyNzcgMTUuMzI4MiA2MS4yMzYxIDEwIDU0LjUgMTBDNDcuNzYzOSAxMCA0Mi4yNzIzIDE1LjMyODIgNDIuMDA5OCAyMkgzMy45OTAyQzMzLjcyNzcgMTUuMzI4MiAyOC4yMzYxIDEwIDIxLjUgMTBDMTQuNzYzOSAxMCA5LjI3MjI3IDE1LjMyODIgOS4wMDk4MiAyMkgwVjBaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K" alt="" srcset=""></div>
+                </div>
+              </section>
+            </aside>
+          </div>
+        </div>
+      </div>
+      <div class="support"><a class="support-item" href="#"><img src="./assets/icons/icon-mess.svg" alt=""></a><a class="support-item" href="#"><img src="./assets/icons/icon-zalo.svg" alt=""></a><a class="support-item btn-scroll" href="#"><img src="./assets/icons/arrow-left-single.svg" alt=""></a></div>
+    </main>
+    <footer class="Footer mt-theme-30 mt-lg-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12 footer-col"><a class="logo-ft" href="#"><img src="./assets/images/logo-ft-betino.png" alt="" srcset=""></a>
+            <div class="Footer-wrapper">
+              <div class="title">
+                <h3>Nhà sách Benito online</h3>
+                <div class="work-time">(Hoạt động từ 8h - 17h, Thứ 2 - Thứ 7)</div>
+              </div>
+              <div class="Footer-wrapper-item"><img src="./assets/icons/phone.svg" alt="" srcset=""><a href="tel:+0888 080 290"><span>Hotline:</span><strong class="ml-theme-2">0888 080 290</strong></a></div>
+              <div class="Footer-wrapper-item"><img src="./assets/icons/mail.svg" alt="" srcset=""><a href="mailto:haianh.pham@benitovn.com"><span>Email:</span><span>haianh.pham@benitovn.com</span></a></div>
+            </div>
+            <div class="Footer-wrapper">
+              <div class="title">
+                <h3>Nhà sách Benito Offline</h3>
+                <div class="work-time">(Hoạt động từ 8h - 17h, Thứ 2 - Thứ 7)</div>
+              </div>
+              <div class="Footer-wrapper-item"><img src="./assets/icons/icon-location.svg" alt="" srcset=""><a href="http://"><span>Ki-ốt sách : Ki-ốt 7 - Phố 19 tháng 12 - Trần Hưng Đạo - Hoàn Kiếm - Hà Nội</span></a></div>
+              <div class="Footer-wrapper-item"><img src="./assets/icons/phone.svg" alt="" srcset=""><a href="tel:+0888 080 290"><span>Gọi đặt hàng:</span><span class="ml-theme-2"><strong>0888 080 290</strong></span></a></div>
+              <div class="Footer-wrapper-item"><img src="./assets/icons/code.svg" alt="" srcset=""><a href="http://"><span>Mã số thuế:</span><span>0109653575</span></a></div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12 footer-col">
+            <h5>Hỗ trợ khách hàng</h5>
+            <ul class="Footer-list">
+              <li><a href="http://">Cách thức vận chuyển</a></li>
+              <li><a href="http://">Chính sách khách hàng mua sỉ</a></li>
+              <li><a href="http://">Chính sách hồi hoàn</a></li>
+              <li><a href="http://">Hướng dẫn đọc sách ebook</a></li>
+              <li><a href="http://">Hướng dẫn thuê sách ebook</a></li>
+              <li><a href="http://">Hướng dẫn mua sách giấy</a></li>
+              <li><a href="http://">Hướng dẫn đăng ký tài khoản</a></li>
+              <li><a href="http://">Hướng dẫn nạp tiền vào ví</a></li>
+              <li><a href="http://">Hướng dẫn kiểm tra tem sách</a></li>
+              <li><a href="http://">Điều khoản sử dụng</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12 footer-col">
+            <h5>Về chúng tôi</h5>
+            <ul class="Footer-list">
+              <li><a href="http://">Giới thiệu</a></li>
+              <li><a href="http://">Liên hệ</a></li>
+            </ul>
+            <ul class="Footer-scan">
+              <li><a href="http://"><img src="./assets/images/ch-play.png" alt="" srcset=""></a></li>
+              <li><a href="http://"><img src="./assets/images/app-store.png" alt="" srcset=""></a></li>
+              <li><a href="http://"><img src="./assets/images/dathongbao-1024x388.png" alt="" srcset=""></a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12 footer-col">
+            <h5>Theo dõi chúng tôi trên</h5>
+            <ul class="Footer-list socical">
+              <li><a href="http://"><img src="./assets/images/facebook.png" alt="" srcset=""><span>400 theo dõi trang</span></a></li>
+              <li><a href="http://"><img src="./assets/images/tiktok.png" alt="" srcset=""><span>3.122 theo dõi trang</span></a></li>
+              <li><a href="http://"><img src="./assets/images/youtube.png" alt="" srcset=""><span>3.122 theo dõi trang</span></a></li>
+            </ul>
+            <h5>Gian hàng của Benito</h5>
+            <ul class="Footer-list socical">
+              <li><a href="http://"><img src="./assets/images/shopee.png" alt="" srcset=""><span>Trên Shopee</span></a></li>
+              <li><a href="http://"><img src="./assets/images/lazada.png" alt="" srcset=""><span>Trên Lazada</span></a></li>
+              <li><a href="http://"><img src="./assets/images/tiki.png" alt="" srcset=""><span>Trên Tiki</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copy-right">Copyright © 2021 - Benito. All rights reserved.</div>
+    </footer>
+    <div class="modal fade Modal-confirm-checkout" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body"><img src="./assets/icons/question-circle.svg" alt="" srcset="">
+            <h4 class="mt-theme-15 mb-theme-15 modal-title" id="myModalLabel">Xác nhận thanh toán</h4>
+            <p class="mb-0">Bạn có chắc chắn muốn thanh toán chuyển khoản</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success" type="button">Xác nhận</button>
+            <button class="btn btn-outline-gray-2" type="button" data-dismiss="modal">Hủy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/select2.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/fancybox.umd.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
