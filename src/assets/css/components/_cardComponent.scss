@@ -222,6 +222,7 @@
       color: var(--black);
       @include ellipsis(2);
       margin-bottom: 4px !important;
+      min-height: 35px;
       &.bookname-15-pt-m {
         @include bookname-15-pt-m();
         a {
