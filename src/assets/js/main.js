@@ -521,32 +521,31 @@ const carousel = {
 };
 
 function SelectDropdown(optional) {
-  const customSelect = document.getElementById(optional.select);
-  const customOptions = document.getElementById(optional.options);
-  const selectModifyMutiple = document.querySelectorAll('.' + optional.classModify)
+  const customSelects = document.querySelectorAll('.' + optional.select);
 
-  if(Array.from(selectModifyMutiple).length){
-    console.log('selectModifyMutiple', selectModifyMutiple)
-  } else {
-    customSelect && customSelect.addEventListener('click', () => {
-      customOptions.classList.toggle('active')
+  customSelects.forEach(customSelect => {
+    const customOptions = customSelect.nextElementSibling;
+
+    customSelect.addEventListener('click', () => {
+      customOptions.classList.toggle('active');
     });
-    customOptions && customOptions.addEventListener('click', (e) => {
+
+    customOptions.addEventListener('click', (e) => {
       if (e.target.classList.contains('option')) {
         const selectedOption = e.target;
         const selectedValue = selectedOption.getAttribute('data-value');
         customSelect.querySelector('.Select-label').textContent = selectedOption.textContent;
-        customOptions.classList.remove('active')
+        customOptions.classList.remove('active');
         console.log('Selected Value:', selectedValue);
       }
     });
+
     document.addEventListener('click', (e) => {
-      if (customSelect && !customSelect.contains(e.target)) {
-        customOptions.classList.remove('active')
+      if (!customSelect.contains(e.target)) {
+        customOptions.classList.remove('active');
       }
     });
-  }
-
+  });
 }
 function QuantityControl(container) {
   function createQuantityControl(subContainer) {
@@ -738,16 +737,6 @@ new ActiveItemsComponent({
 });
 new SelectDropdown({
   select: 'customSelect',
-  options: 'customOptions',
-  classModify:'select-dropdown-cart'
-});
-new SelectDropdown({
-  select: 'selectInput',
-  options: 'optionInput',
-});
-new SelectDropdown({
-  select: 'selectInputMobile',
-  options: 'optionInputMobile',
 });
 new QuantityControl('product')
 new QuantityControl('BookDetail-data-item-quantity')

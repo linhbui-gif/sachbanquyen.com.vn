@@ -12,7 +12,7 @@ header.is-mobile
           img(src="./assets/icons/menu.svg" alt="#")
     .header-mobile-search
       .input-group
-        +SelectDropdownCustom({idSelect: 'selectInputMobile', idOptions: 'optionInputMobile', data: dataDropdownSearch})
+        +SelectDropdownCustom({ data: dataDropdownSearch})
         input.form-control(type='text' placeholder="Nhập từ khóa tìm kiếm" aria-label='Text input with dropdown button')
         span.icon-search
           img(src="./assets/icons/search-normal.svg" alt="")
