@@ -1,0 +1,7 @@
+mixin TableTag({ title, styleType, icon })
+  .TableTag.d-flex.align-items-center(class=`${styleType || ''} ${icon ? 'show-icon' : ''}`)
+    .TableTag-icon 
+      if (icon)
+        img(src=icon, alt="")
+
+    .TableTag-title= title

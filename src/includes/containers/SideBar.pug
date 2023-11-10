@@ -1,0 +1,46 @@
+.SideBar
+  .SideBar-header.d-flex.align-items-center 
+    .SideBar-header-avatar 
+      img(src="./assets/images/image-avatar-default.png" alt="")
+    .SideBar-header-info
+      .SideBar-header-info-title Nguyễn Hoà An
+      .SideBar-header-info-description Đại học Mở
+    .SideBar-header-toggle 
+      img(src="./assets/icons/icon-angle-up-circle.svg", alt="")
+
+  .SideBar-main
+    .SideBar-body
+      #accordionSidebar.accordion
+        each item, index in dataSidebar
+          - const keyHeader = `flush-heading${index}`;
+          - const keyCollapse = `flush-collapse${index}`;
+          - const isChildren = item.children.length > 0;
+
+          .accordion-item
+            h2.accordion-header(id=keyHeader)
+              a(href=item.link).accordion-header-text.d-flex.align-items-center
+                span
+                  img(src=`./assets/icons/${item.icon}`, alt="")
+                = item.title
+
+              if (isChildren)
+                div.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target=`#${keyCollapse}` aria-expanded='false' aria-controls='flush-collapseOne')
+
+
+            if (isChildren)
+              .accordion-collapse.collapse(id=keyCollapse aria-labelledby=keyHeader data-bs-parent='#accordionSidebar')
+                .accordion-body.p-0
+                  ul.accordion-body-children
+                    each subItem, subItemIndex in item.children
+                      li.accordion-body-children-item
+                        a.accordion-body-children-item-link(href=subItem.link class=`${subItemIndex === 0 ? 'active' : ''}` style="display: flex !important;").align-items-center
+                          span 
+                            img(src=`./assets/icons/${subItem.icon}`, alt="")
+                          = subItem.title
+
+
+    .SideBar-footer
+      button.btn.btn-outline-danger.has-icon.w-100.border-0
+        .btn-icon.mr-theme-4
+          img(src="./assets/icons/icon-logout-red.png" alt="" width="16" height="16")
+        span.btn-text Đăng Xuất

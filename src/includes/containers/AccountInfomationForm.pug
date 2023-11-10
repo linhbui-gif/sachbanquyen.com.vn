@@ -1,0 +1,27 @@
+.AccountInfomationForm
+  .AccountInfomationForm-header Thông tin tài khoản
+
+  form(action="#").AccountInfomationForm-form
+    .row.align-items-center
+      .col-lg-3
+        .AccountInfomationForm-form-label Tên đầy đủ của bạn
+      .col-lg-9
+        +Input({ type: 'text', label: 'Nhập tên đầy đủ của bạn', icon: './assets/icons/icon-profile-circle.png' })
+      .col-lg-3
+        .AccountInfomationForm-form-label Số điện thoại
+      .col-lg-9
+        +Input({ type: 'text', label: 'Nhập số điện thoại', icon: './assets/icons/call-calling.svg' })
+      .col-lg-3
+        .AccountInfomationForm-form-label Email của bạn
+      .col-lg-9
+        +Input({ type: 'text', label: 'Nhập email của bạn', icon: './assets/icons/icon-mail.svg' })
+      .col-lg-3
+        .AccountInfomationForm-form-label Địa chỉ nhận hàng
+      .col-lg-9
+        +Input({ type: 'text', label: 'Nhập địa chỉ nhận hàng', icon: './assets/icons/location-tick.svg' })
+
+  .AccountInfomationForm-footer.d-flex.align-items-center.justify-content-end 
+    button.btn.btn-secondary Hủy
+    button.btn.btn-warning Lưu thay đổi
+    
+      

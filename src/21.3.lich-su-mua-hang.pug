@@ -1,0 +1,55 @@
+extends includes/layouts/Guest.pug
+
+block head 
+  - const isHideHeaderMobileSearch = true;
+
+block pages
+    .container
+      include ./includes/components/Breadcrumb.pug
+      .row
+        .col-lg-3
+          include ./includes/containers/SideBar.pug
+        .col-lg-9
+          .row.mb-theme-30(style="row-gap: 15px;")
+            .col-lg-4
+              +CoinCard({ title: 'Số dư Book coin', value: '1.580.000 coin', icon: 'icon-wallet-blue.png', btnTitle: 'Nạp coin' })
+            .col-lg-4
+              +CoinCard({ title: 'Số dư Book xu khuyến mãi', value: '0.000 coin', icon: 'icon-wallet-blue.png' })
+            .col-lg-4
+              +CoinCard({ title: 'Các gói đăng ký của bạn', value: '5 gói đọc', icon: 'icon-vip.png', btnTitle: 'Thông tin' })
+
+          .ProfileTable.vertical-middle
+            .ProfileTable-header Lịch sử mua hàng
+            .ProfileTable-body
+              table.table-striped
+                thead 
+                  tr 
+                    th.fit #
+                    th.w-25 Mã đơn
+                    th Ngày tạo
+                    th Số tiền
+                    th Trạng thái
+                    th.fit Xử lý
+
+                tbody 
+                  each item in [1,2,3,4,5]
+                    tr 
+                      td.fit= item
+                      td.w-25
+                        a(href="#").ProfileTable-info-link #230908160431279
+
+                      td 08/09/2023 16:04
+                      td 153.000đ
+                      td
+                        .d-flex.flex-wrap(style="row-gap: 8px; column-gap: 8px;")
+                          +TableTag({ title: 'Đã duyệt', styleType: 'primary' })
+                          +TableTag({ title: 'Thành công', styleType: 'success' })
+                          +TableTag({ title: 'Chờ duyệt', styleType: 'warning' })
+                          +TableTag({ title: 'Đã hủy', styleType: 'danger' })
+                      td.fit
+                        button.btn.btn-success.btn-sm.w-100(style="min-width: 64px;") Xem
+
+            .ProfileTable-footer
+              +Pagination()
+
+              
