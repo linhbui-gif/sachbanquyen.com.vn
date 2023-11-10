@@ -8,12 +8,21 @@
         @include media-breakpoint-between(lg, xl) {
           margin-top: 0 !important;
         }
+        @media (max-width: 370px) {
+          transform: scale(0.8);
+        }
       }
       &-nav {
         max-width: 30%;
         @include media-breakpoint-between(lg, xl) {
           min-width: 159px !important;
         }
+        .owl-carousel .owl-stage,
+        .owl-item.active:only-child {
+          min-width: 74px !important;
+          margin-left: auto;
+        }
+
         &.width-100 {
           border-radius: 8px;
           border: 1px solid var(--line3);
@@ -54,6 +63,7 @@
       &-image {
         width: 74px;
         height: 74px;
+        min-width: 74px;
         img {
           position: absolute;
           top: 0;
