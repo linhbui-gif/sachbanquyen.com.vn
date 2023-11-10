@@ -1,0 +1,22 @@
+extends includes/layouts/Guest.pug
+
+block head 
+  - const isHideHeaderMobileSearch = true;
+
+block pages
+    .container
+      include ./includes/components/Breadcrumb.pug
+      .row
+        .col-lg-3
+          include ./includes/containers/SideBar.pug
+        .col-lg-9
+          .row.mb-theme-30(style="row-gap: 15px;")
+            .col-lg-4
+              +CoinCard({ title: 'Số dư Book coin', value: '1.580.000 coin', icon: 'icon-wallet-blue.png', btnTitle: 'Nạp coin' })
+            .col-lg-4
+              +CoinCard({ title: 'Số dư Book xu khuyến mãi', value: '0.000 coin', icon: 'icon-wallet-blue.png' })
+            .col-lg-4
+              +CoinCard({ title: 'Các gói đăng ký của bạn', value: '5 gói đọc', icon: 'icon-vip.png', btnTitle: 'Thông tin' })
+
+          include ./includes/containers/AccountInfomationForm.pug
+          

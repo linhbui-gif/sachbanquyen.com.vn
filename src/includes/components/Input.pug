@@ -1,6 +1,6 @@
 mixin Input({ type, label, icon, options, id,classModify = '', typePassword = false })
     if type === 'text'
-      .input-group(class=`${icon ? 'has-icon' : ""}`)(class=`${classModify ? classModify : ''}`)
+      .input-group(class=`${icon ? 'has-icon' : ""} ${classModify ? classModify : ''}`)
         if icon
           .input-group-icon
             img(src=icon, alt="")

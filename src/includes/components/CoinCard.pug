@@ -1,0 +1,10 @@
+mixin CoinCard({ title, value, icon, btnTitle })
+  .CoinCard
+    .CoinCard-title.mb-theme-4= title
+    .CoinCard-description.d-flex.align-items-center
+      .CoinCard-icon 
+        img(src=`./assets/icons/${icon}`, alt="")
+      span= value
+
+      if (btnTitle)
+        button.btn.btn-primary.btn-sm= btnTitle

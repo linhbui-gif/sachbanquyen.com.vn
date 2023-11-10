@@ -3,6 +3,13 @@ extends includes/layouts/Guest.pug
 block pages
     .container
         include ./includes/components/Breadcrumb.pug
+        .Bill-total-wrapper.fixed-bottom
+          .Bill-total.big
+            p.Bill-total-title Tổng tiền:
+            p.Bill-total-price
+              span 311.500đ
+              span.Bill-total-price-unit đ
+            button.btn.btn-orange-brand.w-100 Mua ngay
         .row
             .col-lg-8
                 section

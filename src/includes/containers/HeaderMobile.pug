@@ -6,14 +6,38 @@ header.is-mobile
       .header-mobile-action.d-flex.align-items-center
         .header-mobile-action-item
           img(src="./assets/icons/shopping-cart.svg" alt="#")
-        .header-mobile-action-item
-          img(src="./assets/icons/profile-circle.svg" alt="#")
+
+        .header-top-dropdown.hover-action
+          .header-top-dropdown-overlay
+          .dropdown
+            .header-mobile-action-item
+              if (isLogged)
+                img(src="./assets/icons/profile-circle-active.svg" alt="#")
+              else
+                img(src="./assets/icons/profile-circle.svg" alt="#")
+
+            ul.dropdown-menu.dropdown-menu-end
+              each item in (isLogged ? dataSidebar : dataSidebarNotLogged)
+                li.d-flex.align-items-center
+                  span
+                    img(src=`./assets/icons/${item.icon}`, alt="")
+                  a(href=item.link)= item.title
+              
+              if (isLogged)
+                li(style="padding: 0;")
+                  button.btn.btn-outline-danger.has-icon.w-100.border-0
+                    .btn-icon.mr-theme-4
+                      img(src="./assets/icons/icon-logout-red.png" alt="" width="16" height="16")
+                    span.btn-text Đăng Xuất
+        
         .header-mobile-action-item.bars
           img(src="./assets/icons/menu.svg" alt="#")
-    .header-mobile-search
-      .input-group
-        +SelectDropdownCustom({idSelect: 'selectInputMobile', idOptions: 'optionInputMobile', data: dataDropdownSearch})
-        input.form-control(type='text' placeholder="Nhập từ khóa tìm kiếm" aria-label='Text input with dropdown button')
-        span.icon-search
-          img(src="./assets/icons/search-normal.svg" alt="")
+
+    if (!isHideHeaderMobileSearch)
+      .header-mobile-search
+        .input-group
+          +SelectDropdownCustom({ data: dataDropdownSearch})
+          input.form-control(type='text' placeholder="Nhập từ khóa tìm kiếm" aria-label='Text input with dropdown button')
+          span.icon-search
+            img(src="./assets/icons/search-normal.svg" alt="")
 
