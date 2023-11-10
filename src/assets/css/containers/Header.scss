@@ -99,6 +99,7 @@ header {
 
       @include media-breakpoint-down(md) {
         border-bottom: 1px solid var(--line3);
+        padding: 8px 0;
       }
 
       &-logo {
