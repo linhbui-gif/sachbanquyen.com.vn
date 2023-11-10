@@ -15,20 +15,25 @@
       &-nav {
         max-width: 30%;
         @include media-breakpoint-between(lg, xl) {
-          min-width: 159px !important;
+          max-width: 159px !important;
         }
-        .owl-carousel .owl-stage,
-        .owl-item.active:only-child {
-          min-width: 74px !important;
-          margin-left: auto;
+        .custom-size-mobile-owl{
+          .owl-stage,
+          .owl-item.active:only-child {
+            min-width: 74px !important;
+            margin-left: auto;
+          }
         }
-
         &.width-100 {
           border-radius: 8px;
           border: 1px solid var(--line3);
           width: 100%;
           padding: 15px;
           max-width: 100%;
+          @include media-breakpoint-between(lg, xl) {
+            min-width: 159px !important;
+            max-width: 100%!important;
+          }
           .owl-carousel {
             .item {
               border: 1px solid var(--line3);
