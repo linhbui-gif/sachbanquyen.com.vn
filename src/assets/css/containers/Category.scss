@@ -5,7 +5,12 @@
     padding: 30px 0;
   }
   &.has-bg {
-    background: #fee8bd;
+    background-color: #fee8bd;
+    background-image: url("../../images/image-bg-banner.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
   }
   &-wrapper {
     &.scroll-mobile{
@@ -35,5 +40,8 @@
   }
   .HeadingCard {
     margin-bottom: 42px;
+    @include media-breakpoint-down(sm){
+      margin-bottom: 15px;
+    }
   }
 }

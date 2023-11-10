@@ -7,7 +7,6 @@
   border-bottom: 1px dashed var(--line3);
   @media (max-width: 768px) {
     gap: 8px;
-    align-items: center;
     padding: 15px 0px;
   }
   &.card-small {
@@ -26,7 +25,6 @@
       max-width: 69px !important;
       height: 69px !important;
       overflow: hidden;
-      margin: auto;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -60,9 +58,8 @@
     img {
       width: 100%;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 515px) {
       max-width: unset;
-      min-width: 40%;
       border-radius: 0px;
     }
     .percent-sale {
@@ -78,6 +75,7 @@
   &-body {
     position: relative;
     height: 100%;
+    flex: 1;
     &-title {
       color: var(--text-dark);
       @include h-5-16-pt-b();
