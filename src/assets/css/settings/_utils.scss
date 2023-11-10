@@ -458,3 +458,11 @@ input[type=number] {
 .flash-sale-tab{
   margin-bottom: -30px;
 }
+
+.ellipsis-2 {
+  @include ellipsis(2);
+}
+
+.text-right {
+  text-align: right;
+}
