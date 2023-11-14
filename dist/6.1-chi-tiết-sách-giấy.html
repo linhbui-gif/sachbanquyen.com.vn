@@ -37,8 +37,19 @@
                 <div class="header-top-wrapper-action-item-phone mr-theme-4"><img src="./assets/icons/call-calling.svg" alt="#"></div>
                 <div class="header-top-wrapper-action-item-text"><span>HotLine</span><a class="d-block" href="#">0904506621</a></div>
               </div>
-              <div class="header-top-wrapper-action-item"><a class="header-top-wrapper-action-item-text cart" href="#"><img src="./assets/icons/shopping-cart.svg" alt="#"><span>Giỏ hàng</span><span class="number-cart">5</span></a></div>
-              <div class="header-top-wrapper-action-item"><a class="header-top-wrapper-action-item-text" href="#"><img src="./assets/icons/profile-circle.svg" alt="#"><span>Tài khoản</span></a></div>
+              <div class="header-top-wrapper-action-item"><a class="header-top-wrapper-action-item-text cart d-flex flex-column align-items-center" href="#"><img src="./assets/icons/shopping-cart.svg" alt="#"><span>Giỏ hàng</span><span class="number-cart">5</span></a></div>
+              <div class="header-top-dropdown hover-action">
+                <div class="header-top-dropdown-overlay"></div>
+                <div class="dropdown">
+                  <div class="header-top-wrapper-action-item" style="padding-left: 15px;"><a class="header-top-wrapper-action-item-text d-flex flex-column align-items-center" href="#">
+                      <div class="header-top-wrapper-action-item-text-avatar"><img src="./assets/icons/profile-circle.svg" alt="#">
+                      </div><span>Tài khoản</span></a></div>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="d-flex align-items-center"><span><img src="./assets/icons/icon-key.svg" alt=""></span><a href="#">Đăng ký</a></li>
+                    <li class="d-flex align-items-center"><span><img src="./assets/icons/icon-login.svg" alt=""></span><a href="#">Đăng nhập</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -126,7 +137,17 @@
         <div class="header-mobile d-flex align-items-center justify-content-between"><a class="header-mobile-logo" href="/"><img src="./assets/images/image-logo.png" width="120" alt=""></a>
           <div class="header-mobile-action d-flex align-items-center">
             <div class="header-mobile-action-item"><img src="./assets/icons/shopping-cart.svg" alt="#"></div>
-            <div class="header-mobile-action-item"><img src="./assets/icons/profile-circle.svg" alt="#"></div>
+            <div class="header-top-dropdown hover-action">
+              <div class="header-top-dropdown-overlay"></div>
+              <div class="dropdown">
+                <div class="header-mobile-action-item"><img src="./assets/icons/profile-circle.svg" alt="#">
+                </div>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li class="d-flex align-items-center"><span><img src="./assets/icons/icon-key.svg" alt=""></span><a href="#">Đăng ký</a></li>
+                  <li class="d-flex align-items-center"><span><img src="./assets/icons/icon-login.svg" alt=""></span><a href="#">Đăng nhập</a></li>
+                </ul>
+              </div>
+            </div>
             <div class="header-mobile-action-item bars"><img src="./assets/icons/menu.svg" alt="#"></div>
           </div>
         </div>
@@ -290,9 +311,9 @@
                   <div class="d-flex mt-theme-30 pl-theme-2 BookDetail-gallery-thumbnail-wrapper justify-content-center justify-content-lg-start">
                     <div class="BookDetail-gallery-thumbnail-nav">
                       <div class="owl-carousel owl-theme custom-size-mobile-owl" id="thumbs">
-                        <div class="item"><img src="./assets/images/image-book-cover-detail-small.png" width="80"></div>
-                        <div class="item"><img src="./assets/images/image-book-cover-detail-small-1.png" width="80"></div>
-                        <div class="item"><img src="./assets/images/image-book-cover-detail-small-2.png" width="80"></div>
+                        <div class="item resize-gallery-small"><img src="./assets/images/image-book-cover-detail-small.png" width="80"></div>
+                        <div class="item resize-gallery-small"><img src="./assets/images/image-book-cover-detail-small-1.png" width="80"></div>
+                        <div class="item resize-gallery-small"><img src="./assets/images/image-book-cover-detail-small-2.png" width="80"></div>
                       </div>
                     </div><a class="BookDetail-gallery-thumbnail-image ml-theme-15 position-relative" href="./assets/images/image-book-cover-detail.png" data-thumb-src="./assets/images/image-book-cover-detail-small.png" data-fancybox="gallery"><img src="./assets/images/image-thumbnail-smallx.png" width="74" height="74">
                       <div class="BookDetail-gallery-thumbnail-image-overlay">Xem thêm hình ảnh</div></a>
