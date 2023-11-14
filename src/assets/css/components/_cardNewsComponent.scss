@@ -7,8 +7,7 @@
   border-bottom: 1px dashed var(--line3);
   @media (max-width: 768px) {
     gap: 8px;
-    align-items: center;
-    padding: 15px 0px;
+    padding: 15px 0;
   }
   &.card-small {
     gap: 15px;
@@ -61,9 +60,26 @@
       width: 100%;
     }
     @media (max-width: 768px) {
-      max-width: unset;
-      min-width: 40%;
+      max-width: 160px;
       border-radius: 0px;
+      position: relative;
+      width: 100%;
+      height: 110px;
+      img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center;
+        object-position: center;
+        border-radius: 5px;
+        transition: 0.5s;
+      }
     }
     .percent-sale {
       left: 0;
@@ -78,6 +94,7 @@
   &-body {
     position: relative;
     height: 100%;
+    flex: 1;
     &-title {
       color: var(--text-dark);
       @include h-5-16-pt-b();
