@@ -37,6 +37,11 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 88;
+    img{
+      @include media-breakpoint-down(sm){
+        width: 24px;
+      }
+    }
   }
   &:not(.has-validation) {
     > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(
@@ -53,8 +58,11 @@
   @include body-15-pt-r();
   color: var(--black);
   border-radius: 8px;
-  padding: 12px 15px;
+  padding: 8px 16px;
   border: 1px solid var(--line3);
+  @media (max-width: 375px) {
+    font-size: 12px;
+  }
   &:focus {
     box-shadow: unset;
     border-color: var(--line3);

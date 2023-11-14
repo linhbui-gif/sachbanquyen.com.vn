@@ -24,6 +24,12 @@
   &-title {
     @include h-4-heading-card();
     color: var(--black);
+    @media (max-width: 374px) {
+      font-size: 14px;
+    }
+    @media (max-width: 767px) and (min-width: 375px) {
+      font-size: 16px;
+    }
   }
   &-view {
     @include body-15-pt-r();
@@ -35,6 +41,12 @@
   &.H0-24-B-heading-card {
     .HeadingCard-title {
       @include h-0-24-b-heading-card();
+      @include media-breakpoint-down(sm){
+        @include h-4-heading-card();
+      }
+      @media (max-width: 374px) {
+        font-size: 14px;
+      }
     }
   }
   &.center{

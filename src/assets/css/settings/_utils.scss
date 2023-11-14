@@ -147,6 +147,7 @@ img {
         text-transform: uppercase;
         @include media-breakpoint-down(sm) {
           margin-bottom: 0;
+          font-size: 16px;
         }
       }
       .flash-sale-tab-header-timeEnd-in {
@@ -331,7 +332,6 @@ table {
     object-fit: cover;
     -o-object-position: center;
     object-position: center;
-    border-radius: 5px;
     transition: 0.5s;
   }
 }
@@ -510,6 +510,33 @@ input[type=number] {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    border-radius: 5px;
+    transition: 0.5s;
+  }
+}
+.resize-thumb-gallery-02 {
+  max-width: 80px;
+  height: 80px;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    width: unset !important;
+    -o-object-fit: contain;
+    object-fit: contain;
     -o-object-position: center;
     object-position: center;
     border-radius: 5px;

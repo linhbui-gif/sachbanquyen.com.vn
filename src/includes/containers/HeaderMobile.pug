@@ -22,14 +22,14 @@ header.is-mobile
                   span
                     img(src=`./assets/icons/${item.icon}`, alt="")
                   a(href=item.link)= item.title
-              
+
               if (isLogged)
                 li(style="padding: 0;")
                   button.btn.btn-outline-danger.has-icon.w-100.border-0
                     .btn-icon.mr-theme-4
                       img(src="./assets/icons/icon-logout-red.png" alt="" width="16" height="16")
                     span.btn-text Đăng Xuất
-        
+
         .header-mobile-action-item.bars
           img(src="./assets/icons/menu.svg" alt="#")
 

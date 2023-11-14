@@ -7,6 +7,7 @@ $btn-active-bg: #ee3d05;
 .btn {
   --#{$prefix}btn-font-size: #{$btn-font-size};
   --#{$prefix}btn-font-weight: #{$btn-font-weight};
+  --#{$prefix}btn-border-radius: 5px;
   &.has-icon {
     display: flex;
     align-items: center;
