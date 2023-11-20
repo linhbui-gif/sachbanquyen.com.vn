@@ -25,8 +25,8 @@ block pages
                 thead 
                   tr 
                     th.fit #
-                    th.w-25 Mã đơn
-                    th Ngày tạo
+                    th.w-25.nowrap Mã đơn
+                    th.nowrap Ngày tạo
                     th Số tiền
                     th Trạng thái
                     th.fit Xử lý
@@ -35,10 +35,10 @@ block pages
                   each item in [1,2,3,4,5]
                     tr 
                       td.fit= item
-                      td.w-25
+                      td.w-25.nowrap
                         a(href="#").ProfileTable-info-link #230908160431279
 
-                      td 08/09/2023 16:04
+                      td.nowrap 08/09/2023 16:04
                       td 153.000đ
                       td
                         .d-flex.flex-wrap(style="row-gap: 8px; column-gap: 8px;")

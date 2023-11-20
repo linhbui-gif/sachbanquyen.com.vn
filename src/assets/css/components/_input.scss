@@ -2,11 +2,21 @@
   .input-group-text-icon{
     position: absolute;
     top: 50%;
-    right: 15px;
+    right: 3px;
     transform: translateY(-50%);
     border: unset;
     background-color: unset;
     z-index: 20;
+
+    #togglePassword {
+      cursor: pointer;
+
+      &.fa-eye {
+        .slash {
+          display: none;
+        }
+      }
+    }
   }
   &.has-icon {
     .form-control {
