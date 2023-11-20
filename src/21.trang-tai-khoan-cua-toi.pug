@@ -1,6 +1,6 @@
 extends includes/layouts/Guest.pug
 
-block head 
+block head
   - const isHideHeaderMobileSearch = true;
 
 block pages
@@ -19,4 +19,3 @@ block pages
               +CoinCard({ title: 'Các gói đăng ký của bạn', value: '5 gói đọc', icon: 'icon-vip.png', btnTitle: 'Thông tin' })
 
           include ./includes/containers/AccountInfomationForm.pug
-          
