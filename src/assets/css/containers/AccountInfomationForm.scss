@@ -4,7 +4,6 @@
   border: 1px solid var(--line-3, #eaeaea);
 
   &-header {
-    padding: 0 8px;
     border-bottom: 1px dashed var(--line-3, #eaeaea);
     padding-bottom: 15px;
     @include h-4-18-pt-b-tieude-the();
@@ -33,6 +32,7 @@
     button {
       height: 40px;
       @include l-btn-18-pt-sm();
+      font-size: 15px;
 
       &:first-child {
         font-weight: 400;

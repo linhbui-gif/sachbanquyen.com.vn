@@ -118,7 +118,7 @@
         .btn {
           min-height: 28px;
           border-radius: 5px;
-          font-size: 14px;
+          font-size: 15px;
           height: unset;
           font-weight: 400;
 
@@ -181,7 +181,6 @@
 
   &-status-actions {
     padding: 12px 0;
-    border-top: 1px solid var(--line-3, #eaeaea);
 
     &-status {
       .TableTag {

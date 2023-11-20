@@ -80,6 +80,15 @@
       border-left: none;
       border-right: none;
 
+
+      .accordion-body-children-item-link {
+        transition: 0.3s ease;
+
+        &:hover {
+          background: var(--bs-tertiary-bg);
+        }
+      }
+
       &:last-child {
         border-bottom-style: dashed;
         border-radius: 0;
