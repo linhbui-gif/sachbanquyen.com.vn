@@ -9,14 +9,18 @@ header {
   .header-top-dropdown {
     &-overlay {
       position: absolute;
-      height: 150vh;
       top: calc(100% - 45.5px);
       left: 0;
+      height: 120vh;
       width: 100%;
       z-index: 3;
       background: rgba(#000000, 0.25);
       pointer-events: none;
       opacity: 0;
+
+      @media (max-width: 1440px) {
+        height: 150vh;
+      }
 
       @media (max-width: 991px) {
         top: 100%;
@@ -132,6 +136,7 @@ header {
 
       &-search {
         padding: 12px 0;
+
         @include media-breakpoint-down(lg) {
           border-bottom: 1px solid var(--line3);
         }
