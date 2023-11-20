@@ -4,7 +4,7 @@
   --bs-accordion-btn-icon-width: 16px;
   &-button{
     font-size: 15px;
-    padding: 12px;
+    padding: 6px;
   }
   &.custom-icon{
     --bs-accordion-btn-icon: url("../../assets/icons/add-cirlce.svg");
@@ -103,9 +103,12 @@
     display: flex;
     align-items: center;
     padding-left: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     &-text{
       flex: 1;
       @include body-15-pt-r();
+
     }
   }
 }

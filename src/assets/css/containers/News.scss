@@ -9,7 +9,7 @@
   padding: 23px 30px;
   border-radius: 12px;
   border: 1px solid var(--line-3, #eaeaea);
-  @include media-breakpoint-down(lg){
+  @include media-breakpoint-down(md){
     padding-top: 10px;
     margin-top: 10px!important;
   }
@@ -102,7 +102,7 @@
       overflow: unset;
       img {
         object-position: center;
-        height: 362px;
+        height: 315px;
       }
     }
     &-title,
@@ -211,6 +211,7 @@
       display: none;
       @include media-breakpoint-down(lg) {
         display: block;
+        margin-top: 36px;
       }
     }
     &-mobile {

@@ -45,6 +45,10 @@
         max-width: 80px;
         height: 80px;
       }
+      @media (max-width: 458px) and (min-width: 382px) {
+        max-width: 100px;
+        height: 100px;
+      }
       img {
         position: absolute;
         top: 0;

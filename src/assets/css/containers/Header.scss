@@ -9,7 +9,7 @@ header {
   .header-top-dropdown {
     &-overlay {
       position: absolute;
-      height: 200vh;
+      height: 150vh;
       top: 100%;
       left: 0;
       width: 100%;
@@ -97,7 +97,7 @@ header {
     &-mobile {
       padding: 16px 0;
 
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-down(lg) {
         border-bottom: 1px solid var(--line3);
         padding: 8px 0;
       }

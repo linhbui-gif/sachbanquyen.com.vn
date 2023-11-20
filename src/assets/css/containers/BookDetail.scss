@@ -141,6 +141,9 @@
           padding: 0 4px;
           border-right: unset;
         }
+        @include media-breakpoint-between(lg,xl){
+          padding: 0 17px;
+        }
         i {
           font-size: 13px;
           color: var(--primary-yellow);
