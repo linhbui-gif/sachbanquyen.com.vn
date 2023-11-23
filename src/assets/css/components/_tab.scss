@@ -25,6 +25,9 @@
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   border-top-right-radius: 8px;
+  @include media-breakpoint-down(md){
+    padding: 15px;
+  }
   .tab-pane {
     #content-tab-see {
       max-height: 189px;

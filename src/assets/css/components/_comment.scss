@@ -21,10 +21,16 @@
   @include h-4-heading-card();
   color: var(--body-text);
   padding: 12px 15px;
+  @include media-breakpoint-down(md){
+    padding: 12px 0px;
+  }
 }
 
 .comment-box .comment__list {
   padding: 15px;
+  @include media-breakpoint-down(md){
+    padding: 0;
+  }
 }
 .comment-box .comment__list .comment__list-user {
   display: flex;
