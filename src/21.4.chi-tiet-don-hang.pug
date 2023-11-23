@@ -1,6 +1,6 @@
 extends includes/layouts/Guest.pug
 
-block head 
+block head
   - const isHideHeaderMobileSearch = true;
 
 block pages
@@ -8,15 +8,15 @@ block pages
       include ./includes/components/Breadcrumb.pug
 
       .ProfileTable-status-actions.d-flex.align-items-center.justify-content-between
-        .ProfileTable-status-actions-item.d-flex.align-items-center 
-          .ProfileTable-status-actions-title Trạng thái: 
+        .ProfileTable-status-actions-item.d-flex.align-items-center
+          .ProfileTable-status-actions-title Trạng thái:
           .ProfileTable-status-actions-status.d-flex.flex-wrap(style="row-gap: 8px; column-gap: 8px;")
             +TableTag({ title: 'Đã duyệt', styleType: 'primary' })
             +TableTag({ title: 'Thành công', styleType: 'success' })
             +TableTag({ title: 'Chờ duyệt', styleType: 'warning' })
             +TableTag({ title: 'Đã hủy', styleType: 'danger' })
 
-        .ProfileTable-status-actions-item.d-flex.align-items-center 
+        .ProfileTable-status-actions-item.d-flex.align-items-center
           button.btn.btn-danger.btn-sm Huỷ đơn hàng
 
           .ProfileTable-status-actions-calling.d-flex.align-items-center
@@ -32,8 +32,8 @@ block pages
             .ProfileTable-header Chi tiết đơn hàng
             .ProfileTable-body
               table.table-striped
-                thead 
-                  tr 
+                thead
+                  tr
                     th.fit #
                     th.w-25 Sản phẩm
                     th Loại
@@ -41,9 +41,9 @@ block pages
                     th Số lượng
                     th Thành tiền
 
-                tbody 
+                tbody
                   each item in [1,2,3,4,5]
-                    tr 
+                    tr
                       td.fit= item
                       td.w-25
                         a(href="#").ProfileTable-info-link.ellipsis-2 Gió và tác động của gió lên công trình - Nhà xuất bản Xây Dựng
@@ -57,19 +57,19 @@ block pages
               .ProfileTable.ProfileTable-subtable.vertical-middle.w-100(style="max-width: 256px")
                 .ProfileTable-body
                   table.table-striped
-                    tbody 
-                      tr 
+                    tbody
+                      tr
                         td Tạm tính:
                         td.text-right 311.500đ
-                      tr 
+                      tr
                         td Giảm giá:
                         td.text-right 4.000đ
-                      tr 
+                      tr
                         td Phí ship:
                         td.text-right 23.000đ
-                      tr 
+                      tr
                         td Tổng tiền:
-                        td.text-right 
+                        td.text-right
                           .Table-info-title(style="color: #FF4C13; font-size: 18px; font-weight: 600;") 330.500đ
 
         .col-lg-4
@@ -79,21 +79,21 @@ block pages
             div(style="padding: 8px 0;")
               .ProfileTable-body
                 table.table-striped
-                  tbody 
-                    tr 
+                  tbody
+                    tr
                       td(style="width: 80px;") #[strong Mã đơn:]
                       td #029374028
-                    tr 
+                    tr
                       td(style="width: 80px;") #[strong Ngày:]
                       td 08/09/2023 16:04
-                    tr 
+                    tr
                       td(style="width: 80px;") #[strong Hình thức:]
                       td Chuyển khoản
-                    tr 
+                    tr
                       td(style="width: 80px;") #[strong Trạng thái:]
                       td Đã thanh toán
 
-              .ProfileTable-subheader.d-flex.align-items-center.justify-content-between 
+              .ProfileTable-subheader.d-flex.align-items-center.justify-content-between
                 strong Thông tin giao hàng
                 button.btn.btn-outline-primary.has-icon.border-0
                   .btn-icon.mr-theme-4
@@ -102,18 +102,18 @@ block pages
 
               .ProfileTable-body
                 table.table-striped
-                  tbody 
-                    tr 
+                  tbody
+                    tr
                       td(style="width: 80px;") #[strong Họ tên:]
                       td Phùng Thị Hồng Thắm
-                    tr 
+                    tr
                       td(style="width: 80px;") #[strong SĐT:]
                       td 0987654321
-                    tr 
+                    tr
                       td(style="width: 80px;") #[strong Địa chỉ:]
                       td P A2808, Hồ Gươm Plaza, 110 Trần Phú, Mỗ Lao, Hà Đông
 
-              .ProfileTable-subheader.d-flex.align-items-center.justify-content-between 
+              .ProfileTable-subheader.d-flex.align-items-center.justify-content-between
                 strong(style="width: 80px;") Giao qua:
                 |Viettel Post
                 button.btn.btn-primary.has-icon.border-0
@@ -123,10 +123,10 @@ block pages
 
               .ProfileTable-body
                 table.table-striped
-                  tbody 
-                    tr 
+                  tbody
+                    tr
                       td(style="width: 80px;") #[strong Mã vận đơn:]
                       td #9290308
-                    tr 
+                    tr
                       td(style="width: 80px;") #[strong Trạng thái:]
                       td Đã giao hàng
