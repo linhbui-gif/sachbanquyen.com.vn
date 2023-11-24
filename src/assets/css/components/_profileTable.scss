@@ -53,6 +53,7 @@
   &-subheader {
     position: relative;
     z-index: 1;
+    column-gap: 8px;
     padding: 12px 15px;
     border-top: 1px solid var(--line-3, #eaeaea);
     border-bottom: 1px solid var(--line-3, #eaeaea);
@@ -130,7 +131,7 @@
             &:hover {
               background: rgba(#a4a4a4, 0.1);
             }
-            
+
             &:active {
               background: rgba(#a4a4a4, 0.2);
             }
@@ -180,6 +181,7 @@
   }
 
   &-status-actions {
+    border-top: 1px solid var(--line-3, #eaeaea);
     padding: 12px 0;
 
     &-status {

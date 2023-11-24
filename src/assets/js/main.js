@@ -1,6 +1,7 @@
 window.onload = () => {
   carousel.init();
   sidebar.init();
+  header.init();
 };
 
 const loading = {
@@ -9,6 +10,32 @@ const loading = {
   },
   config: function () {},
 };
+
+const header = {
+  init: function () {
+    this.caculateOverlayDropdown();
+  },
+  caculateOverlayDropdown: function () {
+    const dropdownOverlay = document.querySelector(
+      ".header-top-dropdown-overlay"
+    );
+    if (dropdownOverlay) {
+      const body = document.body;
+      const html = document.documentElement;
+
+      const height = Math.max(
+        body.scrollHeight,
+        body.offsetHeight,
+        html.clientHeight,
+        html.scrollHeight,
+        html.offsetHeight
+      );
+
+      dropdownOverlay.style.height = `${height - 85}px`;
+    }
+  },
+};
+
 const carousel = {
   init: function () {
     this.setupBookDetail();
@@ -811,18 +838,16 @@ const sidebar = {
 };
 const convertNumber = (number) => {
   if (number >= 10000) {
-    return (number / 1000).toFixed(1).replace('.', ',') + 'k';
-  }
-  else if(number >= 1000){
-    return (number / 100).toFixed(1).replace('.', ',') + 'k';
-  }
-  else {
+    return (number / 1000).toFixed(1).replace(".", ",") + "k";
+  } else if (number >= 1000) {
+    return (number / 100).toFixed(1).replace(".", ",") + "k";
+  } else {
     return number;
   }
-}
-const viewNumber = document.querySelector('.view')
-const saleNumber = document.querySelector('.sale')
-const convertViewNumber = convertNumber(Number(viewNumber.textContent))
-const convertSaleNumber = convertNumber(Number(saleNumber.textContent))
-viewNumber.textContent = convertViewNumber
-saleNumber.textContent = convertSaleNumber
+};
+const viewNumber = document.querySelector(".view");
+const saleNumber = document.querySelector(".sale");
+const convertViewNumber = convertNumber(Number(viewNumber.textContent));
+const convertSaleNumber = convertNumber(Number(saleNumber.textContent));
+viewNumber.textContent = convertViewNumber;
+saleNumber.textContent = convertSaleNumber;

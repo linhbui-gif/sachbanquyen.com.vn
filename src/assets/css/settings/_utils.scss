@@ -320,7 +320,7 @@ aside {
   border: 1px solid var(--line3);
   border-radius: 8px;
   max-width: 760px;
-  margin: 0 auto;
+  margin: 30px auto;
 
   &-form {
     padding: 30px;
@@ -577,6 +577,7 @@ input[type=number] {
   align-items: center;
   justify-content: center;
   aspect-ratio: 2.7;
+
   img {
     position: absolute;
     top: 0;
